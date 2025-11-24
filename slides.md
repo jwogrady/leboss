@@ -24,7 +24,7 @@ wakeLock: "build"
 
 # **LEBOSS Core Principles**
 
-**LEBOSS (Local Entrepreneur Business Operating Standards)** is a universal framework for organizing, securing, and scaling local businesses.
+**LEBOSS (Local Entrepreneur Business Operating System Standards)** is a universal framework for organizing, securing, and scaling local businesses.
 
 <div class="pt-8">
   <span @click="$slidev.nav.next" class="px-4 py-2 rounded-lg cursor-pointer bg-white bg-opacity-20 hover:bg-opacity-30 transition-all duration-200">
@@ -44,7 +44,7 @@ wakeLock: "build"
 
 LEBOSS is built on five foundational principles that ensure business success:
 
-<div class="grid grid-cols-1 gap-6 mt-8">
+<div class="grid grid-cols-1 gap-5 mt-8">
 
 <div class="flex items-start gap-4">
   <div class="text-2xl font-bold text-blue-400 min-w-8">1.</div>
@@ -76,7 +76,7 @@ LEBOSS is built on five foundational principles that ensure business success:
 
 # **Core Foundation Principles** (continued)
 
-<div class="grid grid-cols-1 gap-6 mt-8">
+<div class="grid grid-cols-1 gap-5 mt-8">
 
 <div class="flex items-start gap-4">
   <div class="text-2xl font-bold text-blue-400 min-w-8">4.</div>
@@ -96,7 +96,7 @@ LEBOSS is built on five foundational principles that ensure business success:
 
 </div>
 
-<div class="mt-12 text-center">
+<div class="mt-10 text-center">
   <div class="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
     <strong>These principles form the foundation of the LEBOSS Cosmic Elements</strong>
   </div>
@@ -108,23 +108,23 @@ layout: section
 
 # The LEBOSS Cosmic Elements
 
-Six interconnected components that organize your entire business ecosystem
+Six interconnected components (0-5) that organize your entire business ecosystem
 
 ---
 layout: two-cols
 ---
 
-# **1. Universe**
+# **0. Universe**
 
 <div class="space-y-4">
 
-**Definition:**
+<strong>Definition:</strong>
 <p class="text-gray-300">The foundational business entity—this could be a person, a family, or a registered company.</p>
 
-**Role:**
+<strong>Role:</strong>
 <p class="text-gray-300">Owns all other elements (brands, data, assets, permissions).</p>
 
-**Example:**
+<strong>Example:</strong>
 <p class="text-blue-400 font-semibold">"The Patel Family Enterprises," "Smith & Sons LLC"</p>
 
 </div>
@@ -133,7 +133,7 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
@@ -158,17 +158,17 @@ layout: two-cols
 layout: two-cols
 ---
 
-# **2. Galaxy**
+# **1. Galaxy**
 
 <div class="space-y-4">
 
-**Definition:**
+<strong>Definition:</strong>
 <p class="text-gray-300">Each individual brand, business, or venture owned by the Universe.</p>
 
-**Role:**
+<strong>Role:</strong>
 <p class="text-gray-300">Organizes and separates different business lines, brands, or operating companies.</p>
 
-**Example:**
+<strong>Example:</strong>
 <p class="text-blue-400 font-semibold">"Smith Plumbing," "Smith Electrical," and "Smith HVAC" as Galaxies under one Universe</p>
 
 </div>
@@ -177,7 +177,7 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
@@ -202,17 +202,17 @@ layout: two-cols
 layout: two-cols
 ---
 
-# **3. Star**
+# **2. Star**
 
 <div class="space-y-4">
 
-**Definition:**
-<p class="text-gray-300">The interfaces where customers or stakeholders interact with your business.</p>
+<strong>Definition:</strong>
+<p class="text-gray-300">The customer experience—the interfaces where customers or stakeholders interact with your business, usually via web, mobile, or GUI interfaces.</p>
 
-**Role:**
-<p class="text-gray-300">Connects the outside world to your organization—this is where value is delivered and relationships are managed.</p>
+<strong>Role:</strong>
+<p class="text-gray-300">Connects the outside world to your organization—this is where value is delivered and relationships are managed. The Star is what customers see and interact with.</p>
 
-**Example:**
+<strong>Example:</strong>
 <p class="text-blue-400 font-semibold">Websites, customer portals, mobile apps, kiosks, or booking systems</p>
 
 </div>
@@ -221,7 +221,7 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
@@ -246,17 +246,17 @@ layout: two-cols
 layout: two-cols
 ---
 
-# **4. Planet**
+# **3. Planet**
 
 <div class="space-y-4">
 
-**Definition:**
-<p class="text-gray-300">The core APIs, data services, or backend systems that power each Star.</p>
+<strong>Definition:</strong>
+<p class="text-gray-300">The core APIs, data services, or backend systems that react to and orbit each Star.</p>
 
-**Role:**
-<p class="text-gray-300">Provides the technical functionality that Stars rely on—like appointment scheduling, order management, or customer databases.</p>
+<strong>Role:</strong>
+<p class="text-gray-300">Responds to and supports the technical functionality that Stars require—like appointment scheduling, order management, or customer databases. The Planet depends on the Star for life, but without a Planet, no one sees the Star.</p>
 
-**Example:**
+<strong>Example:</strong>
 <p class="text-blue-400 font-semibold">Booking API, product inventory service, user authentication backend</p>
 
 </div>
@@ -265,9 +265,14 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
+  <div class="flex items-start gap-2">
+    <div class="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+    <p>The Planet depends on the Star for life, but without a Planet, no one sees the Star</p>
+  </div>
+  
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
     <p>Can be reused across multiple Stars or Galaxies</p>
@@ -290,17 +295,17 @@ layout: two-cols
 layout: two-cols
 ---
 
-# **5. Moon**
+# **4. Moon**
 
 <div class="space-y-4">
 
-**Definition:**
-<p class="text-gray-300">Modular business capabilities or internal workflows—each "Moon" is a feature, process, or operational tool.</p>
+<strong>Definition:</strong>
+<p class="text-gray-300">A natural satellite—modular business capabilities or internal workflows that orbit another body. Each "Moon" is a company-owned resource, like an internal API.</p>
 
-**Role:**
-<p class="text-gray-300">Adds functionality to the system, supporting sales, service, billing, HR, analytics, and more.</p>
+<strong>Role:</strong>
+<p class="text-gray-300">Adds functionality to the system, supporting sales, service, billing, HR, analytics, and more. As a natural satellite, Moons are company-owned resources that orbit Planets or Stars.</p>
 
-**Example:**
+<strong>Example:</strong>
 <div class="text-blue-400 font-semibold space-y-1">
   <p>• "Apex" (sales/lead management)</p>
   <p>• "Epic" (service delivery & fulfillment)</p>
@@ -313,12 +318,17 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
-    <p>Moons can be enabled, configured, or upgraded independently</p>
+    <p>Moons are natural satellites—company-owned resources (like internal APIs)</p>
+  </div>
+  
+  <div class="flex items-start gap-2">
+    <div class="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+    <p>Can be enabled, configured, or upgraded independently</p>
   </div>
   
   <div class="flex items-start gap-2">
@@ -338,17 +348,17 @@ layout: two-cols
 layout: two-cols
 ---
 
-# **6. Satellite**
+# **5. Satellite**
 
 <div class="space-y-4">
 
-**Definition:**
-<p class="text-gray-300">Connections to third-party platforms and external services.</p>
+<strong>Definition:</strong>
+<p class="text-gray-300">An artificial satellite—connections to third-party platforms and external services. Like a Moon, it orbits another body, but unlike a Moon, it's a managed resource outside the company.</p>
 
-**Role:**
-<p class="text-gray-300">Brings outside data in, or pushes your data out—keeping all your profiles and tools in sync.</p>
+<strong>Role:</strong>
+<p class="text-gray-300">Brings outside data in, or pushes your data out—keeping all your profiles and tools in sync. As an artificial satellite, these are managed resources outside the company that orbit your business ecosystem.</p>
 
-**Example:**
+<strong>Example:</strong>
 <p class="text-blue-400 font-semibold">Integrations with Facebook Ads, Google Business, QuickBooks, Yelp, Stripe, Zapier, etc.</p>
 
 </div>
@@ -357,9 +367,14 @@ layout: two-cols
 
 <div class="pl-8 space-y-4">
 
-**Key Details:**
+<strong>Key Details:</strong>
 
 <div class="space-y-3 text-sm">
+  <div class="flex items-start gap-2">
+    <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+    <p>Satellites are artificial satellites—managed resources outside the company</p>
+  </div>
+  
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
     <p>Each Satellite is focused on one external platform or data source</p>
@@ -382,22 +397,22 @@ layout: two-cols
 
 # **LEBOSS Elements Summary**
 
-<div class="overflow-hidden rounded-lg shadow-lg">
+<div class="overflow-hidden rounded-lg shadow-lg mt-4">
 
 | Cosmic Element | What It Represents | Example |
 |:---:|:---|:---|
-| 🌌 **Universe** | Root owner (family/business) | Smith & Sons LLC |
-| 🌠 **Galaxy** | Brand/business under Universe | Smith Plumbing, Smith HVAC |  
-| ⭐ **Star** | Customer/stakeholder interface | smithplumbing.com, booking app |
-| 🪐 **Planet** | Core API/service powering a Star | Appointment API, order DB |
-| 🌙 **Moon** | Feature module/operational tool | Sales, Service, Billing, Analytics |
-| 🛰️ **Satellite** | Third-party integration | Google Places, Facebook, QuickBooks |
+| 🌐 **Universe** | Root owner (family/business) | Smith & Sons LLC |
+| 🌌 **Galaxy** | Brand/business under Universe | Smith Plumbing, Smith HVAC |
+| ⭐ **Star** | Customer experience (web, mobile, GUI interfaces) | smithplumbing.com, booking app |
+| 🪐 **Planet** | Core API/service that reacts to and orbits a Star | Appointment API, order DB |
+| 🌙 **Moon** | Natural satellite—company-owned resource (like internal API) | Sales, Service, Billing, Analytics |
+| 🛰️ **Satellite** | Artificial satellite—managed resource outside company | Google Places, Facebook, QuickBooks |
 
 </div>
 
-<div class="mt-8 text-center">
-  <div class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-700 rounded-xl">
-    <p class="text-lg font-semibold">Each element has a clear purpose and works together to create a cohesive business ecosystem</p>
+<div class="mt-6 text-center">
+  <div class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-700 rounded-lg">
+    <p class="text-sm font-semibold">Each element has a clear purpose and works together to create a cohesive business ecosystem</p>
   </div>
 </div>
 
@@ -408,28 +423,28 @@ class: text-center
 
 # **LEBOSS Framework Benefits**
 
-<div class="space-y-6 mt-12">
+<div class="space-y-5 mt-10">
 
 <div class="text-xl font-semibold text-blue-400">
-✨ **Clear Organization** — Every part of your business has its place
+✨ <strong>Clear Organization</strong> — Every part of your business has its place
 </div>
 
 <div class="text-xl font-semibold text-purple-400">
-🔒 **Enhanced Security** — Data protection and access control built-in
+🔒 <strong>Enhanced Security</strong> — Data protection and access control built-in
 </div>
 
 <div class="text-xl font-semibold text-green-400">
-📈 **Scalable Growth** — Add capabilities without disrupting operations
+📈 <strong>Scalable Growth</strong> — Add capabilities without disrupting operations
 </div>
 
 <div class="text-xl font-semibold text-yellow-400">
-🔄 **Future-Proof Design** — Adapt and evolve without chaos or lock-in
+🔄 <strong>Future-Proof Design</strong> — Adapt and evolve without chaos or lock-in
 </div>
 
 </div>
 
-<div class="mt-12 text-2xl font-bold">
-**LEBOSS gives every part of your business a clear place, supports security and growth, and enables you to adapt and evolve—without chaos or lock-in.**
+<div class="mt-10 text-xl font-bold">
+LEBOSS gives every part of your business a clear place, supports security and growth, and enables you to adapt and evolve—without chaos or lock-in.
 </div>
 
 ---
@@ -438,7 +453,7 @@ layout: end
 
 # Thank You
 
-**Questions & Discussion**
+<strong>Questions & Discussion</strong>
 
 <div class="mt-8 text-center opacity-75">
 LEBOSS Framework - Organizing Business Excellence
