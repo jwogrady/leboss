@@ -251,10 +251,10 @@ layout: two-cols
 <div class="space-y-4">
 
 <strong>Definition:</strong>
-<p class="text-gray-300">The core APIs, data services, or backend systems that react to and orbit each Star.</p>
+<p class="text-gray-300">The backend service that serves a Star. Without a Star, the Planet has nothing to orbit.</p>
 
 <strong>Role:</strong>
-<p class="text-gray-300">Responds to and supports the technical functionality that Stars require—like appointment scheduling, order management, or customer databases. The Planet depends on the Star for life, but without a Planet, no one sees the Star.</p>
+<p class="text-gray-300">The backend service that powers the Star by providing functionality like appointment scheduling, order management, or customer databases. Planets depend on Moons (natural satellites) and Satellites (artificial satellites) to create a delightful Star experience. Without a Star, the Planet has nothing to orbit, but without a Planet, no one sees the Star.</p>
 
 <strong>Example:</strong>
 <p class="text-blue-400 font-semibold">Booking API, product inventory service, user authentication backend</p>
@@ -270,7 +270,7 @@ layout: two-cols
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-    <p>The Planet depends on the Star for life, but without a Planet, no one sees the Star</p>
+    <p>Planet is the backend service serving a Star—without a Star, the Planet has nothing to orbit</p>
   </div>
   
   <div class="flex items-start gap-2">
@@ -404,7 +404,7 @@ layout: two-cols
 | 🌐 **Universe** | Root owner (family/business) | Smith & Sons LLC |
 | 🌌 **Galaxy** | Brand/business under Universe | Smith Plumbing, Smith HVAC |
 | ⭐ **Star** | Customer experience (web, mobile, GUI interfaces) | smithplumbing.com, booking app |
-| 🪐 **Planet** | Core API/service that reacts to and orbits a Star | Appointment API, order DB |
+| 🪐 **Planet** | Backend service serving a Star (without a Star, Planet has nothing to orbit) | Appointment API, order DB |
 | 🌙 **Moon** | Natural satellite—company-owned resource (like internal API) | Sales, Service, Billing, Analytics |
 | 🛰️ **Satellite** | Artificial satellite—managed resource outside company | Google Places, Facebook, QuickBooks |
 
