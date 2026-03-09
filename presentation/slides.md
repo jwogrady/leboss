@@ -98,7 +98,7 @@ LEBOSS is built on five foundational principles that ensure business success:
 
 <div class="mt-10 text-center">
   <div class="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
-    <strong>These principles form the foundation of the LEBOSS Cosmic Elements</strong>
+    <strong>These principles form the foundation of the LEBOSS Elements</strong>
   </div>
 </div>
 
@@ -106,9 +106,9 @@ LEBOSS is built on five foundational principles that ensure business success:
 layout: section
 ---
 
-# The LEBOSS Cosmic Elements
+# The LEBOSS Elements
 
-Six interconnected components (0-5) that organize your entire business ecosystem
+Six hierarchical components (0-5) that organize your entire business ecosystem
 
 ---
 layout: two-cols
@@ -251,10 +251,10 @@ layout: two-cols
 <div class="space-y-4">
 
 <strong>Definition:</strong>
-<p class="text-gray-300">The backend service that serves a Star. Without a Star, the Planet has nothing to orbit.</p>
+<p class="text-gray-300">The backend service that powers a Star. Without a Star, a Planet serves no one. Without a Planet, a Star cannot function.</p>
 
 <strong>Role:</strong>
-<p class="text-gray-300">The backend service that powers the Star by providing functionality like appointment scheduling, order management, or customer databases. Planets depend on Moons (natural satellites) and Satellites (artificial satellites) to create a delightful Star experience. Without a Star, the Planet has nothing to orbit, but without a Planet, no one sees the Star.</p>
+<p class="text-gray-300">Provides the business logic, data persistence, and operational functionality — appointment scheduling, order management, customer databases — that makes a Star meaningful. May be operated by the business itself or managed by a compliant service provider.</p>
 
 <strong>Example:</strong>
 <p class="text-blue-400 font-semibold">Booking API, product inventory service, user authentication backend</p>
@@ -270,7 +270,7 @@ layout: two-cols
 <div class="space-y-3 text-sm">
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-    <p>Planet is the backend service serving a Star—without a Star, the Planet has nothing to orbit</p>
+    <p>Must serve at least one Star — a Planet with no Star has no purpose in the hierarchy</p>
   </div>
   
   <div class="flex items-start gap-2">
@@ -387,7 +387,7 @@ layout: two-cols
   
   <div class="flex items-start gap-2">
     <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-    <p>They ensure all external touchpoints and listings stay consistent with your business data</p>
+    <p>Satellites are the point of greatest data sovereignty risk — every Satellite requires explicit authorization before receiving any data</p>
   </div>
 </div>
 
@@ -399,7 +399,7 @@ layout: two-cols
 
 <div class="overflow-hidden rounded-lg shadow-lg mt-4">
 
-| Cosmic Element | What It Represents | Example |
+| Element | What It Represents | Example |
 |:---:|:---|:---|
 | 🌐 **Universe** | Root owner (family/business) | Smith & Sons LLC |
 | 🌌 **Galaxy** | Brand/business under Universe | Smith Plumbing, Smith HVAC |

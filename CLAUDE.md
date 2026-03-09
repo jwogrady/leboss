@@ -50,7 +50,7 @@ The current version is `0.0.1` — a working draft open for community contributi
 
 ## Key Terminology
 
-- **LEBOSS Elements** — the six hierarchical architectural elements (Universe, Galaxy, Star, Planet, Moon, Satellite). Do not use "Cosmic Elements" — this was a prior branded term removed from standards documents. It still appears in `presentation/slides.md` and is pending update there.
+- **LEBOSS Elements** — the six hierarchical architectural elements (Universe, Galaxy, Star, Planet, Moon, Satellite). Do not use "Cosmic Elements" — this was a prior branded term, removed from all documents including `presentation/slides.md`.
 - **Universe** — the root owner (person, family, legal entity)
 - **Galaxy** — an individual brand or business line
 - **Star** — customer-facing interface
@@ -78,7 +78,7 @@ Common scopes: `standards`, `governance`, `glossary`, `charter`, `proposals`, `p
 ## What NOT to Do
 
 - **Never claim authorship or credit in commits, pull requests, documents, or any repository artifact.** This is a core violation of LEBOSS principles. All work in this repository belongs to its human contributors. Do not add AI attribution lines (e.g., `Co-Authored-By`, generator footers, or similar) to any commit message, file, or PR description.
-- Do not use "Cosmic" or "Cosmos" as descriptors in standards documents — these are under review as potentially branded terms. They remain in `presentation/slides.md` pending a separate update to the presentation.
+- Do not use "Cosmic" or "Cosmos" as descriptors anywhere in the repository — these were prior branded terms and have been removed from all documents.
 - Do not modify the `presentation/` directory structure without considering the Netlify build (`netlify.toml` sets `base = "presentation"`).
 - Do not add `.bolt/` files — Stackblitz scaffolding has been removed and is gitignored.
 - Do not invent new philosophical principles beyond what exists in the standards documents. Future additions belong in new proposals following the governance workflow.

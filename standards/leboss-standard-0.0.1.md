@@ -453,7 +453,7 @@ This document is version `0.0.1` of the LEBOSS Standard — a working draft. It 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
 - `Z` — Draft: a working document open for contribution
-- `Y` — Committee Review: accepted by the committee and open for member vote
+- `Y` — Committee Vote: accepted by the committee and open for member ratification
 - `X` — Published: ratified by members as the active canonical standard
 
 This version (`0.0.1`) sits at the draft stage. The path to publication:
