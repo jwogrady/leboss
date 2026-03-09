@@ -12,15 +12,30 @@ LEBOSS is a community standard. It will only be as good as the people who challe
 
 The primary mechanism for changing the standard is a pull request. See [governance/governance.md](governance/governance.md) for the full workflow.
 
-A valid Proposal includes:
+**Expected PR shape — use this as your template:**
 
-1. **Summary** — What does this Proposal change, and why?
-2. **Motivation** — What problem does the current standard fail to address, or address incorrectly?
-3. **Specification Changes** — Exact changes to the relevant standard documents
-4. **Impact Assessment** — Which existing elements are affected?
-5. **Backward Compatibility** — Is this a breaking change? If so, why is it justified?
+```markdown
+## Summary
+<!-- One paragraph. What does this change and why? -->
 
-Proposals that are missing these elements may be returned for revision.
+## Motivation
+<!-- What problem does the current standard fail to address or address incorrectly?
+     Cite the specific section or provision that is wrong or missing. -->
+
+## Specification Changes
+<!-- List the exact documents and sections being changed.
+     For each: what the current text says, and what you propose instead. -->
+
+## Impact Assessment
+<!-- Which LEBOSS Elements, Principles, or Sections are affected?
+     Could this change break existing compliant implementations? -->
+
+## Backward Compatibility
+<!-- Is this a breaking change? (yes / no / unclear)
+     If yes: why is the break justified? -->
+```
+
+Proposals that are missing these sections may be returned for revision. You do not need a perfect draft — a clear problem statement and a proposed direction is enough to start a conversation.
 
 ### Open an Issue
 

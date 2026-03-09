@@ -42,17 +42,25 @@ A Draft becomes a Published standard when:
 
 A Draft may be returned to Proposal status if material objections require significant rework.
 
+A Draft that receives committee approval advances to Committee Vote.
+
+### Committee Vote
+
+A **Committee Vote** is a Draft that the committee has formally accepted and opened for member ratification.
+
+The committee announces a vote and holds a ratification period of no less than 14 days, during which active members cast votes.
+
+A Committee Vote becomes a Published standard when:
+- A simple majority of active members vote to ratify
+- No Maintainer has filed a blocking objection with written justification
+
+A Committee Vote may be returned to Draft status if material objections emerge during ratification.
+
 ### Published
 
-A **Published** standard is an approved version of the LEBOSS specification.
+A **Published** standard is an approved version of the LEBOSS specification, ratified by the membership.
 
-Published standards are assigned a version number following semantic versioning conventions:
-
-- **Major version** (1.0.0, 2.0.0): Breaking changes to the architectural model or data ownership doctrine
-- **Minor version** (0.1.0, 0.2.0): Additions to the standard that are backward-compatible
-- **Patch version** (0.0.1, 0.0.2): Corrections, clarifications, and editorial fixes
-
-Once Published, a standard version is immutable. Changes to a Published standard require a new version proceeding through the Proposal → Draft → Published workflow.
+Once Published, a standard version is immutable. Changes to a Published standard require a new version proceeding through the full Proposal → Draft → Committee Vote → Published workflow.
 
 ---
 

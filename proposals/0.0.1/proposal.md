@@ -54,7 +54,21 @@ This proposal preserves all of that material and adds:
 
 ## Scope
 
-This proposal establishes the structure and content of the `0.x.x` version series. During this series, the foundational architecture may change. Breaking changes do not require a major version increment until the standard reaches `1.0.0`.
+**In scope for 0.0.1:**
+- The six LEBOSS Elements and their dependency rules
+- The five Foundation Principles
+- The Data Ownership Doctrine (principles and obligations, not implementation mechanisms)
+- Service Provider Responsibilities
+- The governance model and committee structure
+
+**Explicitly deferred to 0.0.2 and beyond:**
+- Formal conformance criteria and certification process
+- Technical API and interface specifications for compliant implementations
+- Ownership transfer and succession protocols
+- Satellite-specific compliance rules
+- Normative AI/ML requirements for primary operational data
+
+This proposal establishes the doctrine and topology model. Implementation details are future work.
 
 ---
 
@@ -76,10 +90,43 @@ This proposal is intentionally incomplete in certain areas that future proposals
 
 ---
 
+## Future Work: What 0.0.2 Will Address
+
+Version `0.0.2` will be the first revision of the working draft. It is expected to address:
+
+- **Conformance criteria** — testable, verifiable requirements for calling a system LEBOSS-aligned
+- **Ownership transfer protocol** — a defined process for succession and data handoff
+- **Satellite compliance rules** — explicit requirements for what makes a third-party integration compliant
+
+Items not addressed by `0.0.2` will be tracked and moved to `0.0.3` or the `0.1.0` committee review milestone.
+
+---
+
+## Feedback Requested
+
+The committee is specifically seeking community input on the following open questions:
+
+**1. Topology model completeness**
+Are the six LEBOSS Elements sufficient to describe all meaningful local business data relationships? Are there common patterns — franchises, cooperatives, multi-location businesses — that the current model fails to represent?
+
+**2. Access Grant granularity**
+Section 6.3 defines the required components of an Access Grant. Is this the right level of granularity? Too broad? Too narrow? What would a developer need to implement this in a real system?
+
+**3. "Primary operational data" definition**
+Section 6.1 enumerates examples. Is the enumeration complete enough to be useful? Does it create edge cases that should be addressed?
+
+**4. Service provider responsibilities**
+Section 7 defines six responsibilities. Are there obligations missing? Are any of the six unenforceable in practice?
+
+**5. Governance model**
+Is the Proposal → Draft → Committee Vote → Published workflow appropriate for a community this size? What would make it easier to participate?
+
+---
+
 ## How to Engage
 
-- Comment on this pull request with questions, concerns, or support
-- Open issues against specific documents to raise targeted questions
-- Submit pull requests proposing changes to specific provisions
+- Comment on the open pull request with questions, concerns, or support
+- Open issues against specific documents to raise targeted questions — label the issue with the section number (e.g., `standard-6.3`)
+- Submit pull requests proposing changes to specific provisions, following the shape described in [CONTRIBUTING.md](../../CONTRIBUTING.md)
 
-The committee reviews all substantive engagement. See [CONTRIBUTING.md](../../CONTRIBUTING.md).
+The committee reviews all substantive engagement. No contribution is too small.

@@ -12,13 +12,13 @@ We believe that the owner of a business owns its data.
 
 Not the software company. Not the cloud provider. Not the platform. Not the agency. The owner.
 
-We believe that this principle — obvious when stated, routinely violated in practice — must be made technically enforceable, not merely contractually promised.
+We believe this principle — obvious when stated, routinely violated in practice — must be made technically enforceable, not merely contractually promised.
 
-We believe that the local business sector — the plumber, the dentist, the landscaper, the restaurant owner, the independent retailer — has been systematically underserved by an industry that built its revenue model on data extraction dressed as convenience.
+We believe the local business sector has been systematically underserved by an industry that built its revenue model on data extraction dressed as convenience.
 
-We believe that developers have the skill, the tools, and the ethical responsibility to build systems that honor the people who use them.
+We believe developers have the skill, the tools, and the ethical responsibility to build systems that honor the people who use them.
 
-And we believe that a standard — a shared, open, freely adoptable specification — is the most durable mechanism for changing how an industry behaves.
+We believe a standard — shared, open, freely adoptable — is the most durable mechanism for changing how an industry behaves.
 
 ---
 
@@ -37,9 +37,9 @@ LEBOSS is not a product. It is not a certification body. It is not a trade assoc
 
 ## What LEBOSS Is Not
 
-LEBOSS is not anti-technology. The digital tools available to local businesses today are, in many respects, extraordinary. The problem is not the tools. The problem is the ownership model embedded in how those tools are delivered.
+LEBOSS is not anti-technology. The problem is not the tools. The problem is the ownership model embedded in how those tools are delivered.
 
-LEBOSS is not anti-vendor. Service providers who operate within the LEBOSS framework — who treat business data as belonging to the business owner and act as stewards rather than appropriators — are not the problem. They are part of the solution.
+LEBOSS is not anti-vendor. Service providers who treat business data as belonging to the business owner — who act as stewards rather than appropriators — are part of the solution.
 
 LEBOSS is not a legal framework. It does not create rights or impose obligations in law. It defines architectural and ethical requirements for systems that claim to align with its principles.
 
@@ -47,15 +47,13 @@ LEBOSS is not a legal framework. It does not create rights or impose obligations
 
 ## The Mission
 
-The mission of LEBOSS is:
-
 **To establish, maintain, and promote a shared standard for local business data systems in which data ownership is architecturally guaranteed, service providers are structurally accountable, and the interests of the local business owner are protected by design.**
 
 This mission is pursued through:
 
 1. **Publication of the Standard** — An open, versioned specification that defines the LEBOSS architecture, data ownership doctrine, and service provider responsibilities
 2. **Community Governance** — A transparent process by which the standard is proposed, debated, amended, and published by a community of contributors
-3. **Adoption and Implementation** — Encouraging developers, agencies, and service providers to build systems that align with the standard and can demonstrate that alignment
+3. **Adoption and Implementation** — Encouraging developers, agencies, and service providers to build systems that align with the standard
 
 ---
 
@@ -65,7 +63,7 @@ LEBOSS is written for three audiences, in order of importance:
 
 **First: Local business owners.** Every decision in this standard is evaluated by asking whether it protects and advances the interests of the person who built and operates a local business. This is the primary test.
 
-**Second: Developers and systems builders.** People who build digital systems for local businesses need clear, principled guidance on how to structure those systems. The standard must be concrete enough to guide implementation.
+**Second: Developers and systems builders.** People who build digital systems for local businesses need clear, principled guidance on how to structure those systems. The standard must be concrete enough to implement.
 
 **Third: Service providers.** Companies who provide software and services to local businesses need a clear statement of what it means to act as a steward of a client's data rather than an appropriator of it.
 
@@ -75,27 +73,23 @@ LEBOSS is written for three audiences, in order of importance:
 
 LEBOSS stands in a tradition of open standards and software freedom advocacy.
 
-The free software movement demonstrated that software — a tool for doing work — need not be owned by the company that distributes it. Code could be free, and freedom made it better.
+The free software movement established that software — a tool for doing work — need not be owned by the company that distributes it. Code could be free.
 
-The open source movement demonstrated that open development — visible, forkable, community-driven — produces more trustworthy software than closed development.
+The open source movement established that open development produces more trustworthy software than closed development.
 
-LEBOSS applies a related insight to data: the data generated by doing work belongs to the person doing the work, not to the tool that facilitated it. We are not advocating for open data in the sense of public data. We are advocating for data that is owned by its rightful owner and not appropriated by those who merely provided infrastructure.
+LEBOSS applies a related insight to data: the data generated by doing work belongs to the person doing the work, not to the tool that facilitated it. We are not advocating for public data. We are advocating for data that is owned by its rightful owner and not appropriated by those who merely provided infrastructure.
 
 ---
 
 ## A Note on the AI Era
 
-We are writing this standard at a moment when artificial intelligence systems are being embedded into every layer of business software. AI systems are trained on data. AI systems require data to improve. AI systems generate derivative insights from data that are often more valuable than the raw data itself.
+AI systems are trained on data. When a local business uses AI-powered scheduling, marketing, pricing, or customer service, the data powering those systems is the business owner's data. The insights extracted from it are derived from the business owner's history and relationships.
 
-This creates a new and specific urgency for the LEBOSS project.
+Under the current industry model, none of that value is returned to the business. The data flows in. The trained model stays with the vendor.
 
-When a local business uses AI-powered scheduling, AI-powered marketing, AI-powered pricing, or AI-powered customer service — the data powering those systems is the business owner's data. The insights extracted from that data are derived from the business owner's history and relationships. The value created by that data belongs, at least in part, to the business owner.
+LEBOSS does not prohibit AI applications. It requires that when AI systems use primary operational data, they do so under explicit authorization, with disclosed purpose, and with the understanding that the business owner's data is not a free input to a model the vendor will monetize elsewhere.
 
-Under the current industry model, none of that value is returned to the business. The data flows in. The trained model stays with the vendor. The business gets a better product while the vendor gets a more valuable dataset.
-
-LEBOSS does not prohibit AI applications in local business systems. It requires that when AI systems use primary operational data, they do so under explicit authorization, with disclosed purpose, and with the understanding that the business owner's data is not a free input to a model the vendor will monetize elsewhere.
-
-This is not a future concern. It is a present one. And it is one reason this standard must be written now.
+This is not a future concern. It is a present one.
 
 ---
 

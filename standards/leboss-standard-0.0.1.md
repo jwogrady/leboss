@@ -12,6 +12,38 @@
 
 ---
 
+## Normative Keywords
+
+The key words **MUST**, **MUST NOT**, **SHOULD**, and **MAY** in this document are to be interpreted as described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119):
+
+- **MUST** — an absolute requirement of the standard
+- **MUST NOT** — an absolute prohibition
+- **SHOULD** — recommended; valid reasons to deviate may exist but must be weighed carefully
+- **MAY** — optional; the standard neither requires nor discourages it
+
+Lowercase uses of these words carry their ordinary meaning and are not normative.
+
+---
+
+## Scope
+
+**This standard covers:**
+- The organizational topology of a local business digital ecosystem (the six LEBOSS Elements)
+- The five Foundation Principles that govern compliant system design
+- The data ownership doctrine: what primary operational data is, who owns it, and what access to it requires
+- The responsibilities of service providers operating within a LEBOSS-aligned system
+
+**This standard explicitly defers to future versions:**
+- Formal conformance criteria and certification mechanisms
+- Technical API or interface specifications for compliant implementations
+- Ownership transfer and succession protocols
+- Satellite-specific compliance rules
+- Normative requirements for AI and machine learning use of primary operational data
+
+These deferred items are captured in the gap register at [proposals/0.0.1/proposal.md](../proposals/0.0.1/proposal.md) and are the intended scope of subsequent drafts beginning with `0.0.2`.
+
+---
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
@@ -217,7 +249,7 @@ The Planet is the operational engine behind the customer experience. It provides
 - Can be shared across multiple Stars or Galaxies where appropriate
 - Isolated so that updates or replacements do not break customer-facing interfaces
 - May be operated by the business itself or managed by a compliant service provider
-- Must maintain data separation from other Planets in the same or different Galaxies
+- **MUST** maintain data separation from other Planets in the same or different Galaxies
 
 **Example:** A booking API; a product inventory service; a customer authentication backend
 
@@ -259,8 +291,8 @@ The Satellite represents integrations with platforms and services operated outsi
 - Satellites are artificial satellites: managed resources outside the company
 - Each Satellite is scoped to one external platform or data source
 - Can be enabled or disabled independently for compliance or strategic reasons
-- Must not become a path through which primary operational data leaves the business's control without explicit authorization
-- All data flows in or out through Satellites must be logged and auditable
+- **MUST NOT** become a path through which primary operational data leaves the business's control without explicit authorization
+- All data flows in or out through Satellites **MUST** be logged and auditable
 
 **Example:** Google Business Profile integration; Facebook Ads connection; QuickBooks sync; Stripe payments; Yelp listing management
 
@@ -283,12 +315,12 @@ Satellites are the point of greatest data sovereignty risk. A LEBOSS-compliant s
 
 The following dependency rules govern valid LEBOSS topologies:
 
-1. A Planet must serve at least one Star. A Planet with no Star has no purpose in the hierarchy.
-2. A Star must be supported by at least one Planet. A Star with no Planet cannot deliver value.
-3. A Moon must orbit a Planet or Star within the same Galaxy.
-4. A Satellite must be explicitly authorized at the Galaxy or Universe level before it may receive any data.
-5. A Galaxy belongs to exactly one Universe.
-6. A Star belongs to exactly one Galaxy.
+1. A Planet **MUST** serve at least one Star. A Planet with no Star has no purpose in the hierarchy.
+2. A Star **MUST** be supported by at least one Planet. A Star with no Planet cannot deliver value.
+3. A Moon **MUST** orbit a Planet or Star within the same Galaxy.
+4. A Satellite **MUST** be explicitly authorized at the Galaxy or Universe level before it **MAY** receive any data.
+5. A Galaxy **MUST** belong to exactly one Universe.
+6. A Star **MUST** belong to exactly one Galaxy.
 
 ---
 
@@ -310,18 +342,18 @@ Primary operational data includes but is not limited to:
 
 ### 6.2 Derived Data
 
-Service providers who operate infrastructure on behalf of a LEBOSS-compliant business may collect limited derived data — specifically, operational telemetry necessary to provide and improve the service — subject to the following conditions:
+Service providers who operate infrastructure on behalf of a LEBOSS-compliant business **MAY** collect limited derived data — specifically, operational telemetry necessary to provide and improve the service — subject to the following conditions:
 
-- The type of derived data collected must be disclosed in advance and consented to
-- Derived data may not include primary operational data without explicit authorization
-- Derived data may not be used to benefit third parties without explicit authorization
-- Derived data must be deleted upon termination of the service relationship, unless the business consents otherwise
+- The type of derived data collected **MUST** be disclosed in advance and consented to
+- Derived data **MUST NOT** include primary operational data without explicit authorization
+- Derived data **MUST NOT** be used to benefit third parties without explicit authorization
+- Derived data **MUST** be deleted upon termination of the service relationship, unless the business consents otherwise
 
 ### 6.3 Access Grants
 
-No service provider may access primary operational data without an explicit, scoped access grant issued by the Universe owner or their designated delegate.
+No service provider **MAY** access primary operational data without an explicit, scoped access grant issued by the Universe owner or their designated delegate.
 
-Access grants must specify:
+Access grants **MUST** specify:
 - Which elements (Galaxy, Star, Planet, Moon) the grant covers
 - Which operations are permitted (read, write, transform, export)
 - The duration or conditions under which the grant expires
@@ -329,13 +361,13 @@ Access grants must specify:
 
 ### 6.4 Data Portability
 
-A LEBOSS-compliant system must provide the Universe owner with the ability to export all primary operational data in a standard, machine-readable format at any time.
+A LEBOSS-compliant system **MUST** provide the Universe owner with the ability to export all primary operational data in a standard, machine-readable format at any time.
 
 Data portability is not optional. It is a requirement of ownership. A system that cannot return data to the owner is a system that has appropriated it.
 
 ### 6.5 Data Residency
 
-The Universe owner must be informed of where primary operational data is stored and processed, including the jurisdiction of that infrastructure.
+The Universe owner **MUST** be informed of where primary operational data is stored and processed, including the jurisdiction of that infrastructure.
 
 The Universe owner retains the right to require that data reside within specific jurisdictions where such requirements are legally enforceable or operationally necessary.
 
@@ -351,23 +383,23 @@ The service provider acknowledges that primary operational data belongs to the b
 
 ### 7.2 Operate Within Granted Access
 
-The service provider must operate only within the scope of explicitly granted access. Any access to data beyond the scope of the grant is a violation of this standard.
+The service provider **MUST** operate only within the scope of explicitly granted access. Any access to data beyond the scope of the grant is a violation of this standard.
 
 ### 7.3 Maintain Audit Records
 
-The service provider must maintain complete audit records of all data access and transformations performed under the grant. These records must be available to the Universe owner upon request.
+The service provider **MUST** maintain complete audit records of all data access and transformations performed under the grant. These records **MUST** be available to the Universe owner upon request.
 
 ### 7.4 Ensure Portability Upon Exit
 
-Upon termination of a service relationship, the provider must facilitate the complete and timely export of all primary operational data in a machine-readable format. The provider may not withhold, delay, or degrade the quality of this export.
+Upon termination of a service relationship, the provider **MUST** facilitate the complete and timely export of all primary operational data in a machine-readable format. The provider **MUST NOT** withhold, delay, or degrade the quality of this export.
 
 ### 7.5 Disclose Subprocessors
 
-If the service provider uses third-party services (including cloud infrastructure, analytics platforms, or subcontractors) that have access to primary operational data, these subprocessors must be disclosed to the Universe owner and are subject to the same requirements under this standard.
+If the service provider uses third-party services (including cloud infrastructure, analytics platforms, or subcontractors) that have access to primary operational data, these subprocessors **MUST** be disclosed to the Universe owner and are subject to the same requirements under this standard.
 
 ### 7.6 No Secondary Use
 
-The service provider may not use primary operational data for any purpose beyond delivering the contracted service — including training machine learning models, building aggregate datasets for sale, or improving services provided to other customers — without the explicit written consent of the Universe owner.
+The service provider **MUST NOT** use primary operational data for any purpose beyond delivering the contracted service — including training machine learning models, building aggregate datasets for sale, or improving services provided to other customers — without the explicit written consent of the Universe owner.
 
 ---
 
@@ -404,7 +436,7 @@ The committee welcomes proposals for formal conformance criteria as pull request
 
 LEBOSS is not a replacement for existing security or data standards. It is a complementary framework that operates at the organizational and architectural layer.
 
-LEBOSS-compliant systems should be built in a manner consistent with:
+LEBOSS-compliant systems **SHOULD** be built in a manner consistent with:
 
 - Applicable data protection regulations (GDPR, CCPA, and equivalents)
 - The principle of least privilege as defined in NIST SP 800-53

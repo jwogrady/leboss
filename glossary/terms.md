@@ -56,6 +56,16 @@ See: *Legacy and Continuity (Principle 4)*
 
 ---
 
+## Committee Vote
+
+The third state in the LEBOSS governance lifecycle. A Committee Vote is a Draft that the committee has formally accepted and opened for member ratification. A ratification period of no less than 14 days is held, during which active members vote. A successful vote advances the standard to Published. An unsuccessful vote returns the document to Draft.
+
+In the LEBOSS version numbering scheme, the `Y` (middle) position increments when a Draft advances to Committee Vote status.
+
+See: [governance/governance.md](../governance/governance.md)
+
+---
+
 ## Contributor
 
 Any individual or organization that participates in the LEBOSS community by submitting pull requests, filing issues, engaging in proposal discussions, or adopting and implementing the standard.
@@ -93,6 +103,16 @@ The physical location — including the legal jurisdiction — where data is sto
 The practical control a business owner exercises over their operational data, determined not only by legal right but by architectural reality — specifically, by the topology of the systems that store, process, and grant access to that data.
 
 LEBOSS treats data sovereignty as the core problem the standard is designed to solve.
+
+---
+
+## Draft
+
+The second state in the LEBOSS governance lifecycle. A Draft is a Proposal that has been accepted for formal committee review. The committee assigns a Draft to a milestone and opens a discussion period of no less than 14 days. A Draft may advance to Committee Vote or be returned to Proposal status.
+
+In the LEBOSS version numbering scheme, the `Z` (rightmost) position represents the draft iteration count.
+
+See: [governance/governance.md](../governance/governance.md)
 
 ---
 
