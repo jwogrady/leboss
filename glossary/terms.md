@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.1
+**Version:** 0.0.2
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -144,6 +144,16 @@ See: *Committee* (defined in [governance/committee.md](../governance/committee.m
 
 ---
 
+## Governing Entity
+
+The root owner of a LEBOSS-compliant system: the person, family, or registered legal entity that owns the business enterprise and holds ultimate authority over all data access decisions. In the LEBOSS Reference Model, the Governing Entity corresponds to the Universe (Element 0).
+
+The term "Governing Entity" is used in implementation-neutral contexts where the spatial metaphor name (Universe) is not appropriate.
+
+See also: *Universe (Element 0)*
+
+---
+
 ## Infrastructure Topology
 
 The physical and logical arrangement of systems — including where data is stored, where it is processed, who can access it, and under what conditions — that determines the practical distribution of data ownership power.
@@ -180,7 +190,7 @@ The second of LEBOSS's five Foundation Principles. Modularity requires that busi
 
 The fifth element of the LEBOSS Architecture. A Moon is a natural satellite: a company-owned, company-operated internal capability that orbits a Planet or Star within the LEBOSS hierarchy. Moons provide specialized functional modules — such as sales management, service delivery, or accounting — that are owned and controlled by the business.
 
-Named reference Moon modules: Apex (sales), Epic (service delivery), Aware (accounting and billing).
+Implementations are not required to use the name "Moon" or to name specific modules in any particular way. The defining characteristic is company ownership and operational control, which distinguishes Moons from Satellites.
 
 Contrast with: *Satellite (Element 5)*
 
@@ -219,6 +229,16 @@ See: [governance/governance.md](../governance/governance.md)
 ## Published
 
 The third and final standard state in the LEBOSS governance model. A Published standard is an approved version of the LEBOSS specification, assigned a version number, and treated as immutable. Changes to a Published standard require a new version proceeding through the full governance workflow.
+
+---
+
+## Reference Model
+
+The LEBOSS Reference Model is the six-element conceptual architecture defined in Section 5 of the LEBOSS standard, using the spatial naming convention: Universe (0), Galaxy (1), Star (2), Planet (3), Moon (4), Satellite (5).
+
+The Reference Model is an illustrative framework, not a required naming convention. Implementations MAY use any internal terminology while still claiming LEBOSS alignment, provided they preserve the underlying ownership hierarchy, data boundaries, dependency rules, and access control relationships defined in the standard.
+
+See also: *LEBOSS Elements*
 
 ---
 
