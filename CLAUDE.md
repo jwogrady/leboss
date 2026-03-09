@@ -10,6 +10,8 @@ It serves two purposes:
 
 2. **A published presentation** — a Slidev slide deck at `presentation/slides.md`, deployed to **https://leboss.status26.com/** via Netlify (CNAME: `ephemeral-hotteok-2470e0.netlify.app`). This is the public-facing marketing and education layer for the standard.
 
+> **Note on path naming:** The presentation lives at `presentation/` (singular), not `presentations/` (plural). This directory serves as both the Netlify build root (`netlify.toml` sets `base = "presentation"`) and the canonical preserved artifact of the original slide deck. Do not rename or move it — the Netlify build will break.
+
 ## Repository Structure
 
 ```
@@ -36,12 +38,12 @@ LEBOSS uses semantic versioning `X.Y.Z` with LEBOSS-specific meaning:
 | Position | Label | Meaning |
 |----------|-------|---------|
 | `Z` (rightmost) | **Draft** | A working draft in progress |
-| `Y` (middle) | **Committee Review** | Accepted draft, approved by committee and ready for member vote |
+| `Y` (middle) | **Committee Vote** | Accepted draft, approved by committee and open for member ratification |
 | `X` (leftmost) | **Published** | Committee and member approved — the active canonical standard |
 
 **Examples:**
 - `0.0.1` — First draft (current state, no committee review yet)
-- `0.1.0` — Committee has accepted and opened for member vote
+- `0.1.0` — Committee Vote opened for member ratification
 - `1.0.0` — Published canonical standard, subscribed to by the community
 
 The current version is `0.0.1` — a working draft open for community contribution.
@@ -66,6 +68,6 @@ The current version is `0.0.1` — a working draft open for community contributi
 
 ## Governance Workflow
 
-`Proposal` (PR opened) → `Draft` (Z increments) → `Committee Review` (Y increments) → `Published` (X increments)
+`Proposal` (PR opened) → `Draft` (Z increments) → `Committee Vote` (Y increments) → `Published` (X increments)
 
 All changes to standards documents go through pull requests. See `governance/governance.md` and `CONTRIBUTING.md`.
