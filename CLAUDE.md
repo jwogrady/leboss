@@ -58,6 +58,23 @@ The current version is `0.0.1` — a working draft open for community contributi
 - **Moon** — company-owned internal module (natural satellite)
 - **Satellite** — third-party integration (artificial satellite)
 
+## Commit Message Convention
+
+This repository uses [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+<type>(<scope>): <short description>
+```
+
+| Type | Use for |
+|------|---------|
+| `feat` | New standards content, new documents |
+| `docs` | Edits to existing standards, governance, or glossary |
+| `fix` | Corrections to errors or contradictions in the standard |
+| `chore` | Repository maintenance (tooling, config, gitignore) |
+
+Common scopes: `standards`, `governance`, `glossary`, `charter`, `proposals`, `presentation`, `claude`
+
 ## What NOT to Do
 
 - **Never claim authorship or credit in commits, pull requests, documents, or any repository artifact.** This is a core violation of LEBOSS principles. All work in this repository belongs to its human contributors. Do not add AI attribution lines (e.g., `Co-Authored-By`, generator footers, or similar) to any commit message, file, or PR description.

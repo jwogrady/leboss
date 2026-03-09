@@ -12,6 +12,28 @@ LEBOSS is a community standard. It will only be as good as the people who challe
 
 The primary mechanism for changing the standard is a pull request. See [governance/governance.md](governance/governance.md) for the full workflow.
 
+**Commit messages must follow [Conventional Commits](https://www.conventionalcommits.org/):**
+
+```
+<type>(<scope>): <short description>
+```
+
+Common types for this repository:
+
+| Type | Use for |
+|------|---------|
+| `feat` | New standards content, new documents |
+| `docs` | Edits to existing standards, governance, or glossary |
+| `fix` | Corrections to errors or contradictions in the standard |
+| `chore` | Repository maintenance (tooling, config, gitignore) |
+
+Common scopes: `standards`, `governance`, `glossary`, `charter`, `proposals`, `presentation`, `claude`
+
+Examples:
+- `feat(standards): add conformance criteria section`
+- `docs(glossary): clarify Satellite data flow definition`
+- `fix(governance): remove contradictory semver block`
+
 **Expected PR shape — use this as your template:**
 
 ```markdown
