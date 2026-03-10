@@ -3,9 +3,9 @@
   "scripts": {
     "dev": "slidev overview.md",
     "build": "slidev build overview.md --out dist",
-    "build:architecture": "slidev build architecture.md --out dist/architecture",
-    "build:governance": "slidev build governance.md --out dist/governance",
-    "build:all": "npm run build && npm run build:architecture && npm run build:governance",
+    "build:architecture": "slidev build architecture.md --out dist/architecture --base /architecture/",
+    "build:governance": "slidev build governance.md --out dist/governance --base /governance/",
+    "build:all": "npm run build && npm run build:architecture && npm run build:governance && printf '/architecture/*  /architecture/index.html  200\\n/governance/*  /governance/index.html  200\\n/*  /index.html  200\\n' > dist/_redirects",
     "export": "slidev export overview.md"
   },
   "dependencies": {
