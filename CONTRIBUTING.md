@@ -129,9 +129,45 @@ This is not a comprehensive list. Use judgment.
 
 ---
 
+## The Proposal Directory Workflow
+
+LEBOSS changes are tracked through proposal directories. Each accepted version of the specification has a corresponding directory:
+
+```
+proposals/
+├── 0.0.1/proposal.md   ← original doctrine and architecture
+├── 0.0.2/proposal.md   ← normative rule register
+├── ...
+└── 0.0.N/proposal.md   ← your proposal
+```
+
+When you open a proposal:
+
+1. Create a branch named `proposal/X.Y.Z` where `X.Y.Z` is the next draft version
+2. Create `proposals/X.Y.Z/proposal.md` documenting the scope, motivation, and rationale
+3. Make your changes to the relevant specification files
+4. Open a pull request targeting `main`
+
+Proposal documents serve as the permanent change log of the specification. They explain *why* a change was made, not just what changed. Future implementers rely on this context.
+
+**Proposal lifecycle:**
+
+```
+Proposal (PR opened) → Draft (accepted for committee review) → Committee Vote → Published
+```
+
+- **Proposal** — any pull request against this repository introducing or modifying specification content. Version `Z` (rightmost) increments.
+- **Draft** — a Proposal accepted by the committee for formal review. A 14-day minimum discussion period applies.
+- **Committee Vote** — a Draft advanced for member ratification. Version `Y` (middle) increments. A 14-day minimum vote period applies.
+- **Published** — a ratified version. Version `X` (leftmost) increments. The document is immutable at this state.
+
+See [governance/governance.md](governance/governance.md) for the full workflow and [governance/committee.md](governance/committee.md) for committee roles.
+
+---
+
 ## Getting Started
 
-1. Read [standards/leboss-standard-0.0.1.md](standards/leboss-standard-0.0.1.md)
+1. Read [standards/leboss-standard.md](standards/leboss-standard.md) — the current living specification
 2. Read [charter/mission.md](charter/mission.md) to understand the purpose
 3. Browse open issues and pull requests to see current discussions
 4. Open an issue or pull request when you are ready
