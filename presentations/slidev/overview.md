@@ -14,6 +14,12 @@ drawings:
 wakeLock: 'build'
 ---
 
+<div class="absolute top-4 right-6 text-sm opacity-70 flex gap-4">
+  <a href="/" class="hover:opacity-100 transition-opacity">Overview</a>
+  <a href="/architecture/" class="hover:opacity-100 transition-opacity">Architecture</a>
+  <a href="/governance/" class="hover:opacity-100 transition-opacity">Governance</a>
+</div>
+
 # **LEBOSS**
 
 ### Local Entrepreneur Business Operating System Standards
@@ -471,26 +477,34 @@ layout: center
 class: text-center
 ---
 
-# Explore the Architecture
+# Explore the LEBOSS Standard
+
+<div class="mt-6 max-w-2xl mx-auto text-sm text-gray-400">
+  The standard is organized into three presentation decks. Choose your starting point.
+</div>
 
 <div class="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto text-left">
 
-<div class="bg-white bg-opacity-10 rounded-xl p-6">
-  <h3 class="font-semibold text-blue-300 mb-2">Architecture Deck</h3>
-  <p class="text-sm text-gray-300 mb-4">Reference model, governance objects, operational flow, and the full normative architecture.</p>
-  <code class="text-xs text-gray-400">presentations/slidev/architecture.md</code>
+<div class="bg-blue-900 bg-opacity-30 border border-blue-700 rounded-xl p-5">
+  <h3 class="font-semibold text-blue-300 mb-1">Architecture</h3>
+  <p class="text-xs text-gray-400 mb-4">Reference model, governance objects, operational flow. For developers and system architects.</p>
+  <a href="/architecture/" class="inline-block px-5 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-medium text-white transition-colors">
+    Architecture Deep Dive →
+  </a>
 </div>
 
-<div class="bg-white bg-opacity-10 rounded-xl p-6">
-  <h3 class="font-semibold text-purple-300 mb-2">Governance Deck</h3>
-  <p class="text-sm text-gray-300 mb-4">Proposal lifecycle, versioning model, committee roles, and how to contribute to the standard.</p>
-  <code class="text-xs text-gray-400">presentations/slidev/governance.md</code>
+<div class="bg-purple-900 bg-opacity-30 border border-purple-700 rounded-xl p-5">
+  <h3 class="font-semibold text-purple-300 mb-1">Governance</h3>
+  <p class="text-xs text-gray-400 mb-4">Proposal lifecycle, versioning model, committee roles. For contributors and implementers.</p>
+  <a href="/governance/" class="inline-block px-5 py-2 bg-purple-600 hover:bg-purple-500 rounded-lg text-sm font-medium text-white transition-colors">
+    Governance Model →
+  </a>
 </div>
 
 </div>
 
-<div class="mt-8 text-sm text-gray-400">
-  Full specification: <strong class="text-white">github.com/jwogrady/leboss</strong>
+<div class="mt-8 text-sm text-gray-500">
+  Full specification: <strong class="text-gray-300">github.com/jwogrady/leboss</strong>
 </div>
 
 ---
