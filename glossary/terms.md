@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.2
+**Version:** 0.0.3
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -12,13 +12,15 @@
 
 ## Access Grant
 
-A discrete, explicitly issued authorization from a Universe owner (or their designated delegate) that permits a specific party to perform specific operations on specific data within the LEBOSS hierarchy.
+A discrete, explicitly issued authorization from a governing entity (or their designated delegate) that permits a specific party to perform specific operations on specific data within a LEBOSS-compliant system.
 
-An Access Grant must specify: the scope of data covered, the operations permitted, the duration or expiration conditions, the party to whom it is issued, and the stated purpose.
+An Access Grant is a governance object with defined required fields: a unique identifier, the issuing entity, the subject, a defined scope, permitted operations, purpose, issuance timestamp, expiry conditions, and an explicit revocability flag.
 
-Access Grants are revocable at any time by the Universe owner.
+Access Grants are revocable at any time by the governing entity. Systems must validate an Access Grant before allowing data access, and must reject access where no valid grant exists.
 
-See also: *Least Privilege*, *Service Provider*, *Universe*
+See also: *Governance Object*, *Least Privilege*, *Governing Entity*
+
+Full object definition: [`standards/objects/access-grant.md`](../standards/objects/access-grant.md)
 
 ---
 
@@ -28,9 +30,21 @@ See: *Satellite (Element 5)*
 
 ---
 
+## Audit Record
+
+A structured governance object recording a single governed event within a LEBOSS-compliant system. Required fields include a unique event identifier, timestamp, actor identifier, action type, resource identifier, and outcome.
+
+Audit Records are immutable — they must not be modified after creation. They must be retained for a minimum of 36 months and must be available to the governing entity upon request.
+
+See also: *Governance Object*, *Audit Trail*
+
+Full object definition: [`standards/objects/audit-record.md`](../standards/objects/audit-record.md)
+
+---
+
 ## Audit Trail
 
-A complete, tamper-evident record of all operations performed on data within a LEBOSS-compliant system, including who performed the operation, what operation was performed, what data was affected, and when the operation occurred.
+The complete set of Audit Records for a governed environment. A complete, tamper-evident record of all operations performed on data within a LEBOSS-compliant system, including who performed the operation, what operation was performed, what data was affected, and when the operation occurred.
 
 The Audit Trail is the mechanism by which data ownership is made verifiable rather than merely asserted.
 
@@ -138,6 +152,16 @@ Example: Smith Plumbing is a Galaxy within the Smith & Sons LLC Universe.
 
 ---
 
+## Governance Object
+
+A structured data primitive defined by the LEBOSS standard that gives operational form to a normative rule. Governance objects define required fields and normative properties without prescribing implementation format or storage mechanism.
+
+The three governance objects defined in LEBOSS 0.0.3 are: Access Grant, Integration Descriptor, and Audit Record.
+
+See also: *Access Grant*, *Integration Descriptor*, *Audit Record*
+
+---
+
 ## Governing Committee
 
 See: *Committee* (defined in [governance/committee.md](../governance/committee.md))
@@ -151,6 +175,18 @@ The root owner of a LEBOSS-compliant system: the person, family, or registered l
 The term "Governing Entity" is used in implementation-neutral contexts where the spatial metaphor name (Universe) is not appropriate.
 
 See also: *Universe (Element 0)*
+
+---
+
+## Integration Descriptor
+
+A governance object that records the authorization of an external integration (Satellite equivalent) to receive data from a LEBOSS-compliant system. An Integration Descriptor must exist before any external integration may receive primary operational data.
+
+Required fields include a unique integration identifier, the provider name, the authorizing entity, the authorization timestamp, the authorization level (governing entity or brand entity), granted permissions, and data flow descriptions.
+
+See also: *Governance Object*, *Satellite (Element 5)*
+
+Full object definition: [`standards/objects/integration-descriptor.md`](../standards/objects/integration-descriptor.md)
 
 ---
 
