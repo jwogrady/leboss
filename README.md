@@ -117,7 +117,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 ├── charter/
 │   └── mission.md                           # LEBOSS mission and philosophical foundation
 ├── standards/
-│   ├── leboss-standard.md                   # The living specification (v0.0.9)
+│   ├── leboss-standard.md                   # The living specification (pre-v0.1.0 draft)
 │   ├── leboss-normative-rules.md            # Flat normative rule register (40 rules)
 │   ├── leboss-governance-objects.md         # Governance object model
 │   ├── leboss-access-grant-protocol.md      # Access Grant lifecycle protocol
@@ -130,10 +130,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │       ├── integration-descriptor.md        # Integration Descriptor object definition
 │       └── audit-record.md                  # Audit Record object definition
 ├── proposals/
-│   ├── 0.0.1/ … 0.0.10/                    # Proposal documents (change history)
+│   ├── 0.0.1/ … 0.0.11/                    # Proposal documents (change history)
 │   └── */proposal.md
 ├── glossary/
-│   └── terms.md                             # Canonical terminology definitions (v0.0.9)
+│   └── terms.md                             # Canonical terminology definitions
 ├── governance/
 │   ├── governance.md                        # Proposal → Draft → Published workflow
 │   └── committee.md                         # Committee roles and responsibilities

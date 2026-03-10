@@ -2,13 +2,13 @@
 ## Local Entrepreneur Business Operating System Standards
 
 **Status:** Draft
-**Version:** 0.0.9
-**Updated through:** proposal/0.0.10
+**Target Release:** v0.1.0
+**Updated Through:** proposal/0.0.11
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
 
-> This document extracts every normative requirement from LEBOSS Standard 0.0.2 into a flat, enumerable rule register. Rules are drawn directly from the standard and do not introduce new requirements. This register is intended as an implementer reference and a compliance checklist.
+> This document extracts every normative requirement from the LEBOSS Standard into a flat, enumerable rule register. Rules are drawn directly from the standard and do not introduce new requirements. This register is intended as an implementer reference and a compliance checklist.
 >
 > In all cases, the full specification in [leboss-standard.md](leboss-standard.md) is authoritative. Where this register and the standard appear to conflict, the standard governs.
 
@@ -227,7 +227,7 @@ The service provider MUST NOT use primary operational data for any purpose beyon
 
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.9.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.11.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17).
@@ -246,4 +246,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register 0.0.2 — Derived from the standard. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.11. The standard governs in all cases of conflict.*

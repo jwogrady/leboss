@@ -1,8 +1,7 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.9
-**Status:** Proposal
-**Date:** 2026-03-09
+**Status:** Draft
+**Updated Through:** proposal/0.0.11
 
 ---
 
@@ -16,7 +15,7 @@ A discrete, explicitly issued authorization from a governing entity (or their de
 
 An Access Grant is a governance object with defined required fields: a unique identifier, the issuing entity, the subject, a defined scope, permitted operations, purpose, issuance timestamp, expiry conditions, and an explicit revocability flag.
 
-Access Grants are revocable at any time by the governing entity. Systems must validate an Access Grant before allowing data access, and must reject access where no valid grant exists.
+Access Grants are revocable at any time by the governing entity. Validation and lifecycle rules are defined in [`standards/leboss-access-grant-protocol.md`](../standards/leboss-access-grant-protocol.md).
 
 See also: *Governance Object*, *Least Privilege*, *Governing Entity*
 
@@ -58,7 +57,7 @@ Full protocol: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-
 
 A structured governance object recording a single governed event within a LEBOSS-compliant system. Required fields include a unique event identifier, timestamp, actor identifier, action type, resource identifier, and outcome.
 
-Audit Records are immutable — they must not be modified after creation. They must be retained for a minimum of 36 months and must be available to the governing entity upon request.
+Audit Records are immutable after creation and must remain accessible to the governing entity. Retention and integrity rules are defined in [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md).
 
 See also: *Governance Object*, *Audit Trail*
 
@@ -68,13 +67,11 @@ Full object definition: [`standards/objects/audit-record.md`](../standards/objec
 
 ## Audit Retention
 
-The requirement that Audit Records be preserved for a minimum defined period following the event they document. Under LEBOSS, Audit Records must be retained for a minimum of 36 months from the event timestamp, or for the duration of any active dispute, whichever is longer.
-
-Retention is a storage-layer requirement, not an application-layer configuration. A system that deletes Audit Records before the retention period expires — for any reason including contract termination, storage cost, or system migration — is non-compliant. Upon service termination, Audit Records must be transferred to the governing entity or retained per the governing entity's explicit instruction.
+The requirement that Audit Records be preserved for a minimum defined period following the event they document. Retention is a storage-layer requirement — Audit Records must remain available to the governing entity for the retention period regardless of service status or system migration.
 
 See also: *Audit Record*, *Audit Event*
 
-Full protocol: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
+Full retention rules: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
 
 ---
 
@@ -140,7 +137,7 @@ A party who holds and manages data on behalf of another party, under an obligati
 
 The practical ability of a governing entity to obtain their complete operational data environment — including primary operational data, configuration state, integration records, and audit records — in a machine-readable, independently usable form, through a mechanism within their direct control.
 
-Data portability is a normative requirement of LEBOSS-compliant systems, not an optional feature. A system that holds a governing entity's data but makes it difficult, incomplete, or format-locked to export does not satisfy this requirement regardless of any contractual portability claim.
+Data portability is a normative requirement of LEBOSS-compliant systems. Conformance requirements and export completeness rules are defined in [`standards/leboss-data-portability-protocol.md`](../standards/leboss-data-portability-protocol.md).
 
 See also: *Operational Data Export*, *Environment Migration*, *Primary Operational Data*
 

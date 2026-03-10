@@ -2,13 +2,13 @@
 ## Local Entrepreneur Business Operating System Standards
 
 **Status:** Draft
-**Version:** 0.0.9
-**Updated through:** proposal/0.0.10
+**Target Release:** v0.1.0
+**Updated Through:** proposal/0.0.11
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.10. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.11. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -468,7 +468,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is version `0.0.2` of the LEBOSS Standard — a working draft.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.11.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -660,4 +660,4 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.8 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.11 — Open for community review and pull request contribution.*

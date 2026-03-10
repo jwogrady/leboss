@@ -2,7 +2,7 @@
 
 **Status:** Draft
 **Version:** 0.0.11
-**Applies to:** LEBOSS Standard 0.0.9 and later
+**Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
 
