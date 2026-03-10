@@ -77,37 +77,39 @@ layout: center
 class: text-center
 ---
 
-# The Structural Issue
+# Traditional SaaS Architecture
 
-<div class="mt-8 max-w-2xl mx-auto">
+<div class="mt-4 max-w-3xl mx-auto">
 
-<div class="text-base text-gray-400 mb-8">SaaS architecture usually looks like this:</div>
+<div class="text-sm text-gray-400 mb-6">In many modern SaaS systems, the platform controls the operational data environment.</div>
 
-<div class="flex items-center justify-center gap-4">
-  <div class="bg-white bg-opacity-10 rounded-xl px-6 py-4 text-center min-w-32">
-    <div class="text-sm text-gray-400 mb-1">Business</div>
-    <div class="font-semibold">You</div>
+<div class="flex items-start justify-center gap-16">
+
+<div class="flex flex-col items-center gap-0">
+  <div class="bg-white bg-opacity-10 rounded-xl px-8 py-4 text-center w-44">
+    <div class="text-xs text-gray-400 mb-1">You</div>
+    <div class="font-semibold">Business</div>
   </div>
-  <div class="text-gray-500 text-2xl">→</div>
-  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-6 py-4 text-center min-w-32">
-    <div class="text-sm text-gray-400 mb-1">Platform</div>
-    <div class="font-semibold text-red-300">Vendor Controls</div>
+  <div class="text-gray-500 text-lg leading-tight">↓</div>
+  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-8 py-4 text-center w-44">
+    <div class="text-xs text-red-400 mb-1">Vendor controls</div>
+    <div class="font-semibold text-red-300">Platform</div>
   </div>
-  <div class="text-gray-500 text-2xl">→</div>
-  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-6 py-4 text-center min-w-32">
-    <div class="text-sm text-gray-400 mb-1">Data</div>
-    <div class="font-semibold text-red-300">Vendor Holds</div>
+  <div class="text-gray-500 text-lg leading-tight">↓</div>
+  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-8 py-4 text-center w-44">
+    <div class="text-xs text-red-400 mb-1">Vendor holds</div>
+    <div class="font-semibold text-red-300">Data</div>
   </div>
 </div>
 
-<div class="mt-10 space-y-3 text-sm text-gray-400 text-left max-w-lg mx-auto">
+<div class="space-y-3 text-sm text-gray-400 text-left max-w-xs mt-2">
   <div class="flex items-start gap-3">
     <div class="w-2 h-2 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></div>
-    <p>This structure concentrates operational control in the platform layer.</p>
+    <p>Businesses interact with the platform, but the platform governs the data structure, storage, and migration capabilities.</p>
   </div>
   <div class="flex items-start gap-3">
     <div class="w-2 h-2 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></div>
-    <p>Even when data exports exist, the operational environment is not portable — configurations, integrations, history, and audit trails rarely travel with a CSV file.</p>
+    <p>Even when exports exist, the operational system itself is difficult to move — configurations, integrations, and history rarely transfer.</p>
   </div>
   <div class="flex items-start gap-3">
     <div class="w-2 h-2 bg-yellow-400 rounded-full mt-1.5 flex-shrink-0"></div>
@@ -117,35 +119,112 @@ class: text-center
 
 </div>
 
+</div>
+
 ---
 layout: center
 class: text-center
 ---
 
-# The LEBOSS Idea
+# The LEBOSS Model
 
-<div class="mt-6 max-w-3xl mx-auto">
+<div class="mt-4 max-w-3xl mx-auto">
 
-<div class="text-xl text-gray-200 leading-relaxed mb-8">
-  LEBOSS separates <strong class="text-white">data ownership</strong> from <strong class="text-white">platform services</strong>.
+<div class="text-sm text-gray-400 mb-6">LEBOSS inverts the relationship. The business owns the data environment. Platforms serve it.</div>
+
+<div class="flex items-start justify-center gap-16">
+
+<div class="flex flex-col items-center gap-0">
+  <div class="bg-white bg-opacity-10 rounded-xl px-8 py-4 text-center w-52">
+    <div class="text-xs text-gray-400 mb-1">Root of all governance</div>
+    <div class="font-semibold">Business</div>
+  </div>
+  <div class="text-gray-400 text-xs leading-tight py-0.5">↓ owns</div>
+  <div class="bg-green-900 bg-opacity-40 border-2 border-green-500 rounded-xl px-8 py-5 text-center w-52">
+    <div class="text-xs text-green-400 mb-1">Belongs to the business</div>
+    <div class="font-bold text-green-300">Data Environment</div>
+  </div>
+  <div class="text-blue-400 text-xs leading-tight py-0.5">↑ serves</div>
+  <div class="bg-blue-900 bg-opacity-40 border border-blue-500 rounded-xl px-8 py-4 text-center w-52">
+    <div class="text-xs text-blue-400 mb-1">Operate on the environment</div>
+    <div class="font-semibold text-blue-300">Platforms</div>
+  </div>
 </div>
 
-<div class="grid grid-cols-2 gap-6 text-left">
-
-<div class="bg-green-900 bg-opacity-30 border border-green-600 rounded-xl p-5">
-  <div class="text-green-300 font-semibold mb-3">Businesses own their operational data environment</div>
-  <p class="text-sm text-gray-300">Customer records, operational workflows, integration history, audit trails — these belong to the business, not the platform that stores them.</p>
+<div class="space-y-3 text-sm text-gray-400 text-left max-w-xs mt-2">
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>In LEBOSS, the business owns the operational data environment — not the platform that stores it.</p>
+  </div>
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>Platforms provide infrastructure, integrations, and automation that operate on top of that environment.</p>
+  </div>
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-gray-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>Service providers do not own the business's operational data. They are stewards, not owners.</p>
+  </div>
 </div>
 
-<div class="bg-blue-900 bg-opacity-30 border border-blue-600 rounded-xl p-5">
-  <div class="text-blue-300 font-semibold mb-3">Platforms provide services on top of that environment</div>
-  <p class="text-sm text-gray-300">Infrastructure, tooling, interfaces, and integrations remain the platform's domain. Platforms innovate freely — without taking ownership of what the business generates.</p>
 </div>
 
 </div>
 
-<div class="mt-6 text-sm text-gray-400">
-  LEBOSS makes this separation <strong class="text-blue-300">architectural</strong> — built into the structure of systems — rather than merely contractual.
+---
+
+# How LEBOSS Works
+
+<div class="grid grid-cols-2 gap-8 mt-4">
+
+<div class="flex flex-col items-center gap-0">
+  <div class="bg-blue-900 bg-opacity-40 border border-blue-600 rounded-lg px-6 py-2 text-sm font-semibold text-blue-300 w-52 text-center">Governing Entity</div>
+  <div class="text-gray-500 text-xs py-0.5">↓ owns</div>
+  <div class="bg-purple-900 bg-opacity-40 border border-purple-600 rounded-lg px-6 py-2 text-sm font-semibold text-purple-300 w-52 text-center">Resources</div>
+  <div class="text-gray-500 text-xs py-0.5">↓ access controlled by</div>
+  <div class="bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-6 py-2 text-sm font-semibold text-green-300 w-52 text-center">Access Grants</div>
+  <div class="text-gray-500 text-xs py-0.5">↓ authorize</div>
+  <div class="bg-yellow-900 bg-opacity-40 border border-yellow-600 rounded-lg px-6 py-2 text-sm font-semibold text-yellow-300 w-52 text-center">Integrations</div>
+  <div class="text-gray-500 text-xs py-0.5">↓ operate on Resources, recorded in</div>
+  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-lg px-6 py-2 text-sm font-semibold text-red-300 w-52 text-center">Audit Records</div>
+  <div class="text-gray-500 text-xs py-0.5">↓ enable</div>
+  <div class="bg-indigo-900 bg-opacity-40 border border-indigo-600 rounded-lg px-6 py-2 text-sm font-semibold text-indigo-300 w-52 text-center">Data Portability</div>
+</div>
+
+<div class="space-y-4 text-sm mt-1">
+  <div class="text-gray-400 text-xs mb-3">This governance loop ensures:</div>
+
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <div>
+      <strong class="text-blue-300">Business ownership</strong>
+      <p class="text-gray-400 text-xs mt-0.5">The governing entity is the root of all access decisions. No data operation is authorized without their explicit grant.</p>
+    </div>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <div>
+      <strong class="text-green-300">Transparent access control</strong>
+      <p class="text-gray-400 text-xs mt-0.5">Every party that touches business data holds an explicit, scoped, revocable Access Grant.</p>
+    </div>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <div>
+      <strong class="text-red-300">Auditability</strong>
+      <p class="text-gray-400 text-xs mt-0.5">Every governed action produces an immutable Audit Record the business can inspect at any time.</p>
+    </div>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-indigo-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <div>
+      <strong class="text-indigo-300">Portability of the operational environment</strong>
+      <p class="text-gray-400 text-xs mt-0.5">The complete environment — data, grants, integrations, audit history — is exportable at any time.</p>
+    </div>
+  </div>
+
 </div>
 
 </div>
