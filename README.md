@@ -70,6 +70,7 @@ The specification is organized into a base standard plus a set of governance pro
 | Document | Content |
 |----------|---------|
 | [standards/leboss-standard.md](standards/leboss-standard.md) | The base standard: reference model, data ownership doctrine, service provider responsibilities, conformance |
+| [standards/conformance.md](standards/conformance.md) | Conformance definition — minimum requirements for LEBOSS-compliant implementations |
 | [standards/leboss-normative-rules.md](standards/leboss-normative-rules.md) | Flat enumerable rule register (40 rules across 6 groups) |
 | [standards/leboss-governance-objects.md](standards/leboss-governance-objects.md) | Governance object model |
 | [standards/objects/access-grant.md](standards/objects/access-grant.md) | Access Grant object definition |
