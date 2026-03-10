@@ -39,7 +39,7 @@ The Resource Model addresses all three gaps simultaneously by establishing:
 | Document | Change |
 |----------|--------|
 | `standards/leboss-resource-model.md` | New — full Resource Model specification |
-| `standards/leboss-standard-0.0.2.md` | Updated — new §16 references the model |
+| `standards/leboss-standard.md` | Updated — new §16 references the model |
 | `glossary/terms.md` | Updated — four new terms |
 
 ---

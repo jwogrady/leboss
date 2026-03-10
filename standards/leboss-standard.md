@@ -1,15 +1,14 @@
-# LEBOSS Standard 0.0.2
+# LEBOSS Standard
 ## Local Entrepreneur Business Operating System Standards
 
-**Status:** Proposal
-**Version:** 0.0.2
-**Date:** 2026-03-09
-**Branch:** proposal/0.0.2
+**Status:** Draft
+**Version:** 0.0.9
+**Updated through:** proposal/0.0.10
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
 
-> *This document is the second draft of the LEBOSS specification. It refines and formalizes version 0.0.1 without introducing new architecture. The doctrine, reference model, and data ownership rules established in 0.0.1 are preserved and strengthened here.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.10. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -496,7 +495,7 @@ Items deferred to future versions:
 
 ## 11. Governance Objects
 
-The normative rules in this standard and in the rule register (`leboss-normative-rules-0.0.2.md`) require that access be explicitly granted, that integrations be explicitly authorized, and that all governed events be auditable. These requirements can only be satisfied if the structures that record those facts are defined.
+The normative rules in this standard and in the rule register (`leboss-normative-rules.md`) require that access be explicitly granted, that integrations be explicitly authorized, and that all governed events be auditable. These requirements can only be satisfied if the structures that record those facts are defined.
 
 Governance objects are the structured data primitives that give operational form to these rules. They define what must exist — the required fields and normative properties of grants, authorizations, and event records — without prescribing implementation format or protocol.
 

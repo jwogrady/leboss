@@ -1,16 +1,16 @@
-# LEBOSS Normative Rule Register 0.0.2
+# LEBOSS Normative Rule Register
 ## Local Entrepreneur Business Operating System Standards
 
-**Status:** Proposal
-**Version:** 0.0.2
-**Date:** 2026-03-09
-**Derived from:** [leboss-standard-0.0.2.md](leboss-standard-0.0.2.md)
+**Status:** Draft
+**Version:** 0.0.9
+**Updated through:** proposal/0.0.10
+**Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
 
 > This document extracts every normative requirement from LEBOSS Standard 0.0.2 into a flat, enumerable rule register. Rules are drawn directly from the standard and do not introduce new requirements. This register is intended as an implementer reference and a compliance checklist.
 >
-> In all cases, the full specification in [leboss-standard-0.0.2.md](leboss-standard-0.0.2.md) is authoritative. Where this register and the standard appear to conflict, the standard governs.
+> In all cases, the full specification in [leboss-standard.md](leboss-standard.md) is authoritative. Where this register and the standard appear to conflict, the standard governs.
 
 ---
 

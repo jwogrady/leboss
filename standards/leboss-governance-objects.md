@@ -14,7 +14,7 @@
 
 ## 1. Introduction
 
-The LEBOSS normative rule register (`leboss-normative-rules-0.0.2.md`) establishes 40 enforceable requirements. Many of these requirements reference concepts such as "explicit access grant," "authorized integration," and "auditable record" without defining the structure those concepts must take.
+The LEBOSS normative rule register (`leboss-normative-rules.md`) establishes 40 enforceable requirements. Many of these requirements reference concepts such as "explicit access grant," "authorized integration," and "auditable record" without defining the structure those concepts must take.
 
 This document defines the minimum structured objects that make those requirements implementable. It bridges the gap between normative rules and operational systems.
 
