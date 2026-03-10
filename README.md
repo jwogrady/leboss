@@ -33,9 +33,9 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md) — it explains how to open a prop
 | [governance/governance.md](governance/governance.md) | How the standard is proposed, reviewed, and published |
 | [governance/committee.md](governance/committee.md) | Who governs the standard and how |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute a proposal or join the committee |
-| [presentations/slidev/overview.md](presentations/slidev/overview.md) | Overview presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
-| [presentations/slidev/architecture.md](presentations/slidev/architecture.md) | Architecture presentation — reference model and governance objects |
-| [presentations/slidev/governance.md](presentations/slidev/governance.md) | Governance presentation — proposal lifecycle and conformance |
+| [leboss.status26.com](https://leboss.status26.com/) | Overview deck — entry point for the presentation portal |
+| [leboss.status26.com/architecture/](https://leboss.status26.com/architecture/) | Architecture deck — reference model and governance objects |
+| [leboss.status26.com/governance/](https://leboss.status26.com/governance/) | Governance deck — proposal lifecycle and conformance |
 
 ---
 
