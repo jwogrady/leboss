@@ -1,7 +1,10 @@
 [build]
-  base    = "presentation"
-  command = "npm run build"
-  publish = "presentation/dist"
+  base    = "presentations/slidev"
+  command = "npm run build:all"
+  publish = "presentations/slidev/dist"
 
 [build.environment]
   NODE_VERSION = "18"
+
+[context.deploy-preview]
+  command = "npm run build:all"

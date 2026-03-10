@@ -446,6 +446,8 @@ A system **MUST NOT** be described as LEBOSS-aligned if it:
 - Allows external integrations to receive data without explicit authorization
 - Lacks auditable records of data access
 
+For the complete conformance definition — including minimum requirements, non-conformance conditions, and future certification scope — see [conformance.md](conformance.md).
+
 Formal conformance certification criteria will be defined in a subsequent version of the standard.
 
 ---

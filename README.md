@@ -1,7 +1,7 @@
 # LEBOSS
 ## Local Entrepreneur Business Operating System Standards
 
-**Current Version:** 0.0.9 (Draft) — preparing for 0.1.0 implementable draft release
+**Current Version:** 0.0.11 (Draft) — preparing for 0.1.0 implementable draft release
 
 ---
 
@@ -33,7 +33,9 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md) — it explains how to open a prop
 | [governance/governance.md](governance/governance.md) | How the standard is proposed, reviewed, and published |
 | [governance/committee.md](governance/committee.md) | Who governs the standard and how |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute a proposal or join the committee |
-| [presentation/slides.md](presentation/slides.md) | LEBOSS presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
+| [leboss.status26.com](https://leboss.status26.com/) | Overview deck — entry point for the presentation portal |
+| [leboss.status26.com/architecture/](https://leboss.status26.com/architecture/) | Architecture deck — reference model and governance objects |
+| [leboss.status26.com/governance/](https://leboss.status26.com/governance/) | Governance deck — proposal lifecycle and conformance |
 
 ---
 
@@ -68,6 +70,7 @@ The specification is organized into a base standard plus a set of governance pro
 | Document | Content |
 |----------|---------|
 | [standards/leboss-standard.md](standards/leboss-standard.md) | The base standard: reference model, data ownership doctrine, service provider responsibilities, conformance |
+| [standards/conformance.md](standards/conformance.md) | Conformance definition — minimum requirements for LEBOSS-compliant implementations |
 | [standards/leboss-normative-rules.md](standards/leboss-normative-rules.md) | Flat enumerable rule register (40 rules across 6 groups) |
 | [standards/leboss-governance-objects.md](standards/leboss-governance-objects.md) | Governance object model |
 | [standards/objects/access-grant.md](standards/objects/access-grant.md) | Access Grant object definition |
@@ -83,9 +86,9 @@ The specification is organized into a base standard plus a set of governance pro
 
 ## Current Status
 
-The specification is at version **0.0.9** — a complete, stabilized working draft.
+The specification is at version **0.0.11** — a complete, stabilized working draft with a canonical presentation system.
 
-Proposals 0.0.1 through 0.0.10 are open for community review:
+Proposals 0.0.1 through 0.0.11 are open for community review:
 
 | Proposal | Content |
 |----------|---------|
@@ -99,6 +102,7 @@ Proposals 0.0.1 through 0.0.10 are open for community review:
 | [0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
 | [0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
 | [0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
+| [0.0.11](proposals/0.0.11/proposal.md) | Canonical Presentation System |
 
 The next milestone is **0.1.0** — the first Committee Vote candidate. Pull requests and issue submissions are welcome.
 
@@ -134,15 +138,52 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │   ├── governance.md                        # Proposal → Draft → Published workflow
 │   └── committee.md                         # Committee roles and responsibilities
 ├── presentation/
-│   ├── slides.md                            # LEBOSS presentation (published at leboss.status26.com)
-│   ├── package.json                         # Slidev build tooling
-│   └── components/                          # Vue components for interactive slides
+│   ├── slides.md                            # Original LEBOSS deck — archive artifact (primary source)
+│   ├── package.json                         # Slidev build tooling (legacy)
+│   └── components/                          # Vue components
 ├── presentations/
-│   └── leboss-overview.md                   # Presentation archive reference
+│   ├── overview/
+│   │   └── README.md                        # Overview deck directory
+│   ├── architecture/
+│   │   └── README.md                        # Architecture deck directory
+│   ├── governance/
+│   │   └── README.md                        # Governance deck directory
+│   ├── slidev/
+│   │   ├── overview.md                      # Overview deck source (published at leboss.status26.com)
+│   │   ├── architecture.md                  # Architecture deck source
+│   │   ├── governance.md                    # Governance deck source
+│   │   └── package.json                     # Slidev build environment (Netlify build root)
+│   └── leboss-overview.md                   # Presentation system index
 ├── CONTRIBUTING.md                          # How to contribute
 ├── netlify.toml                             # Netlify build configuration
 └── README.md                               # This file
 ```
+
+---
+
+## Presentation System
+
+The LEBOSS repository includes a multi-deck Slidev presentation system organized by audience. All decks are in `presentations/` and share a common Slidev build environment.
+
+| Deck | Path | Audience |
+|------|------|----------|
+| **Overview** | [presentations/slidev/overview.md](presentations/slidev/overview.md) | Business owners, solution providers, developers evaluating the ecosystem |
+| **Architecture** | [presentations/slidev/architecture.md](presentations/slidev/architecture.md) | Developers, platform architects, technical implementers |
+| **Governance** | [presentations/slidev/governance.md](presentations/slidev/governance.md) | Contributors, maintainers, committee members |
+
+All three decks are deployed via Netlify. Every pull request automatically generates a preview deployment — reviewers can see presentation changes live before merging.
+
+To run any deck locally:
+
+```bash
+cd presentations/slidev
+npm install
+npm run dev                  # overview (default)
+npm run build:architecture   # architecture deck
+npm run build:governance     # governance deck
+```
+
+The original presentation — the historical source from which the formal standard was derived — is preserved as an archive artifact at [presentation/slides.md](presentation/slides.md) (singular directory).
 
 ---
 
