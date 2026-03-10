@@ -6,7 +6,7 @@ highlighter: shiki
 lineNumbers: false
 info: |
   ## LEBOSS — Data Sovereignty for Local Business
-  An open standard for local business data governance.
+  An open architecture model for business data governance.
   https://leboss.status26.com
 css: unocss
 drawings:
@@ -18,8 +18,12 @@ wakeLock: 'build'
 
 ### Local Entrepreneur Business Operating System Standards
 
-<div class="pt-10 text-gray-200">
-  An open standard for local business data governance
+<div class="pt-6 text-xl text-gray-200">
+  Restoring data ownership to local businesses.
+</div>
+
+<div class="pt-4 text-sm text-gray-400 max-w-lg mx-auto">
+  An open architecture model for business data governance — defining who owns what, who can access what, and who controls the data environment a business runs on.
 </div>
 
 <div class="pt-8">
@@ -29,67 +33,40 @@ wakeLock: 'build'
 </div>
 
 ---
-layout: center
-class: text-center
----
-
-# A Single Question
-
-<div class="text-3xl font-bold mt-10 text-white">
-  Who owns the data your business generates?
-</div>
-
-<div class="mt-8 text-xl text-gray-300 max-w-2xl mx-auto">
-  Not in a legal sense. <em>In a practical sense.</em>
-</div>
-
-<div class="mt-6 text-gray-400">
-  Who can export it? Who can read it? Who controls what happens to it when you switch platforms?
-</div>
-
----
 
 # The Problem
 
-<div class="grid grid-cols-2 gap-8 mt-8">
+<div class="mt-4 text-gray-300 text-base">
+  Local businesses generate the data that runs their companies.
+</div>
 
-<div class="space-y-4">
-  <h3 class="text-lg font-semibold text-blue-300">What most local businesses experience</h3>
-  <div class="space-y-3 text-sm text-gray-300">
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>Operational data lives inside software vendor systems — not systems the business controls</p>
-    </div>
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>Switching platforms means negotiating data exports, losing history, or starting over</p>
-    </div>
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>Third-party integrations receive data without explicit scope or audit trail</p>
-    </div>
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>In the AI era, business data trains models that generate value for platforms — not for the business</p>
-    </div>
+<div class="grid grid-cols-2 gap-6 mt-6">
+
+<div class="space-y-3">
+  <div class="flex items-center gap-3 bg-white bg-opacity-5 rounded-lg p-3">
+    <div class="w-2 h-2 bg-blue-400 rounded-full flex-shrink-0"></div>
+    <span class="text-sm">Customer records</span>
+  </div>
+  <div class="flex items-center gap-3 bg-white bg-opacity-5 rounded-lg p-3">
+    <div class="w-2 h-2 bg-purple-400 rounded-full flex-shrink-0"></div>
+    <span class="text-sm">Sales history</span>
+  </div>
+  <div class="flex items-center gap-3 bg-white bg-opacity-5 rounded-lg p-3">
+    <div class="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></div>
+    <span class="text-sm">Marketing analytics</span>
+  </div>
+  <div class="flex items-center gap-3 bg-white bg-opacity-5 rounded-lg p-3">
+    <div class="w-2 h-2 bg-yellow-400 rounded-full flex-shrink-0"></div>
+    <span class="text-sm">Operational workflows</span>
   </div>
 </div>
 
 <div class="space-y-4">
-  <h3 class="text-lg font-semibold text-purple-300">Why it happens</h3>
-  <div class="space-y-3 text-sm text-gray-300">
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>Platforms are designed so that the data architecture serves the vendor's interests</p>
-    </div>
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>Data portability is a feature — not a requirement — so it is often minimal or absent</p>
-    </div>
-    <div class="flex items-start gap-3">
-      <div class="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-      <p>This is a design choice, not a technical inevitability</p>
-    </div>
+  <div class="bg-red-900 bg-opacity-30 border border-red-700 rounded-lg p-4 text-sm text-gray-300">
+    In many modern SaaS systems, this data lives inside <strong class="text-white">vendor-controlled platforms</strong> — not systems the business owns or controls.
+  </div>
+  <div class="bg-red-900 bg-opacity-30 border border-red-700 rounded-lg p-4 text-sm text-gray-300">
+    Businesses often <strong class="text-white">cannot move their data environments</strong> easily. Switching a platform means negotiating exports, losing history, or starting over.
   </div>
 </div>
 
@@ -100,98 +77,165 @@ layout: center
 class: text-center
 ---
 
-# LEBOSS Proposes a Different Model
+# The Structural Issue
 
-<div class="mt-10 max-w-3xl mx-auto">
+<div class="mt-8 max-w-2xl mx-auto">
 
-<div class="text-xl text-gray-200 leading-relaxed">
-  The data generated by a local business belongs to the <strong class="text-white">owner of that business</strong> — not the software company, not the cloud platform, not the agency.
-</div>
+<div class="text-base text-gray-400 mb-8">SaaS architecture usually looks like this:</div>
 
-<div class="mt-8 text-gray-400">
-  LEBOSS makes this ownership <strong class="text-blue-300">architectural</strong> — built into the structure of systems — rather than merely contractual.
-</div>
-
-<div class="mt-8 grid grid-cols-3 gap-4">
-  <div class="bg-white bg-opacity-10 rounded-lg p-4">
-    <div class="text-blue-300 font-semibold mb-2">Service providers</div>
-    <div class="text-sm text-gray-300">are stewards of business data, not owners</div>
+<div class="flex items-center justify-center gap-4">
+  <div class="bg-white bg-opacity-10 rounded-xl px-6 py-4 text-center min-w-32">
+    <div class="text-sm text-gray-400 mb-1">Business</div>
+    <div class="font-semibold">You</div>
   </div>
-  <div class="bg-white bg-opacity-10 rounded-lg p-4">
-    <div class="text-purple-300 font-semibold mb-2">Access</div>
-    <div class="text-sm text-gray-300">is explicitly granted, scoped, and auditable</div>
+  <div class="text-gray-500 text-2xl">→</div>
+  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-6 py-4 text-center min-w-32">
+    <div class="text-sm text-gray-400 mb-1">Platform</div>
+    <div class="font-semibold text-red-300">Vendor Controls</div>
   </div>
-  <div class="bg-white bg-opacity-10 rounded-lg p-4">
-    <div class="text-green-300 font-semibold mb-2">Data portability</div>
-    <div class="text-sm text-gray-300">is a normative requirement, not a product feature</div>
+  <div class="text-gray-500 text-2xl">→</div>
+  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-6 py-4 text-center min-w-32">
+    <div class="text-sm text-gray-400 mb-1">Data</div>
+    <div class="font-semibold text-red-300">Vendor Holds</div>
   </div>
 </div>
 
-</div>
-
----
-
-# Five Foundation Principles
-
-<div class="grid grid-cols-1 gap-4 mt-6">
-
-<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
-  <div class="text-2xl font-bold text-blue-400 min-w-8 text-center">1</div>
-  <div>
-    <h3 class="text-lg font-semibold mb-1">Clarity</h3>
-    <p class="text-gray-300 text-sm">Every element in a LEBOSS-governed system has a defined role and place. There is no ambiguity about what owns what.</p>
+<div class="mt-10 space-y-3 text-sm text-gray-400 text-left max-w-lg mx-auto">
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>This structure concentrates operational control in the platform layer.</p>
   </div>
-</div>
-
-<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
-  <div class="text-2xl font-bold text-purple-400 min-w-8 text-center">2</div>
-  <div>
-    <h3 class="text-lg font-semibold mb-1">Modularity</h3>
-    <p class="text-gray-300 text-sm">Capabilities are interchangeable. Switching one service provider does not require migrating everything.</p>
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-red-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>Even when data exports exist, the operational environment is not portable — configurations, integrations, history, and audit trails rarely travel with a CSV file.</p>
   </div>
-</div>
-
-<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
-  <div class="text-2xl font-bold text-green-400 min-w-8 text-center">3</div>
-  <div>
-    <h3 class="text-lg font-semibold mb-1">Security</h3>
-    <p class="text-gray-300 text-sm">Data is separated by entity, access follows least privilege, and every governed action is auditable.</p>
-  </div>
-</div>
-
-<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
-  <div class="text-2xl font-bold text-yellow-400 min-w-8 text-center">4</div>
-  <div>
-    <h3 class="text-lg font-semibold mb-1">Legacy & Continuity</h3>
-    <p class="text-gray-300 text-sm">Systems survive ownership transitions. When a business changes hands, the data environment transfers with it.</p>
-  </div>
-</div>
-
-<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
-  <div class="text-2xl font-bold text-red-400 min-w-8 text-center">5</div>
-  <div>
-    <h3 class="text-lg font-semibold mb-1">Extensibility</h3>
-    <p class="text-gray-300 text-sm">New capabilities attach without disrupting existing ones. Growth does not require architectural rebuilds.</p>
+  <div class="flex items-start gap-3">
+    <div class="w-2 h-2 bg-yellow-400 rounded-full mt-1.5 flex-shrink-0"></div>
+    <p>This is a design choice. It is not a technical inevitability.</p>
   </div>
 </div>
 
 </div>
 
 ---
-layout: section
+layout: center
+class: text-center
 ---
 
-# The Reference Architecture
+# The LEBOSS Idea
 
-Six hierarchical elements that organize a LEBOSS-governed system
+<div class="mt-6 max-w-3xl mx-auto">
+
+<div class="text-xl text-gray-200 leading-relaxed mb-8">
+  LEBOSS separates <strong class="text-white">data ownership</strong> from <strong class="text-white">platform services</strong>.
+</div>
+
+<div class="grid grid-cols-2 gap-6 text-left">
+
+<div class="bg-green-900 bg-opacity-30 border border-green-600 rounded-xl p-5">
+  <div class="text-green-300 font-semibold mb-3">Businesses own their operational data environment</div>
+  <p class="text-sm text-gray-300">Customer records, operational workflows, integration history, audit trails — these belong to the business, not the platform that stores them.</p>
+</div>
+
+<div class="bg-blue-900 bg-opacity-30 border border-blue-600 rounded-xl p-5">
+  <div class="text-blue-300 font-semibold mb-3">Platforms provide services on top of that environment</div>
+  <p class="text-sm text-gray-300">Infrastructure, tooling, interfaces, and integrations remain the platform's domain. Platforms innovate freely — without taking ownership of what the business generates.</p>
+</div>
+
+</div>
+
+<div class="mt-6 text-sm text-gray-400">
+  LEBOSS makes this separation <strong class="text-blue-300">architectural</strong> — built into the structure of systems — rather than merely contractual.
+</div>
+
+</div>
+
+---
+
+# The Governance Model
+
+<div class="mt-4 text-sm text-gray-400 mb-6">Six elements that together ensure a business owner retains control over their operational data.</div>
+
+<div class="grid grid-cols-3 gap-4">
+
+<div class="bg-blue-900 bg-opacity-30 border border-blue-700 rounded-lg p-4">
+  <div class="text-blue-300 font-semibold text-sm mb-2">Governing Entity</div>
+  <p class="text-xs text-gray-400">The business owner. The root of all access decisions. All governance flows from here.</p>
+</div>
+
+<div class="bg-purple-900 bg-opacity-30 border border-purple-700 rounded-lg p-4">
+  <div class="text-purple-300 font-semibold text-sm mb-2">Resources</div>
+  <p class="text-xs text-gray-400">Identifiable units of business data — customer records, configurations, workflows — that are owned and governed.</p>
+</div>
+
+<div class="bg-green-900 bg-opacity-30 border border-green-700 rounded-lg p-4">
+  <div class="text-green-300 font-semibold text-sm mb-2">Access Grants</div>
+  <p class="text-xs text-gray-400">Explicit, scoped authorization issued by the governing entity to every party that touches business data. Revocable at any time.</p>
+</div>
+
+<div class="bg-yellow-900 bg-opacity-30 border border-yellow-700 rounded-lg p-4">
+  <div class="text-yellow-300 font-semibold text-sm mb-2">Integrations</div>
+  <p class="text-xs text-gray-400">Third-party connections. Each integration must have a declared descriptor of what data it accesses and in which direction.</p>
+</div>
+
+<div class="bg-red-900 bg-opacity-30 border border-red-700 rounded-lg p-4">
+  <div class="text-red-300 font-semibold text-sm mb-2">Audit Records</div>
+  <p class="text-xs text-gray-400">An immutable log of every governed action. The governing entity can read the full audit trail at any time.</p>
+</div>
+
+<div class="bg-indigo-900 bg-opacity-30 border border-indigo-700 rounded-lg p-4">
+  <div class="text-indigo-300 font-semibold text-sm mb-2">Data Portability</div>
+  <p class="text-xs text-gray-400">A normative requirement — not a product feature. Any governing entity may request a complete export of their data environment at any time.</p>
+</div>
+
+</div>
+
+---
+layout: center
+class: text-center
+---
+
+# The Operational Flow
+
+<div class="mt-6 max-w-3xl mx-auto">
+
+<div class="flex items-center justify-center gap-2 flex-wrap">
+  <div class="bg-blue-700 rounded-lg px-4 py-3 text-sm font-semibold">Actor</div>
+  <div class="text-gray-500 text-xl">→</div>
+  <div class="bg-purple-700 rounded-lg px-4 py-3 text-sm font-semibold">Operation</div>
+  <div class="text-gray-500 text-xl">→</div>
+  <div class="bg-yellow-700 rounded-lg px-4 py-3 text-sm font-semibold">Resource</div>
+  <div class="text-gray-500 text-xl">→</div>
+  <div class="bg-green-700 rounded-lg px-4 py-3 text-sm font-semibold">Access Grant</div>
+  <div class="text-gray-500 text-xl">→</div>
+  <div class="bg-orange-700 rounded-lg px-4 py-3 text-sm font-semibold">Integration</div>
+  <div class="text-gray-500 text-xl">→</div>
+  <div class="bg-red-700 rounded-lg px-4 py-3 text-sm font-semibold">Audit Record</div>
+</div>
+
+<div class="mt-8 bg-white bg-opacity-5 rounded-lg p-5 text-sm text-gray-300 text-left max-w-2xl mx-auto">
+  All operations in a compliant LEBOSS environment must pass through this governance flow. Every actor, every data operation, every integration — each one produces an auditable record tied back to the governing entity's explicit authorization.
+</div>
+
+<div class="mt-4 grid grid-cols-3 gap-3 text-xs text-gray-500 max-w-2xl mx-auto text-left">
+  <div>An <strong class="text-gray-300">actor</strong> can be a person, service, or integration.</div>
+  <div>The <strong class="text-gray-300">access grant</strong> defines what the actor is authorized to do on which resource.</div>
+  <div>The <strong class="text-gray-300">audit record</strong> captures the full event — actor, resource, grant, outcome.</div>
+</div>
+
+</div>
 
 ---
 layout: two-cols
 ---
 
-# The Six Elements
+# The Reference Model
 
-<div class="space-y-3 text-sm mt-4">
+<div class="text-xs text-yellow-300 mb-4 bg-yellow-900 bg-opacity-30 border border-yellow-700 rounded px-3 py-2">
+  Reference architecture — illustrative names. Implementations may use different terminology.
+</div>
+
+<div class="space-y-3 text-sm">
 
 <div class="flex items-center gap-3">
   <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-xs font-bold flex-shrink-0">0</div>
@@ -237,7 +281,7 @@ layout: two-cols
   <div class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-xs font-bold flex-shrink-0">5</div>
   <div>
     <span class="font-semibold">Satellite</span>
-    <span class="text-gray-400"> — third-party integration. Artificial satellite. Highest data sovereignty risk.</span>
+    <span class="text-gray-400"> — third-party integration. Artificial satellite.</span>
   </div>
 </div>
 
@@ -245,111 +289,149 @@ layout: two-cols
 
 ::right::
 
-<div class="pl-8 mt-4">
+<div class="pl-8 mt-12 space-y-4 text-xs text-gray-400">
 
-<div class="bg-white bg-opacity-5 rounded-lg p-5 space-y-2 text-xs text-gray-400">
-  <p class="font-semibold text-gray-200 mb-3">These names are illustrative.</p>
-  <p>The LEBOSS reference model uses spatial metaphors to communicate hierarchy and ownership relationships.</p>
-  <p class="mt-3">Implementations are not required to use these names internally. What matters is that the ownership and access relationships they describe are present in the system.</p>
-  <p class="mt-3 text-blue-300">Universe → owns Galaxy → owns Star ↔ Planet → uses Moon and Satellite</p>
+<div class="bg-white bg-opacity-5 rounded-lg p-4">
+  <p class="font-semibold text-gray-200 mb-2">These names are illustrative.</p>
+  <p>The LEBOSS reference model uses a spatial hierarchy to communicate ownership relationships. Implementations are not required to use these names internally.</p>
+  <p class="mt-3">What matters is that the ownership hierarchy, data flow direction, and access governance requirements are present in the system — regardless of what the implementation calls them.</p>
+</div>
+
+<div class="bg-white bg-opacity-5 rounded-lg p-3 mt-4">
+  <p class="text-blue-300 text-xs">Universe → Galaxy → Star ↔ Planet → Moon / Satellite</p>
+  <p class="mt-1 text-gray-500">Governing entity → brand → interface ↔ service → internal / external</p>
 </div>
 
 </div>
 
 ---
 
-# How Access Works
+# Five Foundation Principles
 
-<div class="mt-6 grid grid-cols-2 gap-6">
+<div class="grid grid-cols-1 gap-3 mt-4">
 
-<div class="space-y-4">
-  <h3 class="text-base font-semibold text-blue-300">The governing entity controls access</h3>
-  <div class="space-y-3 text-sm text-gray-300">
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      <strong class="text-white">Access Grants</strong> — explicit, scoped authorization for each party that touches business data. Revocable at any time.
-    </div>
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      <strong class="text-white">Integration Descriptors</strong> — a declared record of what every third-party integration does, what data it touches, and in which direction.
-    </div>
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      <strong class="text-white">Audit Records</strong> — an immutable log of every governed action. The governing entity can read the full audit trail at any time.
-    </div>
+<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
+  <div class="text-xl font-bold text-blue-400 min-w-8 text-center">1</div>
+  <div>
+    <span class="font-semibold">Clarity</span>
+    <span class="text-gray-300 text-sm"> — Every element in a LEBOSS-governed system has a defined role and place. There is no ambiguity about what owns what.</span>
   </div>
 </div>
 
-<div class="space-y-4">
-  <h3 class="text-base font-semibold text-purple-300">Data portability is not optional</h3>
-  <div class="space-y-3 text-sm text-gray-300">
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      Any governing entity can request a complete export of their operational data environment — at any time, including during contract termination.
-    </div>
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      Exports must be machine-readable and require no proprietary tools to process.
-    </div>
-    <div class="bg-white bg-opacity-5 rounded p-3">
-      Service providers who cannot produce a complete export are not compliant.
-    </div>
+<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
+  <div class="text-xl font-bold text-purple-400 min-w-8 text-center">2</div>
+  <div>
+    <span class="font-semibold">Modularity</span>
+    <span class="text-gray-300 text-sm"> — Capabilities are interchangeable. Switching one service provider does not require migrating everything else.</span>
+  </div>
+</div>
+
+<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
+  <div class="text-xl font-bold text-green-400 min-w-8 text-center">3</div>
+  <div>
+    <span class="font-semibold">Security</span>
+    <span class="text-gray-300 text-sm"> — Data is separated by entity, access follows least privilege, and every governed action is auditable.</span>
+  </div>
+</div>
+
+<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
+  <div class="text-xl font-bold text-yellow-400 min-w-8 text-center">4</div>
+  <div>
+    <span class="font-semibold">Legacy & Continuity</span>
+    <span class="text-gray-300 text-sm"> — Systems survive ownership transitions. When a business changes hands, the data environment transfers with it.</span>
+  </div>
+</div>
+
+<div class="flex items-start gap-4 bg-white bg-opacity-5 rounded-lg p-4">
+  <div class="text-xl font-bold text-red-400 min-w-8 text-center">5</div>
+  <div>
+    <span class="font-semibold">Extensibility</span>
+    <span class="text-gray-300 text-sm"> — New capabilities attach without disrupting existing ones. Growth does not require architectural rebuilds.</span>
   </div>
 </div>
 
 </div>
 
 ---
-layout: center
-class: text-center
+layout: two-cols
 ---
 
-# Who LEBOSS Is For
+# Why This Matters
 
-<div class="grid grid-cols-3 gap-6 mt-10">
+## For Businesses
 
-<div class="bg-white bg-opacity-10 rounded-xl p-6 text-left">
-  <div class="text-2xl mb-3">🏢</div>
-  <h3 class="font-semibold text-blue-300 mb-2">Local Business Owners</h3>
-  <p class="text-sm text-gray-300">LEBOSS tells you what to expect from every software vendor and service provider that touches your business data. If they cannot meet these requirements, you should know that before you sign.</p>
+<div class="space-y-4 mt-4 text-sm">
+
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-green-300">Long-term control of operational data</strong>
+    <p class="text-gray-400 mt-1">Your customer records, transaction history, and workflows remain yours — not held as leverage by a vendor.</p>
+  </div>
 </div>
 
-<div class="bg-white bg-opacity-10 rounded-xl p-6 text-left">
-  <div class="text-2xl mb-3">🛠️</div>
-  <h3 class="font-semibold text-purple-300 mb-2">Developers & Architects</h3>
-  <p class="text-sm text-gray-300">LEBOSS defines the access, integration, audit, and portability requirements for compliant systems. It provides a governance object model and normative rule register you can implement against.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-green-300">Ability to change service providers</strong>
+    <p class="text-gray-400 mt-1">A complete, portable export of your operational environment is a normative requirement — not a negotiating point.</p>
+  </div>
 </div>
 
-<div class="bg-white bg-opacity-10 rounded-xl p-6 text-left">
-  <div class="text-2xl mb-3">🤝</div>
-  <h3 class="font-semibold text-green-300 mb-2">Solution Providers</h3>
-  <p class="text-sm text-gray-300">LEBOSS-aligned products signal a commitment to customer data sovereignty. The standard gives you a clear, auditable framework to build against and demonstrate compliance.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-green-300">Protection from platform lock-in</strong>
+    <p class="text-gray-400 mt-1">Modular architecture means replacing one tool doesn't require replacing the entire stack.</p>
+  </div>
+</div>
+
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-green-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-green-300">Continuity over time</strong>
+    <p class="text-gray-400 mt-1">Systems survive ownership changes, platform pivots, and vendor failures.</p>
+  </div>
 </div>
 
 </div>
 
----
-layout: center
-class: text-center
----
+::right::
 
-# Get Involved
+## For Developers
 
-<div class="grid grid-cols-2 gap-8 mt-8 text-left max-w-3xl mx-auto">
+<div class="space-y-4 mt-4 pl-6 text-sm">
 
-<div class="space-y-4">
-  <h3 class="text-lg font-semibold text-blue-300">Use the standard</h3>
-  <p class="text-sm text-gray-300">Read the specification at <strong>github.com/jwogrady/leboss</strong>. Implement against the normative rule register. Open issues when the standard is unclear or incomplete.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-blue-300">A clear governance model</strong>
+    <p class="text-gray-400 mt-1">40 normative rules across six protocol groups — a precise implementation target with no ambiguity.</p>
+  </div>
 </div>
 
-<div class="space-y-4">
-  <h3 class="text-lg font-semibold text-purple-300">Contribute to the standard</h3>
-  <p class="text-sm text-gray-300">Open a proposal pull request. Every change to the standard goes through a public review process. Agreement and disagreement are both welcome — the standard improves through both.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-blue-300">Modular system design</strong>
+    <p class="text-gray-400 mt-1">Each service has a defined role, data boundary, and access surface. Systems are composable by design.</p>
+  </div>
 </div>
 
-<div class="space-y-4">
-  <h3 class="text-lg font-semibold text-green-300">Join the committee</h3>
-  <p class="text-sm text-gray-300">Committee members review proposals, participate in votes, and shape the direction of the standard. Open an issue titled <code>Committee Nomination: [Your Name]</code>.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-blue-300">Predictable integration patterns</strong>
+    <p class="text-gray-400 mt-1">Every third-party integration follows the same descriptor and access grant lifecycle. No one-off contract negotiation for data access.</p>
+  </div>
 </div>
 
-<div class="space-y-4">
-  <h3 class="text-lg font-semibold text-yellow-300">Build and report back</h3>
-  <p class="text-sm text-gray-300">The most valuable contributions come from people who have tried to build a LEBOSS-aligned system and found where the standard was unclear, incomplete, or wrong.</p>
+<div class="flex items-start gap-3">
+  <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
+  <div>
+    <strong class="text-blue-300">Standardized operational data environments</strong>
+    <p class="text-gray-400 mt-1">The Resource Model defines identifiable, namespaced, portable data units — enabling consistent tooling across implementations.</p>
+  </div>
 </div>
 
 </div>
@@ -364,21 +446,21 @@ class: text-center
 <div class="grid grid-cols-2 gap-6 mt-8 max-w-2xl mx-auto text-left">
 
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
-  <h3 class="font-semibold text-blue-300 mb-2">Architecture</h3>
-  <p class="text-sm text-gray-300 mb-4">Reference model, governance objects, operational flow, and data portability protocol.</p>
+  <h3 class="font-semibold text-blue-300 mb-2">Architecture Deck</h3>
+  <p class="text-sm text-gray-300 mb-4">The reference model in depth — governance objects, operational flow, data portability protocol, and the full normative architecture.</p>
   <code class="text-xs text-gray-400">presentations/slidev/architecture.md</code>
 </div>
 
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
-  <h3 class="font-semibold text-purple-300 mb-2">Governance</h3>
-  <p class="text-sm text-gray-300 mb-4">Proposal lifecycle, versioning model, committee roles, and conformance requirements.</p>
+  <h3 class="font-semibold text-purple-300 mb-2">Governance Deck</h3>
+  <p class="text-sm text-gray-300 mb-4">How the standard evolves — proposal lifecycle, versioning model, committee roles, conformance requirements, and how to contribute.</p>
   <code class="text-xs text-gray-400">presentations/slidev/governance.md</code>
 </div>
 
 </div>
 
 <div class="mt-8 text-sm text-gray-400">
-  Specification: <strong class="text-white">github.com/jwogrady/leboss</strong>
+  Full specification: <strong class="text-white">github.com/jwogrady/leboss</strong>
 </div>
 
 ---
@@ -389,10 +471,16 @@ layout: end
 
 **Local Entrepreneur Business Operating System Standards**
 
-<div class="mt-6 text-gray-300">
-  Open standard — open contribution — open governance
+<div class="mt-6 max-w-2xl mx-auto text-gray-200 leading-relaxed">
+  LEBOSS defines how local businesses can retain ownership of the data that powers their companies.
 </div>
 
-<div class="mt-4 text-sm text-gray-500">
+<div class="mt-4 max-w-2xl mx-auto text-gray-400 text-sm leading-relaxed">
+  Platforms can innovate freely — building better tools, better infrastructure, better interfaces — without taking ownership of the business's operational data environment.
+</div>
+
+<div class="mt-8 text-sm text-gray-500">
+  Open standard · Open contribution · Open governance
+  <br/>
   github.com/jwogrady/leboss · leboss.status26.com
 </div>
