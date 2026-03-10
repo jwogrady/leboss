@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.5
+**Version:** 0.0.6
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -30,6 +30,30 @@ See: *Satellite (Element 5)*
 
 ---
 
+## Audit Correlation
+
+The practice of linking Audit Records to the governance objects and events that produced them — specifically, referencing the `grant_id` of the Access Grant and the `integration_id` of the Integration Descriptor involved in a governed action.
+
+Correlation enables reconstruction of the full governance history for any event: who acted, under what authorization, through what channel, and in what causal sequence. In cascade events (such as a grant revocation triggering an integration suspension), correlation ensures both Audit Records carry shared identifiers, making the causal chain explicit.
+
+See also: *Audit Record*, *Audit Event*, *Access Grant*, *Integration Descriptor*
+
+Full protocol: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
+
+---
+
+## Audit Event
+
+A governed action that a LEBOSS-compliant system must capture as an Audit Record at the moment it occurs. Audit events include all data operations (read, write, transform, export), all Access Grant lifecycle transitions (issuance, revocation, expiration), and all Integration Descriptor lifecycle transitions (registration, authorization, activation, suspension, deactivation).
+
+An audit event that occurs but is not captured as a record is a compliance violation. The completeness of audit event capture — not merely the existence of an audit record mechanism — is a normative requirement.
+
+See also: *Audit Record*, *Audit Correlation*, *Audit Trail*
+
+Full protocol: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
+
+---
+
 ## Audit Record
 
 A structured governance object recording a single governed event within a LEBOSS-compliant system. Required fields include a unique event identifier, timestamp, actor identifier, action type, resource identifier, and outcome.
@@ -39,6 +63,18 @@ Audit Records are immutable — they must not be modified after creation. They m
 See also: *Governance Object*, *Audit Trail*
 
 Full object definition: [`standards/objects/audit-record.md`](../standards/objects/audit-record.md)
+
+---
+
+## Audit Retention
+
+The requirement that Audit Records be preserved for a minimum defined period following the event they document. Under LEBOSS, Audit Records must be retained for a minimum of 36 months from the event timestamp, or for the duration of any active dispute, whichever is longer.
+
+Retention is a storage-layer requirement, not an application-layer configuration. A system that deletes Audit Records before the retention period expires — for any reason including contract termination, storage cost, or system migration — is non-compliant. Upon service termination, Audit Records must be transferred to the governing entity or retained per the governing entity's explicit instruction.
+
+See also: *Audit Record*, *Audit Event*
+
+Full protocol: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
 
 ---
 
