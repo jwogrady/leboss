@@ -14,6 +14,12 @@ drawings:
 wakeLock: 'build'
 ---
 
+<div class="absolute top-4 right-6 text-sm opacity-70 flex gap-4">
+  <a href="/" class="hover:opacity-100 transition-opacity">Overview</a>
+  <a href="/architecture/" class="hover:opacity-100 transition-opacity">Architecture</a>
+  <a href="/governance/" class="hover:opacity-100 transition-opacity">Governance</a>
+</div>
+
 # **LEBOSS Governance**
 
 ### How the standard evolves
