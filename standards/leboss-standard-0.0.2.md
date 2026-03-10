@@ -65,6 +65,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 13. [Integration Descriptor Protocol](#13-integration-descriptor-protocol)
 14. [Audit Record Collection Protocol](#14-audit-record-collection-protocol)
 15. [Data Portability Protocol](#15-data-portability-protocol)
+16. [Resource Model](#16-resource-model)
 
 ---
 
@@ -635,4 +636,32 @@ The full protocol, including 28 normative rules (LEBOSS-DPP-1 through DPP-28) an
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.7 — Open for community review and pull request contribution.*
+---
+
+## 16. Resource Model
+
+Every governance operation in LEBOSS acts upon something. Access Grants authorize operations within a `scope`. Audit Records identify an affected resource via `resource_identifier`. Integration Descriptors describe data flows by category. The Data Portability Protocol requires export of all resources in the governed environment. The Resource Model defines what a resource is — its identity, type, ownership, and namespace — making the scope and target references of all prior protocols structurally precise.
+
+The model operationalizes the following structural requirements across existing governance objects:
+
+| Governance Object | Resource Reference | What the Model Defines |
+|-------------------|--------------------|------------------------|
+| Access Grant | `scope` field | A scope references one or more resources; scope must be resolvable to an identifiable set |
+| Audit Record | `resource_identifier` field | An identifier that is stable, namespace-qualified, and human-interpretable in context |
+| Integration Descriptor | `data_flows` field | Data categories map to `data_collection` resources within the defined type taxonomy |
+| Data Portability manifest | export categories | A complete export enumerates all resources owned by the governing entity |
+
+**Key structural requirements:**
+
+- Every operational asset that may be accessed, modified, or exported MUST be representable as a resource — a system that permits governed operations on unrepresented assets does not satisfy auditability requirements.
+- Resources MUST have stable, namespace-qualified identifiers that are unique within their namespace, consistent across export and import, and human-interpretable in context.
+- Resources MUST be classified by type; required type categories are: `data_collection`, `configuration`, `governance_object`, `service_endpoint`, and `workflow`.
+- Every resource MUST be associated with a governing entity. Ownership MUST be preserved across export and import operations.
+- Access Grant `scope` fields MUST reference resources or resource categories that resolve to an identifiable set. An unresolvable scope is invalid.
+- Authorized and denied operations MUST be recorded in Audit Records with both the resource identifier and the grant identifier — together forming the complete governance record of an operation.
+
+The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and defined identifier, type, ownership, namespace, and Access Grant relationship requirements, is specified in [`standards/leboss-resource-model.md`](leboss-resource-model.md).
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.8 — Open for community review and pull request contribution.*
