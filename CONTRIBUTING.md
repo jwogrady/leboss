@@ -146,7 +146,7 @@ When you open a proposal:
 1. Create a branch named `proposal/X.Y.Z` where `X.Y.Z` is the next draft version
 2. Create `proposals/X.Y.Z/proposal.md` documenting the scope, motivation, and rationale
 3. Make your changes to the relevant specification files
-4. Open a pull request targeting `main`
+4. Open a pull request targeting `master`
 
 Proposal documents serve as the permanent change log of the specification. They explain *why* a change was made, not just what changed. Future implementers rely on this context.
 

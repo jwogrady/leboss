@@ -20,7 +20,7 @@ Every version of the LEBOSS standard exists in one of three states.
 
 ### Proposal
 
-A **Proposal** is a pull request against the `main` branch of this repository that introduces or modifies content in the `/standards/` directory.
+A **Proposal** is a pull request against the `master` branch of this repository that introduces or modifies content in the `/standards/` directory.
 
 Anyone may open a Proposal. A Proposal represents an idea in its earliest formal state — worthy of committee attention but not yet accepted for review.
 

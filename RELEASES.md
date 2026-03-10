@@ -23,7 +23,7 @@ LEBOSS uses semantic versioning in the form `X.Y.Z` with LEBOSS-specific meaning
 
 All `0.x.x` versions are evolving drafts. The specification architecture and normative rules may change between drafts as community feedback is incorporated.
 
-Implementers MAY build against a `0.x.x` draft but should expect that specific rules, field names, or protocol requirements may be revised before `1.0.0`. Tracking the `main` branch or a specific tag is recommended for implementation work.
+Implementers MAY build against a `0.x.x` draft but should expect that specific rules, field names, or protocol requirements may be revised before `1.0.0`. Tracking the `master` branch or a specific tag is recommended for implementation work.
 
 ### Committee Vote Series (0.Y.0)
 
@@ -46,7 +46,7 @@ A `1.0.0` or higher version marks a Published standard:
 
 Specification versions are tracked through:
 
-1. **Git tags** — each release is tagged `vX.Y.Z` on the `main` branch
+1. **Git tags** — each release is tagged `vX.Y.Z` on the `master` branch
 2. **Proposal directories** — each draft increment has a corresponding `proposals/X.Y.Z/proposal.md` documenting what changed and why
 
 ### Draft Releases
@@ -74,7 +74,7 @@ Specification versions are tracked through:
 
 ## Tagging Convention
 
-Tags are applied to commits on the `main` branch after proposals are merged:
+Tags are applied to commits on the `master` branch after proposals are merged:
 
 ```
 git tag -a v0.1.0 -m "LEBOSS 0.1.0 — first implementable draft release"
