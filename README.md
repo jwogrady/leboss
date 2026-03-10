@@ -37,12 +37,12 @@ LEBOSS defines:
 
 ```mermaid
 flowchart LR
-    U["0 · Universe"]
-    G["1 · Galaxy"]
-    S["2 · Star"]
-    P["3 · Planet"]
-    M["4 · Moon"]
-    T["5 · Satellite"]
+    U(("0 · Universe"))
+    G(("1 · Galaxy"))
+    S(("2 · Star"))
+    P(("3 · Planet"))
+    M(("4 · Moon"))
+    T(("5 · Satellite"))
 
     U --> G --> S <--> P
     P --> M
