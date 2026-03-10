@@ -62,6 +62,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 10. [Versioning](#10-versioning)
 11. [Governance Objects](#11-governance-objects)
 12. [Access Grant Protocol](#12-access-grant-protocol)
+13. [Integration Descriptor Protocol](#13-integration-descriptor-protocol)
 
 ---
 
@@ -547,4 +548,30 @@ The full protocol, including 17 normative rules (LEBOSS-AGP-1 through AGP-17) an
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.4 — Open for community review and pull request contribution.*
+## 13. Integration Descriptor Protocol
+
+External integrations are the point of greatest data sovereignty risk in the LEBOSS reference model. The Integration Descriptor Protocol makes integrations governed actors — with explicit lifecycle state, enforced authorization, and full audit coverage.
+
+The protocol defines five lifecycle states: `registered`, `authorized`, `active`, `suspended`, and `deactivated`. Registration does not confer authorization. Authorization requires a valid, linked Access Grant. Active integrations must pass a five-step validation sequence before any data operation. Suspension is immediate and reversible; deactivation is immediate and permanent.
+
+The protocol operationalizes the following rules from this standard:
+
+| Rule | Protocol Section |
+|------|-----------------|
+| LEBOSS-ACC-5 — integrations must be explicitly authorized before receiving data | §4 Registration, §5 Authorization |
+| LEBOSS-ARCH-10 — integrations must not become unauthorized data exit paths | §6 Operational Validation |
+| LEBOSS-ARCH-11 — all data flows through integrations must be logged | §8 Audit Requirements |
+
+**Key behavioral requirements:**
+
+- An Integration Descriptor MUST exist before any external integration receives data. Registration is not authorization.
+- Integrations MUST hold a valid, linked Access Grant to transition to `active` state.
+- If an integration's linked Access Grant is revoked, the integration MUST be immediately suspended — no separate suspension command is required.
+- Suspension MUST take effect immediately. Deactivation is permanent — a new descriptor and grant are required for reconnection.
+- All lifecycle events MUST generate Audit Records including `integration_id` and, for data operations, `grant_id`.
+
+The full protocol, including 26 normative rules (LEBOSS-IDP-1 through IDP-26) and defined lifecycle state machine, is specified in [`standards/leboss-integration-protocol.md`](leboss-integration-protocol.md).
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.5 — Open for community review and pull request contribution.*

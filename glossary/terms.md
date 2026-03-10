@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.4
+**Version:** 0.0.5
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -187,6 +187,42 @@ Required fields include a unique integration identifier, the provider name, the 
 See also: *Governance Object*, *Satellite (Element 5)*
 
 Full object definition: [`standards/objects/integration-descriptor.md`](../standards/objects/integration-descriptor.md)
+
+---
+
+## Integration Deactivation
+
+The permanent, irreversible termination of an external integration's authorization within a LEBOSS-compliant system. A deactivated integration must not receive or transmit primary operational data. Deactivation takes effect immediately and cannot be reversed — if the governing entity later wishes to reconnect the same external platform, a new Integration Descriptor with a new integration identifier must be created.
+
+Upon deactivation, the linked Access Grant must be revoked if not already revoked. The Integration Descriptor itself must be retained for audit purposes.
+
+Contrast with: *Integration Suspension*
+
+See also: *Integration Descriptor*, *Integration Lifecycle*
+
+---
+
+## Integration Lifecycle
+
+The defined set of states an external integration passes through during its operational lifetime within a LEBOSS-compliant system: `registered`, `authorized`, `active`, `suspended`, and `deactivated`. State transitions are governed by the Integration Descriptor Protocol.
+
+Registration records the integration but does not confer authorization. Authorization requires a valid, linked Access Grant. An active integration must pass a five-step operational validation before each data operation. Suspension is immediate and reversible; deactivation is immediate and permanent.
+
+See also: *Integration Descriptor*, *Integration Suspension*, *Integration Deactivation*, *Grant Lifecycle*
+
+Full protocol: [`standards/leboss-integration-protocol.md`](../standards/leboss-integration-protocol.md)
+
+---
+
+## Integration Suspension
+
+The immediate, reversible halting of an external integration's data access by the governing entity. A suspended integration must not receive or transmit primary operational data. Suspension takes effect at the moment it is issued and may not be deferred.
+
+Suspension is reversible — the governing entity may reactivate a suspended integration after confirming that the linked Access Grant remains valid. If the linked Access Grant is revoked while the integration is suspended, a new grant must be issued before reactivation.
+
+Contrast with: *Integration Deactivation*
+
+See also: *Integration Lifecycle*, *Integration Descriptor*
 
 ---
 
