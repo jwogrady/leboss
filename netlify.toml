@@ -1,7 +1,7 @@
 [build]
-  base    = "presentation"
+  base    = "presentations/slidev"
   command = "npm run build"
-  publish = "presentation/dist"
+  publish = "presentations/slidev/dist"
 
 [build.environment]
   NODE_VERSION = "18"

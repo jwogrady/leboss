@@ -1,7 +1,7 @@
 # LEBOSS
 ## Local Entrepreneur Business Operating System Standards
 
-**Current Version:** 0.0.9 (Draft) — preparing for 0.1.0 implementable draft release
+**Current Version:** 0.0.11 (Draft) — preparing for 0.1.0 implementable draft release
 
 ---
 
@@ -33,7 +33,9 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md) — it explains how to open a prop
 | [governance/governance.md](governance/governance.md) | How the standard is proposed, reviewed, and published |
 | [governance/committee.md](governance/committee.md) | Who governs the standard and how |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute a proposal or join the committee |
-| [presentation/slides.md](presentation/slides.md) | LEBOSS presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
+| [presentations/overview/slides.md](presentations/overview/slides.md) | Overview presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
+| [presentations/architecture/slides.md](presentations/architecture/slides.md) | Architecture presentation — reference model and governance objects |
+| [presentations/governance/slides.md](presentations/governance/slides.md) | Governance presentation — proposal lifecycle and conformance |
 
 ---
 
@@ -83,9 +85,9 @@ The specification is organized into a base standard plus a set of governance pro
 
 ## Current Status
 
-The specification is at version **0.0.9** — a complete, stabilized working draft.
+The specification is at version **0.0.11** — a complete, stabilized working draft with a canonical presentation system.
 
-Proposals 0.0.1 through 0.0.10 are open for community review:
+Proposals 0.0.1 through 0.0.11 are open for community review:
 
 | Proposal | Content |
 |----------|---------|
@@ -99,6 +101,7 @@ Proposals 0.0.1 through 0.0.10 are open for community review:
 | [0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
 | [0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
 | [0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
+| [0.0.11](proposals/0.0.11/proposal.md) | Canonical Presentation System |
 
 The next milestone is **0.1.0** — the first Committee Vote candidate. Pull requests and issue submissions are welcome.
 
@@ -134,15 +137,49 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │   ├── governance.md                        # Proposal → Draft → Published workflow
 │   └── committee.md                         # Committee roles and responsibilities
 ├── presentation/
-│   ├── slides.md                            # LEBOSS presentation (published at leboss.status26.com)
-│   ├── package.json                         # Slidev build tooling
-│   └── components/                          # Vue components for interactive slides
+│   ├── slides.md                            # Original LEBOSS deck — archive artifact (primary source)
+│   ├── package.json                         # Slidev build tooling (legacy)
+│   └── components/                          # Vue components
 ├── presentations/
-│   └── leboss-overview.md                   # Presentation archive reference
+│   ├── overview/
+│   │   └── slides.md                        # Overview deck (published at leboss.status26.com)
+│   ├── architecture/
+│   │   └── slides.md                        # Architecture deck — reference model and governance objects
+│   ├── governance/
+│   │   └── slides.md                        # Governance deck — proposal lifecycle and conformance
+│   ├── slidev/
+│   │   └── package.json                     # Slidev build environment (Netlify build root)
+│   └── leboss-overview.md                   # Archive reference index
 ├── CONTRIBUTING.md                          # How to contribute
 ├── netlify.toml                             # Netlify build configuration
 └── README.md                               # This file
 ```
+
+---
+
+## Presentation System
+
+The LEBOSS repository includes a multi-deck Slidev presentation system organized by audience. All decks are in `presentations/` and share a common Slidev build environment.
+
+| Deck | Path | Audience |
+|------|------|----------|
+| **Overview** | [presentations/overview/slides.md](presentations/overview/slides.md) | Business owners, solution providers, developers evaluating the ecosystem |
+| **Architecture** | [presentations/architecture/slides.md](presentations/architecture/slides.md) | Developers, platform architects, technical implementers |
+| **Governance** | [presentations/governance/slides.md](presentations/governance/slides.md) | Contributors, maintainers, committee members |
+
+The Overview deck is deployed to **[leboss.status26.com](https://leboss.status26.com/)** via Netlify.
+
+To run any deck locally:
+
+```bash
+cd presentations/slidev
+npm install
+npm run dev                  # overview (default)
+npm run build:architecture   # architecture deck
+npm run build:governance     # governance deck
+```
+
+The original presentation — the historical source from which the formal standard was derived — is preserved as an archive artifact at [presentation/slides.md](presentation/slides.md) (singular directory).
 
 ---
 
