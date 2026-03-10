@@ -165,6 +165,26 @@ See [governance/governance.md](governance/governance.md) for the full workflow a
 
 ---
 
+## Preview Deployments
+
+When a pull request is opened, Netlify automatically builds a preview version of the LEBOSS presentation system.
+
+The preview includes all three decks:
+
+- `/` — Overview
+- `/architecture/` — Architecture
+- `/governance/` — Governance
+
+The preview URL follows the format:
+
+```
+https://deploy-preview-<PR_NUMBER>--leboss.netlify.app
+```
+
+Netlify posts this link as a status check on the pull request. Reviewers can open it to see how the change affects the presentation system before merging. No additional configuration is required.
+
+---
+
 ## Getting Started
 
 1. Read [standards/leboss-standard.md](standards/leboss-standard.md) — the current living specification
