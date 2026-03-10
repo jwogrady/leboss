@@ -64,6 +64,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 12. [Access Grant Protocol](#12-access-grant-protocol)
 13. [Integration Descriptor Protocol](#13-integration-descriptor-protocol)
 14. [Audit Record Collection Protocol](#14-audit-record-collection-protocol)
+15. [Data Portability Protocol](#15-data-portability-protocol)
 
 ---
 
@@ -606,4 +607,32 @@ The full protocol, including 24 normative rules (LEBOSS-ACP-1 through ACP-24) an
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.6 — Open for community review and pull request contribution.*
+---
+
+## 15. Data Portability Protocol
+
+The LEBOSS doctrine holds that operational data belongs to the governing entity. The Data Portability Protocol defines the system behaviors that make that ownership practically exercisable — ensuring the governing entity can obtain a complete, accurate, and independently usable copy of their operational data environment at any time, in a machine-readable format, through a mechanism within their direct control.
+
+The protocol operationalizes the following rules from this standard:
+
+| Rule | Protocol Section |
+|------|-----------------|
+| LEBOSS-CONT-1 — governed systems must support data portability | §3 Export Authority, §4 Export Scope |
+| LEBOSS-CONT-2 — governing entities must be able to exit systems with their data | §3 Export Authority, §5 Export Completeness |
+| LEBOSS-CONT-3 — data must be exportable in a machine-readable format | §6 Export Neutrality |
+| LEBOSS-CONT-4 — export obligations survive contract termination | §5 Export Completeness, §7 Migration Considerations |
+
+**Key behavioral requirements:**
+
+- Only the governing entity — or a party holding an explicit Access Grant with `export` permission — may initiate an operational data export. Service providers MUST NOT deliver exports to third parties without governing entity authorization.
+- A full export MUST include primary operational data, configuration state, integration records, audit records, and all associated governance objects. No category may be omitted without explicit governing entity authorization.
+- Exports MUST include a manifest enumerating categories, time ranges, record counts, and the generation timestamp. The governing entity MUST be able to verify completeness using the manifest independently.
+- Exports MUST use machine-readable, documented formats that do not require proprietary tools to open or use. Format documentation MUST accompany each export.
+- Export obligations survive contract termination. Access to export capability MUST NOT be restricted as a consequence of a termination notice.
+- Export events MUST produce Audit Records under the Audit Record Collection Protocol, linking the authorization, generation, and delivery events through a shared manifest identifier.
+
+The full protocol, including 28 normative rules (LEBOSS-DPP-1 through DPP-28) and defined authority, scope, completeness, neutrality, and audit requirements, is specified in [`standards/leboss-data-portability-protocol.md`](leboss-data-portability-protocol.md).
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.7 — Open for community review and pull request contribution.*
