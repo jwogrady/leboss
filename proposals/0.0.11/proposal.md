@@ -36,9 +36,9 @@ Additionally, the Netlify deployment at `https://leboss.status26.com/` currently
 | Document | Change |
 |----------|--------|
 | `presentations/slidev/package.json` | New — Slidev build environment for the presentation system |
-| `presentations/overview/slides.md` | New — Overview deck: data sovereignty rationale, principles, architecture introduction |
-| `presentations/architecture/slides.md` | New — Architecture deck: reference model, governance objects, operational flow |
-| `presentations/governance/slides.md` | New — Governance deck: proposal lifecycle, versioning, committee, conformance |
+| `presentations/slidev/overview.md` | New — Overview deck: data sovereignty rationale, principles, architecture introduction |
+| `presentations/slidev/architecture.md` | New — Architecture deck: reference model, governance objects, operational flow |
+| `presentations/slidev/governance.md` | New — Governance deck: proposal lifecycle, versioning, committee, conformance |
 | `netlify.toml` | Updated — build root changed from `presentation/` to `presentations/slidev/` |
 | `README.md` | Updated — Presentation System section added |
 

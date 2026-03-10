@@ -543,13 +543,13 @@ class: text-center
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
   <h3 class="font-semibold text-blue-300 mb-2">← Overview</h3>
   <p class="text-sm text-gray-300 mb-3">Data sovereignty rationale, five principles, who LEBOSS is for.</p>
-  <code class="text-xs text-gray-400">presentations/overview/slides.md</code>
+  <code class="text-xs text-gray-400">presentations/slidev/overview.md</code>
 </div>
 
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
   <h3 class="font-semibold text-purple-300 mb-2">Governance →</h3>
   <p class="text-sm text-gray-300 mb-3">Proposal lifecycle, versioning, committee, conformance.</p>
-  <code class="text-xs text-gray-400">presentations/governance/slides.md</code>
+  <code class="text-xs text-gray-400">presentations/slidev/governance.md</code>
 </div>
 
 </div>

@@ -1,11 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "dev": "slidev ../overview/slides.md",
-    "build": "slidev build ../overview/slides.md --out dist",
-    "build:architecture": "slidev build ../architecture/slides.md --out dist/architecture",
-    "build:governance": "slidev build ../governance/slides.md --out dist/governance",
-    "export": "slidev export ../overview/slides.md"
+    "dev": "slidev overview.md",
+    "build": "slidev build overview.md --out dist",
+    "build:architecture": "slidev build architecture.md --out dist/architecture",
+    "build:governance": "slidev build governance.md --out dist/governance",
+    "export": "slidev export overview.md"
   },
   "dependencies": {
     "@slidev/cli": "latest",

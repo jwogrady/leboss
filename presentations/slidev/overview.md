@@ -366,13 +366,13 @@ class: text-center
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
   <h3 class="font-semibold text-blue-300 mb-2">Architecture</h3>
   <p class="text-sm text-gray-300 mb-4">Reference model, governance objects, operational flow, and data portability protocol.</p>
-  <code class="text-xs text-gray-400">presentations/architecture/slides.md</code>
+  <code class="text-xs text-gray-400">presentations/slidev/architecture.md</code>
 </div>
 
 <div class="bg-white bg-opacity-10 rounded-xl p-5">
   <h3 class="font-semibold text-purple-300 mb-2">Governance</h3>
   <p class="text-sm text-gray-300 mb-4">Proposal lifecycle, versioning model, committee roles, and conformance requirements.</p>
-  <code class="text-xs text-gray-400">presentations/governance/slides.md</code>
+  <code class="text-xs text-gray-400">presentations/slidev/governance.md</code>
 </div>
 
 </div>

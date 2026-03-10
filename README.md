@@ -33,9 +33,9 @@ Start with [CONTRIBUTING.md](CONTRIBUTING.md) — it explains how to open a prop
 | [governance/governance.md](governance/governance.md) | How the standard is proposed, reviewed, and published |
 | [governance/committee.md](governance/committee.md) | Who governs the standard and how |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute a proposal or join the committee |
-| [presentations/overview/slides.md](presentations/overview/slides.md) | Overview presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
-| [presentations/architecture/slides.md](presentations/architecture/slides.md) | Architecture presentation — reference model and governance objects |
-| [presentations/governance/slides.md](presentations/governance/slides.md) | Governance presentation — proposal lifecycle and conformance |
+| [presentations/slidev/overview.md](presentations/slidev/overview.md) | Overview presentation — published at [leboss.status26.com](https://leboss.status26.com/) |
+| [presentations/slidev/architecture.md](presentations/slidev/architecture.md) | Architecture presentation — reference model and governance objects |
+| [presentations/slidev/governance.md](presentations/slidev/governance.md) | Governance presentation — proposal lifecycle and conformance |
 
 ---
 
@@ -142,14 +142,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │   └── components/                          # Vue components
 ├── presentations/
 │   ├── overview/
-│   │   └── slides.md                        # Overview deck (published at leboss.status26.com)
+│   │   └── README.md                        # Overview deck directory
 │   ├── architecture/
-│   │   └── slides.md                        # Architecture deck — reference model and governance objects
+│   │   └── README.md                        # Architecture deck directory
 │   ├── governance/
-│   │   └── slides.md                        # Governance deck — proposal lifecycle and conformance
+│   │   └── README.md                        # Governance deck directory
 │   ├── slidev/
+│   │   ├── overview.md                      # Overview deck source (published at leboss.status26.com)
+│   │   ├── architecture.md                  # Architecture deck source
+│   │   ├── governance.md                    # Governance deck source
 │   │   └── package.json                     # Slidev build environment (Netlify build root)
-│   └── leboss-overview.md                   # Archive reference index
+│   └── leboss-overview.md                   # Presentation system index
 ├── CONTRIBUTING.md                          # How to contribute
 ├── netlify.toml                             # Netlify build configuration
 └── README.md                               # This file
@@ -163,9 +166,9 @@ The LEBOSS repository includes a multi-deck Slidev presentation system organized
 
 | Deck | Path | Audience |
 |------|------|----------|
-| **Overview** | [presentations/overview/slides.md](presentations/overview/slides.md) | Business owners, solution providers, developers evaluating the ecosystem |
-| **Architecture** | [presentations/architecture/slides.md](presentations/architecture/slides.md) | Developers, platform architects, technical implementers |
-| **Governance** | [presentations/governance/slides.md](presentations/governance/slides.md) | Contributors, maintainers, committee members |
+| **Overview** | [presentations/slidev/overview.md](presentations/slidev/overview.md) | Business owners, solution providers, developers evaluating the ecosystem |
+| **Architecture** | [presentations/slidev/architecture.md](presentations/slidev/architecture.md) | Developers, platform architects, technical implementers |
+| **Governance** | [presentations/slidev/governance.md](presentations/slidev/governance.md) | Contributors, maintainers, committee members |
 
 The Overview deck is deployed to **[leboss.status26.com](https://leboss.status26.com/)** via Netlify.
 
