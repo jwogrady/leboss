@@ -1,3 +1,14 @@
+<!--
+# Archived Presentation Deck
+
+This presentation was used during early proposal discussions
+before the canonical Slidev presentation system was introduced in proposal/0.0.11.
+
+It is preserved for historical reference. Do not modify.
+
+Active presentations are in: presentations/slidev/
+-->
+
 ---
 # Professional business theme
 theme: seriph

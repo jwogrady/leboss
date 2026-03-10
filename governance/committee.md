@@ -1,8 +1,7 @@
 # LEBOSS Committee Structure
 
-**Version:** 0.0.1
-**Status:** Proposal
-**Date:** 2026-03-09
+**Status:** Draft
+**Updated Through:** proposal/0.0.11
 
 ---
 

@@ -1,7 +1,7 @@
 # LEBOSS
 ## Local Entrepreneur Business Operating System Standards
 
-**Current Version:** 0.0.11 (Draft) — preparing for 0.1.0 implementable draft release
+**Current Version:** pre-v0.1.0 (Draft) — see [STATUS.md](STATUS.md) for specification status and release information
 
 ---
 
@@ -117,7 +117,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 ├── charter/
 │   └── mission.md                           # LEBOSS mission and philosophical foundation
 ├── standards/
-│   ├── leboss-standard.md                   # The living specification (v0.0.9)
+│   ├── leboss-standard.md                   # The living specification (pre-v0.1.0 draft)
 │   ├── leboss-normative-rules.md            # Flat normative rule register (40 rules)
 │   ├── leboss-governance-objects.md         # Governance object model
 │   ├── leboss-access-grant-protocol.md      # Access Grant lifecycle protocol
@@ -130,17 +130,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │       ├── integration-descriptor.md        # Integration Descriptor object definition
 │       └── audit-record.md                  # Audit Record object definition
 ├── proposals/
-│   ├── 0.0.1/ … 0.0.10/                    # Proposal documents (change history)
+│   ├── 0.0.1/ … 0.0.11/                    # Proposal documents (change history)
 │   └── */proposal.md
 ├── glossary/
-│   └── terms.md                             # Canonical terminology definitions (v0.0.9)
+│   └── terms.md                             # Canonical terminology definitions
 ├── governance/
 │   ├── governance.md                        # Proposal → Draft → Published workflow
 │   └── committee.md                         # Committee roles and responsibilities
-├── presentation/
-│   ├── slides.md                            # Original LEBOSS deck — archive artifact (primary source)
-│   ├── package.json                         # Slidev build tooling (legacy)
-│   └── components/                          # Vue components
 ├── presentations/
 │   ├── overview/
 │   │   └── README.md                        # Overview deck directory
@@ -153,6 +149,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to participate.
 │   │   ├── architecture.md                  # Architecture deck source
 │   │   ├── governance.md                    # Governance deck source
 │   │   └── package.json                     # Slidev build environment (Netlify build root)
+│   ├── archive/                             # Original deck — historical source (pre-spec)
+│   │   └── slides.md
 │   └── leboss-overview.md                   # Presentation system index
 ├── CONTRIBUTING.md                          # How to contribute
 ├── netlify.toml                             # Netlify build configuration
@@ -183,7 +181,7 @@ npm run build:architecture   # architecture deck
 npm run build:governance     # governance deck
 ```
 
-The original presentation — the historical source from which the formal standard was derived — is preserved as an archive artifact at [presentation/slides.md](presentation/slides.md) (singular directory).
+The original presentation — the historical source from which the formal standard was derived — is preserved as an archive artifact at [presentations/archive/slides.md](presentations/archive/slides.md).
 
 ---
 

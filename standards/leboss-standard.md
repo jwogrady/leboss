@@ -2,13 +2,27 @@
 ## Local Entrepreneur Business Operating System Standards
 
 **Status:** Draft
-**Version:** 0.0.9
-**Updated through:** proposal/0.0.10
+**Target Release:** v0.1.0
+**Updated Through:** proposal/0.0.11
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.10. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+## Status of This Document
+
+This document defines the LEBOSS standard.
+
+This version represents **v0.1.0**, the first implementable draft of the specification. The architecture, governance model, and core protocols are considered draft-stable. Implementations may begin development against this version.
+
+Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
+
+The proposal history for this version spans proposals 0.0.1 through 0.0.11, preserved in [`proposals/`](../proposals/).
+
+Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
+
+---
+
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.11. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -468,7 +482,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is version `0.0.2` of the LEBOSS Standard — a working draft.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.11.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -476,12 +490,12 @@ LEBOSS versions follow the pattern `X.Y.Z`:
 - `Y` — Committee Vote: accepted by the committee and open for member ratification
 - `X` — Published: ratified by members as the active canonical standard
 
-This version (`0.0.2`) sits at the draft stage. The path to publication:
+The pre-v0.1.0 working draft sits at the draft stage. The path to publication:
 
 ```
-0.0.2  →  Current working draft
-0.1.0  →  Committee accepts for member vote
-1.0.0  →  Members ratify; canonical standard published
+pre-v0.1.0  →  Current working draft (this document)
+0.1.0       →  Committee accepts for member vote
+1.0.0       →  Members ratify; canonical standard published
 ```
 
 The full governance process is defined in [governance/governance.md](../governance/governance.md).
@@ -660,4 +674,4 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.8 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.11 — Open for community review and pull request contribution.*

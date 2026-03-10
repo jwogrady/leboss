@@ -72,4 +72,4 @@ Each deck includes a navigation header in the top-right corner of the title slid
 
 ## Original Presentation Archive
 
-The original LEBOSS slide deck — the historical source from which the formal standard was derived — is preserved at [`../presentation/slides.md`](../presentation/slides.md) (singular directory). It is not part of the current presentation system and is not modified.
+The original LEBOSS slide deck — the historical source from which the formal standard was derived — is preserved at [`presentations/archive/slides.md`](archive/slides.md). It is not part of the current presentation system and is not modified.
