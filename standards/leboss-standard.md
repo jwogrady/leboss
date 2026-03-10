@@ -8,6 +8,20 @@
 
 ---
 
+## Status of This Document
+
+This document defines the LEBOSS standard.
+
+This version represents **v0.1.0**, the first implementable draft of the specification. The architecture, governance model, and core protocols are considered draft-stable. Implementations may begin development against this version.
+
+Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
+
+The proposal history for this version spans proposals 0.0.1 through 0.0.11, preserved in [`proposals/`](../proposals/).
+
+Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
+
+---
+
 > *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.11. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
