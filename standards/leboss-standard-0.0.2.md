@@ -63,6 +63,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 11. [Governance Objects](#11-governance-objects)
 12. [Access Grant Protocol](#12-access-grant-protocol)
 13. [Integration Descriptor Protocol](#13-integration-descriptor-protocol)
+14. [Audit Record Collection Protocol](#14-audit-record-collection-protocol)
 
 ---
 
@@ -574,4 +575,35 @@ The full protocol, including 26 normative rules (LEBOSS-IDP-1 through IDP-26) an
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.5 — Open for community review and pull request contribution.*
+---
+
+## 14. Audit Record Collection Protocol
+
+Prior protocols require specific audit records across the Access Grant and Integration Descriptor lifecycles. The Audit Record Collection Protocol defines the system behaviors that make those requirements enforceable: how events are captured, how records are correlated to the governance objects that produced them, how long they must be retained, and how their integrity is verified.
+
+The protocol operationalizes the following rules from this standard:
+
+| Rule | Protocol Section |
+|------|-----------------|
+| LEBOSS-SEC-3 — all data operations must be auditable | §3 Audit Event Capture |
+| LEBOSS-SVC-3 — service providers must maintain complete audit records | §3 Audit Event Capture, §5 Retention |
+| LEBOSS-SVC-4 — audit records must be available to the governing entity | §7 Audit Verification |
+| LEBOSS-OBJ-AR-1 — Audit Records must be created for every governed event | §3 Audit Event Capture |
+| LEBOSS-OBJ-AR-3 — Audit Records must not be modified after creation | §6 Integrity |
+| LEBOSS-OBJ-AR-4 — Audit Records must be retained for a minimum of 36 months | §5 Retention |
+
+**Key behavioral requirements:**
+
+- A LEBOSS-compliant system MUST generate an Audit Record for every required governance event. Absence of a required record is a compliance violation.
+- Audit Records MUST be created at the time of the event — retroactive creation, batching, and deferred writing are not permitted.
+- Where a data operation is authorized by an Access Grant, the Audit Record MUST include the `grant_id`. Where it involves an integration, it MUST include the `integration_id`.
+- Cascade events (such as grant revocation triggering integration suspension) MUST each produce their own Audit Record, with records linked by shared identifier references.
+- Audit Records MUST NOT be deleted before the minimum 36-month retention period expires. Deletion controls MUST be enforced at the storage layer.
+- Systems MUST store Audit Records in a manner that makes modification after creation detectable. Any tampering attempt MUST itself be recorded.
+- The governing entity MUST be able to query and verify audit records without requiring cooperation from the party under review.
+
+The full protocol, including 24 normative rules (LEBOSS-ACP-1 through ACP-24) and defined capture, correlation, retention, and integrity requirements, is specified in [`standards/leboss-audit-protocol.md`](leboss-audit-protocol.md).
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.6 — Open for community review and pull request contribution.*
