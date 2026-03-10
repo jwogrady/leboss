@@ -49,7 +49,7 @@ Without defined object structures, the rule register cannot be implemented consi
 | `standards/objects/access-grant.md` | New — Access Grant object definition |
 | `standards/objects/integration-descriptor.md` | New — Integration Descriptor object definition |
 | `standards/objects/audit-record.md` | New — Audit Record object definition |
-| `standards/leboss-standard-0.0.2.md` | Updated — new §11 references governance objects |
+| `standards/leboss-standard.md` | Updated — new §11 references governance objects |
 | `glossary/terms.md` | Updated — four new terms |
 
 ---
@@ -76,7 +76,7 @@ These three objects are the minimum set required to make the existing rule regis
 
 No existing normative rules are modified. No existing document sections are removed or rewritten.
 
-The new `§11 Governance Objects` section in `leboss-standard-0.0.2.md` is additive. The object files in `standards/objects/` are new artifacts. Existing LEBOSS-aligned systems are not retroactively non-compliant.
+The new `§11 Governance Objects` section in `leboss-standard.md` is additive. The object files in `standards/objects/` are new artifacts. Existing LEBOSS-aligned systems are not retroactively non-compliant.
 
 ---
 

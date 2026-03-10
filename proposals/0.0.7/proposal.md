@@ -36,7 +36,7 @@ This proposal defines the behavioral requirements that close these gaps. It answ
 | Document | Change |
 |----------|--------|
 | `standards/leboss-data-portability-protocol.md` | New — full behavioral protocol for operational data export and environment migration |
-| `standards/leboss-standard-0.0.2.md` | Updated — new §15 references the protocol |
+| `standards/leboss-standard.md` | Updated — new §15 references the protocol |
 | `glossary/terms.md` | Updated — three new terms |
 
 ---

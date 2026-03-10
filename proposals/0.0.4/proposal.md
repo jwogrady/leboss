@@ -37,7 +37,7 @@ The Access Grant Protocol closes this gap by specifying required lifecycle behav
 | Document | Change |
 |----------|--------|
 | `standards/leboss-access-grant-protocol.md` | New — full lifecycle and interaction protocol |
-| `standards/leboss-standard-0.0.2.md` | Updated — new §12 references the protocol |
+| `standards/leboss-standard.md` | Updated — new §12 references the protocol |
 | `glossary/terms.md` | Updated — three new terms |
 
 ---

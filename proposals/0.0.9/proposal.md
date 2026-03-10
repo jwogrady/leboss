@@ -29,7 +29,7 @@ Proposals 0.0.1 through 0.0.8 built the specification incrementally — each add
 
 **Stale versioning section.** §10 lists items deferred to future drafts; four of the five original gaps (GAP-1 through GAP-4) have been addressed by proposals 0.0.3 through 0.0.8. The list should reflect the current state.
 
-**Gaps register.** The normative rule register (`leboss-normative-rules-0.0.2.md`) still lists all five gaps as open. Four have been resolved.
+**Gaps register.** The normative rule register (`leboss-normative-rules.md`) still lists all five gaps as open. Four have been resolved.
 
 ---
 
@@ -37,8 +37,8 @@ Proposals 0.0.1 through 0.0.8 built the specification incrementally — each add
 
 | Document | Change |
 |----------|--------|
-| `standards/leboss-standard-0.0.2.md` | Terminology alignment, normative language correction, scope field update, duplicate separator removal, deferred items list update |
-| `standards/leboss-normative-rules-0.0.2.md` | Gap register updated to reflect resolved gaps |
+| `standards/leboss-standard.md` | Terminology alignment, normative language correction, scope field update, duplicate separator removal, deferred items list update |
+| `standards/leboss-normative-rules.md` | Gap register updated to reflect resolved gaps |
 
 ---
 

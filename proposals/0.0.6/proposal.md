@@ -38,7 +38,7 @@ There is also a practical dependency chain: the Access Grant Protocol and Integr
 | Document | Change |
 |----------|--------|
 | `standards/leboss-audit-protocol.md` | New — full behavioral protocol for audit event capture, correlation, retention, and integrity |
-| `standards/leboss-standard-0.0.2.md` | Updated — new §14 references the protocol |
+| `standards/leboss-standard.md` | Updated — new §14 references the protocol |
 | `glossary/terms.md` | Updated — three new terms |
 
 ---

@@ -19,8 +19,8 @@ Version `0.0.2` is a **formalization release**. It does not introduce new archit
 
 | Document | Change |
 |----------|--------|
-| `standards/leboss-standard-0.0.2.md` | Updated specification: versioned, clarified, branding-neutral |
-| `standards/leboss-normative-rules-0.0.2.md` | Extracted normative rule register |
+| `standards/leboss-standard.md` | Updated specification: versioned, clarified, branding-neutral |
+| `standards/leboss-normative-rules.md` | Extracted normative rule register |
 | `glossary/terms.md` | Updated Moon definition, added Reference Model and Governing Entity terms |
 | `proposals/0.0.2/proposal.md` | This document |
 
@@ -53,7 +53,7 @@ Version `0.0.2` is a **formalization release**. It does not introduce new archit
 - Add MUST/MUST NOT language to Foundation Principles
 - Remove Section 8 (Framework Benefits) from normative document; content preserved in README
 - Strengthen Section 9 (Conformance) with interim LEBOSS-aligned criteria
-- Create normative rule register (`standards/leboss-normative-rules-0.0.2.md`)
+- Create normative rule register (`standards/leboss-normative-rules.md`)
 - Glossary updates: Moon definition, new terms
 
 **Explicitly deferred to 0.0.3 and beyond:**
@@ -98,7 +98,7 @@ Is the naming disclaimer in Section 5 clear enough? Can an implementer build a f
 The 0.0.2 draft adds MUST language to the Foundation Principles. Does this make them feel appropriately normative, or does it constrain implementations in ways that aren't justified?
 
 **3. Normative rule register**
-Is the rule register in `standards/leboss-normative-rules-0.0.2.md` useful as a standalone reference? Is the grouping appropriate?
+Is the rule register in `standards/leboss-normative-rules.md` useful as a standalone reference? Is the grouping appropriate?
 
 **4. Conformance criteria**
 Does the updated Section 9 give implementers enough guidance to assess whether their system is LEBOSS-aligned? What's still missing?
