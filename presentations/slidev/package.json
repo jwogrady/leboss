@@ -5,6 +5,7 @@
     "build": "slidev build overview.md --out dist",
     "build:architecture": "slidev build architecture.md --out dist/architecture",
     "build:governance": "slidev build governance.md --out dist/governance",
+    "build:all": "npm run build && npm run build:architecture && npm run build:governance",
     "export": "slidev export overview.md"
   },
   "dependencies": {
