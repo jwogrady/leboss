@@ -36,17 +36,15 @@ LEBOSS defines:
 - **A conformance definition** — the minimum requirements for claiming LEBOSS compatibility
 
 ```mermaid
-graph TD
-    U["0 · Universe\nGoverning Entity — root owner"]
-    G["1 · Galaxy\nBrand or business line"]
-    S["2 · Star\nCustomer-facing interface"]
-    P["3 · Planet\nBackend service — holds primary operational data"]
-    M["4 · Moon\nCompany-owned internal capability"]
-    T["5 · Satellite\nThird-party integration"]
+flowchart LR
+    U["0 · Universe"]
+    G["1 · Galaxy"]
+    S["2 · Star"]
+    P["3 · Planet"]
+    M["4 · Moon"]
+    T["5 · Satellite"]
 
-    U --> G
-    G --> S
-    S <--> P
+    U --> G --> S <--> P
     P --> M
     P --> T
 
@@ -57,6 +55,15 @@ graph TD
     style M fill:#4f46e5,color:#fff,stroke:none
     style T fill:#dc2626,color:#fff,stroke:none
 ```
+
+| Element | Role |
+|---------|------|
+| **0 · Universe** | Governing Entity — root owner of all data |
+| **1 · Galaxy** | Brand or business line |
+| **2 · Star** | Customer-facing interface |
+| **3 · Planet** | Backend service — holds primary operational data |
+| **4 · Moon** | Company-owned internal capability |
+| **5 · Satellite** | Third-party integration |
 
 The **Governing Entity** (Universe) owns all data. Every other element operates under explicit, scoped, revocable authorization. All governed operations produce Audit Records. The complete environment is always exportable by the Governing Entity.
 
