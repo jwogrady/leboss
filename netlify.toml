@@ -1,6 +1,6 @@
 [build]
   base    = "presentations/slidev"
-  command = "npm run build"
+  command = "npm run build:all"
   publish = "presentations/slidev/dist"
 
 [build.environment]
