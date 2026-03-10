@@ -60,6 +60,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 8. [Conformance](#8-conformance)
 9. [Relationship to Other Standards](#9-relationship-to-other-standards)
 10. [Versioning](#10-versioning)
+11. [Governance Objects](#11-governance-objects)
 
 ---
 
@@ -489,4 +490,32 @@ Subsequent drafts will expand upon:
 
 ---
 
-*LEBOSS Standard 0.0.2 — Open for community review and pull request contribution.*
+---
+
+## 11. Governance Objects
+
+The normative rules in this standard and in the rule register (`leboss-normative-rules-0.0.2.md`) require that access be explicitly granted, that integrations be explicitly authorized, and that all governed events be auditable. These requirements can only be satisfied if the structures that record those facts are defined.
+
+Governance objects are the structured data primitives that give operational form to these rules. They define what must exist — the required fields and normative properties of grants, authorizations, and event records — without prescribing implementation format or protocol.
+
+Three governance objects are defined in LEBOSS 0.0.3:
+
+| Object | Purpose | Rules Addressed |
+|--------|---------|-----------------|
+| **Access Grant** | Records explicit authorization for a party to access primary operational data | LEBOSS-ACC-1, ACC-2, ACC-3, ACC-4 |
+| **Integration Descriptor** | Records authorization of an external integration to receive data | LEBOSS-ACC-5, ARCH-10, ARCH-11 |
+| **Audit Record** | Records governed events for auditability and compliance | LEBOSS-SEC-3, SVC-3, SVC-4 |
+
+Full object definitions, including required fields, optional fields, and object-level normative requirements, are defined in:
+
+- [`standards/objects/access-grant.md`](objects/access-grant.md)
+- [`standards/objects/integration-descriptor.md`](objects/integration-descriptor.md)
+- [`standards/objects/audit-record.md`](objects/audit-record.md)
+
+The governance object model, including lifecycle concepts and format neutrality, is defined in [`standards/leboss-governance-objects.md`](leboss-governance-objects.md).
+
+Implementations claiming LEBOSS alignment **MUST** maintain governance objects that satisfy the normative requirements defined in the individual object specifications.
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated in proposal/0.0.3 to reference governance objects — Open for community review and pull request contribution.*
