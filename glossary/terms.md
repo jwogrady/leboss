@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.3
+**Version:** 0.0.4
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -187,6 +187,36 @@ Required fields include a unique integration identifier, the provider name, the 
 See also: *Governance Object*, *Satellite (Element 5)*
 
 Full object definition: [`standards/objects/integration-descriptor.md`](../standards/objects/integration-descriptor.md)
+
+---
+
+## Grant Lifecycle
+
+The defined set of states an Access Grant passes through during its operational lifetime: `requested`, `issued`, `active`, `revoked`, and `expired`. State transitions are governed by the Access Grant Protocol.
+
+A grant confers no authorization until it is `active`. A `revoked` grant permanently loses its authorization and cannot be reactivated. An `expired` grant has automatically transitioned out of active status upon satisfaction of its `expires_at` condition.
+
+See also: *Access Grant*, *Grant Revocation*, *Grant Validation*
+
+---
+
+## Grant Revocation
+
+The immediate, permanent invalidation of an Access Grant by the governing entity. Revocation takes effect at the moment it is issued and must be reflected in all system components without delay. A revoked grant cannot be reactivated — new access requires a new grant.
+
+Revocation is a core enforcement mechanism for the governing entity's right to control data access. It must be technically supported in any LEBOSS-compliant system, not merely contractually promised.
+
+See also: *Access Grant*, *Grant Lifecycle*
+
+---
+
+## Grant Validation
+
+The required sequence of checks a LEBOSS-compliant system must perform before authorizing any data access under an Access Grant. The seven steps are: grant existence, issuer authority, subject match, expiration check, revocation check, scope check, and operation check.
+
+A failure at any step must result in access denial. Access denial must generate an Audit Record.
+
+See also: *Access Grant*, *Grant Lifecycle*
 
 ---
 

@@ -61,6 +61,7 @@ These deferred items are captured in the gap register at [proposals/0.0.2/propos
 9. [Relationship to Other Standards](#9-relationship-to-other-standards)
 10. [Versioning](#10-versioning)
 11. [Governance Objects](#11-governance-objects)
+12. [Access Grant Protocol](#12-access-grant-protocol)
 
 ---
 
@@ -518,4 +519,32 @@ Implementations claiming LEBOSS alignment **MUST** maintain governance objects t
 
 ---
 
-*LEBOSS Standard 0.0.2 — Updated in proposal/0.0.3 to reference governance objects — Open for community review and pull request contribution.*
+---
+
+## 12. Access Grant Protocol
+
+Governance objects define structure. Protocols define behavior.
+
+The Access Grant Protocol specifies the lifecycle and interaction rules that make Access Grants operational: how grants are issued, how they are validated before each access attempt, how revocation takes immediate effect, and how expiration is evaluated automatically.
+
+The protocol operationalizes the following rules from this standard:
+
+| Rule | Protocol Section |
+|------|-----------------|
+| LEBOSS-ACC-1 — no access without explicit grant | §5 Validation |
+| LEBOSS-ACC-2 — grants must specify scope, operations, duration, purpose | §4 Issuance |
+| LEBOSS-ACC-3 — grants are revocable at any time | §6 Revocation |
+| LEBOSS-ACC-4 — providers must operate within granted access | §5 Validation |
+
+**Key behavioral requirements:**
+
+- Systems MUST validate grants at the time of each access attempt across a defined seven-step sequence: grant existence, issuer authority, subject match, expiration, revocation, scope, and operation.
+- Revocation MUST take effect immediately. No caching, deferral, or queuing of revocation is permitted.
+- Grant expiration is automatic — systems must evaluate expiry conditions at every access attempt.
+- All grant lifecycle events (issuance, access granted, access denied, revocation, expiration) MUST generate Audit Records.
+
+The full protocol, including 17 normative rules (LEBOSS-AGP-1 through AGP-17) and defined lifecycle state machine, is specified in [`standards/leboss-access-grant-protocol.md`](leboss-access-grant-protocol.md).
+
+---
+
+*LEBOSS Standard 0.0.2 — Updated through proposal/0.0.4 — Open for community review and pull request contribution.*
