@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev ../overview/slides.md",
+    "build": "slidev build ../overview/slides.md --out dist",
+    "build:architecture": "slidev build ../architecture/slides.md --out dist/architecture",
+    "build:governance": "slidev build ../governance/slides.md --out dist/governance",
+    "export": "slidev export ../overview/slides.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "latest",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  }
+}
