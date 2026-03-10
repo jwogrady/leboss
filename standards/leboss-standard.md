@@ -476,12 +476,12 @@ LEBOSS versions follow the pattern `X.Y.Z`:
 - `Y` — Committee Vote: accepted by the committee and open for member ratification
 - `X` — Published: ratified by members as the active canonical standard
 
-This version (`0.0.2`) sits at the draft stage. The path to publication:
+The pre-v0.1.0 working draft sits at the draft stage. The path to publication:
 
 ```
-0.0.2  →  Current working draft
-0.1.0  →  Committee accepts for member vote
-1.0.0  →  Members ratify; canonical standard published
+pre-v0.1.0  →  Current working draft (this document)
+0.1.0       →  Committee accepts for member vote
+1.0.0       →  Members ratify; canonical standard published
 ```
 
 The full governance process is defined in [governance/governance.md](../governance/governance.md).
