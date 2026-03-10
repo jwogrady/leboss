@@ -334,7 +334,7 @@ The following rules describe the data ownership requirements that LEBOSS-complia
 
 ### 6.1 Primary Data Ownership
 
-All primary operational data generated within a LEBOSS-compliant system is owned by the root owner (Universe) to which it belongs.
+All primary operational data generated within a LEBOSS-compliant system is owned by the governing entity (Universe) to which it belongs.
 
 Primary operational data includes but is not limited to:
 - Customer records and contact information
@@ -355,27 +355,27 @@ Service providers who operate infrastructure on behalf of a LEBOSS-compliant bus
 
 ### 6.3 Access Grants
 
-No service provider **MAY** access primary operational data without an explicit, scoped access grant issued by the Universe owner or their designated delegate.
+No service provider **MAY** access primary operational data without an explicit, scoped Access Grant issued by the governing entity or their designated delegate.
 
-Access grants **MUST** specify:
-- Which elements or equivalent structures the grant covers
+Access Grants **MUST** specify:
+- The resources or resource categories the grant covers
 - Which operations are permitted (read, write, transform, export)
 - The duration or conditions under which the grant expires
 - The purpose for which access is granted
 
-Access grants are revocable at any time by the Universe owner.
+Access Grants **MUST** be revocable at any time by the governing entity.
 
 ### 6.4 Data Portability
 
-A LEBOSS-compliant system **MUST** provide the Universe owner with the ability to export all primary operational data in a standard, machine-readable format at any time.
+A LEBOSS-compliant system **MUST** provide the governing entity with the ability to export all primary operational data in a standard, machine-readable format at any time.
 
 Data portability is a requirement of ownership. A system that cannot return data to the owner is a system that has appropriated it.
 
 ### 6.5 Data Residency
 
-The Universe owner **MUST** be informed of where primary operational data is stored and processed, including the jurisdiction of that infrastructure.
+The governing entity **MUST** be informed of where primary operational data is stored and processed, including the jurisdiction of that infrastructure.
 
-The Universe owner retains the right to require that data reside within specific jurisdictions where such requirements are legally enforceable or operationally necessary.
+The governing entity retains the right to require that data reside within specific jurisdictions where such requirements are legally enforceable or operationally necessary.
 
 ---
 
@@ -385,7 +385,7 @@ A service provider operating within a LEBOSS-compliant ecosystem — whether bui
 
 ### 7.1 Act as Steward, Not Owner
 
-The service provider acknowledges that primary operational data belongs to the business owner and that the provider acts as a steward of that data. The provider does not acquire ownership of data through access to it.
+The service provider acknowledges that primary operational data belongs to the governing entity and that the provider acts as a steward of that data. The provider does not acquire ownership of data through access to it.
 
 ### 7.2 Operate Within Granted Access
 
@@ -393,7 +393,7 @@ The service provider **MUST** operate only within the scope of explicitly grante
 
 ### 7.3 Maintain Audit Records
 
-The service provider **MUST** maintain complete audit records of all data access and transformations performed under the grant. These records **MUST** be available to the Universe owner upon request.
+The service provider **MUST** maintain complete audit records of all data access and transformations performed under the grant. These records **MUST** be available to the governing entity upon request.
 
 ### 7.4 Ensure Portability Upon Exit
 
@@ -401,11 +401,11 @@ Upon termination of a service relationship, the provider **MUST** facilitate the
 
 ### 7.5 Disclose Subprocessors
 
-If the service provider uses third-party services (including cloud infrastructure, analytics platforms, or subcontractors) that have access to primary operational data, these subprocessors **MUST** be disclosed to the Universe owner and are subject to the same requirements under this standard.
+If the service provider uses third-party services (including cloud infrastructure, analytics platforms, or subcontractors) that have access to primary operational data, these subprocessors **MUST** be disclosed to the governing entity and are subject to the same requirements under this standard.
 
 ### 7.6 No Secondary Use
 
-The service provider **MUST NOT** use primary operational data for any purpose beyond delivering the contracted service — including training machine learning models, building aggregate datasets for sale, or improving services provided to other customers — without the explicit written consent of the Universe owner.
+The service provider **MUST NOT** use primary operational data for any purpose beyond delivering the contracted service — including training machine learning models, building aggregate datasets for sale, or improving services provided to other customers — without the explicit written consent of the governing entity.
 
 ---
 
@@ -485,15 +485,12 @@ This version (`0.0.2`) sits at the draft stage. The path to publication:
 
 The full governance process is defined in [governance/governance.md](../governance/governance.md).
 
-Subsequent drafts will expand upon:
+Items deferred to future versions:
 - Formal conformance certification process
 - Reference architecture diagrams
-- Ownership transfer protocols
-- Compliance rules for external integration components
+- Succession and Ownership Transfer Protocol (GAP-5)
 - API and interface specifications for compliant backend implementations
 - Normative requirements for AI and machine learning use of primary operational data
-
----
 
 ---
 
@@ -520,8 +517,6 @@ Full object definitions, including required fields, optional fields, and object-
 The governance object model, including lifecycle concepts and format neutrality, is defined in [`standards/leboss-governance-objects.md`](leboss-governance-objects.md).
 
 Implementations claiming LEBOSS alignment **MUST** maintain governance objects that satisfy the normative requirements defined in the individual object specifications.
-
----
 
 ---
 
