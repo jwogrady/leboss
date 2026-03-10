@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Version:** 0.0.7
+**Version:** 0.0.8
 **Status:** Proposal
 **Date:** 2026-03-09
 
@@ -405,6 +405,54 @@ The LEBOSS Reference Model is the six-element conceptual architecture defined in
 The Reference Model is an illustrative framework, not a required naming convention. Implementations MAY use any internal terminology while still claiming LEBOSS alignment, provided they preserve the underlying ownership hierarchy, data boundaries, dependency rules, and access control relationships defined in the standard.
 
 See also: *LEBOSS Elements*
+
+---
+
+## Resource
+
+An identifiable operational asset within a LEBOSS-governed environment that is owned by a governing entity, can be the target of a governed operation, can be referenced by an Access Grant or Audit Record, and exists within a defined namespace.
+
+Resources are not system constructs — they represent real operational assets the business generates and relies upon. A dataset of customer records, a workflow definition, a configuration artifact, and a service endpoint are all resources in the LEBOSS sense if they are operational assets within the governed environment and may be the target of a governed operation.
+
+See also: *Resource Identifier*, *Resource Type*, *Resource Namespace*, *Primary Operational Data*
+
+Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-model.md)
+
+---
+
+## Resource Identifier
+
+The stable, unique label by which a resource is referenced within governance objects, audit records, and export manifests. A resource identifier must be unique within its namespace, stable for the lifetime of the resource, consistent across export and import operations, and human-interpretable in context.
+
+Resource identifiers appear in Access Grant `scope` fields, Audit Record `resource_identifier` fields, Integration Descriptor `data_flows` entries, and Data Portability export manifests. An identifier that cannot be correlated to a resource without access to proprietary internal state is non-compliant.
+
+See also: *Resource*, *Resource Namespace*
+
+Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-model.md)
+
+---
+
+## Resource Namespace
+
+The bounded scope within which resource identifiers are unique and meaningful. A namespace must include at minimum the governing entity identifier and, where applicable, the brand entity identifier. Every resource identifier must be qualified by a namespace — a bare identifier without namespace context cannot be resolved unambiguously across environments.
+
+Namespace qualification must be consistent across all governance objects within a governed environment: an Access Grant scope, an Audit Record resource identifier, and an export manifest entry referring to the same resource must use the same namespace-qualified identifier.
+
+See also: *Resource*, *Resource Identifier*
+
+Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-model.md)
+
+---
+
+## Resource Type
+
+A classification of an operational asset by its functional role within a LEBOSS-governed environment. Every resource must be assigned a type. The five required type categories are: `data_collection` (structured sets of primary operational records), `configuration` (settings and structural definitions), `governance_object` (formal LEBOSS governance artifacts), `service_endpoint` (addressable interfaces for data flows), and `workflow` (defined sequences of operations or business logic).
+
+Type classification determines which governance rules apply to a resource, how it maps to data categories in Access Grant scopes and Integration Descriptor flow definitions, and how it appears in export manifest categories.
+
+See also: *Resource*, *Primary Operational Data*
+
+Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-model.md)
 
 ---
 
