@@ -29,6 +29,58 @@ wakeLock: 'build'
 </div>
 
 ---
+
+# LEBOSS System Map
+
+<div class="grid grid-cols-1 gap-4 mt-2 text-xs">
+
+<div class="bg-blue-900 bg-opacity-30 border border-blue-700 rounded-lg p-3">
+  <p class="text-blue-300 font-semibold text-sm mb-2">Layer 1 — Ownership</p>
+  <div class="flex items-center gap-2 text-gray-300">
+    <span class="bg-blue-800 bg-opacity-60 border border-blue-500 rounded px-2 py-1">Governing Entity (Universe)</span>
+    <carbon:arrow-right class="text-blue-400 flex-shrink-0"/>
+    <span class="bg-blue-800 bg-opacity-60 border border-blue-500 rounded px-2 py-1">Resource Namespace (Galaxy → Star → Planet)</span>
+    <carbon:arrow-right class="text-blue-400 flex-shrink-0"/>
+    <span class="bg-blue-800 bg-opacity-60 border border-blue-500 rounded px-2 py-1">Resources</span>
+  </div>
+</div>
+
+<div class="bg-purple-900 bg-opacity-30 border border-purple-700 rounded-lg p-3">
+  <p class="text-purple-300 font-semibold text-sm mb-2">Layer 2 — Access and Operation</p>
+  <div class="flex items-center gap-2 text-gray-300">
+    <span class="bg-purple-800 bg-opacity-60 border border-purple-500 rounded px-2 py-1">Actor (Moon / Satellite)</span>
+    <carbon:arrow-right class="text-purple-400 flex-shrink-0"/>
+    <span class="bg-purple-800 bg-opacity-60 border border-purple-500 rounded px-2 py-1">Integration Descriptor</span>
+    <carbon:arrow-right class="text-purple-400 flex-shrink-0"/>
+    <span class="bg-purple-800 bg-opacity-60 border border-purple-500 rounded px-2 py-1">Access Grant</span>
+    <carbon:arrow-right class="text-purple-400 flex-shrink-0"/>
+    <span class="bg-purple-800 bg-opacity-60 border border-purple-500 rounded px-2 py-1">Resources</span>
+  </div>
+</div>
+
+<div class="bg-green-900 bg-opacity-30 border border-green-700 rounded-lg p-3">
+  <p class="text-green-300 font-semibold text-sm mb-2">Layer 3 — Governance and Continuity</p>
+  <div class="flex items-center gap-2 text-gray-300">
+    <span class="bg-green-800 bg-opacity-60 border border-green-500 rounded px-2 py-1">Resources</span>
+    <carbon:arrow-right class="text-green-400 flex-shrink-0"/>
+    <span class="bg-green-800 bg-opacity-60 border border-green-500 rounded px-2 py-1">Audit Records</span>
+    <carbon:arrow-right class="text-green-400 flex-shrink-0"/>
+    <span class="bg-green-800 bg-opacity-60 border border-green-500 rounded px-2 py-1">Data Portability</span>
+    <carbon:arrow-right class="text-green-400 flex-shrink-0"/>
+    <span class="bg-green-800 bg-opacity-60 border border-green-500 rounded px-2 py-1">Governing Entity</span>
+  </div>
+</div>
+
+</div>
+
+<div class="mt-3 text-xs text-gray-400 leading-relaxed">
+<strong class="text-gray-300">Resources</strong> are owned by the Universe and namespaced through the hierarchy.
+<strong class="text-gray-300">Access Grants</strong> authorize Actors to operate on Resources within defined scope.
+<strong class="text-gray-300">Audit Records</strong> create an immutable trail of every operation.
+<strong class="text-gray-300">Data Portability</strong> closes the loop — the Governing Entity can always reclaim their data.
+</div>
+
+---
 layout: section
 ---
 
