@@ -1,0 +1,283 @@
+# LEBOSS Glossary of Terms
+
+**Version:** 0.0.1
+**Status:** Proposal
+**Date:** 2026-03-09
+
+---
+
+> This glossary defines the key terms used in the LEBOSS standard. When a term used in this glossary appears in another LEBOSS document, it carries the meaning defined here unless explicitly stated otherwise.
+
+---
+
+## Access Grant
+
+A discrete, explicitly issued authorization from a Universe owner (or their designated delegate) that permits a specific party to perform specific operations on specific data within the LEBOSS hierarchy.
+
+An Access Grant must specify: the scope of data covered, the operations permitted, the duration or expiration conditions, the party to whom it is issued, and the stated purpose.
+
+Access Grants are revocable at any time by the Universe owner.
+
+See also: *Least Privilege*, *Service Provider*, *Universe*
+
+---
+
+## Artificial Satellite
+
+See: *Satellite (Element 5)*
+
+---
+
+## Audit Trail
+
+A complete, tamper-evident record of all operations performed on data within a LEBOSS-compliant system, including who performed the operation, what operation was performed, what data was affected, and when the operation occurred.
+
+The Audit Trail is the mechanism by which data ownership is made verifiable rather than merely asserted.
+
+---
+
+## Clarity (Principle 1)
+
+The first of LEBOSS's five Foundation Principles. Clarity requires that every part of a business system — including people, brands, workflows, data, and integrations — has a clearly defined role and place within the LEBOSS hierarchy, with no ambiguity about ownership, accountability, or access scope.
+
+---
+
+## Compliance
+
+Alignment with the normative requirements of the LEBOSS standard. A system that meets all structural, organizational, and data ownership requirements of the applicable published version of the standard may be described as LEBOSS-compliant.
+
+Formal compliance criteria are to be defined in a subsequent version of the standard.
+
+---
+
+## Continuity
+
+See: *Legacy and Continuity (Principle 4)*
+
+---
+
+## Committee Vote
+
+The third state in the LEBOSS governance lifecycle. A Committee Vote is a Draft that the committee has formally accepted and opened for member ratification. A ratification period of no less than 14 days is held, during which active members vote. A successful vote advances the standard to Published. An unsuccessful vote returns the document to Draft.
+
+In the LEBOSS version numbering scheme, the `Y` (middle) position increments when a Draft advances to Committee Vote status.
+
+See: [governance/governance.md](../governance/governance.md)
+
+---
+
+## Contributor
+
+Any individual or organization that participates in the LEBOSS community by submitting pull requests, filing issues, engaging in proposal discussions, or adopting and implementing the standard.
+
+Contributors do not hold voting authority on the committee but their participation shapes the standard.
+
+---
+
+## LEBOSS Elements
+
+The six hierarchical architectural elements defined by the LEBOSS standard: Universe (0), Galaxy (1), Star (2), Planet (3), Moon (4), and Satellite (5). Together, the LEBOSS Elements form a complete vocabulary for describing the structure of a local business's digital ecosystem.
+
+---
+
+## Data Fiduciary
+
+A party who holds and manages data on behalf of another party, under an obligation to act in the interests of the data's rightful owner. In the LEBOSS model, service providers who access primary operational data are expected to act as data fiduciaries.
+
+---
+
+## Data Portability
+
+The ability of a Universe owner to export all primary operational data from a system in a standard, machine-readable format. Data portability is a normative requirement of LEBOSS-compliant systems, not an optional feature.
+
+---
+
+## Data Residency
+
+The physical location — including the legal jurisdiction — where data is stored and processed. LEBOSS requires that Universe owners be informed of data residency and retain the right to enforce residency requirements where legally or operationally necessary.
+
+---
+
+## Data Sovereignty
+
+The practical control a business owner exercises over their operational data, determined not only by legal right but by architectural reality — specifically, by the topology of the systems that store, process, and grant access to that data.
+
+LEBOSS treats data sovereignty as the core problem the standard is designed to solve.
+
+---
+
+## Draft
+
+The second state in the LEBOSS governance lifecycle. A Draft is a Proposal that has been accepted for formal committee review. The committee assigns a Draft to a milestone and opens a discussion period of no less than 14 days. A Draft may advance to Committee Vote or be returned to Proposal status.
+
+In the LEBOSS version numbering scheme, the `Z` (rightmost) position represents the draft iteration count.
+
+See: [governance/governance.md](../governance/governance.md)
+
+---
+
+## Derived Data
+
+Data generated by processing or analyzing primary operational data. Examples include aggregated analytics, behavioral models, and performance metrics derived from business operations.
+
+Under LEBOSS, service providers may collect limited derived data (such as operational telemetry) under disclosed and consented conditions, but may not use derived data to benefit third parties or to build products sold to others without explicit authorization from the Universe owner.
+
+---
+
+## Extensibility (Principle 5)
+
+The fifth of LEBOSS's five Foundation Principles. Extensibility requires that LEBOSS-compliant systems allow new capabilities, workflows, and integrations to be added without disrupting existing operations. No capability should be entangled with others in a way that makes its removal or replacement destructive.
+
+---
+
+## Galaxy (Element 1)
+
+The second element of the LEBOSS Architecture. A Galaxy represents an individual brand, business line, or operating company owned by a Universe. A single Universe may contain multiple Galaxies, each with its own branding, teams, operational settings, and data boundary.
+
+Example: Smith Plumbing is a Galaxy within the Smith & Sons LLC Universe.
+
+---
+
+## Governing Committee
+
+See: *Committee* (defined in [governance/committee.md](../governance/committee.md))
+
+---
+
+## Infrastructure Topology
+
+The physical and logical arrangement of systems — including where data is stored, where it is processed, who can access it, and under what conditions — that determines the practical distribution of data ownership power.
+
+LEBOSS treats infrastructure topology as a first-class concern of data governance.
+
+---
+
+## Least Privilege
+
+The information security principle that a party should have access only to the data and capabilities they need to perform their authorized function — no more. In LEBOSS, least privilege applies not only to internal system design but to all vendor and service provider relationships.
+
+---
+
+## Legacy and Continuity (Principle 4)
+
+The fourth of LEBOSS's five Foundation Principles. This principle requires that LEBOSS-compliant systems be designed for long-term resilience, transparent ownership transitions, and deliberate succession planning — acknowledging that local businesses often outlast any particular software platform, service agreement, or individual owner.
+
+---
+
+## Maintainer
+
+A member of the LEBOSS governing body who holds administrative authority over the repository and final responsibility for the integrity of the standard. See [governance/committee.md](../governance/committee.md) for full role definition.
+
+---
+
+## Modularity (Principle 2)
+
+The second of LEBOSS's five Foundation Principles. Modularity requires that business operations and capabilities be organized as interchangeable components that can be adopted, replaced, or removed independently without requiring reconstruction of the broader system.
+
+---
+
+## Moon (Element 4)
+
+The fifth element of the LEBOSS Architecture. A Moon is a natural satellite: a company-owned, company-operated internal capability that orbits a Planet or Star within the LEBOSS hierarchy. Moons provide specialized functional modules — such as sales management, service delivery, or accounting — that are owned and controlled by the business.
+
+Named reference Moon modules: Apex (sales), Epic (service delivery), Aware (accounting and billing).
+
+Contrast with: *Satellite (Element 5)*
+
+---
+
+## Natural Satellite
+
+See: *Moon (Element 4)*
+
+---
+
+## Planet (Element 3)
+
+The fourth element of the LEBOSS Architecture. A Planet is the backend service that powers a Star. It provides the business logic, data persistence, and operational functionality that makes a customer experience meaningful. A Planet must serve at least one Star; without a Star, it has no purpose in the hierarchy.
+
+Example: A booking API that powers a plumbing company's customer scheduling portal.
+
+---
+
+## Primary Operational Data
+
+The core operational records generated by a business in the course of its activities, including customer records, transaction history, appointments and scheduling records, communications, inventory, and employee records. Primary operational data is owned by the Universe and subject to the full data ownership doctrine of the LEBOSS standard.
+
+Contrast with: *Derived Data*
+
+---
+
+## Proposal
+
+The first of three standard states in the LEBOSS governance model. A Proposal is a pull request against the LEBOSS repository that introduces or modifies content in the standards documents. Any contributor may open a Proposal.
+
+See: [governance/governance.md](../governance/governance.md)
+
+---
+
+## Published
+
+The third and final standard state in the LEBOSS governance model. A Published standard is an approved version of the LEBOSS specification, assigned a version number, and treated as immutable. Changes to a Published standard require a new version proceeding through the full governance workflow.
+
+---
+
+## Satellite (Element 5)
+
+The sixth element of the LEBOSS Architecture. A Satellite is an artificial satellite: a connection to a third-party platform or external service operated outside the business's direct control. Satellites represent the boundary of greatest data sovereignty risk, as they are points at which primary operational data may flow to external systems.
+
+Every Satellite must be explicitly authorized at the Galaxy or Universe level before receiving any data, and all data flows through Satellites must be logged and auditable.
+
+Example: A Google Business Profile integration; a QuickBooks sync; a Facebook Ads connection.
+
+Contrast with: *Moon (Element 4)*
+
+---
+
+## Security (Principle 3)
+
+The third of LEBOSS's five Foundation Principles. Security requires that data be separated by business entity, that access follow the principle of least privilege, and that all data operations be auditable. In LEBOSS, security is a structural property of the architecture — not a feature added to an insecure foundation.
+
+---
+
+## Service Provider
+
+Any individual or organization that builds, manages, or operates systems on behalf of a local business under the LEBOSS framework. Service providers are stewards of business data, not owners. They must operate within explicitly granted access, maintain audit records, and facilitate data portability upon exit.
+
+---
+
+## Star (Element 2)
+
+The third element of the LEBOSS Architecture. A Star is the customer experience: the interface through which the outside world interacts with a business. Stars include websites, mobile applications, booking portals, customer kiosks, and any other interface through which customers, partners, or stakeholders make contact with the business.
+
+A Star cannot function without a Planet to support it. Without a Star, a Planet serves no one.
+
+---
+
+## Steward
+
+A party who holds and manages data or a system on behalf of its rightful owner, bound by an obligation to act in the owner's interest. Under LEBOSS, all service providers are stewards. Being a steward does not confer ownership.
+
+---
+
+## Subprocessor
+
+A third-party service used by a service provider that has access to primary operational data. Subprocessors must be disclosed to the Universe owner and are subject to the same LEBOSS obligations as the primary service provider.
+
+---
+
+## Succession Planning
+
+The deliberate architectural design of a system to support the transfer of ownership — of data, credentials, contracts, and operational control — from one person or entity to another. LEBOSS's Legacy and Continuity principle requires that all compliant systems support succession planning.
+
+---
+
+## Universe (Element 0)
+
+The first and foundational element of the LEBOSS Architecture. The Universe is the root owner: the person, family, or registered legal entity that owns the entire business enterprise and everything within it. The Universe is the ultimate authority over all data access decisions in the LEBOSS hierarchy.
+
+A Universe is not a software construct. It is a legal and organizational reality that LEBOSS-compliant systems must reflect and respect.
+
+---
+
+*LEBOSS Glossary of Terms — Open for community contribution through the standard Proposal process.*
