@@ -54,7 +54,7 @@ Proposal documents are preserved in [`proposals/`](proposals/) and serve as the 
 | [`glossary/`](glossary/) | Canonical terminology definitions |
 | [`proposals/`](proposals/) | Proposal history — change log for all versions |
 | [`presentations/`](presentations/) | Active presentation system — three-deck Slidev portal |
-| [`presentation/`](presentation/) | Archived original slide deck — historical source material |
+| [`presentations/archive/`](presentations/archive/) | Archived original slide deck — historical source material |
 
 ---
 
