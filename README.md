@@ -171,7 +171,7 @@ The LEBOSS repository includes a multi-deck Slidev presentation system organized
 | **Architecture** | [presentations/slidev/architecture.md](presentations/slidev/architecture.md) | Developers, platform architects, technical implementers |
 | **Governance** | [presentations/slidev/governance.md](presentations/slidev/governance.md) | Contributors, maintainers, committee members |
 
-The Overview deck is deployed to **[leboss.status26.com](https://leboss.status26.com/)** via Netlify.
+All three decks are deployed via Netlify. Every pull request automatically generates a preview deployment — reviewers can see presentation changes live before merging.
 
 To run any deck locally:
 
