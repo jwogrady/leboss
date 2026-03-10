@@ -227,27 +227,22 @@ The service provider MUST NOT use primary operational data for any purpose beyon
 
 ## Gaps Identified
 
-The following requirements are implied by the standard but not yet specified with sufficient precision to be enumerable as rules:
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.9.
 
-**GAP-1: Access Grant Format**
-The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2), but does not define a machine-readable format or protocol for issuing, storing, or revoking grants.
-*Deferred to: 0.0.3 or 0.1.x*
+**GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4*
+The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17).
 
-**GAP-2: Audit Trail Format**
-The standard requires auditable records (LEBOSS-SEC-3, LEBOSS-SVC-3) but does not define what fields constitute a complete audit record.
-*Deferred to: 0.0.3 or 0.1.x*
+**GAP-2: Audit Trail Format** — *Resolved in 0.0.3 and 0.0.6*
+The standard requires auditable records (LEBOSS-SEC-3, LEBOSS-SVC-3). The Audit Record object (`standards/objects/audit-record.md`) defines the required fields. The Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`) defines capture, correlation, retention, and integrity behavioral rules (LEBOSS-ACP-1 through ACP-24).
 
-**GAP-3: Portability Format**
-The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1) but does not define which formats qualify as "standard and machine-readable."
-*Deferred to: 0.0.3 or 0.1.x*
+**GAP-3: Portability Format** — *Partially resolved in 0.0.7*
+The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1). The Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) defines export authority, scope, completeness, and neutrality behavioral rules (LEBOSS-DPP-1 through DPP-28). A specific LEBOSS Portability Format (canonical encoding) is deferred to a future proposal.
 
-**GAP-4: External Integration Authorization Protocol**
-LEBOSS-ACC-5 requires explicit authorization for external integrations but does not define a protocol for what constitutes a valid authorization or how it is recorded.
-*Deferred to: 0.0.3 or 0.1.x*
+**GAP-4: External Integration Authorization Protocol** — *Resolved in 0.0.3 and 0.0.5*
+LEBOSS-ACC-5 requires explicit authorization for external integrations. The Integration Descriptor object (`standards/objects/integration-descriptor.md`) defines what must be recorded. The Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`) defines the full integration lifecycle and behavioral rules (LEBOSS-IDP-1 through IDP-26).
 
-**GAP-5: Succession and Ownership Transfer**
-LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists for executing an ownership transfer.
-*Deferred to: 0.0.3*
+**GAP-5: Succession and Ownership Transfer** — *Open*
+LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists for executing an ownership transfer. Deferred to a future proposal.
 
 ---
 
