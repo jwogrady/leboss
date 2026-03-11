@@ -102,7 +102,7 @@ The delegation model itself is not fully specified in this version and will be a
 
 ## 6. Relationship to Other Objects
 
-- An Access Grant MAY reference an Integration Descriptor when granting access to an external integration (Satellite equivalent).
+- An Access Grant MAY reference an Integration Descriptor when granting access to an external integration.
 - Every data access event governed by an Access Grant SHOULD produce an Audit Record referencing the `grant_id`.
 
 ---

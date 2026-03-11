@@ -12,7 +12,7 @@
 
 An Integration Descriptor is the structured record of an authorized external integration within a LEBOSS-compliant system.
 
-External integrations (Satellite equivalents) are the point of greatest data sovereignty risk in the LEBOSS reference model. Before any external integration MAY receive data, it MUST be explicitly authorized at the brand entity or governing entity level (LEBOSS-ACC-5). The Integration Descriptor is the object that records that authorization.
+External integrations are the point of greatest data sovereignty risk in the LEBOSS reference model. Before any external integration MAY receive data, it MUST be explicitly authorized at the brand entity or governing entity level (LEBOSS-ACC-5). The Integration Descriptor is the object that records that authorization.
 
 Without an Integration Descriptor, a connection to an external platform cannot be verified as explicitly authorized, and the requirement that all data flows through external integrations be logged and auditable (LEBOSS-ARCH-11) cannot be enforced.
 

@@ -308,7 +308,7 @@ class: text-center
   <div class="text-5xl font-bold text-blue-300 mb-2">Z</div>
   <div class="text-sm font-semibold mb-2">Draft</div>
   <div class="text-xs text-gray-400">Rightmost digit. Increments with each accepted Proposal. Working drafts open to community feedback.</div>
-  <div class="mt-3 text-xs text-blue-300 font-mono">0.0.1 → 0.0.2 → 0.0.11</div>
+  <div class="mt-3 text-xs text-blue-300 font-mono">0.0.1 → 0.0.2 → 0.0.12</div>
 </div>
 
 <div class="bg-purple-900 bg-opacity-40 border border-purple-500 rounded-xl p-5 text-center">
@@ -329,7 +329,7 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
   <strong class="text-gray-300">Current status:</strong>
-  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.11</code> — a complete working draft preparing for <code class="text-purple-300">0.1.0</code>, the first Committee Vote candidate. Proposals 0.0.1 through 0.0.11 are open for community review.</span>
+  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.12</code> — a complete working draft preparing for <code class="text-purple-300">0.1.0</code>, the first Committee Vote candidate. Proposals 0.0.1 through 0.0.12 are open for community review.</span>
 </div>
 
 </div>

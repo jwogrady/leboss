@@ -4,7 +4,6 @@
 **Status:** Proposal
 **Version:** 0.0.3
 **Date:** 2026-03-09
-**Branch:** proposal/0.0.3
 
 ---
 
