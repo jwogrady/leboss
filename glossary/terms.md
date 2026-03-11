@@ -205,7 +205,7 @@ Example: Smith Plumbing is a Galaxy within the Smith & Sons LLC Universe.
 
 A structured data primitive defined by the LEBOSS standard that gives operational form to a normative rule. Governance objects define required fields and normative properties without prescribing implementation format or storage mechanism.
 
-The three governance objects defined in LEBOSS 0.0.3 are: Access Grant, Integration Descriptor, and Audit Record.
+The three governance objects are: Access Grant, Integration Descriptor, and Audit Record.
 
 See also: *Access Grant*, *Integration Descriptor*, *Audit Record*
 

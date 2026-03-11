@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Version:** 0.0.11
+**Updated Through:** proposal/0.0.11
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---

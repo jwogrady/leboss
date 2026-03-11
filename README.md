@@ -2,7 +2,7 @@
 
 **Local Entrepreneur Business Operating System Standards**
 
-[![Version](https://img.shields.io/badge/version-v0.1.0_draft-blue)](STATUS.md)
+[![Version](https://img.shields.io/badge/version-pre--v0.1.0-blue)](STATUS.md)
 [![Status](https://img.shields.io/badge/status-draft-orange)](STATUS.md)
 [![Type](https://img.shields.io/badge/type-open%20standard-purple)](standards/leboss-standard.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)

@@ -15,7 +15,7 @@ LEBOSS uses semantic versioning in the form `X.Y.Z` with LEBOSS-specific meaning
 | `X` (leftmost) | **Published** | A committee- and member-ratified standard. Immutable. The canonical reference for conformant implementations. |
 
 **Examples:**
-- `0.0.9` — ninth working draft; under active development
+- `0.0.11` — eleventh working draft; current pre-v0.1.0 draft
 - `0.1.0` — first Committee Vote candidate; stable for implementer review
 - `1.0.0` — first Published standard; ratified and immutable
 
@@ -63,6 +63,7 @@ Specification versions are tracked through:
 | 0.0.8 | `v0.0.8` *(pending)* | [proposals/0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
 | 0.0.9 | `v0.0.9` *(pending)* | [proposals/0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
 | 0.0.10 | `v0.0.10` *(pending)* | [proposals/0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
+| 0.0.11 | `v0.0.11` *(pending)* | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
 
 ### Upcoming
 
