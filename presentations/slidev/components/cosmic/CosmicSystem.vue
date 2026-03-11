@@ -68,7 +68,7 @@
         :key="orbit.radius"
         :cx="cx"
         :cy="cy"
-        :r="orbit.radius"
+        :r="clampedRadius(orbit)"
         fill="none"
         stroke="rgba(255,255,255,0.07)"
         stroke-width="1"
@@ -209,9 +209,10 @@ function nodePosition(orbit: OrbitDef, ni: number) {
   const startAngle = orbit.startAngle ?? -Math.PI / 2
   const angleStep = count > 1 ? (2 * Math.PI) / count : 0
   const angle = startAngle + ni * angleStep
+  const r = clampedRadius(orbit)
   return {
-    x: cx.value + orbit.radius * Math.cos(angle),
-    y: cy.value + orbit.radius * Math.sin(angle),
+    x: cx.value + r * Math.cos(angle),
+    y: cy.value + r * Math.sin(angle),
   }
 }
 
@@ -257,6 +258,12 @@ function nodeSize(node: OrbitNode): number {
     galaxy: 76, star: 64, planet: 64, moon: 56, satellite: 56, custom: 60,
   }
   return defaults[node.type ?? 'custom'] ?? 60
+}
+
+function clampedRadius(orbit: OrbitDef): number {
+  const maxNodeHalf = orbit.nodes.reduce((m, n) => Math.max(m, nodeSize(n) / 2), 0)
+  const maxR = Math.min(props.width, props.height) / 2 - maxNodeHalf - 4
+  return Math.min(orbit.radius, Math.max(0, maxR))
 }
 
 function nodeFontSize(node: OrbitNode): number {

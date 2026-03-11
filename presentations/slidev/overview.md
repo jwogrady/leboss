@@ -238,22 +238,30 @@ class: text-center
 
 # How LEBOSS Works
 
-<div class="grid grid-cols-2 gap-10 mt-4">
+<div class="grid grid-cols-2 gap-6 mt-2">
 
-<div class="flex flex-col items-center gap-0">
-  <div class="w-20 h-20 rounded-full bg-blue-900 bg-opacity-60 border border-blue-500 flex items-center justify-center text-xs font-semibold text-blue-300 text-center px-1">Governing Entity</div>
-  <div class="text-gray-500 text-xs leading-none">↓ owns</div>
-  <div class="w-16 h-16 rounded-full bg-purple-900 bg-opacity-60 border border-purple-500 flex items-center justify-center text-xs font-semibold text-purple-300">Resources</div>
-  <div class="text-gray-500 text-xs leading-none">↓</div>
-  <div class="w-16 h-16 rounded-full bg-green-900 bg-opacity-60 border border-green-500 flex items-center justify-center text-xs font-semibold text-green-300 text-center px-1">Access Grants</div>
-  <div class="text-gray-500 text-xs leading-none">↓</div>
-  <div class="w-16 h-16 rounded-full bg-yellow-900 bg-opacity-60 border border-yellow-500 flex items-center justify-center text-xs font-semibold text-yellow-300 text-center px-1">Integrations</div>
-  <div class="text-gray-500 text-xs leading-none">↓</div>
-  <div class="w-16 h-16 rounded-full bg-red-900 bg-opacity-60 border border-red-500 flex items-center justify-center text-xs font-semibold text-red-300 text-center px-1">Audit Records</div>
-  <div class="text-gray-500 text-xs leading-none">↓</div>
-  <div class="w-16 h-16 rounded-full bg-indigo-900 bg-opacity-60 border border-indigo-500 flex items-center justify-center text-xs font-semibold text-indigo-300 text-center px-1">Data Portability</div>
-  <div class="text-blue-400 text-xs leading-none">↓ closes loop</div>
-  <div class="w-20 h-20 rounded-full bg-blue-900 bg-opacity-40 border border-blue-600 flex items-center justify-center text-xs font-semibold text-blue-300 text-center px-1 opacity-70">Governing Entity</div>
+<div class="flex justify-center items-center">
+<CosmicSystem
+  center-label="Governing Entity"
+  center-sub="Business Owner"
+  :center-size="72"
+  :width="300"
+  :height="300"
+  :starfield="false"
+  :show-connectors="true"
+  :orbits="[
+    {
+      radius: 108,
+      nodes: [
+        { label: 'Resources', size: 52, color: 'rgba(147,51,234,0.35)', borderColor: 'rgba(192,132,252,0.8)' },
+        { label: 'Access Grants', size: 52, color: 'rgba(34,197,94,0.35)', borderColor: 'rgba(74,222,128,0.8)' },
+        { label: 'Integrations', size: 52, color: 'rgba(234,179,8,0.35)', borderColor: 'rgba(250,204,21,0.8)' },
+        { label: 'Audit Records', size: 52, color: 'rgba(239,68,68,0.35)', borderColor: 'rgba(248,113,113,0.8)' },
+        { label: 'Data Portability', size: 52, color: 'rgba(99,102,241,0.35)', borderColor: 'rgba(129,140,248,0.8)' }
+      ]
+    }
+  ]"
+/>
 </div>
 
 <div class="space-y-4 text-sm mt-2">
