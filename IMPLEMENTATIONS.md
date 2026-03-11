@@ -6,9 +6,9 @@ This document tracks systems implementing or aligning with the LEBOSS specificat
 
 ## Implementations
 
-| Project | Description | Status | LEBOSS Version |
-|---------|-------------|--------|----------------|
-| *(none yet)* | | | |
+| Project        | Description | Status | LEBOSS Version |
+|----------------|-------------|--------|----------------|
+| *(none yet)*   | -           | -      | -              |
 
 ---
 
@@ -27,7 +27,7 @@ Include:
 
 ## Conformance
 
-Implementations claiming LEBOSS compatibility must satisfy the requirements defined in:
+Implementations claiming LEBOSS-compliant status must satisfy the requirements defined in:
 
 [standards/conformance.md](standards/conformance.md)
 

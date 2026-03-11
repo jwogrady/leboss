@@ -257,7 +257,7 @@ See also: *Universe (Element 0)*
 
 ## Integration Descriptor
 
-A governance object that records the authorization of an external integration (Satellite equivalent) to receive data from a LEBOSS-compliant system. An Integration Descriptor must exist before any external integration may receive primary operational data.
+A governance object that records the authorization of an external integration to receive data from a LEBOSS-compliant system. An Integration Descriptor must exist before any external integration may receive primary operational data.
 
 Required fields include a unique integration identifier, the provider name, the authorizing entity, the authorization timestamp, the authorization level (governing entity or brand entity), granted permissions, and data flow descriptions.
 

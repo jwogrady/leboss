@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.11, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.12, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.11. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.12. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -476,7 +476,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.11.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.12.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -657,4 +657,4 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.11 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.12 — Open for community review and pull request contribution.*
