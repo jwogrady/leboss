@@ -105,30 +105,32 @@ class: text-center
 <CosmicSystem
   center-label="Universe"
   center-sub="Governing Entity"
-  :center-size="96"
-  :width="620"
-  :height="380"
+  :center-size="88"
+  :width="520"
+  :height="420"
   :starfield="true"
   :orbits="[
     {
-      radius: 120,
+      radius: 90,
       nodes: [
-        { label: 'Galaxy', sub: 'Brand / Business Line', type: 'galaxy', size: 76 }
+        { label: 'Galaxy', sub: 'Brand / Business Line', type: 'galaxy', size: 72 }
       ]
     },
     {
-      radius: 210,
+      radius: 155,
+      startAngle: 0,
       nodes: [
         { label: 'Star', sub: 'Customer Interface', type: 'star' },
         { label: 'Planet', sub: 'Backend Service', type: 'planet' }
       ]
     },
     {
-      radius: 295,
+      radius: 200,
+      startAngle: 0.7854,
       nodes: [
         { label: 'Moon', sub: 'Internal Module', type: 'moon' },
-        { label: 'Moon', sub: 'Internal Module', type: 'moon' },
         { label: 'Satellite', sub: 'Third-Party', type: 'satellite' },
+        { label: 'Moon', sub: 'Internal Module', type: 'moon' },
         { label: 'Satellite', sub: 'Third-Party', type: 'satellite' }
       ]
     }
