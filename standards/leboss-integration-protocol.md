@@ -4,7 +4,6 @@
 **Status:** Proposal
 **Version:** 0.0.5
 **Date:** 2026-03-09
-**Branch:** proposal/0.0.5
 **Depends on:** [standards/objects/integration-descriptor.md](objects/integration-descriptor.md), [standards/leboss-access-grant-protocol.md](leboss-access-grant-protocol.md)
 
 ---
@@ -17,7 +16,7 @@
 
 The Integration Descriptor object (`standards/objects/integration-descriptor.md`) defines what must be recorded about an authorized external integration. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines how authorizations are issued and enforced. This protocol defines how integrations behave across their operational lifetime, and how those two prior specifications are applied specifically to the external integration context.
 
-External integrations (Satellite equivalents) are the point of greatest data sovereignty risk in the LEBOSS reference model. They represent boundaries at which primary operational data may flow to systems outside the governing entity's direct control. This risk requires not only that integrations be registered and authorized, but that their behavior be continuously governed and immediately adjustable.
+External integrations are the point of greatest data sovereignty risk in the LEBOSS reference model. They represent boundaries at which primary operational data may flow to systems outside the governing entity's direct control. This risk requires not only that integrations be registered and authorized, but that their behavior be continuously governed and immediately adjustable.
 
 This protocol is:
 - **implementation-neutral** — it specifies what must happen, not how it is implemented

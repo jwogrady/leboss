@@ -4,7 +4,6 @@
 **Status:** Proposal
 **Version:** 0.0.7
 **Date:** 2026-03-09
-**Branch:** proposal/0.0.7
 **Depends on:** [standards/objects/audit-record.md](objects/audit-record.md), [standards/leboss-audit-protocol.md](leboss-audit-protocol.md)
 
 ---

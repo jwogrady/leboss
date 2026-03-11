@@ -4,7 +4,6 @@
 **Status:** Proposal
 **Version:** 0.0.8
 **Date:** 2026-03-09
-**Branch:** proposal/0.0.8
 **Referenced by:** [standards/objects/access-grant.md](objects/access-grant.md), [standards/objects/audit-record.md](objects/audit-record.md), [standards/leboss-data-portability-protocol.md](leboss-data-portability-protocol.md)
 
 ---

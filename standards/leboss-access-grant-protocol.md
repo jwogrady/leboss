@@ -4,7 +4,6 @@
 **Status:** Proposal
 **Version:** 0.0.4
 **Date:** 2026-03-09
-**Branch:** proposal/0.0.4
 **Depends on:** [standards/objects/access-grant.md](objects/access-grant.md)
 
 ---
