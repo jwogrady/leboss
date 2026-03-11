@@ -64,6 +64,7 @@ Specification versions are tracked through:
 | 0.0.9 | [`v0.0.9`](https://github.com/jwogrady/leboss/releases/tag/v0.0.9) | [proposals/0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
 | 0.0.10 | [`v0.0.10`](https://github.com/jwogrady/leboss/releases/tag/v0.0.10) | [proposals/0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
 | 0.0.11 | [`v0.0.11`](https://github.com/jwogrady/leboss/releases/tag/v0.0.11) | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
+| 0.0.12 | [`v0.0.12`](https://github.com/jwogrady/leboss/releases/tag/v0.0.12) | [proposals/0.0.12](proposals/0.0.12/proposal.md) | Terminology stabilization — conformance tiers, missing glossary entries, element name alignment |
 
 ### Upcoming
 

@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.12
 
 ---
 
@@ -20,6 +20,14 @@ Access Grants are revocable at any time by the governing entity. Validation and 
 See also: *Governance Object*, *Least Privilege*, *Governing Entity*
 
 Full object definition: [`standards/objects/access-grant.md`](../standards/objects/access-grant.md)
+
+---
+
+## Actor
+
+A party that performs a governed action within a LEBOSS-compliant system. An actor is identified by a stable, unique identifier recorded in the `actor_id` field of every Audit Record. Actors include human users, service accounts, automation processes, and external integrations. Every governed operation must be attributable to an actor.
+
+See also: *Audit Record*, *Governing Entity*
 
 ---
 
@@ -83,6 +91,16 @@ The Audit Trail is the mechanism by which data ownership is made verifiable rath
 
 ---
 
+## Brand Entity
+
+An implementation-neutral term for a Galaxy (Element 1): an individual brand, business line, or operating company within a governed environment. The term "brand entity" is used in protocol documents and field definitions where the spatial metaphor name (Galaxy) is not appropriate.
+
+A brand entity's identifier is used to qualify resource namespaces and to scope the authorization level of Integration Descriptors.
+
+See also: *Galaxy (Element 1)*, *Governing Entity*, *Resource Namespace*
+
+---
+
 ## Clarity (Principle 1)
 
 The first of LEBOSS's five Foundation Principles. Clarity requires that every part of a business system — including people, brands, workflows, data, and integrations — has a clearly defined role and place within the LEBOSS hierarchy, with no ambiguity about ownership, accountability, or access scope.
@@ -91,9 +109,15 @@ The first of LEBOSS's five Foundation Principles. Clarity requires that every pa
 
 ## Compliance
 
-Alignment with the normative requirements of the LEBOSS standard. A system that meets all structural, organizational, and data ownership requirements of the applicable published version of the standard may be described as LEBOSS-compliant.
+LEBOSS defines two conformance tiers:
 
-Formal compliance criteria are to be defined in a subsequent version of the standard.
+**LEBOSS-aligned** — The structural conformance claim. A system that preserves the LEBOSS ownership hierarchy, data boundaries, dependency rules, and access control relationships defined in the Reference Model, regardless of the internal naming used.
+
+**LEBOSS-compliant** — The normative conformance claim. A system that satisfies all MUST-level requirements in [`standards/conformance.md`](../standards/conformance.md). All LEBOSS-compliant systems are also LEBOSS-aligned.
+
+The term "LEBOSS-conformant" is not a defined LEBOSS conformance term.
+
+See also: *Reference Model*
 
 ---
 
@@ -130,6 +154,10 @@ The six hierarchical architectural elements defined by the LEBOSS standard: Univ
 ## Data Fiduciary
 
 A party who holds and manages data on behalf of another party, under an obligation to act in the interests of the data's rightful owner. In the LEBOSS model, service providers who access primary operational data are expected to act as data fiduciaries.
+
+*Note: This is an informative, conceptual term expressing the philosophical obligation underlying LEBOSS's service provider requirements. It is not used normatively in current standards documents. See [charter/mission.md](../charter/mission.md) for the philosophical foundation.*
+
+See also: *Service Provider*, *Steward*
 
 ---
 
@@ -195,7 +223,7 @@ The fifth of LEBOSS's five Foundation Principles. Extensibility requires that LE
 
 ## Galaxy (Element 1)
 
-The second element of the LEBOSS Architecture. A Galaxy represents an individual brand, business line, or operating company owned by a Universe. A single Universe may contain multiple Galaxies, each with its own branding, teams, operational settings, and data boundary.
+The second element of the LEBOSS Reference Model. A Galaxy represents an individual brand, business line, or operating company owned by a Universe. A single Universe may contain multiple Galaxies, each with its own branding, teams, operational settings, and data boundary.
 
 Example: Smith Plumbing is a Galaxy within the Smith & Sons LLC Universe.
 
@@ -339,7 +367,7 @@ The second of LEBOSS's five Foundation Principles. Modularity requires that busi
 
 ## Moon (Element 4)
 
-The fifth element of the LEBOSS Architecture. A Moon is a natural satellite: a company-owned, company-operated internal capability that orbits a Planet or Star within the LEBOSS hierarchy. Moons provide specialized functional modules — such as sales management, service delivery, or accounting — that are owned and controlled by the business.
+The fifth element of the LEBOSS Reference Model. A Moon is a natural satellite: a company-owned, company-operated internal capability that operates within the data boundary of a brand entity (Galaxy). Moons provide specialized functional modules — such as sales management, service delivery, or accounting — that are owned and controlled by the business.
 
 Implementations are not required to use the name "Moon" or to name specific modules in any particular way. The defining characteristic is company ownership and operational control, which distinguishes Moons from Satellites.
 
@@ -367,7 +395,7 @@ Full protocol: [`standards/leboss-data-portability-protocol.md`](../standards/le
 
 ## Planet (Element 3)
 
-The fourth element of the LEBOSS Architecture. A Planet is the backend service that powers a Star. It provides the business logic, data persistence, and operational functionality that makes a customer experience meaningful. A Planet must serve at least one Star; without a Star, it has no purpose in the hierarchy.
+The fourth element of the LEBOSS Reference Model. A Planet is the backend service that powers a Star. It provides the business logic, data persistence, and operational functionality that makes a customer experience meaningful. A Planet must serve at least one Star; without a Star, it has no purpose in the hierarchy.
 
 Example: A booking API that powers a plumbing company's customer scheduling portal.
 
@@ -383,7 +411,7 @@ Contrast with: *Derived Data*
 
 ## Proposal
 
-The first of three standard states in the LEBOSS governance model. A Proposal is a pull request against the LEBOSS repository that introduces or modifies content in the standards documents. Any contributor may open a Proposal.
+The first of four standard states in the LEBOSS governance model. A Proposal is a pull request against the LEBOSS repository that introduces or modifies content in the standards documents. Any contributor may open a Proposal.
 
 See: [governance/governance.md](../governance/governance.md)
 
@@ -391,7 +419,7 @@ See: [governance/governance.md](../governance/governance.md)
 
 ## Published
 
-The third and final standard state in the LEBOSS governance model. A Published standard is an approved version of the LEBOSS specification, assigned a version number, and treated as immutable. Changes to a Published standard require a new version proceeding through the full governance workflow.
+The fourth and final standard state in the LEBOSS governance model. A Published standard is an approved version of the LEBOSS specification, assigned a version number, and treated as immutable. Changes to a Published standard require a new version proceeding through the full governance workflow.
 
 ---
 
@@ -455,9 +483,11 @@ Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-
 
 ## Satellite (Element 5)
 
-The sixth element of the LEBOSS Architecture. A Satellite is an artificial satellite: a connection to a third-party platform or external service operated outside the business's direct control. Satellites represent the boundary of greatest data sovereignty risk, as they are points at which primary operational data may flow to external systems.
+The sixth element of the LEBOSS Reference Model. A Satellite is an artificial satellite: a connection to a third-party platform or external service operated outside the business's direct control. Satellites represent the boundary of greatest data sovereignty risk, as they are points at which primary operational data may flow to external systems.
 
 Every Satellite must be explicitly authorized at the Galaxy or Universe level before receiving any data, and all data flows through Satellites must be logged and auditable.
+
+In implementation-neutral contexts, a Satellite may be referred to as an **external integration**. This term is used in protocol documents where the spatial metaphor is not appropriate.
 
 Example: A Google Business Profile integration; a QuickBooks sync; a Facebook Ads connection.
 
@@ -479,7 +509,7 @@ Any individual or organization that builds, manages, or operates systems on beha
 
 ## Star (Element 2)
 
-The third element of the LEBOSS Architecture. A Star is the customer experience: the interface through which the outside world interacts with a business. Stars include websites, mobile applications, booking portals, customer kiosks, and any other interface through which customers, partners, or stakeholders make contact with the business.
+The third element of the LEBOSS Reference Model. A Star is the customer experience: the interface through which the outside world interacts with a business. Stars include websites, mobile applications, booking portals, customer kiosks, and any other interface through which customers, partners, or stakeholders make contact with the business.
 
 A Star cannot function without a Planet to support it. Without a Star, a Planet serves no one.
 
@@ -505,7 +535,7 @@ The deliberate architectural design of a system to support the transfer of owner
 
 ## Universe (Element 0)
 
-The first and foundational element of the LEBOSS Architecture. The Universe is the root owner: the person, family, or registered legal entity that owns the entire business enterprise and everything within it. The Universe is the ultimate authority over all data access decisions in the LEBOSS hierarchy.
+The first and foundational element of the LEBOSS Reference Model. The Universe is the root owner: the person, family, or registered legal entity that owns the entire business enterprise and everything within it. The Universe is the ultimate authority over all data access decisions in the LEBOSS hierarchy.
 
 A Universe is not a software construct. It is a legal and organizational reality that LEBOSS-compliant systems must reflect and respect.
 

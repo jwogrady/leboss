@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.12
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -9,6 +9,18 @@
 ## 1. Purpose
 
 This document defines the minimum requirements for systems claiming compatibility with the LEBOSS standard.
+
+### 1.0 Conformance Tiers *(Informative)*
+
+LEBOSS defines two conformance tiers:
+
+**LEBOSS-aligned** — The structural conformance claim. A system that preserves the LEBOSS ownership hierarchy, data boundaries, dependency rules, and access control relationships defined in the Reference Model (§5 of the base standard), regardless of the internal naming used. LEBOSS-aligned asserts that the architecture is organized consistently with the LEBOSS model.
+
+**LEBOSS-compliant** — The normative conformance claim. A system that satisfies all MUST-level requirements defined in Section 3 of this document. LEBOSS-compliant asserts full behavioral conformance with all protocols, governance object rules, and data ownership requirements.
+
+All LEBOSS-compliant systems are also LEBOSS-aligned. LEBOSS-aligned systems are not required to be LEBOSS-compliant.
+
+The term "LEBOSS-conformant" is not a defined LEBOSS conformance term and **MUST NOT** be used as a conformance claim.
 
 A system that satisfies all requirements in Section 3 **MAY** be described as **LEBOSS-compliant**. A system that fails any requirement in Section 4 **MUST NOT** be described as LEBOSS-compliant.
 
