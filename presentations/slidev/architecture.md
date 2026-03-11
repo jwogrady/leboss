@@ -88,12 +88,55 @@ routerMode: 'history'
 </div>
 
 ---
-layout: section
+layout: center
+class: text-center
 ---
 
-# The Reference Model
+<CosmicDivider title="The Reference Model" subtitle="Six hierarchical elements for structuring a LEBOSS-governed system" />
 
-Six hierarchical elements for structuring a LEBOSS-governed system
+---
+layout: center
+class: text-center
+---
+
+# LEBOSS Orbital Model
+
+<div class="flex justify-center mt-2">
+<CosmicSystem
+  center-label="Universe"
+  center-sub="Governing Entity"
+  :center-size="96"
+  :width="620"
+  :height="380"
+  :starfield="true"
+  :orbits="[
+    {
+      radius: 120,
+      nodes: [
+        { label: 'Galaxy', sub: 'Brand / Business Line', type: 'galaxy', size: 76 }
+      ]
+    },
+    {
+      radius: 210,
+      nodes: [
+        { label: 'Star', sub: 'Customer Interface', type: 'star' },
+        { label: 'Planet', sub: 'Backend Service', type: 'planet' }
+      ]
+    },
+    {
+      radius: 295,
+      nodes: [
+        { label: 'Moon', sub: 'Internal Module', type: 'moon' },
+        { label: 'Moon', sub: 'Internal Module', type: 'moon' },
+        { label: 'Satellite', sub: 'Third-Party', type: 'satellite' },
+        { label: 'Satellite', sub: 'Third-Party', type: 'satellite' }
+      ]
+    }
+  ]"
+/>
+</div>
+
+<div class="text-xs text-gray-500 mt-1">Every element orbits the governing entity — data sovereignty is structural, not contractual.</div>
 
 ---
 layout: two-cols
@@ -209,6 +252,26 @@ layout: two-cols
 
 ::right::
 
+<div class="pl-6 mt-4 space-y-4">
+
+<div class="text-center">
+  <div class="inline-flex w-12 h-12 rounded-full bg-purple-600 items-center justify-center text-lg font-bold mb-1">1</div>
+  <div class="text-xs text-gray-500 mb-2">Galaxy</div>
+  <div class="inline-flex w-20 h-20 rounded-full bg-yellow-500 items-center justify-center text-3xl font-bold">2</div>
+  <p class="mt-2 text-yellow-300 font-semibold">Star</p>
+</div>
+
+<div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
+  <p class="text-yellow-300 font-semibold mb-2">Implementation note</p>
+  <p class="text-gray-400">A Star presents the brand experience. Multiple Stars may serve a single Galaxy — for example, a public-facing storefront and a separate staff scheduling portal.</p>
+</div>
+
+</div>
+
+---
+layout: two-cols
+---
+
 # **3 — Planet**
 
 <div class="space-y-4 text-sm mt-4">
@@ -226,6 +289,24 @@ layout: two-cols
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <p class="font-semibold text-gray-300 mb-2">Ownership</p>
   <p class="text-gray-400">May be operated by the business itself or by a compliant service provider. The governing entity retains data ownership regardless of who operates the Planet.</p>
+</div>
+
+</div>
+
+::right::
+
+<div class="pl-6 mt-4 space-y-4">
+
+<div class="text-center">
+  <div class="inline-flex w-12 h-12 rounded-full bg-yellow-500 items-center justify-center text-lg font-bold mb-1">2</div>
+  <div class="text-xs text-gray-500 mb-2">Star</div>
+  <div class="inline-flex w-20 h-20 rounded-full bg-green-600 items-center justify-center text-3xl font-bold">3</div>
+  <p class="mt-2 text-green-300 font-semibold">Planet</p>
+</div>
+
+<div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
+  <p class="text-green-300 font-semibold mb-2">Implementation note</p>
+  <p class="text-gray-400">The Planet is the source of truth for its Galaxy's data. A compliant Planet must support export, audit, and access revocation — regardless of the operating provider.</p>
 </div>
 
 </div>
@@ -258,6 +339,26 @@ layout: two-cols
 
 ::right::
 
+<div class="pl-6 mt-4 space-y-4">
+
+<div class="text-center">
+  <div class="inline-flex w-16 h-16 rounded-full bg-green-600 items-center justify-center text-2xl font-bold mb-1">3</div>
+  <div class="text-xs text-gray-500 mb-2">Planet</div>
+  <div class="inline-flex w-20 h-20 rounded-full bg-indigo-600 items-center justify-center text-3xl font-bold">4</div>
+  <p class="mt-2 text-indigo-300 font-semibold">Moon</p>
+</div>
+
+<div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
+  <p class="text-indigo-300 font-semibold mb-2">Implementation note</p>
+  <p class="text-gray-400">Moons operate inside the trust boundary. No external data flows are required. Examples: an internal invoicing engine, a staff scheduling module, an analytics dashboard.</p>
+</div>
+
+</div>
+
+---
+layout: two-cols
+---
+
 # **5 — Satellite**
 #### Artificial Satellite
 
@@ -276,6 +377,24 @@ layout: two-cols
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <p class="font-semibold text-red-300 mb-2">⚠ Data sovereignty risk</p>
   <p class="text-gray-400">Satellites are the point of greatest data sovereignty risk. Every Satellite requires an explicit Access Grant and a filed Integration Descriptor before receiving any business data.</p>
+</div>
+
+</div>
+
+::right::
+
+<div class="pl-6 mt-4 space-y-4">
+
+<div class="text-center">
+  <div class="inline-flex w-16 h-16 rounded-full bg-green-600 items-center justify-center text-2xl font-bold mb-1">3</div>
+  <div class="text-xs text-gray-500 mb-2">Planet</div>
+  <div class="inline-flex w-20 h-20 rounded-full bg-red-600 items-center justify-center text-3xl font-bold">5</div>
+  <p class="mt-2 text-red-300 font-semibold">Satellite</p>
+</div>
+
+<div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
+  <p class="text-red-300 font-semibold mb-2">Implementation note</p>
+  <p class="text-gray-400">Satellites operate outside the trust boundary. Before activation, a Satellite must have a filed Integration Descriptor and an active Access Grant scoped to its declared data flows.</p>
 </div>
 
 </div>
@@ -303,12 +422,11 @@ layout: two-cols
 </div>
 
 ---
-layout: section
+layout: center
+class: text-center
 ---
 
-# Governance Objects
-
-The three data primitives that enforce LEBOSS compliance
+<CosmicDivider title="Governance Objects" subtitle="The objects that enforce LEBOSS compliance" />
 
 ---
 
@@ -562,21 +680,31 @@ class: text-center
 
 # Operational Flow
 
-<div class="mt-8 max-w-3xl mx-auto text-left">
+<div class="mt-8 max-w-3xl mx-auto">
 
-<div class="flex items-center gap-3 mb-4">
-  <div class="bg-blue-600 rounded px-3 py-2 text-sm font-semibold whitespace-nowrap">Actor</div>
-  <div class="text-gray-500">→</div>
-  <div class="bg-purple-600 rounded px-3 py-2 text-sm font-semibold whitespace-nowrap">Operation</div>
-  <div class="text-gray-500">→</div>
-  <div class="bg-yellow-600 rounded px-3 py-2 text-sm font-semibold whitespace-nowrap">Resource</div>
-  <div class="text-gray-500">→</div>
-  <div class="bg-green-600 rounded px-3 py-2 text-sm font-semibold whitespace-nowrap">Access Grant</div>
-  <div class="text-gray-500">→</div>
-  <div class="bg-red-600 rounded px-3 py-2 text-sm font-semibold whitespace-nowrap">Audit Record</div>
+<div class="flex items-center justify-center gap-2 mb-4">
+  <div class="flex flex-col items-center gap-1">
+    <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-xs font-semibold text-center leading-tight px-1">Actor</div>
+  </div>
+  <div class="text-gray-500 text-lg">→</div>
+  <div class="flex flex-col items-center gap-1">
+    <div class="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center text-xs font-semibold text-center leading-tight px-1">Oper&shy;ation</div>
+  </div>
+  <div class="text-gray-500 text-lg">→</div>
+  <div class="flex flex-col items-center gap-1">
+    <div class="w-16 h-16 rounded-full bg-yellow-600 flex items-center justify-center text-xs font-semibold text-center leading-tight px-1">Resource</div>
+  </div>
+  <div class="text-gray-500 text-lg">→</div>
+  <div class="flex flex-col items-center gap-1">
+    <div class="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center text-xs font-semibold text-center leading-tight px-1">Access Grant</div>
+  </div>
+  <div class="text-gray-500 text-lg">→</div>
+  <div class="flex flex-col items-center gap-1">
+    <div class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center text-xs font-semibold text-center leading-tight px-1">Audit Record</div>
+  </div>
 </div>
 
-<div class="grid grid-cols-5 gap-2 text-xs text-gray-400 mt-4">
+<div class="grid grid-cols-5 gap-2 text-xs text-gray-400 mt-2">
   <div class="text-center">Any party attempting to access or modify business data</div>
   <div class="text-center">The data operation being performed (read, write, delete, export)</div>
   <div class="text-center">The specific resource being accessed, as defined by the Resource Model</div>

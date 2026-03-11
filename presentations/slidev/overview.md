@@ -82,19 +82,19 @@ class: text-center
 <div class="text-sm text-gray-400 mb-8">In most modern SaaS systems:</div>
 
 <div class="flex flex-col items-center gap-0">
-  <div class="bg-white bg-opacity-10 rounded-xl px-10 py-4 text-center w-52">
-    <div class="text-xs text-gray-400 mb-1">You</div>
-    <div class="font-semibold">Business</div>
+  <div class="w-28 h-28 rounded-full bg-white bg-opacity-10 flex flex-col items-center justify-center text-center">
+    <div class="text-xs text-gray-400 leading-tight">You</div>
+    <div class="font-semibold text-sm">Business</div>
   </div>
   <div class="text-gray-500 text-lg py-1">↓</div>
-  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-10 py-4 text-center w-52">
-    <div class="text-xs text-red-400 mb-1">Vendor controls</div>
-    <div class="font-semibold text-red-300">Platform</div>
+  <div class="w-28 h-28 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
+    <div class="text-xs text-red-400 leading-tight">Vendor controls</div>
+    <div class="font-semibold text-sm text-red-300">Platform</div>
   </div>
   <div class="text-gray-500 text-lg py-1">↓</div>
-  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-xl px-10 py-4 text-center w-52">
-    <div class="text-xs text-red-400 mb-1">Vendor holds</div>
-    <div class="font-semibold text-red-300">Data</div>
+  <div class="w-28 h-28 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
+    <div class="text-xs text-red-400 leading-tight">Vendor holds</div>
+    <div class="font-semibold text-sm text-red-300">Data</div>
   </div>
 </div>
 
@@ -178,26 +178,26 @@ class: text-center
 
 <div class="space-y-4">
   <div class="text-sm font-semibold text-red-400 mb-3">Traditional SaaS</div>
-  <div class="flex flex-col items-start gap-0">
-    <div class="bg-white bg-opacity-10 rounded-lg px-5 py-2 text-sm w-44 text-center">Business</div>
-    <div class="text-gray-500 text-sm pl-5 leading-tight">↓</div>
-    <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-lg px-5 py-2 text-sm w-44 text-center text-red-300">Platform owns</div>
-    <div class="text-gray-500 text-sm pl-5 leading-tight">↓</div>
-    <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-lg px-5 py-2 text-sm w-44 text-center text-red-300">Data</div>
+  <div class="flex flex-col items-center gap-0">
+    <div class="w-20 h-20 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-semibold">Business</div>
+    <div class="text-gray-500 text-sm py-0.5">↓</div>
+    <div class="w-20 h-20 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-xs text-center text-red-300 px-1"><span class="font-semibold">Platform</span><span>owns</span></div>
+    <div class="text-gray-500 text-sm py-0.5">↓</div>
+    <div class="w-20 h-20 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex items-center justify-center text-sm font-semibold text-red-300">Data</div>
   </div>
-  <div class="text-xs text-gray-500 mt-2">Control flows down — away from the business.</div>
+  <div class="text-xs text-gray-500 mt-2 text-center">Control flows down — away from the business.</div>
 </div>
 
 <div class="space-y-4">
   <div class="text-sm font-semibold text-green-400 mb-3">LEBOSS</div>
-  <div class="flex flex-col items-start gap-0">
-    <div class="bg-white bg-opacity-10 rounded-lg px-5 py-2 text-sm w-52 text-center">Business</div>
-    <div class="text-gray-400 text-xs pl-6 leading-tight">↓ owns</div>
-    <div class="bg-green-900 bg-opacity-40 border-2 border-green-500 rounded-lg px-5 py-3 text-sm w-52 text-center font-semibold text-green-300">Data Environment</div>
-    <div class="text-blue-400 text-xs pl-6 leading-tight">↑ serves</div>
-    <div class="bg-blue-900 bg-opacity-40 border border-blue-500 rounded-lg px-5 py-2 text-sm w-52 text-center text-blue-300">Platform Services</div>
+  <div class="flex flex-col items-center gap-0">
+    <div class="w-20 h-20 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-semibold">Business</div>
+    <div class="text-gray-400 text-xs py-0.5">↓ owns</div>
+    <div class="w-24 h-24 rounded-full bg-green-900 bg-opacity-40 border-2 border-green-500 flex items-center justify-center text-xs text-center text-green-300 font-semibold px-2">Data Environment</div>
+    <div class="text-blue-400 text-xs py-0.5">↑ serves</div>
+    <div class="w-20 h-20 rounded-full bg-blue-900 bg-opacity-40 border border-blue-500 flex items-center justify-center text-xs text-center text-blue-300 px-2">Platform Services</div>
   </div>
-  <div class="text-xs text-gray-500 mt-2">The business owns the environment. Platforms operate on top of it.</div>
+  <div class="text-xs text-gray-500 mt-2 text-center">The business owns the environment. Platforms operate on top of it.</div>
 </div>
 
 </div>
@@ -241,19 +241,19 @@ class: text-center
 <div class="grid grid-cols-2 gap-10 mt-4">
 
 <div class="flex flex-col items-center gap-0">
-  <div class="bg-blue-900 bg-opacity-40 border border-blue-600 rounded-lg px-6 py-2 text-sm font-semibold text-blue-300 w-56 text-center">Governing Entity</div>
-  <div class="text-gray-500 text-xs py-0.5">↓ owns</div>
-  <div class="bg-purple-900 bg-opacity-40 border border-purple-600 rounded-lg px-6 py-2 text-sm font-semibold text-purple-300 w-56 text-center">Resources</div>
-  <div class="text-gray-500 text-xs py-0.5">↓ access controlled by</div>
-  <div class="bg-green-900 bg-opacity-40 border border-green-600 rounded-lg px-6 py-2 text-sm font-semibold text-green-300 w-56 text-center">Access Grants</div>
-  <div class="text-gray-500 text-xs py-0.5">↓ authorize</div>
-  <div class="bg-yellow-900 bg-opacity-40 border border-yellow-600 rounded-lg px-6 py-2 text-sm font-semibold text-yellow-300 w-56 text-center">Integrations</div>
-  <div class="text-gray-500 text-xs py-0.5">↓ recorded in</div>
-  <div class="bg-red-900 bg-opacity-40 border border-red-600 rounded-lg px-6 py-2 text-sm font-semibold text-red-300 w-56 text-center">Audit Records</div>
-  <div class="text-gray-500 text-xs py-0.5">↓ enable</div>
-  <div class="bg-indigo-900 bg-opacity-40 border border-indigo-600 rounded-lg px-6 py-2 text-sm font-semibold text-indigo-300 w-56 text-center">Data Portability</div>
-  <div class="text-blue-400 text-xs py-0.5">↓ returns control to</div>
-  <div class="bg-blue-900 bg-opacity-40 border border-blue-600 rounded-lg px-6 py-2 text-sm font-semibold text-blue-300 w-56 text-center opacity-70">Governing Entity</div>
+  <div class="w-20 h-20 rounded-full bg-blue-900 bg-opacity-60 border border-blue-500 flex items-center justify-center text-xs font-semibold text-blue-300 text-center px-1">Governing Entity</div>
+  <div class="text-gray-500 text-xs leading-none">↓ owns</div>
+  <div class="w-16 h-16 rounded-full bg-purple-900 bg-opacity-60 border border-purple-500 flex items-center justify-center text-xs font-semibold text-purple-300">Resources</div>
+  <div class="text-gray-500 text-xs leading-none">↓</div>
+  <div class="w-16 h-16 rounded-full bg-green-900 bg-opacity-60 border border-green-500 flex items-center justify-center text-xs font-semibold text-green-300 text-center px-1">Access Grants</div>
+  <div class="text-gray-500 text-xs leading-none">↓</div>
+  <div class="w-16 h-16 rounded-full bg-yellow-900 bg-opacity-60 border border-yellow-500 flex items-center justify-center text-xs font-semibold text-yellow-300 text-center px-1">Integrations</div>
+  <div class="text-gray-500 text-xs leading-none">↓</div>
+  <div class="w-16 h-16 rounded-full bg-red-900 bg-opacity-60 border border-red-500 flex items-center justify-center text-xs font-semibold text-red-300 text-center px-1">Audit Records</div>
+  <div class="text-gray-500 text-xs leading-none">↓</div>
+  <div class="w-16 h-16 rounded-full bg-indigo-900 bg-opacity-60 border border-indigo-500 flex items-center justify-center text-xs font-semibold text-indigo-300 text-center px-1">Data Portability</div>
+  <div class="text-blue-400 text-xs leading-none">↓ closes loop</div>
+  <div class="w-20 h-20 rounded-full bg-blue-900 bg-opacity-40 border border-blue-600 flex items-center justify-center text-xs font-semibold text-blue-300 text-center px-1 opacity-70">Governing Entity</div>
 </div>
 
 <div class="space-y-4 text-sm mt-2">
@@ -443,7 +443,7 @@ layout: two-cols
   <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
   <div>
     <strong class="text-blue-300">Clear governance model</strong>
-    <p class="text-gray-400 text-xs mt-1">40 normative rules across six protocol groups — a precise implementation target.</p>
+    <p class="text-gray-400 text-xs mt-1">A comprehensive set of normative rules across multiple protocol groups — a precise implementation target.</p>
   </div>
 </div>
 

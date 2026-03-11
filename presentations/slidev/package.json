@@ -2,15 +2,17 @@
   "private": true,
   "scripts": {
     "dev": "slidev overview.md",
+    "dev:architecture": "slidev architecture.md",
+    "dev:governance": "slidev governance.md",
     "build": "slidev build overview.md --out dist",
     "build:architecture": "slidev build architecture.md --out dist/architecture --base /architecture/",
     "build:governance": "slidev build governance.md --out dist/governance --base /governance/",
-    "build:all": "npm run build && npm run build:architecture && npm run build:governance && printf '/architecture/*  /architecture/index.html  200\\n/governance/*  /governance/index.html  200\\n/*  /index.html  200\\n' > dist/_redirects",
+    "build:all": "npm run build && npm run build:architecture && npm run build:governance && cp _redirects dist/_redirects",
     "export": "slidev export overview.md"
   },
   "dependencies": {
-    "@slidev/cli": "latest",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
+    "@slidev/cli": "^0.49.0",
+    "@slidev/theme-default": "^0.23.0",
+    "@slidev/theme-seriph": "^0.23.0"
   }
 }
