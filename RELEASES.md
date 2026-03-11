@@ -53,17 +53,17 @@ Specification versions are tracked through:
 
 | Version | Tag | Proposal | Content |
 |---------|-----|----------|---------|
-| 0.0.1 | `v0.0.1` *(pending)* | [proposals/0.0.1](proposals/0.0.1/proposal.md) | Initial doctrine and reference architecture |
-| 0.0.2 | `v0.0.2` *(pending)* | [proposals/0.0.2](proposals/0.0.2/proposal.md) | Normative rule register and conformance requirements |
-| 0.0.3 | `v0.0.3` *(pending)* | [proposals/0.0.3](proposals/0.0.3/proposal.md) | Governance object model (Access Grant, Integration Descriptor, Audit Record) |
-| 0.0.4 | `v0.0.4` *(pending)* | [proposals/0.0.4](proposals/0.0.4/proposal.md) | Access Grant Protocol |
-| 0.0.5 | `v0.0.5` *(pending)* | [proposals/0.0.5](proposals/0.0.5/proposal.md) | Integration Descriptor Protocol |
-| 0.0.6 | `v0.0.6` *(pending)* | [proposals/0.0.6](proposals/0.0.6/proposal.md) | Audit Record Collection Protocol |
-| 0.0.7 | `v0.0.7` *(pending)* | [proposals/0.0.7](proposals/0.0.7/proposal.md) | Data Portability Protocol |
-| 0.0.8 | `v0.0.8` *(pending)* | [proposals/0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
-| 0.0.9 | `v0.0.9` *(pending)* | [proposals/0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
-| 0.0.10 | `v0.0.10` *(pending)* | [proposals/0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
-| 0.0.11 | `v0.0.11` *(pending)* | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
+| 0.0.1 | [`v0.0.1`](https://github.com/jwogrady/leboss/releases/tag/v0.0.1) | [proposals/0.0.1](proposals/0.0.1/proposal.md) | Initial doctrine and reference architecture |
+| 0.0.2 | [`v0.0.2`](https://github.com/jwogrady/leboss/releases/tag/v0.0.2) | [proposals/0.0.2](proposals/0.0.2/proposal.md) | Normative rule register and conformance requirements |
+| 0.0.3 | [`v0.0.3`](https://github.com/jwogrady/leboss/releases/tag/v0.0.3) | [proposals/0.0.3](proposals/0.0.3/proposal.md) | Governance object model (Access Grant, Integration Descriptor, Audit Record) |
+| 0.0.4 | [`v0.0.4`](https://github.com/jwogrady/leboss/releases/tag/v0.0.4) | [proposals/0.0.4](proposals/0.0.4/proposal.md) | Access Grant Protocol |
+| 0.0.5 | [`v0.0.5`](https://github.com/jwogrady/leboss/releases/tag/v0.0.5) | [proposals/0.0.5](proposals/0.0.5/proposal.md) | Integration Descriptor Protocol |
+| 0.0.6 | [`v0.0.6`](https://github.com/jwogrady/leboss/releases/tag/v0.0.6) | [proposals/0.0.6](proposals/0.0.6/proposal.md) | Audit Record Collection Protocol |
+| 0.0.7 | [`v0.0.7`](https://github.com/jwogrady/leboss/releases/tag/v0.0.7) | [proposals/0.0.7](proposals/0.0.7/proposal.md) | Data Portability Protocol |
+| 0.0.8 | [`v0.0.8`](https://github.com/jwogrady/leboss/releases/tag/v0.0.8) | [proposals/0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
+| 0.0.9 | [`v0.0.9`](https://github.com/jwogrady/leboss/releases/tag/v0.0.9) | [proposals/0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
+| 0.0.10 | [`v0.0.10`](https://github.com/jwogrady/leboss/releases/tag/v0.0.10) | [proposals/0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
+| 0.0.11 | [`v0.0.11`](https://github.com/jwogrady/leboss/releases/tag/v0.0.11) | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
 
 ### Upcoming
 
