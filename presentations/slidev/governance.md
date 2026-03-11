@@ -62,49 +62,41 @@ class: text-center
 
 # The Proposal Lifecycle
 
-<div class="mt-8">
+<div class="mt-6">
 
-<div class="flex items-center gap-0 justify-center">
+<div class="flex items-center justify-center gap-3">
 
-<div class="flex flex-col items-center">
-  <div class="w-32 h-20 bg-blue-700 rounded-l-xl flex items-center justify-center text-center p-2">
-    <div>
-      <div class="font-bold text-sm">Proposal</div>
-      <div class="text-xs text-blue-200 mt-1">PR opened</div>
-    </div>
+<div class="flex flex-col items-center gap-1">
+  <div class="w-24 h-24 rounded-full bg-blue-700 flex flex-col items-center justify-center text-center p-2">
+    <div class="font-bold text-sm">Proposal</div>
+    <div class="text-xs text-blue-200 mt-1">PR opened</div>
   </div>
 </div>
 
-<div class="text-gray-500 text-2xl px-1">→</div>
+<div class="text-gray-500 text-xl">→</div>
 
-<div class="flex flex-col items-center">
-  <div class="w-32 h-20 bg-purple-700 flex items-center justify-center text-center p-2">
-    <div>
-      <div class="font-bold text-sm">Draft</div>
-      <div class="text-xs text-purple-200 mt-1">Committee review begins</div>
-    </div>
+<div class="flex flex-col items-center gap-1">
+  <div class="w-24 h-24 rounded-full bg-purple-700 flex flex-col items-center justify-center text-center p-2">
+    <div class="font-bold text-sm">Draft</div>
+    <div class="text-xs text-purple-200 mt-1">Committee review</div>
   </div>
 </div>
 
-<div class="text-gray-500 text-2xl px-1">→</div>
+<div class="text-gray-500 text-xl">→</div>
 
-<div class="flex flex-col items-center">
-  <div class="w-32 h-20 bg-indigo-700 flex items-center justify-center text-center p-2">
-    <div>
-      <div class="font-bold text-sm">Committee Vote</div>
-      <div class="text-xs text-indigo-200 mt-1">Member ratification</div>
-    </div>
+<div class="flex flex-col items-center gap-1">
+  <div class="w-24 h-24 rounded-full bg-indigo-700 flex flex-col items-center justify-center text-center p-2">
+    <div class="font-bold text-xs">Committee Vote</div>
+    <div class="text-xs text-indigo-200 mt-1">Ratification</div>
   </div>
 </div>
 
-<div class="text-gray-500 text-2xl px-1">→</div>
+<div class="text-gray-500 text-xl">→</div>
 
-<div class="flex flex-col items-center">
-  <div class="w-32 h-20 bg-green-700 rounded-r-xl flex items-center justify-center text-center p-2">
-    <div>
-      <div class="font-bold text-sm">Published</div>
-      <div class="text-xs text-green-200 mt-1">Immutable</div>
-    </div>
+<div class="flex flex-col items-center gap-1">
+  <div class="w-24 h-24 rounded-full bg-green-700 flex flex-col items-center justify-center text-center p-2">
+    <div class="font-bold text-sm">Published</div>
+    <div class="text-xs text-green-200 mt-1">Immutable</div>
   </div>
 </div>
 
@@ -335,6 +327,13 @@ class: text-center
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+<CosmicDivider title="The Committee" subtitle="Roles, responsibilities, and how to participate" />
+
+---
 
 # The Committee
 
@@ -421,16 +420,34 @@ class: text-center
 </div>
 
 ---
+layout: center
+class: text-center
+---
+
+<CosmicDivider title="Conformance" subtitle="LEBOSS-aligned and LEBOSS-compliant" />
+
+---
 
 # Conformance
 
-<div class="grid grid-cols-2 gap-6 mt-6 text-sm">
+<div class="grid grid-cols-2 gap-3 mb-4">
+  <div class="bg-blue-900 bg-opacity-40 border border-blue-500 rounded-lg p-3 text-sm">
+    <p class="font-semibold text-blue-300 mb-1">LEBOSS-aligned</p>
+    <p class="text-gray-400 text-xs">Preserves the LEBOSS ownership hierarchy, data boundaries, and access control relationships. The structural conformance claim.</p>
+  </div>
+  <div class="bg-green-900 bg-opacity-40 border border-green-500 rounded-lg p-3 text-sm">
+    <p class="font-semibold text-green-300 mb-1">LEBOSS-compliant</p>
+    <p class="text-gray-400 text-xs">Satisfies all MUST-level requirements in the normative rule register. The full normative conformance claim. All compliant systems are also aligned.</p>
+  </div>
+</div>
+
+<div class="grid grid-cols-2 gap-6 mt-2 text-sm">
 
 <div class="space-y-4">
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <h3 class="font-semibold text-blue-300 mb-2">What conformance means</h3>
-  <p class="text-gray-400">A LEBOSS-compliant system implements all MUST-level requirements in the normative rule register. The register contains 40 rules across 6 groups, corresponding to the governance protocols in the standard.</p>
+  <p class="text-gray-400">A LEBOSS-compliant system implements all MUST-level requirements in the normative rule register. The register contains normative rules across 6 groups, corresponding to the governance protocols in the standard.</p>
 </div>
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
