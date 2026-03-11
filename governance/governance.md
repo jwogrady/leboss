@@ -15,7 +15,7 @@ The governance model is intentionally lightweight. Standards bodies fail not fro
 
 ## The Standard States
 
-Every version of the LEBOSS standard exists in one of three states.
+Every version of the LEBOSS standard exists in one of four states.
 
 ### Proposal
 
@@ -84,7 +84,7 @@ LEBOSS versions follow the pattern `X.Y.Z`, where each position has a specific m
 | Position | Label | Meaning | Transitions When |
 |----------|-------|---------|-----------------|
 | `Z` (rightmost) | **Draft** | A working draft in active development | A new draft iteration is created |
-| `Y` (middle) | **Committee Review** | An accepted draft approved by the committee and open for member vote | The committee accepts a draft for formal vote |
+| `Y` (middle) | **Committee Vote** | An accepted draft approved by the committee and open for member vote | The committee accepts a draft for formal vote |
 | `X` (leftmost) | **Published** | The active canonical standard, approved by committee and ratified by members | Members ratify and the standard is published |
 
 **Example progression:**

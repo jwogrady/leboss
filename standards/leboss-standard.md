@@ -12,7 +12,7 @@
 
 This document defines the LEBOSS standard.
 
-This version represents **v0.1.0**, the first implementable draft of the specification. The architecture, governance model, and core protocols are considered draft-stable. Implementations may begin development against this version.
+This document represents the integrated working draft of the LEBOSS standard prior to the first Committee Vote (target release: v0.1.0). The architecture, governance model, and core protocols are considered draft-stable. Implementations may begin development against this version.
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
@@ -50,14 +50,8 @@ Lowercase uses of these words carry their ordinary meaning and are not normative
 - Interim conformance criteria for LEBOSS-aligned systems
 
 **This standard explicitly defers to future versions:**
-- Formal conformance certification mechanisms
-- Technical API or interface specifications for compliant implementations
-- Ownership transfer and succession protocols
-- Satellite-specific compliance rules
-- Normative requirements for AI and machine learning use of primary operational data
-- Reference architecture diagrams
 
-These deferred items are captured in the gap register at [proposals/0.0.2/proposal.md](../proposals/0.0.2/proposal.md).
+Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 
 ---
 
@@ -500,12 +494,7 @@ pre-v0.1.0  →  Current working draft (this document)
 
 The full governance process is defined in [governance/governance.md](../governance/governance.md).
 
-Items deferred to future versions:
-- Formal conformance certification process
-- Reference architecture diagrams
-- Succession and Ownership Transfer Protocol (GAP-5)
-- API and interface specifications for compliant backend implementations
-- Normative requirements for AI and machine learning use of primary operational data
+Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 
 ---
 
@@ -515,7 +504,7 @@ The normative rules in this standard and in the rule register (`leboss-normative
 
 Governance objects are the structured data primitives that give operational form to these rules. They define what must exist — the required fields and normative properties of grants, authorizations, and event records — without prescribing implementation format or protocol.
 
-Three governance objects are defined in LEBOSS 0.0.3:
+Three governance objects define how authority and accountability are enforced within the LEBOSS model:
 
 | Object | Purpose | Rules Addressed |
 |--------|---------|-----------------|
@@ -587,8 +576,6 @@ The full protocol, including 26 normative rules (LEBOSS-IDP-1 through IDP-26) an
 
 ---
 
----
-
 ## 14. Audit Record Collection Protocol
 
 Prior protocols require specific audit records across the Access Grant and Integration Descriptor lifecycles. The Audit Record Collection Protocol defines the system behaviors that make those requirements enforceable: how events are captured, how records are correlated to the governance objects that produced them, how long they must be retained, and how their integrity is verified.
@@ -618,8 +605,6 @@ The full protocol, including 24 normative rules (LEBOSS-ACP-1 through ACP-24) an
 
 ---
 
----
-
 ## 15. Data Portability Protocol
 
 The LEBOSS doctrine holds that operational data belongs to the governing entity. The Data Portability Protocol defines the system behaviors that make that ownership practically exercisable — ensuring the governing entity can obtain a complete, accurate, and independently usable copy of their operational data environment at any time, in a machine-readable format, through a mechanism within their direct control.
@@ -643,8 +628,6 @@ The protocol operationalizes the following rules from this standard:
 - Export events MUST produce Audit Records under the Audit Record Collection Protocol, linking the authorization, generation, and delivery events through a shared manifest identifier.
 
 The full protocol, including 28 normative rules (LEBOSS-DPP-1 through DPP-28) and defined authority, scope, completeness, neutrality, and audit requirements, is specified in [`standards/leboss-data-portability-protocol.md`](leboss-data-portability-protocol.md).
-
----
 
 ---
 

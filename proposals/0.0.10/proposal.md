@@ -71,6 +71,6 @@ None. This is a repository hygiene release. No behavioral rules change and no sp
 
 ## Release Tagging
 
-Upon merging proposals 0.0.1 through 0.0.10 into `main`, the repository is ready for `v0.1.0` tagging. This tag marks the first Committee Vote candidate — a complete, self-consistent, implementable specification draft.
+Upon merging proposals 0.0.1 through 0.0.10 into `master`, the repository is ready for `v0.1.0` tagging. This tag marks the first Committee Vote candidate — a complete, self-consistent, implementable specification draft.
 
 GAP-5 (Succession and Ownership Transfer Protocol) remains the single open identified gap and is formally deferred beyond 0.1.0.
