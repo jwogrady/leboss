@@ -1,0 +1,14 @@
+/*
+ * Global layout safety — prevents slide content from being clipped.
+ *
+ * Slidev's scrollable: true (set in each deck's defaults) is the primary
+ * mechanism. This CSS provides a secondary safety layer that ensures the
+ * scrollable container itself is not constrained by a strict overflow: hidden
+ * on a parent element.
+ *
+ * Do not add presentation-specific styles here. Only layout infrastructure.
+ */
+
+.slidev-layout {
+  overflow-y: auto;
+}

@@ -13,6 +13,8 @@ drawings:
   persist: false
 wakeLock: 'build'
 routerMode: 'history'
+defaults:
+  scrollable: true
 ---
 
 <div class="absolute top-4 right-6 text-sm opacity-70 flex gap-4">
