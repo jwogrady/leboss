@@ -106,7 +106,7 @@ The **Governing Entity** (Universe) owns all data. Every other element operates 
 | [`standards/`](standards/) | Normative specification — all MUST/SHOULD/MAY requirements |
 | [`glossary/`](glossary/) | Canonical terminology definitions |
 | [`governance/`](governance/) | Governance model — proposal lifecycle, committee roles |
-| [`proposals/`](proposals/) | Specification change history (0.0.1 → 0.0.11) |
+| [`proposals/`](proposals/) | Specification change history (0.0.1 → 0.0.12) |
 | [`presentations/`](presentations/) | Three-deck Slidev presentation portal |
 | [`charter/`](charter/) | Mission and philosophical foundation |
 

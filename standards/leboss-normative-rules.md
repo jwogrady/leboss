@@ -227,7 +227,7 @@ The service provider MUST NOT use primary operational data for any purpose beyon
 
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.11.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.12.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17).
@@ -246,4 +246,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.11. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.12. The standard governs in all cases of conflict.*
