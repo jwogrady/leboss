@@ -14,7 +14,7 @@ drawings:
 wakeLock: 'build'
 routerMode: 'history'
 defaults:
-  scrollable: true
+  layout: default
 ---
 
 <div class="absolute top-4 right-6 text-sm opacity-70 flex gap-4">
@@ -108,8 +108,8 @@ class: text-center
   center-label="Universe"
   center-sub="Governing Entity"
   :center-size="88"
-  :width="520"
-  :height="420"
+  :width="500"
+  :height="380"
   :starfield="true"
   :orbits="[
     {

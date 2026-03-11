@@ -14,7 +14,7 @@ drawings:
 wakeLock: 'build'
 routerMode: 'history'
 defaults:
-  scrollable: true
+  layout: default
 ---
 
 <div class="absolute top-4 right-6 text-sm opacity-70 flex gap-4">
@@ -81,26 +81,26 @@ class: text-center
 
 <div class="mt-6 max-w-2xl mx-auto">
 
-<div class="text-sm text-gray-400 mb-8">In most modern SaaS systems:</div>
+<div class="text-sm text-gray-400 mb-4">In most modern SaaS systems:</div>
 
 <div class="flex flex-col items-center gap-0">
-  <div class="w-28 h-28 rounded-full bg-white bg-opacity-10 flex flex-col items-center justify-center text-center">
+  <div class="w-20 h-20 rounded-full bg-white bg-opacity-10 flex flex-col items-center justify-center text-center">
     <div class="text-xs text-gray-400 leading-tight">You</div>
     <div class="font-semibold text-sm">Business</div>
   </div>
-  <div class="text-gray-500 text-lg py-1">↓</div>
-  <div class="w-28 h-28 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
+  <div class="text-gray-500 py-0.5">↓</div>
+  <div class="w-20 h-20 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
     <div class="text-xs text-red-400 leading-tight">Vendor controls</div>
     <div class="font-semibold text-sm text-red-300">Platform</div>
   </div>
-  <div class="text-gray-500 text-lg py-1">↓</div>
-  <div class="w-28 h-28 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
+  <div class="text-gray-500 py-0.5">↓</div>
+  <div class="w-20 h-20 rounded-full bg-red-900 bg-opacity-40 border-2 border-red-600 flex flex-col items-center justify-center text-center px-2">
     <div class="text-xs text-red-400 leading-tight">Vendor holds</div>
     <div class="font-semibold text-sm text-red-300">Data</div>
   </div>
 </div>
 
-<div class="mt-8 text-sm text-gray-400 max-w-md mx-auto">
+<div class="mt-4 text-sm text-gray-400 max-w-md mx-auto">
   Most operational data environments exist inside <strong class="text-white">vendor-controlled systems</strong> — not systems the business owns.
 </div>
 
@@ -174,7 +174,7 @@ class: text-center
 
 # The LEBOSS Idea
 
-<div class="mt-4 max-w-3xl mx-auto">
+<div class="mt-2 max-w-3xl mx-auto">
 
 <div class="grid grid-cols-2 gap-8 text-left">
 
@@ -204,7 +204,7 @@ class: text-center
 
 </div>
 
-<div class="mt-8 text-sm text-gray-400">
+<div class="mt-4 text-sm text-gray-400">
   LEBOSS makes this inversion <strong class="text-blue-300">architectural</strong> — built into the structure of systems, not just written into contracts.
 </div>
 
