@@ -430,7 +430,7 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <h3 class="font-semibold text-blue-300 mb-2">What conformance means</h3>
-  <p class="text-gray-400">A LEBOSS-conformant system implements all MUST-level requirements in the normative rule register. The register contains 40 rules across 6 groups, corresponding to the governance protocols in the standard.</p>
+  <p class="text-gray-400">A LEBOSS-compliant system implements all MUST-level requirements in the normative rule register. The register contains 40 rules across 6 groups, corresponding to the governance protocols in the standard.</p>
 </div>
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">

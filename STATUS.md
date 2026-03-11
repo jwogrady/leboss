@@ -1,7 +1,7 @@
 # LEBOSS Specification Status
 
 **Current Version:** pre-v0.1.0 (Draft)
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.12
 **Next Milestone:** v0.1.0 — first Committee Vote candidate
 
 ---
@@ -40,6 +40,7 @@ The specification evolved through the following proposals, each merged to `maste
 | [0.0.9](proposals/0.0.9/proposal.md) | Specification stabilization |
 | [0.0.10](proposals/0.0.10/proposal.md) | Repository normalization and publishing preparation |
 | [0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
+| [0.0.12](proposals/0.0.12/proposal.md) | Terminology stabilization — conformance tiers, missing glossary entries, element name alignment |
 
 Proposal documents are preserved in [`proposals/`](proposals/) and serve as the permanent change log of the specification.
 
