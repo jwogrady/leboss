@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.13
+**Updated Through:** proposal/0.0.14
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -480,10 +480,17 @@ A system **MUST NOT** be described as LEBOSS-aligned if it:
 - Does not support data export by the governing entity
 - Allows external integrations to receive data without explicit authorization
 - Lacks auditable records of data access
+- Satisfies normative requirements through documentation or stated intent without operational enforcement
 
 For the complete conformance definition — including minimum requirements, non-conformance conditions, and future certification scope — see [conformance.md](conformance.md).
 
 Formal conformance certification criteria will be defined in a subsequent version of the standard.
+
+### 8.6 Operational Enforcement
+
+15. Normative requirements are enforced in operation. Documentation, policy declarations, and stated intent do not constitute enforcement.
+16. Governed actions — including data access, grant validation, grant revocation, audit record creation, and data export — are subject to rule enforcement at the time they occur.
+17. A failure to operationally enforce any ownership, access, audit, revocation, or portability requirement constitutes a conformance failure, regardless of whether that failure was intentional.
 
 ---
 

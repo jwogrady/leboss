@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.13
+**Updated Through:** proposal/0.0.14
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -25,6 +25,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `CONT` — Continuity Rules
 - `SVC` — Service Provider Rules
 - `SPEC` — Specification Boundary Rules
+- `ENF`  — Enforcement Responsibility Rules
 
 ---
 
@@ -232,6 +233,34 @@ The LEBOSS standard does not designate any specific implementation as preferred 
 
 ---
 
+## Enforcement Responsibility Rules
+
+**LEBOSS-ENF-1**
+Normative requirements defined in this standard MUST be enforced in operation.
+Documentation of compliance, policy declarations, and stated intent MUST NOT be
+treated as satisfying normative requirements.
+*Source: §8.6*
+
+**LEBOSS-ENF-2**
+A LEBOSS-compliant system MUST ensure that governed actions — including data access,
+grant validation, grant revocation, audit record creation, and data export — are
+subject to rule enforcement at the time they occur.
+*Source: §8.6*
+
+**LEBOSS-ENF-3**
+A system MUST NOT be described as LEBOSS-aligned or LEBOSS-compliant if it permits
+governed actions to proceed without enforcement of applicable normative requirements,
+whether by design, configuration, exception, or operational failure.
+*Source: §8.6, conformance.md §4*
+
+**LEBOSS-ENF-4**
+The LEBOSS standard MUST NOT prescribe a specific enforcement architecture, mechanism,
+or technology. The obligation to enforce normative requirements does not constrain the
+means by which enforcement is achieved.
+*Source: §1.2, §8.6*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -241,9 +270,10 @@ The LEBOSS standard does not designate any specific implementation as preferred 
 | Architectural (ARCH) | 11 | 9 | 2 | — | — |
 | Security (SEC) | 5 | 4 | 1 | 1 | — |
 | Continuity (CONT) | 4 | 4 | 1 | — | — |
-| Service Provider (SVC) | 7 | 5 | 2 | — | — |
-| Specification Boundary (SPEC) | 4 | 2 | 2 | 1 | — |
-| **Total** | **44** | **32** | **12** | **5** | **—** |
+| Service Provider (SVC)           | 7 | 5 | 2 | — | — |
+| Specification Boundary (SPEC)    | 4 | 2 | 2 | 1 | — |
+| Enforcement Responsibility (ENF) | 4 | 2 | 3 | — | — |
+| **Total**                        | **48** | **34** | **15** | **5** | **—** |
 
 ---
 
