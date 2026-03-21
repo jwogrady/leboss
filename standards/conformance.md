@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.12
+**Updated Through:** proposal/0.0.13
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -146,9 +146,13 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 
 6. **Secondary use without consent** — primary operational data is used for purposes beyond those covered by active access grants without explicit governing entity consent.
 
+7. **Rule redefinition** — the system redefines, overrides, or selectively applies normative LEBOSS requirements in a manner inconsistent with the published standard while claiming LEBOSS alignment or compliance (LEBOSS-SPEC-3).
+
 ---
 
 ## 5. Implementation Freedom
+
+The boundary between what LEBOSS specifies normatively and what it defers to implementing systems is defined in [leboss-standard.md §1.1 and §1.2](leboss-standard.md). The normative rules governing this boundary are LEBOSS-SPEC-1 through SPEC-4.
 
 LEBOSS defines governance rules, not implementation technologies. Conformant systems **MAY** use any combination of:
 

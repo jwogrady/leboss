@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.12
+**Updated Through:** proposal/0.0.13
 
 ---
 
@@ -341,6 +341,16 @@ LEBOSS treats infrastructure topology as a first-class concern of data governanc
 
 ---
 
+## Implementation
+
+A system — software, platform, service, or product — built to satisfy the normative requirements of the LEBOSS standard. An implementation expresses LEBOSS governance rules through specific technology choices; those choices are explicitly outside the scope of the standard.
+
+Implementations MAY reference LEBOSS rules and use the LEBOSS Reference Model as a design vocabulary. Implementations MUST NOT redefine, override, or selectively apply normative LEBOSS requirements while claiming LEBOSS alignment or compliance. The standard does not designate any specific implementation as preferred or required.
+
+See also: *Conformance*, *Reference Model*, *LEBOSS-aligned*, *LEBOSS-compliant*, *Specification Boundary*
+
+---
+
 ## Least Privilege
 
 The information security principle that a party should have access only to the data and capabilities they need to perform their authorized function — no more. In LEBOSS, least privilege applies not only to internal system design but to all vendor and service provider relationships.
@@ -518,6 +528,20 @@ A Star cannot function without a Planet to support it. Without a Star, a Planet 
 ## Steward
 
 A party who holds and manages data or a system on behalf of its rightful owner, bound by an obligation to act in the owner's interest. Under LEBOSS, all service providers are stewards. Being a steward does not confer ownership.
+
+---
+
+## Specification Boundary
+
+The formal separation between what the LEBOSS standard defines normatively and what it defers to implementing systems.
+
+LEBOSS defines: the organizational hierarchy, data ownership doctrine, access control requirements, audit requirements, service provider obligations, and conformance criteria.
+
+LEBOSS does not define: runtime environments, API designs, infrastructure platforms, user interface designs, or specific software architectures.
+
+Normative rules governing this boundary: LEBOSS-SPEC-1 through SPEC-4.
+
+See also: *Implementation*, *Conformance*, *Reference Model*
 
 ---
 

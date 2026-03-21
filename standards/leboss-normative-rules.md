@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.13
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -24,6 +24,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `SEC` — Security Rules
 - `CONT` — Continuity Rules
 - `SVC` — Service Provider Rules
+- `SPEC` — Specification Boundary Rules
 
 ---
 
@@ -211,6 +212,26 @@ The service provider MUST NOT use primary operational data for any purpose beyon
 
 ---
 
+## Specification Boundary Rules
+
+**LEBOSS-SPEC-1**
+The LEBOSS specification MUST NOT impose requirements on specific technologies, runtime environments, infrastructure platforms, or API designs.
+*Source: §1.2*
+
+**LEBOSS-SPEC-2**
+Implementations MAY reference normative LEBOSS rules and use the LEBOSS Reference Model as a design vocabulary.
+*Source: §1.2*
+
+**LEBOSS-SPEC-3**
+Implementations MUST NOT redefine, override, or selectively apply normative LEBOSS requirements while claiming LEBOSS alignment or compliance.
+*Source: §1.2*
+
+**LEBOSS-SPEC-4**
+The LEBOSS standard does not designate any specific implementation as preferred or required. Implementations MUST remain replaceable — no conformant implementation is structurally privileged over another under this standard.
+*Source: §1.2*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -221,7 +242,8 @@ The service provider MUST NOT use primary operational data for any purpose beyon
 | Security (SEC) | 5 | 4 | 1 | 1 | — |
 | Continuity (CONT) | 4 | 4 | 1 | — | — |
 | Service Provider (SVC) | 7 | 5 | 2 | — | — |
-| **Total** | **40** | **30** | **10** | **4** | **—** |
+| Specification Boundary (SPEC) | 4 | 2 | 2 | 1 | — |
+| **Total** | **44** | **32** | **12** | **5** | **—** |
 
 ---
 
