@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.25
+**Updated Through:** proposal/0.0.26
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -33,6 +33,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `VER` — Conformance Verification Rules
 - `PROT` — Protocol Normativity Rules
 - `ACTOR` — Actor Identity Portability Rules
+- `GEA` — Governing Entity Authenticity Rules
 
 ---
 
@@ -435,7 +436,8 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
 | Protocol Normativity (PROT)             | 5 | 2  | 3  | — | — |
 | Actor Identity Portability (ACTOR)      | 6 | 3  | 3  | — | — |
-| **Total**                           | **91** | **60** | **34** | **5** | **—** |
+| Governing Entity Authenticity (GEA)     | 6 | 3  | 3  | — | — |
+| **Total**                           | **97** | **63** | **37** | **5** | **—** |
 
 ---
 
@@ -491,9 +493,37 @@ Actor identity in governance objects MUST NOT depend on systems or infrastructur
 
 ---
 
+## Governing Entity Authenticity Rules
+
+**LEBOSS-GEA-1**
+A governing entity MUST represent independent authority that exists outside the implementing system. A governing entity that can only be created, defined, or validated by the implementing system or by a service provider does not constitute a valid governing entity under this standard.
+*Source: §22*
+
+**LEBOSS-GEA-2**
+A conformant system MUST NOT permit a service provider to unilaterally create, modify, reassign, or revoke governing entity authority without the authorization of the party the governing entity represents.
+*Source: §22*
+
+**LEBOSS-GEA-3**
+A governing entity's authority MUST NOT be dependent on identifiers, accounts, or credentials that are exclusively controlled by a service provider or platform. Ownership authority that ceases to exist upon termination of a service relationship does not satisfy this standard.
+*Source: §22*
+
+**LEBOSS-GEA-4**
+A governing entity's authority MUST remain valid and transferable across system migrations. A change in implementing system, service provider, or infrastructure does not extinguish governing entity authority.
+*Source: §22*
+
+**LEBOSS-GEA-5**
+A conformant system MUST NOT treat system-generated identifiers alone as sufficient basis for governing entity authority. The authority of a governing entity must be grounded in the real-world entity it represents, not in a system record.
+*Source: §22*
+
+**LEBOSS-GEA-6**
+A conformant system MUST ensure that governing entity authority is independently verifiable — it must not rest solely on assertions made by the implementing system or its service providers.
+*Source: §22*
+
+---
+
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.25.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.26.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
@@ -512,4 +542,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.25. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.26. The standard governs in all cases of conflict.*
