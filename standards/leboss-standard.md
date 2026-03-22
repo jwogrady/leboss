@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.26
+**Updated Through:** proposal/0.0.27
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.26, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.27, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.26. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.27. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -79,6 +79,7 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 20. [Protocol Normativity Framework](#20-protocol-normativity-framework)
 21. [Actor Identity Portability](#21-actor-identity-portability)
 22. [Governing Entity Authenticity](#22-governing-entity-authenticity)
+23. [Audit Resolution Requirements](#23-audit-resolution-requirements)
 
 ---
 
@@ -551,7 +552,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.26.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.27.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -876,4 +877,29 @@ The normative rules for governing entity authenticity (LEBOSS-GEA-1 through GEA-
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.26 — Open for community review and pull request contribution.*
+## 23. Audit Resolution Requirements
+
+The LEBOSS audit model requires that governed actions be recorded, that those records be immutable and authoritative, and that the governing entity can access them at any time. These requirements ensure that an audit corpus exists. They do not ensure that it is useful.
+
+An audit record can satisfy every recording requirement while providing no meaningful basis for governance accountability. A log entry that documents only that a data access event occurred — with no indication of which resources were accessed, no record of the operation performed, no outcome captured — is structurally compliant and functionally useless. The governing entity possesses an immutable record of nothing actionable.
+
+**The gap this section addresses:** The existing audit requirements establish existence, immutability, and availability. They do not establish resolution — the level of informational detail required for an audit record to support verification of whether a governed action was authorized, whether it was within scope, and who was accountable for it. Without a resolution floor, satisfying audit recording requirements is compatible with producing audit records that tell a governing entity, or an independent evaluator, essentially nothing.
+
+This gap undermines the standard's accountability model at its foundation. An audit corpus that documents event occurrence without action-level specificity cannot support evaluation of ACC-4 compliance (service providers must operate only within grant scope). It cannot support VER-2 (compliance claims must be supportable through observable system behavior and audit records). It cannot support VER-4 (independent parties must be able to verify conformance). Audit existence without audit resolution makes the governance record a procedural artifact rather than an accountability instrument.
+
+This section does not define schemas, field structures, logging formats, storage systems, or specific data representations. It defines the informational floor: what must be true about the content of an audit record for it to satisfy accountability and verifiability obligations under this standard.
+
+**Key behavioral requirements:**
+
+- Audit records **MUST** contain sufficient detail to determine what specific resources were accessed or affected, what operation was performed, and the outcome of that operation (LEBOSS-AUD-1).
+- Audit records **MUST** be sufficiently granular to allow determination of whether the access was within the scope defined by the applicable Access Grant (LEBOSS-AUD-2).
+- A conformant system **MUST NOT** produce audit records that aggregate, summarize, or omit resource-level and operation-level detail in a manner that prevents verification of whether individual governed actions were within authorized scope (LEBOSS-AUD-3).
+- Audit records **MUST** support reconstruction of governed actions from the record alone, without reliance on system state, service provider cooperation, or information not present in the record itself (LEBOSS-AUD-4).
+- A conformant system **MUST NOT** produce audit records that are interpretable only with knowledge of internal system state, internal nomenclature, or conventions unavailable to an independent evaluator (LEBOSS-AUD-5).
+- A conformant system **MUST NOT** satisfy audit recording requirements by producing records that document the occurrence of governed events while omitting the detail required to evaluate whether those events were authorized (LEBOSS-AUD-6).
+
+The normative rules for audit resolution requirements (LEBOSS-AUD-1 through AUD-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.27 — Open for community review and pull request contribution.*

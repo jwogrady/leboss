@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.26
+**Updated Through:** proposal/0.0.27
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -34,6 +34,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `PROT` — Protocol Normativity Rules
 - `ACTOR` — Actor Identity Portability Rules
 - `GEA` — Governing Entity Authenticity Rules
+- `AUD` — Audit Resolution Requirements Rules
 
 ---
 
@@ -437,7 +438,8 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Protocol Normativity (PROT)             | 5 | 2  | 3  | — | — |
 | Actor Identity Portability (ACTOR)      | 6 | 3  | 3  | — | — |
 | Governing Entity Authenticity (GEA)     | 6 | 3  | 3  | — | — |
-| **Total**                           | **97** | **63** | **37** | **5** | **—** |
+| Audit Resolution Requirements (AUD)     | 6 | 3  | 3  | — | — |
+| **Total**                           | **103** | **66** | **40** | **5** | **—** |
 
 ---
 
@@ -521,9 +523,37 @@ A conformant system MUST ensure that governing entity authority is independently
 
 ---
 
+## Audit Resolution Requirements Rules
+
+**LEBOSS-AUD-1**
+Audit records MUST contain sufficient detail to determine what specific resources were accessed or affected, what operation was performed, and the outcome of that operation. A record that documents only the occurrence of an event without resource-level and operation-level specificity does not satisfy this requirement.
+*Source: §23*
+
+**LEBOSS-AUD-2**
+Audit records MUST be sufficiently granular to allow determination of whether the access described was within the scope defined by the applicable Access Grant. An audit record that cannot be evaluated against the grant that authorized the action does not satisfy this standard.
+*Source: §23*
+
+**LEBOSS-AUD-3**
+A conformant system MUST NOT produce audit records that aggregate, summarize, or omit resource-level and operation-level detail in a manner that prevents verification of whether individual governed actions were within authorized scope.
+*Source: §23*
+
+**LEBOSS-AUD-4**
+Audit records MUST support reconstruction of governed actions from the audit record alone, without reliance on system state, service provider cooperation, or information not present in the audit record itself.
+*Source: §23*
+
+**LEBOSS-AUD-5**
+A conformant system MUST NOT produce audit records that are interpretable only with knowledge of internal system state, internal nomenclature, or conventions unavailable to an independent evaluator. Audit records must carry sufficient context to be self-interpreting with respect to the governed action they document.
+*Source: §23*
+
+**LEBOSS-AUD-6**
+A conformant system MUST NOT satisfy audit recording requirements by producing records that document the occurrence of governed events while omitting the detail required to evaluate whether those events were authorized. Recording that an event occurred is not equivalent to recording what that event was.
+*Source: §23*
+
+---
+
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.26.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.27.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
@@ -542,4 +572,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.26. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.27. The standard governs in all cases of conflict.*
