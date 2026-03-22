@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.18
+**Updated Through:** proposal/0.0.19
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -170,6 +170,17 @@ A conformant system **MUST** enforce structural constraints on delegated access 
 - A conformant system **MUST NOT** permit delegation chains that introduce ambiguity in access authority or that cannot be fully audited (LEBOSS-DEL-5).
 - Delegation **MUST NOT** create implicit or inherited access outside explicit grant scope (LEBOSS-DEL-6).
 
+### 3.10 Conformance Verification
+
+A conformant system **MUST** satisfy the conditions under which its compliance claim can be independently verified. Specifically:
+
+- A conformant system **MUST** satisfy all applicable normative rules. Partial satisfaction of normative rules **MUST NOT** be represented as full compliance (LEBOSS-VER-1).
+- Compliance claims **MUST** be supportable through observable system behavior and audit records. Self-declaration without supporting evidence **MUST NOT** constitute a valid compliance claim (LEBOSS-VER-2).
+- A system **MUST NOT** claim LEBOSS compliance if any non-conformance condition in §4 of this document is present (LEBOSS-VER-3).
+- A system **MUST** provide sufficient visibility into its governed operations to allow an independent party to verify conformance without relying solely on system-reported assertions (LEBOSS-VER-4).
+- Where conformance levels are defined, those levels **MUST** be clearly bounded and non-ambiguous. A system **MUST NOT** represent partial satisfaction of a conformance level as meeting that level (LEBOSS-VER-5).
+- Verification **MUST NOT** be satisfied by documentation, policy declaration, or stated intent alone. Conformance requires observable evidence of enforcement in governed operations (LEBOSS-VER-6).
+
 ---
 
 ## 4. Non-Conformance Conditions
@@ -205,6 +216,10 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 14. **Unbounded delegation** — the system permits a delegated grant to be issued with scope, operations, or duration exceeding those of the delegating grant, or permits delegation chains to extend beyond the bounds of the root governing entity grant (LEBOSS-DEL-1).
 
 15. **Untraceable authority chain** — the system permits delegation chains that cannot be traced to a valid root governing entity grant, or that introduce ambiguity in access authority, or that do not propagate revocation to all dependent grants (LEBOSS-DEL-3, LEBOSS-DEL-4, LEBOSS-DEL-5).
+
+16. **False compliance claim** — the system claims LEBOSS compliance while any non-conformance condition in this section is present, or while any applicable normative rule is unsatisfied (LEBOSS-VER-1, LEBOSS-VER-3).
+
+17. **Unverifiable conformance** — the system does not provide sufficient visibility into its governed operations to allow an independent party to verify conformance, or represents partial satisfaction of normative rules as full compliance (LEBOSS-VER-2, LEBOSS-VER-4, LEBOSS-VER-5, LEBOSS-VER-6).
 
 ---
 
