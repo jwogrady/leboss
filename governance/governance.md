@@ -1,7 +1,7 @@
 # LEBOSS Governance Model
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.29
 
 ---
 
@@ -96,7 +96,7 @@ LEBOSS versions follow the pattern `X.Y.Z`, where each position has a specific m
 1.0.0  →  Members ratify; canonical standard published
 ```
 
-The current standard is the pre-v0.1.0 working draft, updated through proposal/0.0.12 — open for community contribution and pull requests.
+The current standard is the pre-v0.1.0 working draft, updated through proposal/0.0.29 — open for community contribution and pull requests.
 
 ---
 

@@ -302,7 +302,7 @@ class: text-center
   <div class="text-5xl font-bold text-blue-300 mb-2">Z</div>
   <div class="text-sm font-semibold mb-2">Draft</div>
   <div class="text-xs text-gray-400">Rightmost digit. Increments with each accepted Proposal. Working drafts open to community feedback.</div>
-  <div class="mt-3 text-xs text-blue-300 font-mono">0.0.1 → 0.0.2 → 0.0.12</div>
+  <div class="mt-3 text-xs text-blue-300 font-mono">0.0.1 → 0.0.2 → 0.0.29</div>
 </div>
 
 <div class="bg-purple-900 bg-opacity-40 border border-purple-500 rounded-xl p-5 text-center">
@@ -323,7 +323,7 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
   <strong class="text-gray-300">Current status:</strong>
-  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.12</code> — a complete working draft preparing for <code class="text-purple-300">0.1.0</code>, the first Committee Vote candidate. Proposals 0.0.1 through 0.0.12 are open for community review.</span>
+  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.29</code> — a comprehensive working draft covering ownership, access control, delegation, enforcement, audit, portability, and verification. Open for community review.</span>
 </div>
 
 </div>
@@ -449,19 +449,32 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <h3 class="font-semibold text-blue-300 mb-2">What conformance means</h3>
-  <p class="text-gray-400">A LEBOSS-compliant system implements all MUST-level requirements in the normative rule register. The register contains normative rules across 6 groups, corresponding to the governance protocols in the standard.</p>
+  <p class="text-gray-400">A LEBOSS-compliant system implements all MUST-level requirements in the normative rule register. The register contains 115 normative rules across 19 rule groups, spanning ownership, access control, delegation, enforcement, audit, portability, and verification.</p>
 </div>
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <h3 class="font-semibold text-purple-300 mb-2">Rule groups</h3>
-  <ul class="text-gray-400 space-y-1">
-    <li>• <code class="text-blue-300">LEBOSS-AGP</code> — Access Grant Protocol</li>
-    <li>• <code class="text-blue-300">LEBOSS-IDP</code> — Integration Descriptor Protocol</li>
-    <li>• <code class="text-blue-300">LEBOSS-ACP</code> — Audit Record Collection Protocol</li>
-    <li>• <code class="text-blue-300">LEBOSS-DPP</code> — Data Portability Protocol</li>
-    <li>• <code class="text-blue-300">LEBOSS-RM</code> — Resource Model</li>
-    <li>• <code class="text-blue-300">LEBOSS-GOV</code> — Governance Objects</li>
-  </ul>
+  <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-400 text-xs">
+    <div>• <code class="text-blue-300">OWN</code> — Ownership</div>
+    <div>• <code class="text-blue-300">ACC</code> — Access Control</div>
+    <div>• <code class="text-blue-300">ARCH</code> — Architecture</div>
+    <div>• <code class="text-blue-300">SEC</code> — Security</div>
+    <div>• <code class="text-blue-300">CONT</code> — Continuity</div>
+    <div>• <code class="text-blue-300">SVC</code> — Service Providers</div>
+    <div>• <code class="text-blue-300">SPEC</code> — Specification Boundary</div>
+    <div>• <code class="text-blue-300">ENF</code> — Enforcement</div>
+    <div>• <code class="text-blue-300">REC</code> — Record Keeping</div>
+    <div>• <code class="text-blue-300">PORT</code> — Portability</div>
+    <div>• <code class="text-blue-300">MAP</code> — Resource Mapping</div>
+    <div>• <code class="text-blue-300">DEL</code> — Delegation</div>
+    <div>• <code class="text-blue-300">VER</code> — Verification</div>
+    <div>• <code class="text-blue-300">PROT</code> — Protocol Normativity</div>
+    <div>• <code class="text-blue-300">ACTOR</code> — Actor Identity</div>
+    <div>• <code class="text-blue-300">GEA</code> — Governing Entity Auth</div>
+    <div>• <code class="text-blue-300">AUD</code> — Audit Resolution</div>
+    <div>• <code class="text-blue-300">DCL</code> — Delegation Chain Lifetime</div>
+    <div>• <code class="text-blue-300">REV</code> — Revocation Enforcement</div>
+  </div>
 </div>
 
 </div>
@@ -475,7 +488,7 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4">
   <h3 class="font-semibold text-yellow-300 mb-2">Conformance criteria</h3>
-  <p class="text-gray-400">Formal third-party conformance criteria are on the roadmap. Until established, implementations should document which rules they implement and provide evidence for each MUST-level requirement.</p>
+  <p class="text-gray-400">Conformance is self-declared. The specification provides normative precision sufficient for an independent auditor to verify compliance claims against the rule register. Implementations should document which rules they implement and provide observable evidence for each MUST-level requirement.</p>
 </div>
 
 </div>

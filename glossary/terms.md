@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.23
+**Updated Through:** proposal/0.0.29
 
 ---
 
@@ -28,6 +28,16 @@ Full object definition: [`standards/objects/access-grant.md`](../standards/objec
 A party that performs a governed action within a LEBOSS-compliant system. An actor is identified by a stable, unique identifier recorded in the `actor_id` field of every Audit Record. Actors include human users, service accounts, automation processes, and external integrations. Every governed operation must be attributable to an actor.
 
 See also: *Audit Record*, *Governing Entity*
+
+---
+
+## Actor Identity
+
+The stable, portable identity of an actor within a LEBOSS-governed environment. Actor identity requirements mandate that actor identifiers be unique within a governed environment, stable across sessions and operations, and that no actor may assume another actor's identifier. An actor's identity must be consistently represented in all Audit Records produced by that actor's governed actions. Identity portability requires that actor identifiers remain valid and traceable across environment migrations.
+
+Normative rules: LEBOSS-ACTOR-1 through ACTOR-6.
+
+See also: *Actor*, *Audit Record*, *Identity Portability*
 
 ---
 
@@ -80,6 +90,18 @@ The requirement that Audit Records be preserved for a minimum defined period fol
 See also: *Audit Record*, *Audit Event*
 
 Full retention rules: [`standards/leboss-audit-protocol.md`](../standards/leboss-audit-protocol.md)
+
+---
+
+## Audit Resolution
+
+The informational floor that audit records must meet to serve their governance function. An audit record satisfies audit resolution requirements when it contains sufficient detail to determine: what specific resources were accessed or affected, what operation was performed, the outcome of that operation, and whether the access described was within the scope of the applicable Access Grant.
+
+Audit records that document event occurrence without resource-level and operation-level detail satisfy recording requirements but fail audit resolution requirements. An audit corpus that requires access to system state, internal nomenclature, or service provider cooperation to interpret does not satisfy this standard.
+
+Normative rules: LEBOSS-AUD-1 through AUD-6.
+
+See also: *Audit Record*, *Audit Trail*, *Conformance Evidence*, *System of Record*
 
 ---
 
@@ -205,6 +227,18 @@ See also: *Authority Chain*, *Access Grant*, *Governing Entity*
 
 ---
 
+## Delegation Chain
+
+The sequence of delegated grants tracing from the acting party back to the root governing entity grant. A delegation chain must be independently verifiable for its entire active lifetime: the audit evidence supporting each step must persist for at least as long as the delegation remains active. A delegation chain that has become unverifiable — whether through loss of supporting audit evidence or any other cause — must be treated as having no valid authority.
+
+A delegation chain is only as verifiable as its least-verified link. Loss of verifiability in any link propagates as a validity failure to all grants in the chain. A conformant system must not substitute its own assertions, internal state, or configuration as evidence of delegation authority when independent audit evidence is unavailable.
+
+Normative rules: LEBOSS-DCL-1 through DCL-6.
+
+See also: *Authority Chain*, *Delegated Grant*, *Access Grant*, *Audit Record*
+
+---
+
 ## Data Fiduciary
 
 A party who holds and manages data on behalf of another party, under an obligation to act in the interests of the data's rightful owner. In the LEBOSS model, service providers who access primary operational data are expected to act as data fiduciaries.
@@ -323,6 +357,18 @@ See also: *Universe (Element 0)*
 
 ---
 
+## Governing Entity Authenticity
+
+The requirement that a party claiming to act as a governing entity in a LEBOSS-compliant system be verifiably identifiable as the actual governing entity. A conformant system must not accept or act on governing entity assertions that are unverifiable, externally asserted without internal verification, or that conflict with the established governing entity identity for the governed environment.
+
+Governed actions taken on the basis of an unauthenticated governing entity claim are not authorized. A governing entity credential or assertion that cannot be independently verified does not satisfy this standard.
+
+Normative rules: LEBOSS-GEA-1 through GEA-6.
+
+See also: *Governing Entity*, *Actor Identity*, *Conformance Evidence*
+
+---
+
 ## Integration Descriptor
 
 A governance object that records the authorization of an external integration to receive data from a LEBOSS-compliant system. An Integration Descriptor must exist before any external integration may receive primary operational data.
@@ -395,9 +441,13 @@ See also: *Access Grant*, *Grant Revocation*, *Grant Validation*
 
 ## Grant Revocation
 
-The immediate, permanent invalidation of an Access Grant by the governing entity. Revocation takes effect at the moment it is issued and must be reflected in all system components without delay. A revoked grant cannot be reactivated — new access requires a new grant.
+The immediate, permanent invalidation of an Access Grant by the governing entity. Revocation is effective at the moment it occurs — no governed action may be authorized under a revoked grant for any reason. A revoked grant cannot be reactivated — new access requires a new grant.
+
+A conformant system must evaluate grant state using authoritative, current grant state at the time of access evaluation. Enforcement based on cached, stale, or previously recorded authorization state when the current authoritative state of the grant is revoked does not satisfy this standard.
 
 Revocation is a core enforcement mechanism for the governing entity's right to control data access. It must be technically supported in any LEBOSS-compliant system, not merely contractually promised.
+
+Normative rules: LEBOSS-ACC-3, LEBOSS-REV-1 through REV-6.
 
 See also: *Access Grant*, *Grant Lifecycle*
 
