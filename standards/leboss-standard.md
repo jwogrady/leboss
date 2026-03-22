@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.25
+**Updated Through:** proposal/0.0.26
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.25, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.26, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.25. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.26. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -78,6 +78,7 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 19. [Conformance Verification](#19-conformance-verification)
 20. [Protocol Normativity Framework](#20-protocol-normativity-framework)
 21. [Actor Identity Portability](#21-actor-identity-portability)
+22. [Governing Entity Authenticity](#22-governing-entity-authenticity)
 
 ---
 
@@ -550,7 +551,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.25.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.26.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -850,4 +851,29 @@ The normative rules for actor identity portability (LEBOSS-ACTOR-1 through ACTOR
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.25 — Open for community review and pull request contribution.*
+## 22. Governing Entity Authenticity
+
+The LEBOSS ownership model places the governing entity — the person, family, or legal entity that owns the business — at the root of all authority. Every rule in this standard flows from that root. Access Grants are issued by the governing entity. Audit history is readable by the governing entity. Data portability rights belong to the governing entity. Delegation chains terminate at the governing entity grant. The integrity of this model depends entirely on the governing entity being real.
+
+The standard defines what a governing entity *is*: a person, family, or registered legal entity representing a business enterprise. What it has not established is what conditions are required for a governing entity record to constitute authentic, independently controlled authority. Without those conditions, a platform can fabricate a governing entity record, make ownership conditional on a continued service relationship, or assign an entity identity using purely internal constructs — and satisfy every LEBOSS ownership rule while retaining structural control over the governing entity itself.
+
+**The critical distinction:** A governing entity is not a software construct. A row in a database, a platform account, or a system-assigned identifier is a *representation* of a governing entity — not the entity itself. The entity behind that representation must exist independently of the system that records it. Control over that representation must rest with the entity it represents, not with the platform that hosts it.
+
+This distinction matters in practice. Platforms routinely create user accounts on behalf of clients, own the infrastructure that hosts those accounts, and retain the ability to modify or deactivate them. A business owner may believe they are the governing entity over their operational environment while the platform holds a degree of structural control that would allow reassignment, suspension, or termination of that authority without consent.
+
+This section establishes the conditions that make governing entity authority authentic under this standard.
+
+**Key behavioral requirements:**
+
+- A governing entity **MUST** represent independent authority that exists outside the implementing system. A governing entity that can only be created, defined, or validated by the system or its service providers does not satisfy this standard (LEBOSS-GEA-1).
+- A conformant system **MUST NOT** permit a service provider to unilaterally create, modify, reassign, or revoke governing entity authority without the authorization of the party the governing entity represents (LEBOSS-GEA-2).
+- Governing entity authority **MUST NOT** depend on identifiers, accounts, or credentials exclusively controlled by a service provider or platform. Authority that ceases upon service relationship termination does not satisfy this standard (LEBOSS-GEA-3).
+- Governing entity authority **MUST** remain valid and transferable across system migrations. A change in implementing system, service provider, or infrastructure does not extinguish it (LEBOSS-GEA-4).
+- A conformant system **MUST NOT** treat system-generated identifiers alone as sufficient basis for governing entity authority. Authority must be grounded in the real-world entity represented, not in a system record (LEBOSS-GEA-5).
+- Governing entity authority **MUST** be independently verifiable — it must not rest solely on assertions made by the implementing system or its service providers (LEBOSS-GEA-6).
+
+The normative rules for governing entity authenticity (LEBOSS-GEA-1 through GEA-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.26 — Open for community review and pull request contribution.*
