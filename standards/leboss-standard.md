@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.16
+**Updated Through:** proposal/0.0.17
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -713,4 +713,23 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.16 — Open for community review and pull request contribution.*
+## 17. Cross-System Resource Identity and Mapping
+
+The LEBOSS portability doctrine holds that a governing entity must be able to move their operational environment to another system without loss of governance continuity. The Data Portability Protocol (§15) defines what must be exported. Proposal 0.0.16 established the structural requirements for a valid export. This section defines what must be true about resource identity and cross-system mapping to make portability operationally achievable.
+
+A complete, format-independent export is necessary but not sufficient for portability. For a governing entity to reconstruct their governed environment in a receiving system, each exported resource must carry identity information sufficient to be uniquely identified, mapped to a corresponding resource in the destination, and reconnected to its relationships — without reference to the source system or its infrastructure.
+
+**Key behavioral requirements:**
+
+- Every governed resource MUST have a stable identity within its environment. An identity that changes over time, or that depends on system-internal state not present in the export, cannot serve as a basis for governance continuity across systems.
+- Resource identity MUST persist through export and import without alteration. The identity a resource carries in the export package MUST be the same identity used to reference it in governance objects — Access Grants, Audit Records, and Integration Descriptors.
+- An export MUST include sufficient identity information for each resource to enable a receiving system to uniquely identify and map that resource independently, without access to the source system.
+- A receiving system importing a LEBOSS export MUST be able to map each imported resource to an internal equivalent without requiring access to the source system or its service providers.
+- Structural relationships between resources MUST remain resolvable in the receiving system after import. An import that renders previously resolvable relationships unresolvable does not satisfy this standard.
+- Resource identity and mapping MUST NOT depend on proprietary mechanisms, vendor-controlled systems, or undocumented processes.
+
+The normative rules for cross-system resource identity and mapping (LEBOSS-MAP-1 through MAP-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.17 — Open for community review and pull request contribution.*

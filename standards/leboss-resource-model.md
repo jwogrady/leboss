@@ -185,9 +185,9 @@ This model does not define:
 - **Resource lifecycle management** — how resources are created, versioned, archived, or deleted is outside this specification; a Resource Lifecycle Protocol is deferred to a future proposal
 - **Resource discovery** — how parties enumerate available resources within a governed environment is outside this specification
 - **Type taxonomy enforcement** — while required type categories are defined, mandatory sub-classifications within categories are outside this specification
-- **Cross-environment resource mapping** — how resources are matched between source and destination environments during migration is outside this specification
-
 These concerns will be addressed in future proposals.
+
+Cross-environment resource mapping requirements — what must be true about resource identity and mapping to enable migration between systems — are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md) (LEBOSS-MAP-1 through MAP-6), added in proposal 0.0.17.
 
 ---
 
