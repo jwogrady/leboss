@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.17
+**Updated Through:** proposal/0.0.18
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -29,6 +29,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `REC` — Audit as System of Record Rules
 - `PORT` — Data Portability Requirements Rules
 - `MAP` — Cross-System Resource Identity and Mapping Rules
+- `DEL` — Delegation and Authority Chain Rules
 
 ---
 
@@ -340,6 +341,34 @@ Resource identity and mapping MUST NOT depend on proprietary mechanisms, vendor-
 
 ---
 
+## Delegation and Authority Chain Rules
+
+**LEBOSS-DEL-1**
+Delegated authority MUST NOT exceed the scope, operations, or duration of the grant from which it was delegated. A delegate cannot authorize more than they were themselves authorized to authorize.
+*Source: §18*
+
+**LEBOSS-DEL-2**
+A delegated grant MUST reference the originating grant that authorized the delegation. A grant with no traceable originating authority is invalid and MUST NOT be treated as a basis for access.
+*Source: §18*
+
+**LEBOSS-DEL-3**
+A delegation chain MUST be fully traceable from any point in the chain to the root governing entity grant. A chain that cannot be resolved to a valid root governing entity grant does not satisfy this standard.
+*Source: §18*
+
+**LEBOSS-DEL-4**
+Revocation of a grant MUST propagate to all grants in the delegation chain that depend on it. A delegated grant that continues to authorize access after its originating grant has been revoked constitutes a conformance failure.
+*Source: §18*
+
+**LEBOSS-DEL-5**
+A conformant system MUST NOT permit delegation chains that introduce ambiguity in access authority or that cannot be fully audited.
+*Source: §18*
+
+**LEBOSS-DEL-6**
+Delegation MUST NOT create implicit or inherited access. Access authorized through delegation is bounded by explicit grant scope at every step in the chain.
+*Source: §18*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -355,7 +384,8 @@ Resource identity and mapping MUST NOT depend on proprietary mechanisms, vendor-
 | Audit as System of Record (REC)     | 4  | 2  | 2  | — | — |
 | Data Portability Requirements (PORT) | 6 | 5  | 1  | — | — |
 | Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
-| **Total**                           | **64** | **46** | **19** | **5** | **—** |
+| Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
+| **Total**                           | **70** | **49** | **22** | **5** | **—** |
 
 ---
 
@@ -380,4 +410,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.17. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.18. The standard governs in all cases of conflict.*

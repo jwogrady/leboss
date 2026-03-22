@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.17
+**Updated Through:** proposal/0.0.18
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -732,4 +732,23 @@ The normative rules for cross-system resource identity and mapping (LEBOSS-MAP-1
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.17 — Open for community review and pull request contribution.*
+## 18. Delegation and Authority Chains
+
+The LEBOSS access control doctrine requires that every access to primary operational data be authorized by an explicit, scoped Access Grant issued by the governing entity or their designated delegate. The Access Grant Protocol operationalizes this requirement at the behavioral level. What the standard has not established is the structural constraints that make delegation safe — the guarantees that must hold across any chain of delegated authority to prevent scope expansion, audit gaps, and orphaned access.
+
+Delegation occurs when a party holding a valid Access Grant is authorized to issue grants to other parties within their own grant's scope. This is a legitimate governance pattern. It is unsafe when: a delegated grant expands beyond the delegator's authority; when the chain from a delegated action to its root authority cannot be established; or when revocation of a parent grant does not propagate to the grants that depend on it.
+
+**Key behavioral requirements:**
+
+- Delegated authority **MUST NOT** exceed the scope of the grant from which it was delegated. A delegate cannot authorize more than they were authorized to authorize.
+- A delegated grant **MUST** reference the originating grant that authorized the delegation. A grant with no traceable originating authority is invalid.
+- A delegation chain **MUST** be fully traceable from any point in the chain to the root governing entity grant. A chain that cannot be resolved to a valid root governing entity grant does not satisfy this standard.
+- Revocation of a grant **MUST** propagate to all grants in the delegation chain that depend on it. A delegated grant that continues to authorize access after its parent grant has been revoked constitutes a conformance failure.
+- A conformant system **MUST NOT** permit delegation chains that introduce ambiguity in access authority or that cannot be fully audited.
+- Delegation **MUST NOT** create implicit or inherited access. Access authorized through delegation is bounded by explicit grant scope at every step in the chain.
+
+The normative rules for delegation and authority chains (LEBOSS-DEL-1 through DEL-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.18 — Open for community review and pull request contribution.*
