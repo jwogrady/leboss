@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.28
+**Updated Through:** proposal/0.0.29
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -36,6 +36,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `GEA` — Governing Entity Authenticity Rules
 - `AUD` — Audit Resolution Requirements Rules
 - `DCL` — Delegation Chain Lifetime Rules
+- `REV` — Revocation Enforcement Timing Rules
 
 ---
 
@@ -441,7 +442,8 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Governing Entity Authenticity (GEA)     | 6 | 3  | 3  | — | — |
 | Audit Resolution Requirements (AUD)     | 6 | 3  | 3  | — | — |
 | Delegation Chain Lifetime (DCL)         | 6 | 3  | 3  | — | — |
-| **Total**                           | **109** | **69** | **43** | **5** | **—** |
+| Revocation Enforcement Timing (REV)     | 6 | 3  | 3  | — | — |
+| **Total**                           | **115** | **72** | **46** | **5** | **—** |
 
 ---
 
@@ -581,9 +583,37 @@ A conformant system MUST NOT substitute its own assertions, internal state, or c
 
 ---
 
+## Revocation Enforcement Timing Rules
+
+**LEBOSS-REV-1**
+A revoked grant MUST NOT authorize any governed action after the point of revocation. Revocation is effective at the moment it occurs — no governed action may be authorized under a revoked grant for any reason.
+*Source: §25*
+
+**LEBOSS-REV-2**
+A conformant system MUST evaluate grant state using authoritative, current grant state at the time of access evaluation. Enforcement based on authorization state that does not reflect the current state of the grant does not satisfy this standard.
+*Source: §25*
+
+**LEBOSS-REV-3**
+A conformant system MUST NOT authorize a governed action based on stale, cached, or previously recorded authorization state when the current authoritative state of the grant is revoked.
+*Source: §25*
+
+**LEBOSS-REV-4**
+Revocation MUST be effective at the moment of enforcement. A governing entity who revokes a grant must be able to rely on that revocation preventing access at the time of the next governed action evaluation.
+*Source: §25*
+
+**LEBOSS-REV-5**
+A conformant system MUST NOT permit any design, configuration, or operational mode in which a revoked grant continues to authorize governed actions, regardless of whether the cause is caching, propagation delay, or asynchronous state management.
+*Source: §25*
+
+**LEBOSS-REV-6**
+The authoritative revocation state of a grant MUST be the sole determinant of whether that grant may authorize access. Any authorization path that bypasses, ignores, or defers consultation of authoritative grant state does not satisfy this standard.
+*Source: §25*
+
+---
+
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.28.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.29.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
@@ -602,4 +632,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.28. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.29. The standard governs in all cases of conflict.*
