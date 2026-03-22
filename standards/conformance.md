@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.15
+**Updated Through:** proposal/0.0.16
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -124,6 +124,14 @@ A conformant system **MUST** support data portability, allowing the governing en
 
 The portability mechanism **MUST** be available at any time, not only upon termination of a service relationship.
 
+A conformant system **MUST** produce exports that are complete, relationship-preserving, reconstructable, and format-independent. Specifically:
+
+- Exports **MUST** include all governed resource categories — primary operational data, governance objects, and audit records — without omission (LEBOSS-PORT-1, LEBOSS-PORT-2).
+- Exports **MUST** preserve the structural relationships between resources, governance objects, and Audit Records so that those relationships are recoverable from the export alone (LEBOSS-PORT-3).
+- Exports **MUST** be sufficient to reconstruct the governed environment's operational state in an independent system without reliance on the exporting system or its service providers (LEBOSS-PORT-4).
+- Exports **MUST** use documented, non-proprietary formats with documentation sufficient for independent implementation (LEBOSS-PORT-5).
+- Exports **MUST** include a manifest identifying resource categories, time range, and record counts (LEBOSS-PORT-6).
+
 ### 3.6 Audit History Access
 
 A conformant system **MUST** maintain a verifiable audit history accessible to the governing entity.
@@ -163,6 +171,10 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 8. **Unenforced requirements** — normative requirements governing data access, grant validation, grant revocation, audit record creation, or data export are satisfied by documentation, policy declaration, or stated intent only, without operational enforcement (LEBOSS-ENF-1, LEBOSS-ENF-2).
 
 9. **Irreconcilable state** — the system represents the state of a governed resource in a manner that cannot be reconciled with the Audit Record history for that resource (LEBOSS-REC-2).
+
+10. **Non-reconstructable export** — the data portability mechanism produces exports that are insufficient to reconstruct the governed environment's operational state in an independent system without reliance on the exporting system or its service providers (LEBOSS-PORT-4).
+
+11. **Proprietary format dependency** — exports require proprietary tools, vendor-controlled systems, or undocumented formats to access, parse, or interpret, making them inaccessible to independent implementation (LEBOSS-PORT-5).
 
 ---
 
