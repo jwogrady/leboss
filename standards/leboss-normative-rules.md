@@ -440,7 +440,7 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 ## Protocol Normativity Rules
 
 **LEBOSS-PROT-1**
-All normative behavioral requirements defined in LEBOSS protocol documents are normative requirements of this standard. The following protocol documents are incorporated into the normative framework of this standard: the Access Grant Protocol (`standards/leboss-access-grant-protocol.md`, LEBOSS-AGP-1 through AGP-17), the Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`, LEBOSS-IDP-1 through IDP-26), the Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`, LEBOSS-ACP-1 through ACP-24), and the Data Portability Protocol (`standards/leboss-data-portability-protocol.md`, LEBOSS-DPP-1 through DPP-28). A system claiming LEBOSS compliance MUST satisfy the behavioral requirements of all incorporated protocol documents.
+The following protocol documents are incorporated into the normative framework of this standard: the Access Grant Protocol (`standards/leboss-access-grant-protocol.md`, LEBOSS-AGP-1 through AGP-17), the Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`, LEBOSS-IDP-1 through IDP-26), the Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`, LEBOSS-ACP-1 through ACP-24), and the Data Portability Protocol (`standards/leboss-data-portability-protocol.md`, LEBOSS-DPP-1 through DPP-28). A system claiming LEBOSS compliance MUST satisfy the requirements of all incorporated protocol documents. Only protocol provisions expressed in normative language (MUST, MUST NOT, SHALL) are incorporated as binding requirements under this rule. Explanatory, descriptive, or non-normative content in protocol documents is not binding.
 *Source: §20*
 
 **LEBOSS-PROT-2**
@@ -452,7 +452,7 @@ Conformance evaluation MUST NOT be performed against this register alone while i
 *Source: §20*
 
 **LEBOSS-PROT-4**
-Protocol documents incorporated into this standard MUST NOT introduce enforceable behavioral requirements that are not traceable to this standard's governance framework. Protocol rules must extend or operationalize requirements within defined rule groups; they MUST NOT create obligations disconnected from the standard's established normative structure.
+Incorporated protocol documents MUST NOT introduce normative requirements that are not traceable to the governance model defined in this standard. A protocol provision is traceable if it operationalizes a requirement within an established rule group or directly enforces a principle, doctrine, or obligation defined in this standard.
 *Source: §20*
 
 **LEBOSS-PROT-5**

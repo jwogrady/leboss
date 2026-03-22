@@ -803,7 +803,7 @@ The LEBOSS standard defines normative requirements across two tiers.
 
 A system that satisfies register-level rules while violating protocol-level behavioral requirements is not conformant. A system that claims conformance by interpreting protocol documents as informative guidance does not satisfy this standard.
 
-The following protocol documents are incorporated into the normative framework of this standard:
+The following protocol documents are incorporated into the normative framework of this standard. Only provisions expressed in normative language (MUST, MUST NOT, SHALL) are incorporated as binding requirements. Explanatory, descriptive, or non-normative content in protocol documents is not binding.
 
 | Protocol Document | Incorporated Rules |
 |------------------|--------------------|
@@ -814,10 +814,10 @@ The following protocol documents are incorporated into the normative framework o
 
 **Key behavioral requirements:**
 
-- A system claiming LEBOSS compliance **MUST** satisfy the behavioral requirements of all incorporated protocol documents (LEBOSS-PROT-1).
+- A system claiming LEBOSS compliance **MUST** satisfy all normative provisions of the incorporated protocol documents (LEBOSS-PROT-1).
 - Protocol-level MUST and MUST NOT requirements **MUST NOT** be treated as non-binding guidance (LEBOSS-PROT-2).
-- Conformance evaluation **MUST NOT** be limited to register rules while ignoring applicable protocol-level behavioral requirements (LEBOSS-PROT-3).
-- Incorporated protocol documents **MUST NOT** introduce enforceable requirements disconnected from this standard's governance framework (LEBOSS-PROT-4).
+- Conformance evaluation **MUST NOT** be limited to register rules while ignoring applicable protocol-level normative requirements (LEBOSS-PROT-3).
+- Incorporated protocol documents **MUST NOT** introduce normative requirements that are not traceable to the governance model defined in this standard (LEBOSS-PROT-4).
 - Incorporation under LEBOSS-PROT-1 makes a protocol rule normatively binding without requiring separate listing in the register (LEBOSS-PROT-5).
 
 The normative rules for protocol normativity (LEBOSS-PROT-1 through PROT-5) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
