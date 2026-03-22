@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.27
+**Updated Through:** proposal/0.0.28
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -234,6 +234,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 22. **Platform-dependent ownership** — the system defines or controls governing entity authority in a manner that makes it dependent on service provider accounts, platform-controlled identifiers, or system-generated constructs that do not represent the real-world entity they purport to govern; or permits a service provider to unilaterally modify, reassign, or revoke governing entity status without the authorization of the party the governing entity represents (LEBOSS-GEA-2, LEBOSS-GEA-3, LEBOSS-GEA-5).
 
 23. **Insufficient audit resolution** — the system produces audit records that satisfy recording requirements but omit the resource-level or operation-level detail required to verify whether governed actions were within authorized scope, or produces an audit corpus that an independent party cannot use to evaluate governed action legality without access to system state, internal nomenclature, or service provider cooperation (LEBOSS-AUD-3, LEBOSS-AUD-5, LEBOSS-AUD-6).
+
+24. **Unverifiable delegation chain lifetime** — the system maintains active delegation grants whose authority chain cannot be independently validated due to loss or expiration of supporting audit evidence, or treats system assertions as sufficient substitute for independently verifiable delegation evidence when that evidence is unavailable (LEBOSS-DCL-2, LEBOSS-DCL-4, LEBOSS-DCL-6).
 
 ---
 

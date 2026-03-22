@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.27
+**Updated Through:** proposal/0.0.28
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -35,6 +35,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `ACTOR` — Actor Identity Portability Rules
 - `GEA` — Governing Entity Authenticity Rules
 - `AUD` — Audit Resolution Requirements Rules
+- `DCL` — Delegation Chain Lifetime Rules
 
 ---
 
@@ -439,7 +440,8 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Actor Identity Portability (ACTOR)      | 6 | 3  | 3  | — | — |
 | Governing Entity Authenticity (GEA)     | 6 | 3  | 3  | — | — |
 | Audit Resolution Requirements (AUD)     | 6 | 3  | 3  | — | — |
-| **Total**                           | **103** | **66** | **40** | **5** | **—** |
+| Delegation Chain Lifetime (DCL)         | 6 | 3  | 3  | — | — |
+| **Total**                           | **109** | **69** | **43** | **5** | **—** |
 
 ---
 
@@ -551,9 +553,37 @@ A conformant system MUST NOT satisfy audit recording requirements by producing r
 
 ---
 
+## Delegation Chain Lifetime Rules
+
+**LEBOSS-DCL-1**
+A delegation chain MUST remain independently verifiable for its entire active lifetime. Verifiability requires that the chain can be traced to a valid root governing entity grant through evidence that does not rely on assertions made by the implementing system or its service providers.
+*Source: §24*
+
+**LEBOSS-DCL-2**
+A conformant system MUST NOT maintain active delegation grants whose authority chain cannot be independently validated. A delegation chain that has become unverifiable — whether through loss of supporting audit evidence or any other cause — MUST be treated as having no valid authority.
+*Source: §24*
+
+**LEBOSS-DCL-3**
+The audit evidence supporting each step in a delegation chain MUST persist for at least as long as the delegation remains active. A delegation chain that outlives the verifiable record of its origin does not satisfy this standard.
+*Source: §24*
+
+**LEBOSS-DCL-4**
+A conformant system MUST NOT allow a delegation chain to remain active after the supporting audit records establishing the root governing entity grant have become unavailable or irrecoverable.
+*Source: §24*
+
+**LEBOSS-DCL-5**
+Loss of verifiability in any link of a delegation chain MUST propagate as a validity failure to all grants in that chain. A delegation chain is only as verifiable as its least-verified link.
+*Source: §24*
+
+**LEBOSS-DCL-6**
+A conformant system MUST NOT substitute its own assertions, internal state, or configuration as evidence of delegation authority when independent audit evidence is unavailable. System trust is not a substitute for independently verifiable evidence.
+*Source: §24*
+
+---
+
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.27.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.28.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
@@ -572,4 +602,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.27. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.28. The standard governs in all cases of conflict.*
