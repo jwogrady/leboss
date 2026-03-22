@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.28
+**Updated Through:** proposal/0.0.29
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.28, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.29, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.28. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.29. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -81,6 +81,7 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 22. [Governing Entity Authenticity](#22-governing-entity-authenticity)
 23. [Audit Resolution Requirements](#23-audit-resolution-requirements)
 24. [Delegation Chain Lifetime Integrity](#24-delegation-chain-lifetime-integrity)
+25. [Revocation Enforcement Timing](#25-revocation-enforcement-timing)
 
 ---
 
@@ -553,7 +554,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.28.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.29.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -928,4 +929,31 @@ The normative rules for delegation chain lifetime integrity (LEBOSS-DCL-1 throug
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.28 — Open for community review and pull request contribution.*
+## 25. Revocation Enforcement Timing
+
+The LEBOSS access control model grants the governing entity the right to revoke access at any time (ACC-3). This right is meaningful only if revocation results in actual denial of access — not merely a recorded state change that the system may or may not reflect at the point where access decisions are made.
+
+Most authorization systems do not evaluate access directly against authoritative grant state. They evaluate against a cache, a session token, a local copy of an authorization decision, or some other intermediary representation. These designs are common, reasonable from a performance perspective, and entirely capable of producing a system where a revocation is recorded and audited while a previously computed authorization continues to permit access.
+
+**The gap this section addresses:** No existing rule specifies what authorization state must be consulted at evaluation time. ENF-2 requires that enforcement occur at the time of governed actions. It does not specify that the state used for that enforcement must be current and authoritative. A system that enforces access control at evaluation time using cached state that predates a revocation satisfies ENF-2 and violates the governing entity's intent in equal measure.
+
+The result is a class of revocation that is formally recorded but functionally incomplete — a revocation that the governing entity made and that the system acknowledged, while access it was meant to stop continues.
+
+This section establishes that revocation is not complete until it is reflected in enforcement. Recording a revocation changes the authoritative state of a grant. Enforcement must consult that authoritative state. The distance between those two moments is not an implementation tolerance — it is a compliance gap.
+
+This section does not define caching strategies, synchronization mechanisms, distributed system designs, or time durations. It defines the relationship between authoritative grant state and the enforcement decision: the former must govern the latter.
+
+**Key behavioral requirements:**
+
+- A revoked grant **MUST NOT** authorize any governed action after the point of revocation (LEBOSS-REV-1).
+- A conformant system **MUST** evaluate grant state using authoritative, current grant state at the time of access evaluation (LEBOSS-REV-2).
+- A conformant system **MUST NOT** authorize a governed action based on stale, cached, or previously recorded authorization state when the current authoritative state of the grant is revoked (LEBOSS-REV-3).
+- Revocation **MUST** be effective at the moment of enforcement — a governing entity who revokes a grant must be able to rely on that revocation preventing access at the time of the next governed action evaluation (LEBOSS-REV-4).
+- A conformant system **MUST NOT** permit any design, configuration, or operational mode in which a revoked grant continues to authorize governed actions (LEBOSS-REV-5).
+- The authoritative revocation state of a grant **MUST** be the sole determinant of whether that grant may authorize access (LEBOSS-REV-6).
+
+The normative rules for revocation enforcement timing (LEBOSS-REV-1 through REV-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.29 — Open for community review and pull request contribution.*

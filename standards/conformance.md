@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.28
+**Updated Through:** proposal/0.0.29
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -236,6 +236,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 23. **Insufficient audit resolution** — the system produces audit records that satisfy recording requirements but omit the resource-level or operation-level detail required to verify whether governed actions were within authorized scope, or produces an audit corpus that an independent party cannot use to evaluate governed action legality without access to system state, internal nomenclature, or service provider cooperation (LEBOSS-AUD-3, LEBOSS-AUD-5, LEBOSS-AUD-6).
 
 24. **Unverifiable delegation chain lifetime** — the system maintains active delegation grants whose authority chain cannot be independently validated due to loss or expiration of supporting audit evidence, or treats system assertions as sufficient substitute for independently verifiable delegation evidence when that evidence is unavailable (LEBOSS-DCL-2, LEBOSS-DCL-4, LEBOSS-DCL-6).
+
+25. **Deferred revocation enforcement** — the system allows governed actions to proceed under a revoked grant due to cached, stale, or asynchronous grant state, or permits any design or operational mode in which revocation does not take effect at the time of access evaluation (LEBOSS-REV-1, LEBOSS-REV-3, LEBOSS-REV-5).
 
 ---
 
