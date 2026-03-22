@@ -1,5 +1,7 @@
 # LEBOSS Releases
 
+**Updated Through:** proposal/0.0.29
+
 This document describes the versioning policy for the LEBOSS specification and lists all releases.
 
 ---
@@ -15,7 +17,7 @@ LEBOSS uses semantic versioning in the form `X.Y.Z` with LEBOSS-specific meaning
 | `X` (leftmost) | **Published** | A committee- and member-ratified standard. Immutable. The canonical reference for conformant implementations. |
 
 **Examples:**
-- `0.0.12` — twelfth working draft; current pre-v0.1.0 draft
+- `0.0.29` — pre-v0.1.0 complete draft (post stress-test closure); structurally complete governance standard
 - `0.1.0` — first Committee Vote candidate; stable for implementer review
 - `1.0.0` — first Published standard; ratified and immutable
 
@@ -51,6 +53,8 @@ Specification versions are tracked through:
 
 ### Draft Releases
 
+#### Foundation Series (0.0.1–0.0.12)
+
 | Version | Tag | Proposal | Content |
 |---------|-----|----------|---------|
 | 0.0.1 | [`v0.0.1`](https://github.com/jwogrady/leboss/releases/tag/v0.0.1) | [proposals/0.0.1](proposals/0.0.1/proposal.md) | Initial doctrine and reference architecture |
@@ -66,11 +70,38 @@ Specification versions are tracked through:
 | 0.0.11 | [`v0.0.11`](https://github.com/jwogrady/leboss/releases/tag/v0.0.11) | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
 | 0.0.12 | [`v0.0.12`](https://github.com/jwogrady/leboss/releases/tag/v0.0.12) | [proposals/0.0.12](proposals/0.0.12/proposal.md) | Terminology stabilization — conformance tiers, missing glossary entries, element name alignment |
 
+#### Governance Boundary and Enforcement Series (0.0.13–0.0.20)
+
+| Version | Proposal | Content |
+|---------|----------|---------|
+| 0.0.13 | [proposals/0.0.13](proposals/0.0.13/proposal.md) | Specification and implementation boundary |
+| 0.0.14 | [proposals/0.0.14](proposals/0.0.14/proposal.md) | Enforcement responsibility |
+| 0.0.15 | [proposals/0.0.15](proposals/0.0.15/proposal.md) | Audit as system of record |
+| 0.0.16 | [proposals/0.0.16](proposals/0.0.16/proposal.md) | Data portability format requirements |
+| 0.0.17 | [proposals/0.0.17](proposals/0.0.17/proposal.md) | Cross-system resource identity and mapping |
+| 0.0.18 | [proposals/0.0.18](proposals/0.0.18/proposal.md) | Delegation and authority chain constraints |
+| 0.0.19 | [proposals/0.0.19](proposals/0.0.19/proposal.md) | Conformance verification |
+| 0.0.20 | [proposals/0.0.20](proposals/0.0.20/proposal.md) | Structural normalization |
+
+#### Stress Test and Gap Closure Series (0.0.21–0.0.29)
+
+| Version | Proposal | Content |
+|---------|----------|---------|
+| 0.0.21 | [proposals/0.0.21](proposals/0.0.21/proposal.md) | Boundary stress test — identified remaining enforcement gaps |
+| 0.0.22 | [proposals/0.0.22](proposals/0.0.22/proposal.md) | Primary operational data boundary (OWN-9, OWN-10) |
+| 0.0.23 | [proposals/0.0.23](proposals/0.0.23/proposal.md) | Service provider boundary (SVC-8, SVC-9) |
+| 0.0.24 | [proposals/0.0.24](proposals/0.0.24/proposal.md) | Protocol normativity alignment (PROT-1 through PROT-5) |
+| 0.0.25 | [proposals/0.0.25](proposals/0.0.25/proposal.md) | Actor identity portability (ACTOR-1 through ACTOR-6) |
+| 0.0.26 | [proposals/0.0.26](proposals/0.0.26/proposal.md) | Governing entity authenticity (GEA-1 through GEA-6) |
+| 0.0.27 | [proposals/0.0.27](proposals/0.0.27/proposal.md) | Audit resolution requirements (AUD-1 through AUD-6) |
+| 0.0.28 | [proposals/0.0.28](proposals/0.0.28/proposal.md) | Delegation chain lifetime integrity (DCL-1 through DCL-6) |
+| 0.0.29 | [proposals/0.0.29](proposals/0.0.29/proposal.md) | Revocation enforcement timing (REV-1 through REV-6) |
+
 ### Upcoming
 
 | Version | Status | Description |
 |---------|--------|-------------|
-| **0.1.0** | Preparing | First Committee Vote candidate — implementable draft release |
+| **0.1.0** | Preparing | First Committee Vote candidate — structurally complete governance standard open for member ratification |
 
 ---
 
@@ -79,17 +110,11 @@ Specification versions are tracked through:
 Tags are applied to commits on the `master` branch after proposals are merged:
 
 ```
-git tag -a v0.1.0 -m "LEBOSS 0.1.0 — first implementable draft release"
+git tag -a v0.1.0 -m "LEBOSS 0.1.0 — first Committee Vote candidate"
 git push origin v0.1.0
 ```
 
 Each tag marks the state of the specification at that version. The full specification at any past version is recoverable by checking out the corresponding tag.
-
----
-
-## Open Gap
-
-**GAP-5: Succession and Ownership Transfer Protocol** — The standard requires succession support (LEBOSS-CONT-1 through CONT-3) but no protocol yet defines how ownership transfer is executed. This is the one remaining identified gap and is formally deferred beyond `0.1.0`.
 
 ---
 
