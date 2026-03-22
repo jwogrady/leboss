@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.14
+**Updated Through:** proposal/0.0.15
 
 ---
 
@@ -88,6 +88,18 @@ Full retention rules: [`standards/leboss-audit-protocol.md`](../standards/leboss
 The complete set of Audit Records for a governed environment. A complete, tamper-evident record of all operations performed on data within a LEBOSS-compliant system, including who performed the operation, what operation was performed, what data was affected, and when the operation occurred.
 
 The Audit Trail is the mechanism by which data ownership is made verifiable rather than merely asserted.
+
+---
+
+## Audit as System of Record
+
+The LEBOSS principle that the set of Audit Records for a governed environment constitutes the authoritative record of all governed actions performed within that environment. The Audit Record history is not supplementary evidence — it is the canonical source of truth about what actions occurred on governed resources.
+
+A conformant system must not represent the state of a governed resource in a manner that is irreconcilable with the Audit Record history for that resource. The LEBOSS standard does not prescribe how this consistency guarantee is implemented; it requires only that the guarantee holds.
+
+Normative rules: LEBOSS-REC-1 through REC-4.
+
+See also: *Audit Record*, *Audit Trail*, *Irreconcilable State*, *Governed Action*
 
 ---
 
@@ -314,6 +326,18 @@ Suspension is reversible — the governing entity may reactivate a suspended int
 Contrast with: *Integration Deactivation*
 
 See also: *Integration Lifecycle*, *Integration Descriptor*
+
+---
+
+## Irreconcilable State
+
+A condition in which the represented state of a governed resource within a LEBOSS-compliant system cannot be reconciled with the Audit Record history for that resource. Irreconcilable state is a non-conformance condition under the LEBOSS standard (LEBOSS-REC-2).
+
+A state and its Audit Record history are irreconcilable when the history does not account for how the state came to exist — that is, when no sequence of governed actions in the Audit Record can explain the current state of the resource.
+
+The LEBOSS standard does not prescribe how systems detect or prevent irreconcilable state. It requires only that the condition not exist.
+
+See also: *Audit as System of Record*, *Audit Record*, *Governed Action*
 
 ---
 
@@ -559,6 +583,14 @@ A Star cannot function without a Planet to support it. Without a Star, a Planet 
 ## Steward
 
 A party who holds and manages data or a system on behalf of its rightful owner, bound by an obligation to act in the owner's interest. Under LEBOSS, all service providers are stewards. Being a steward does not confer ownership.
+
+---
+
+## System of Record
+
+The authoritative source of truth about governed actions in a LEBOSS-compliant environment. Under LEBOSS, the set of Audit Records constitutes the system of record for governed actions. The system of record is not a supplementary log — it is the canonical representation of what occurred.
+
+See also: *Audit as System of Record*, *Audit Record*, *Audit Trail*
 
 ---
 
