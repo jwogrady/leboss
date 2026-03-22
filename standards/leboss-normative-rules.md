@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.20
+**Updated Through:** proposal/0.0.22
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -67,6 +67,14 @@ Derived data MUST NOT be used to benefit third parties without explicit authoriz
 **LEBOSS-OWN-8**
 Derived data MUST be deleted upon termination of the service relationship, unless the governing entity consents otherwise.
 *Source: §6.2*
+
+**LEBOSS-OWN-9**
+Data MUST be treated as primary operational data if it is materially required for the operation, continuity, accountability, or reconstruction of the governed business environment — regardless of how it is labeled or classified within the implementing system.
+*Source: §6.1*
+
+**LEBOSS-OWN-10**
+A conformant system MUST NOT exclude data from primary operational data ownership, audit, or portability obligations by classifying it as auxiliary, metadata, configuration, or supplementary when that data is materially required for continuity, accountability, or reconstruction of the governed environment.
+*Source: §6.1*
 
 ---
 
@@ -402,7 +410,7 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
 |-------|-------|------|----------|-----|--------|
-| Ownership (OWN) | 8 | 5 | 3 | 1 | — |
+| Ownership (OWN) | 10 | 6 | 4 | 1 | — |
 | Access (ACC) | 5 | 3 | 1 | 2 | — |
 | Architectural (ARCH) | 11 | 9 | 2 | — | — |
 | Security (SEC) | 5 | 4 | 1 | 1 | — |
@@ -415,7 +423,7 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
 | Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
 | Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
-| **Total**                           | **76** | **53** | **26** | **5** | **—** |
+| **Total**                           | **78** | **54** | **27** | **5** | **—** |
 
 ---
 
@@ -440,4 +448,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.20. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.22. The standard governs in all cases of conflict.*

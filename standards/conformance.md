@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.20
+**Updated Through:** proposal/0.0.22
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -132,6 +132,8 @@ A conformant system **MUST** produce exports that are complete, relationship-pre
 - Exports **MUST** use documented, non-proprietary formats with documentation sufficient for independent implementation (LEBOSS-PORT-5).
 - Exports **MUST** include a manifest identifying resource categories, time range, and record counts (LEBOSS-PORT-6).
 
+Export completeness **MUST** be evaluated against the functional scope of primary operational data as defined in LEBOSS-OWN-9. A system **MUST NOT** satisfy the completeness requirement by applying a narrow definition of primary operational data that excludes data materially required for continuity, accountability, or reconstruction of the governed environment (LEBOSS-OWN-10).
+
 ### 3.6 Audit History Access
 
 A conformant system **MUST** maintain a verifiable audit history accessible to the governing entity.
@@ -220,6 +222,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 16. **False compliance claim** — the system claims LEBOSS compliance while any non-conformance condition in this section is present, or while any applicable normative rule is unsatisfied (LEBOSS-VER-1, LEBOSS-VER-3).
 
 17. **Unverifiable conformance** — the system does not provide sufficient visibility into its governed operations to allow an independent party to verify conformance, or represents partial satisfaction of normative rules as full compliance (LEBOSS-VER-2, LEBOSS-VER-4, LEBOSS-VER-5, LEBOSS-VER-6).
+
+18. **Functionally incomplete export** — the system applies a definition of primary operational data narrow enough to exclude data materially required for continuity, accountability, or reconstruction of the governed environment, producing exports that satisfy structural completeness requirements while omitting business-critical operational content (LEBOSS-OWN-10, LEBOSS-PORT-1).
 
 ---
 

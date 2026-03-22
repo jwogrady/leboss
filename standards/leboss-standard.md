@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.20
+**Updated Through:** proposal/0.0.22
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.20, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.22, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.20. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.22. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -370,11 +370,16 @@ The following rules describe the data ownership requirements that LEBOSS-complia
 
 All primary operational data generated within a LEBOSS-compliant system is owned by the governing entity (Universe) to which it belongs.
 
-Primary operational data includes but is not limited to:
+Primary operational data is defined by its role in the governed business environment. Data **MUST** be treated as primary operational data if it is materially required for the operation, continuity, accountability, or reconstruction of the governed business environment — regardless of how it is labeled or classified within the implementing system.
+
+A conformant system **MUST NOT** exclude data from primary operational data ownership, audit, or portability obligations by classifying it as auxiliary, metadata, configuration, or supplementary when that data is materially required for continuity, accountability, or reconstruction of the governed environment.
+
+The following are illustrative examples of primary operational data. They are not an exhaustive definition — the governing criterion is the functional role of the data, not its categorical label:
 - Customer records and contact information
 - Transaction and payment history
 - Appointment and scheduling records
 - Communications between the business and its customers
+- Workflow state and operational configuration when materially required for reconstruction
 - Inventory and asset records
 - Employee and team records
 
@@ -532,7 +537,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.20.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.22.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -776,4 +781,4 @@ The normative rules for conformance verification (LEBOSS-VER-1 through VER-6) ar
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.20 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.22 — Open for community review and pull request contribution.*
