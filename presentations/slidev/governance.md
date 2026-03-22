@@ -323,7 +323,7 @@ class: text-center
 
 <div class="bg-white bg-opacity-5 rounded-lg p-4 text-sm">
   <strong class="text-gray-300">Current status:</strong>
-  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.29</code> — a comprehensive working draft covering ownership, access control, delegation, enforcement, audit, portability, and verification. Open for community review.</span>
+  <span class="text-gray-400"> LEBOSS is at <code class="text-blue-300">0.0.29</code> — a structurally complete governance standard (v0.1.0-rc) covering ownership, access control, delegation, enforcement, audit, portability, and verification. Open for committee review.</span>
 </div>
 
 </div>

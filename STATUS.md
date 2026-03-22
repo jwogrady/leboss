@@ -1,8 +1,8 @@
 # LEBOSS Specification Status
 
-**Current Version:** pre-v0.1.0 (Draft)
+**Current Version:** v0.1.0-rc
 **Updated Through:** proposal/0.0.29
-**Next Milestone:** v0.1.0 — first Committee Vote candidate
+**Status:** Release candidate for first Committee Vote (v0.1.0)
 
 ---
 
@@ -16,7 +16,7 @@ The standard covers the full governance layer: ownership, access control, delega
 - **25 non-conformance conditions** defined in `standards/conformance.md`
 - **MUST:** 72 · **MUST NOT:** 46 · **MAY:** 5
 
-Implementations may begin development against this version. The pre-v0.1.0 draft is open for community contribution and critique. The v0.1.0 milestone will mark the first Committee Vote candidate.
+Implementations may begin development against this version. The v0.1.0-rc is open for community review. The v0.1.0 milestone will mark the first Committee Vote candidate.
 
 ---
 

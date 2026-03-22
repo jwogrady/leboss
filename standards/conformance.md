@@ -1,8 +1,8 @@
 # LEBOSS Conformance
 
-**Status:** Draft
+**Status:** v0.1.0-rc
 **Updated Through:** proposal/0.0.29
-**Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
+**Applies to:** LEBOSS Standard v0.1.0-rc and later
 
 ---
 
@@ -258,17 +258,17 @@ Two systems that implement the same governance requirements using entirely diffe
 
 ---
 
-## 6. Future Certification
+## 6. Certification Scope
 
-The requirements defined in this document represent the **minimum conformance baseline** for LEBOSS 0.x drafts.
+The requirements defined in this document represent the **minimum conformance baseline** for this standard. Conformance is self-declared. The specification provides normative precision sufficient for an independent auditor to evaluate compliance claims against the rule register.
 
-Future versions of the standard **MAY** introduce:
+Formal third-party certification procedures are outside the scope of this version. Future versions of the standard **MAY** introduce:
 
 - **Formal compliance profiles** — tiered conformance levels (e.g., Core, Extended, Certified) with defined feature sets at each tier
 - **Certification procedures** — processes by which implementations can be evaluated against the standard by independent parties
 - **Interoperability tests** — defined test cases and reference implementations for validating cross-system data portability and governance handoff
 
-All future certification mechanisms will be built on the requirements defined in Sections 3 and 4 of this document. Systems that satisfy those requirements today will be well-positioned for certification when those processes become available.
+All future certification mechanisms will be built on the requirements defined in Sections 3 and 4 of this document.
 
 ---
 

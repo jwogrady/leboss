@@ -17,7 +17,7 @@ LEBOSS uses semantic versioning in the form `X.Y.Z` with LEBOSS-specific meaning
 | `X` (leftmost) | **Published** | A committee- and member-ratified standard. Immutable. The canonical reference for conformant implementations. |
 
 **Examples:**
-- `0.0.29` — pre-v0.1.0 complete draft (post stress-test closure); structurally complete governance standard
+- `0.0.29` / `v0.1.0-rc` — structurally complete governance standard; release candidate for first Committee Vote
 - `0.1.0` — first Committee Vote candidate; stable for implementer review
 - `1.0.0` — first Published standard; ratified and immutable
 
@@ -101,7 +101,7 @@ Specification versions are tracked through:
 
 | Version | Status | Description |
 |---------|--------|-------------|
-| **0.1.0** | Preparing | First Committee Vote candidate — structurally complete governance standard open for member ratification |
+| **0.1.0** | Release Candidate (v0.1.0-rc) | First Committee Vote candidate — governance standard at release candidate stage, open for committee review and member ratification |
 
 ---
 
