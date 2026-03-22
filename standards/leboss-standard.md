@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.23
+**Updated Through:** proposal/0.0.24
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.23, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.24, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.23. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.24. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -73,6 +73,10 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 14. [Audit Record Collection Protocol](#14-audit-record-collection-protocol)
 15. [Data Portability Protocol](#15-data-portability-protocol)
 16. [Resource Model](#16-resource-model)
+17. [Cross-System Resource Identity and Mapping](#17-cross-system-resource-identity-and-mapping)
+18. [Delegation and Authority Chains](#18-delegation-and-authority-chains)
+19. [Conformance Verification](#19-conformance-verification)
+20. [Protocol Normativity Framework](#20-protocol-normativity-framework)
 
 ---
 
@@ -789,4 +793,35 @@ The normative rules for conformance verification (LEBOSS-VER-1 through VER-6) ar
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.23 — Open for community review and pull request contribution.*
+## 20. Protocol Normativity Framework
+
+The LEBOSS standard defines normative requirements across two tiers.
+
+**Tier 1 — The Normative Rule Register:** The flat rule register (`standards/leboss-normative-rules.md`) enumerates normative requirements directly. These are the rules a conformance evaluation begins with.
+
+**Tier 2 — Incorporated Protocol Documents:** Protocol documents define detailed behavioral requirements that operationalize Tier 1 rules. These requirements are expressed in the same normative language (MUST, MUST NOT) and carry the same normative force. Protocol documents are not informative supplements to the standard — they are normative extensions of it.
+
+A system that satisfies register-level rules while violating protocol-level behavioral requirements is not conformant. A system that claims conformance by interpreting protocol documents as informative guidance does not satisfy this standard.
+
+The following protocol documents are incorporated into the normative framework of this standard. Only provisions expressed in normative language (MUST, MUST NOT, SHALL) are incorporated as binding requirements. Explanatory, descriptive, or non-normative content in protocol documents is not binding.
+
+| Protocol Document | Incorporated Rules |
+|------------------|--------------------|
+| Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) | LEBOSS-AGP-1 through AGP-17 |
+| Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`) | LEBOSS-IDP-1 through IDP-26 |
+| Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`) | LEBOSS-ACP-1 through ACP-24 |
+| Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) | LEBOSS-DPP-1 through DPP-28 |
+
+**Key behavioral requirements:**
+
+- A system claiming LEBOSS compliance **MUST** satisfy all normative provisions of the incorporated protocol documents (LEBOSS-PROT-1).
+- Protocol-level MUST and MUST NOT requirements **MUST NOT** be treated as non-binding guidance (LEBOSS-PROT-2).
+- Conformance evaluation **MUST NOT** be limited to register rules while ignoring applicable protocol-level normative requirements (LEBOSS-PROT-3).
+- Incorporated protocol documents **MUST NOT** introduce normative requirements that are not traceable to the governance model defined in this standard (LEBOSS-PROT-4).
+- Incorporation under LEBOSS-PROT-1 makes a protocol rule normatively binding without requiring separate listing in the register (LEBOSS-PROT-5).
+
+The normative rules for protocol normativity (LEBOSS-PROT-1 through PROT-5) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.24 — Open for community review and pull request contribution.*

@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.23
+**Updated Through:** proposal/0.0.24
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -31,6 +31,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `MAP` — Cross-System Resource Identity and Mapping Rules
 - `DEL` — Delegation and Authority Chain Rules
 - `VER` — Conformance Verification Rules
+- `PROT` — Protocol Normativity Rules
 
 ---
 
@@ -431,29 +432,54 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
 | Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
 | Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
-| **Total**                           | **80** | **55** | **28** | **5** | **—** |
+| Protocol Normativity (PROT)             | 5 | 2  | 3  | — | — |
+| **Total**                           | **85** | **57** | **31** | **5** | **—** |
+
+---
+
+## Protocol Normativity Rules
+
+**LEBOSS-PROT-1**
+The following protocol documents are incorporated into the normative framework of this standard: the Access Grant Protocol (`standards/leboss-access-grant-protocol.md`, LEBOSS-AGP-1 through AGP-17), the Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`, LEBOSS-IDP-1 through IDP-26), the Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`, LEBOSS-ACP-1 through ACP-24), and the Data Portability Protocol (`standards/leboss-data-portability-protocol.md`, LEBOSS-DPP-1 through DPP-28). A system claiming LEBOSS compliance MUST satisfy the requirements of all incorporated protocol documents. Only protocol provisions expressed in normative language (MUST, MUST NOT, SHALL) are incorporated as binding requirements under this rule. Explanatory, descriptive, or non-normative content in protocol documents is not binding.
+*Source: §20*
+
+**LEBOSS-PROT-2**
+A conformant system MUST NOT treat protocol-level behavioral rules as non-binding guidance. A MUST or MUST NOT requirement defined in an incorporated LEBOSS protocol document carries the same normative weight as a rule listed directly in this register.
+*Source: §20*
+
+**LEBOSS-PROT-3**
+Conformance evaluation MUST NOT be performed against this register alone while ignoring behavioral requirements defined in incorporated protocol documents. Full conformance requires satisfaction of all register rules and all applicable protocol-level rules.
+*Source: §20*
+
+**LEBOSS-PROT-4**
+Incorporated protocol documents MUST NOT introduce normative requirements that are not traceable to the governance model defined in this standard. A protocol provision is traceable if it operationalizes a requirement within an established rule group or directly enforces a principle, doctrine, or obligation defined in this standard.
+*Source: §20*
+
+**LEBOSS-PROT-5**
+Where an incorporated LEBOSS protocol defines required behavior through MUST or MUST NOT language, that requirement MUST be treated as normatively binding by virtue of the protocol's incorporation under LEBOSS-PROT-1. No separate rule listing in this register is required for a protocol rule to constitute a binding obligation under this standard.
+*Source: §20*
 
 ---
 
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.12.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.24.
 
-**GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4*
-The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17).
+**GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
+The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
 
-**GAP-2: Audit Trail Format** — *Resolved in 0.0.3 and 0.0.6*
-The standard requires auditable records (LEBOSS-SEC-3, LEBOSS-SVC-3). The Audit Record object (`standards/objects/audit-record.md`) defines the required fields. The Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`) defines capture, correlation, retention, and integrity behavioral rules (LEBOSS-ACP-1 through ACP-24).
+**GAP-2: Audit Trail Format** — *Resolved in 0.0.3 and 0.0.6; normative standing formalized in 0.0.24*
+The standard requires auditable records (LEBOSS-SEC-3, LEBOSS-SVC-3). The Audit Record object (`standards/objects/audit-record.md`) defines the required fields. The Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`) defines capture, correlation, retention, and integrity behavioral rules (LEBOSS-ACP-1 through ACP-24). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
 
-**GAP-3: Portability Format** — *Partially resolved — export requirements defined; canonical encoding remains deferred*
-The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1). The Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) defines export authority, scope, completeness, and neutrality behavioral rules (LEBOSS-DPP-1 through DPP-28). Proposal 0.0.16 added standard-level requirements for export completeness, relationship preservation, reconstructability, format independence, and manifests (LEBOSS-PORT-1 through PORT-6). A specific canonical encoding format remains deferred to a future proposal.
+**GAP-3: Portability Format** — *Portability behavioral requirements resolved; canonical encoding deferred*
+The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1). The Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) defines export authority, scope, completeness, and neutrality behavioral rules (LEBOSS-DPP-1 through DPP-28). Proposal 0.0.16 added standard-level requirements for export completeness, relationship preservation, reconstructability, format independence, and manifests (LEBOSS-PORT-1 through PORT-6). DPP behavioral rules are incorporated as normative requirements under LEBOSS-PROT-1. A specific canonical encoding format remains deferred to a future proposal.
 
-**GAP-4: External Integration Authorization Protocol** — *Resolved in 0.0.3 and 0.0.5*
-LEBOSS-ACC-5 requires explicit authorization for external integrations. The Integration Descriptor object (`standards/objects/integration-descriptor.md`) defines what must be recorded. The Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`) defines the full integration lifecycle and behavioral rules (LEBOSS-IDP-1 through IDP-26).
+**GAP-4: External Integration Authorization Protocol** — *Resolved in 0.0.3 and 0.0.5; normative standing formalized in 0.0.24*
+LEBOSS-ACC-5 requires explicit authorization for external integrations. The Integration Descriptor object (`standards/objects/integration-descriptor.md`) defines what must be recorded. The Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`) defines the full integration lifecycle and behavioral rules (LEBOSS-IDP-1 through IDP-26). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
 
 **GAP-5: Succession and Ownership Transfer** — *Open*
 LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists for executing an ownership transfer. Deferred to a future proposal.
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.23. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.24. The standard governs in all cases of conflict.*

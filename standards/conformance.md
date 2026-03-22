@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.23
+**Updated Through:** proposal/0.0.24
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -226,6 +226,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 18. **Functionally incomplete export** — the system applies a definition of primary operational data narrow enough to exclude data materially required for continuity, accountability, or reconstruction of the governed environment, producing exports that satisfy structural completeness requirements while omitting business-critical operational content (LEBOSS-OWN-10, LEBOSS-PORT-1).
 
 19. **Ungoverned infrastructure access** — any entity with the ability to access or control systems containing primary operational data is not treated as a service provider, is not disclosed to the governing entity, or is not subject to the service provider obligations and access grant requirements of this standard (LEBOSS-SVC-8, LEBOSS-SVC-9).
+
+20. **Protocol-only compliance** — the system satisfies register-level normative rules while failing to satisfy behavioral requirements defined in incorporated LEBOSS protocol documents (LEBOSS-AGP-1 through AGP-17, LEBOSS-IDP-1 through IDP-26, LEBOSS-ACP-1 through ACP-24, LEBOSS-DPP-1 through DPP-28), or treats protocol-level MUST and MUST NOT requirements as non-binding guidance rather than normative obligations (LEBOSS-PROT-1, LEBOSS-PROT-2, LEBOSS-PROT-3).
 
 ---
 
