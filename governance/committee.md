@@ -1,7 +1,7 @@
 # LEBOSS Committee Structure
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.29
 
 ---
 
@@ -10,6 +10,8 @@
 The LEBOSS Committee exists to steward the standard — not to own it. Its members are accountable to the community of business owners, developers, and service providers who adopt and contribute to LEBOSS.
 
 The committee must remain small enough to move decisively and open enough to represent the interests of those it serves. It must never become a barrier to contribution or a mechanism for private control.
+
+As of proposal/0.0.29, the standard is structurally complete. The committee's primary work is now the maintenance and evolution of a comprehensive governance specification — reviewing proposals, ensuring coherence across 115 normative rules and 19 rule groups, and stewarding the path toward the first Committee Vote candidate (v0.1.0).
 
 ---
 
@@ -94,7 +96,7 @@ The committee will hold public discussion periods for all Drafts and will seek t
 
 ---
 
-## Current Committee (Founding)
+## Current Committee
 
 | Role | Name | Affiliation |
 |------|------|-------------|
@@ -102,7 +104,7 @@ The committee will hold public discussion periods for all Drafts and will seek t
 | Committee Member | *Open for nomination* | — |
 | Committee Member | *Open for nomination* | — |
 
-*This table will be populated as the founding committee is established. Nominations are open. See [CONTRIBUTING.md](../CONTRIBUTING.md) for how to participate.*
+*Nominations are open. See [CONTRIBUTING.md](../CONTRIBUTING.md) for how to participate.*
 
 ---
 

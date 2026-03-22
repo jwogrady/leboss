@@ -2,12 +2,14 @@
 
 **Local Entrepreneur Business Operating System Standards**
 
+**Updated Through:** proposal/0.0.29
+
 [![Version](https://img.shields.io/badge/version-pre--v0.1.0-blue)](STATUS.md)
 [![Status](https://img.shields.io/badge/status-draft-orange)](STATUS.md)
 [![Type](https://img.shields.io/badge/type-open%20standard-purple)](standards/leboss-standard.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-> An open governance standard for defining clear system ownership boundaries, integration contracts, and auditable data access — for local business software systems.
+> An open governance standard defining ownership, access control, delegation, enforcement, audit, portability, identity, and revocation requirements for local business data systems.
 
 See [STATUS.md](STATUS.md) for current specification status and release information.
 
@@ -87,7 +89,7 @@ The **Governing Entity** (Universe) owns all data. Every other element operates 
 |----------|---------|
 | [standards/leboss-standard.md](standards/leboss-standard.md) | Base standard — reference model, data ownership doctrine, service provider obligations, conformance |
 | [standards/conformance.md](standards/conformance.md) | Conformance definition — minimum requirements for LEBOSS-compliant implementations |
-| [standards/leboss-normative-rules.md](standards/leboss-normative-rules.md) | Flat rule register — 40 normative rules across 6 protocol groups |
+| [standards/leboss-normative-rules.md](standards/leboss-normative-rules.md) | Flat rule register — 115 normative rules across 19 rule groups |
 | [standards/leboss-resource-model.md](standards/leboss-resource-model.md) | Resource Model |
 | [standards/leboss-access-grant-protocol.md](standards/leboss-access-grant-protocol.md) | Access Grant Protocol |
 | [standards/leboss-integration-protocol.md](standards/leboss-integration-protocol.md) | Integration Descriptor Protocol |
@@ -106,7 +108,7 @@ The **Governing Entity** (Universe) owns all data. Every other element operates 
 | [`standards/`](standards/) | Normative specification — all MUST/SHOULD/MAY requirements |
 | [`glossary/`](glossary/) | Canonical terminology definitions |
 | [`governance/`](governance/) | Governance model — proposal lifecycle, committee roles |
-| [`proposals/`](proposals/) | Specification change history (0.0.1 → 0.0.12) |
+| [`proposals/`](proposals/) | Specification change history (0.0.1 → 0.0.29) |
 | [`presentations/`](presentations/) | Three-deck Slidev presentation portal |
 | [`charter/`](charter/) | Mission and philosophical foundation |
 
@@ -160,21 +162,15 @@ Every pull request automatically generates a **Netlify preview** of the presenta
 
 ## Current Status
 
-The specification is at the **pre-v0.1.0 draft** milestone — the first implementable draft. The architecture, governance objects, and operational protocols are draft-stable.
+The specification is at the **pre-v0.1.0 draft** milestone — structurally complete and open for community contribution. The standard covers the full governance layer across 115 normative rules and 19 rule groups. All boundary gaps identified in the 0.0.21 stress test have been resolved.
 
-| Proposal | Content |
-|----------|---------|
-| [0.0.1](proposals/0.0.1/proposal.md) | Initial doctrine and reference architecture |
-| [0.0.2](proposals/0.0.2/proposal.md) | Normative rule register and formalization pass |
-| [0.0.3](proposals/0.0.3/proposal.md) | Governance object model |
-| [0.0.4](proposals/0.0.4/proposal.md) | Access Grant Protocol |
-| [0.0.5](proposals/0.0.5/proposal.md) | Integration Descriptor Protocol |
-| [0.0.6](proposals/0.0.6/proposal.md) | Audit Record Collection Protocol |
-| [0.0.7](proposals/0.0.7/proposal.md) | Data Portability Protocol |
-| [0.0.8](proposals/0.0.8/proposal.md) | Resource Model |
-| [0.0.9](proposals/0.0.9/proposal.md) | Specification stabilization |
-| [0.0.10](proposals/0.0.10/proposal.md) | Repository normalization |
-| [0.0.11](proposals/0.0.11/proposal.md) | Canonical presentation system |
+**Foundation (0.0.1–0.0.12):** Initial doctrine, normative rule register, governance object model, five operational protocols, resource model, conformance requirements, and terminology stabilization.
+
+**Governance boundary and enforcement (0.0.13–0.0.20):** Specification and implementation boundary defined; enforcement responsibility, audit as system of record, portability format requirements, resource identity mapping, delegation constraints, conformance verification, and structural normalization.
+
+**Stress test and gap closure (0.0.21–0.0.29):** Boundary stress test identified enforcement gaps; primary operational data boundary (OWN-9–10), service provider boundary (SVC-8–9), protocol normativity alignment (PROT-1–5), actor identity portability (ACTOR-1–6), governing entity authenticity (GEA-1–6), audit resolution requirements (AUD-1–6), delegation chain lifetime integrity (DCL-1–6), and revocation enforcement timing (REV-1–6).
+
+Full proposal history is in [`proposals/`](proposals/) and in [STATUS.md](STATUS.md).
 
 The next milestone is **v0.1.0** — the first Committee Vote candidate.
 
