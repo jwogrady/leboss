@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.22
+**Updated Through:** proposal/0.0.23
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.22, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.23, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.22. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.23. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -432,7 +432,15 @@ The governing entity retains the right to require that data reside within specif
 
 ## 7. Service Provider Responsibilities
 
-A service provider operating within a LEBOSS-compliant ecosystem — whether building a customer interface, managing a backend service, operating an internal capability, or connecting an external integration — accepts the following responsibilities.
+### 7.0 Service Provider Definition
+
+A **service provider** under this standard is any entity that stores, processes, transmits, or has the ability to access or control primary operational data on behalf of the governing entity. This includes entities providing infrastructure, hosting, or administrative support to systems containing primary operational data, regardless of whether their access is direct, delegated, purposeful, or incidental.
+
+An entity does not become exempt from this standard's obligations by characterizing its role as infrastructure, utilities, or support. The governing criterion is the ability to access or control primary operational data — not the label applied to the relationship.
+
+A conformant system **MUST NOT** permit any entity to access primary operational data without that entity being subject to the service provider obligations defined in this standard, including disclosure requirements and access grant requirements.
+
+The responsibilities in this section apply to all service providers so defined.
 
 ### 7.1 Act as Steward, Not Owner
 
@@ -537,7 +545,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.22.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.23.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -781,4 +789,4 @@ The normative rules for conformance verification (LEBOSS-VER-1 through VER-6) ar
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.22 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.23 — Open for community review and pull request contribution.*

@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.22
+**Updated Through:** proposal/0.0.23
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -224,6 +224,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 17. **Unverifiable conformance** — the system does not provide sufficient visibility into its governed operations to allow an independent party to verify conformance, or represents partial satisfaction of normative rules as full compliance (LEBOSS-VER-2, LEBOSS-VER-4, LEBOSS-VER-5, LEBOSS-VER-6).
 
 18. **Functionally incomplete export** — the system applies a definition of primary operational data narrow enough to exclude data materially required for continuity, accountability, or reconstruction of the governed environment, producing exports that satisfy structural completeness requirements while omitting business-critical operational content (LEBOSS-OWN-10, LEBOSS-PORT-1).
+
+19. **Ungoverned infrastructure access** — any entity with the ability to access or control systems containing primary operational data is not treated as a service provider, is not disclosed to the governing entity, or is not subject to the service provider obligations and access grant requirements of this standard (LEBOSS-SVC-8, LEBOSS-SVC-9).
 
 ---
 
