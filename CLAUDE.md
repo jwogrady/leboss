@@ -16,7 +16,7 @@ It serves two purposes:
 /
 ├── charter/mission.md                   # Philosophical foundation and mission
 ├── standards/leboss-standard.md         # Living specification (primary artifact)
-├── proposals/0.0.1/ … 0.0.11/          # Proposal history
+├── proposals/0.0.1/ … 0.0.29/          # Proposal history
 ├── glossary/terms.md                    # Defined terminology
 ├── governance/governance.md             # Versioning and workflow rules
 ├── governance/committee.md              # Committee roles
@@ -44,11 +44,12 @@ LEBOSS uses semantic versioning `X.Y.Z` with LEBOSS-specific meaning:
 | `X` (leftmost) | **Published** | Committee and member approved — the active canonical standard |
 
 **Examples:**
-- `0.0.1` — First draft (current state, no committee review yet)
+- `0.0.1` — First draft
+- `0.0.29` — Current state (v0.1.0-rc): 115 rules, 19 groups, structurally complete
 - `0.1.0` — Committee Vote opened for member ratification
 - `1.0.0` — Published canonical standard, subscribed to by the community
 
-The current version is pre-v0.1.0 — the first implementable draft, open for community contribution. See `STATUS.md`.
+The current version is v0.1.0-rc (0.0.29) — a structurally complete governance standard and release candidate for the first Committee Vote. See `STATUS.md`.
 
 ## Key Terminology
 

@@ -1,7 +1,7 @@
 # LEBOSS Standard
 ## Local Entrepreneur Business Operating System Standards
 
-**Status:** Draft
+**Status:** v0.1.0-rc
 **Target Release:** v0.1.0
 **Updated Through:** proposal/0.0.29
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
@@ -12,7 +12,7 @@
 
 This document defines the LEBOSS standard.
 
-This document represents the integrated working draft of the LEBOSS standard prior to the first Committee Vote (target release: v0.1.0). The architecture, governance model, and core protocols are considered draft-stable. Implementations may begin development against this version.
+This document represents the v0.1.0 release candidate of the LEBOSS standard — a structurally complete governance specification covering ownership, access control, delegation, enforcement, audit, portability, identity, and revocation across 115 normative rules and 19 rule groups. This is the release candidate for the first Committee Vote (target: v0.1.0). Implementations may begin development against this version.
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
@@ -516,9 +516,9 @@ A system **MUST NOT** be described as LEBOSS-aligned if it:
 - Lacks auditable records of data access
 - Satisfies normative requirements through documentation or stated intent without operational enforcement
 
-For the complete conformance definition — including minimum requirements, non-conformance conditions, and future certification scope — see [conformance.md](conformance.md).
+For the complete conformance definition — including minimum requirements and non-conformance conditions — see [conformance.md](conformance.md).
 
-Formal conformance certification criteria will be defined in a subsequent version of the standard.
+Formal third-party certification procedures are outside the scope of this version. Conformance is self-declared against the criteria defined in this section and in [conformance.md](conformance.md).
 
 ### 8.6 Operational Enforcement
 
@@ -554,7 +554,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.29.
+This document is the v0.1.0-rc release candidate of the LEBOSS Standard, updated through proposal/0.0.29.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -562,12 +562,12 @@ LEBOSS versions follow the pattern `X.Y.Z`:
 - `Y` — Committee Vote: accepted by the committee and open for member ratification
 - `X` — Published: ratified by members as the active canonical standard
 
-The pre-v0.1.0 working draft sits at the draft stage. The path to publication:
+The current state is the release candidate for the first Committee Vote. The path to publication:
 
 ```
-pre-v0.1.0  →  Current working draft (this document)
-0.1.0       →  Committee accepts for member vote
-1.0.0       →  Members ratify; canonical standard published
+0.0.29 / v0.1.0-rc  →  Current release candidate (this document)
+0.1.0               →  Committee accepts for member vote
+1.0.0               →  Members ratify; canonical standard published
 ```
 
 The full governance process is defined in [governance/governance.md](../governance/governance.md).
@@ -956,4 +956,4 @@ The normative rules for revocation enforcement timing (LEBOSS-REV-1 through REV-
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.29 — Open for community review and pull request contribution.*
+*LEBOSS Standard — v0.1.0-rc, updated through proposal/0.0.29 — Open for community review and committee consideration.*

@@ -1,7 +1,7 @@
 # LEBOSS Normative Rule Register
 ## Local Entrepreneur Business Operating System Standards
 
-**Status:** Draft
+**Status:** v0.1.0-rc
 **Target Release:** v0.1.0
 **Updated Through:** proposal/0.0.29
 **Derived from:** [leboss-standard.md](leboss-standard.md)
@@ -632,4 +632,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.29. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — v0.1.0-rc, updated through proposal/0.0.29. The standard governs in all cases of conflict.*

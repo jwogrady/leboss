@@ -1,6 +1,6 @@
 # LEBOSS Glossary of Terms
 
-**Status:** Draft
+**Status:** v0.1.0-rc
 **Updated Through:** proposal/0.0.29
 
 ---

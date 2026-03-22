@@ -162,7 +162,7 @@ Every pull request automatically generates a **Netlify preview** of the presenta
 
 ## Current Status
 
-The specification is at the **pre-v0.1.0 draft** milestone — structurally complete and open for community contribution. The standard covers the full governance layer across 115 normative rules and 19 rule groups. All boundary gaps identified in the 0.0.21 stress test have been resolved.
+The specification is at the **v0.1.0-rc** milestone — structurally complete and open for community review as a release candidate for the first Committee Vote. The standard covers the full governance layer across 115 normative rules and 19 rule groups. All boundary gaps identified in the 0.0.21 stress test have been resolved.
 
 **Foundation (0.0.1–0.0.12):** Initial doctrine, normative rule register, governance object model, five operational protocols, resource model, conformance requirements, and terminology stabilization.
 
