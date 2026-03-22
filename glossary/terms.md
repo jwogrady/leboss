@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.19
+**Updated Through:** proposal/0.0.20
 
 ---
 
