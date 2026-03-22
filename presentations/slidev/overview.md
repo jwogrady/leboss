@@ -6,7 +6,7 @@ highlighter: shiki
 lineNumbers: false
 info: |
   ## LEBOSS — Data Sovereignty for Local Business
-  An open architecture model for business data governance.
+  An open governance standard for local business data systems.
   https://leboss.status26.com
 css: unocss
 drawings:
