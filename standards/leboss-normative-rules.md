@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.22
+**Updated Through:** proposal/0.0.23
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -224,6 +224,14 @@ Disclosed subprocessors are subject to the same LEBOSS requirements as the prima
 The service provider MUST NOT use primary operational data for any purpose beyond delivering the contracted service — including training machine learning models, building aggregate datasets, or improving services for other customers — without explicit written consent from the governing entity.
 *Source: §7.6*
 
+**LEBOSS-SVC-8**
+Any entity that stores, processes, transmits, or has the ability to access or control primary operational data — including entities providing infrastructure, hosting, or administrative support to systems containing primary operational data — MUST be treated as a service provider under this standard and is subject to all applicable service provider obligations, regardless of whether their access is direct, delegated, purposeful, or incidental.
+*Source: §7.0*
+
+**LEBOSS-SVC-9**
+A conformant system MUST NOT permit any entity to access primary operational data without that entity being subject to the service provider obligations defined in this standard, including disclosure requirements (LEBOSS-SVC-5) and access grant requirements (LEBOSS-ACC-1).
+*Source: §7.0*
+
 ---
 
 ## Specification Boundary Rules
@@ -415,7 +423,7 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Architectural (ARCH) | 11 | 9 | 2 | — | — |
 | Security (SEC) | 5 | 4 | 1 | 1 | — |
 | Continuity (CONT) | 4 | 4 | 1 | — | — |
-| Service Provider (SVC)              | 7  | 5  | 2  | — | — |
+| Service Provider (SVC)              | 9  | 6  | 3  | — | — |
 | Specification Boundary (SPEC)       | 4  | 2  | 2  | 1 | — |
 | Enforcement Responsibility (ENF)    | 4  | 2  | 3  | — | — |
 | Audit as System of Record (REC)     | 4  | 2  | 2  | — | — |
@@ -423,7 +431,7 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
 | Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
 | Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
-| **Total**                           | **78** | **54** | **27** | **5** | **—** |
+| **Total**                           | **80** | **55** | **28** | **5** | **—** |
 
 ---
 
@@ -448,4 +456,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.22. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.23. The standard governs in all cases of conflict.*

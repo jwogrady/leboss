@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.22
+**Updated Through:** proposal/0.0.23
 
 ---
 
@@ -674,7 +674,15 @@ The third of LEBOSS's five Foundation Principles. Security requires that data be
 
 ## Service Provider
 
-Any individual or organization that builds, manages, or operates systems on behalf of a local business under the LEBOSS framework. Service providers are stewards of business data, not owners. They must operate within explicitly granted access, maintain audit records, and facilitate data portability upon exit.
+Any entity that stores, processes, transmits, or has the ability to access or control primary operational data on behalf of the governing entity. Service providers include, but are not limited to: application developers, platform operators, managed service providers, and entities providing infrastructure, hosting, or administrative support to systems containing primary operational data — regardless of whether their access is direct, delegated, purposeful, or incidental.
+
+An entity does not become exempt from LEBOSS obligations by characterizing its role as infrastructure, utilities, or support. The governing criterion is the ability to access or control primary operational data, not the label applied to the relationship.
+
+Service providers are stewards of business data, not owners. They must operate within explicitly granted Access Grants, disclose subprocessors, maintain audit records, and facilitate data portability upon exit.
+
+Normative rules: LEBOSS-SVC-1 through SVC-9, LEBOSS-ACC-1.
+
+See also: *Subprocessor*, *Access Grant*, *Governing Entity*, *Steward*
 
 ---
 
@@ -716,7 +724,9 @@ See also: *Implementation*, *Conformance*, *Reference Model*
 
 ## Subprocessor
 
-A third-party service used by a service provider that has access to primary operational data. Subprocessors must be disclosed to the governing entity and are subject to the same LEBOSS obligations as the primary service provider.
+A third-party entity used by a service provider that has the ability to access primary operational data — including entities providing infrastructure, hosting, or administrative support to systems containing primary operational data. A subprocessor is a service provider under this standard (LEBOSS-SVC-8) and must be disclosed to the governing entity (LEBOSS-SVC-5). Subprocessors are subject to the same LEBOSS service provider obligations as the primary service provider (LEBOSS-SVC-6).
+
+See also: *Service Provider*, *Access Grant*, *Governing Entity*
 
 ---
 
