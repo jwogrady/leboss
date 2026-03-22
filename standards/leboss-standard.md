@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.19
+**Updated Through:** proposal/0.0.20
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.12, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.20, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.12. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.20. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -356,8 +356,8 @@ The following dependency rules govern valid LEBOSS topologies. An implementation
 1. A backend service component **MUST** serve at least one customer interface. A backend with no associated interface has no purpose in the hierarchy.
 2. A customer interface **MUST** be supported by at least one backend service. An interface with no backend cannot deliver value.
 3. An internal capability component **MUST** operate within the data boundary of a single brand entity.
-4. An external integration component **MUST** be explicitly authorized at the brand entity or root owner level before it **MAY** receive any data.
-5. A brand entity **MUST** belong to exactly one root owner.
+4. An external integration component **MUST** be explicitly authorized at the brand entity or governing entity level before it **MAY** receive any data.
+5. A brand entity **MUST** belong to exactly one governing entity.
 6. A customer interface **MUST** belong to exactly one brand entity.
 
 ---
@@ -532,7 +532,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.12.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.20.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -643,9 +643,8 @@ The protocol operationalizes the following rules from this standard:
 | LEBOSS-SEC-3 — all data operations must be auditable | §3 Audit Event Capture |
 | LEBOSS-SVC-3 — service providers must maintain complete audit records | §3 Audit Event Capture, §5 Retention |
 | LEBOSS-SVC-4 — audit records must be available to the governing entity | §7 Audit Verification |
-| LEBOSS-OBJ-AR-1 — Audit Records must be created for every governed event | §3 Audit Event Capture |
-| LEBOSS-OBJ-AR-3 — Audit Records must not be modified after creation | §6 Integrity |
-| LEBOSS-OBJ-AR-4 — Audit Records must be retained for a minimum of 36 months | §5 Retention |
+| LEBOSS-REC-1 — Audit Records constitute the authoritative record of governed actions | §3 Audit Event Capture |
+| LEBOSS-REC-3 — Audit Records are foundational, not supplementary | §6 Integrity |
 
 **Key behavioral requirements:**
 
@@ -669,10 +668,15 @@ The protocol operationalizes the following rules from this standard:
 
 | Rule | Protocol Section |
 |------|-----------------|
-| LEBOSS-CONT-1 — governed systems must support data portability | §3 Export Authority, §4 Export Scope |
-| LEBOSS-CONT-2 — governing entities must be able to exit systems with their data | §3 Export Authority, §5 Export Completeness |
-| LEBOSS-CONT-3 — data must be exportable in a machine-readable format | §6 Export Neutrality |
-| LEBOSS-CONT-4 — export obligations survive contract termination | §5 Export Completeness, §7 Migration Considerations |
+| LEBOSS-OWN-3 — governing entity must be able to export all primary operational data at any time | §3 Export Authority |
+| LEBOSS-SVC-1 — provider must facilitate complete export upon service termination | §3 Export Authority, §5 Export Completeness |
+| LEBOSS-SVC-2 — provider must not withhold, delay, or degrade an export | §5 Export Completeness |
+| LEBOSS-PORT-1 — complete export must include all primary operational data, governance objects, and audit records | §4 Export Scope, §5 Export Completeness |
+| LEBOSS-PORT-2 — export must not omit any governed resource category without authorization | §5 Export Completeness |
+| LEBOSS-PORT-3 — export must preserve structural relationships | §5 Export Completeness |
+| LEBOSS-PORT-4 — export must be sufficient to reconstruct the governed environment independently | §6 Export Neutrality |
+| LEBOSS-PORT-5 — exports must use documented, non-proprietary formats | §6 Export Neutrality |
+| LEBOSS-PORT-6 — exports must include a manifest for independent completeness verification | §5 Export Completeness |
 
 **Key behavioral requirements:**
 
@@ -772,4 +776,4 @@ The normative rules for conformance verification (LEBOSS-VER-1 through VER-6) ar
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.19 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.20 — Open for community review and pull request contribution.*
