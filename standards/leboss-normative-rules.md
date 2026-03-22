@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.16
+**Updated Through:** proposal/0.0.17
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -28,6 +28,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `ENF` — Enforcement Responsibility Rules
 - `REC` — Audit as System of Record Rules
 - `PORT` — Data Portability Requirements Rules
+- `MAP` — Cross-System Resource Identity and Mapping Rules
 
 ---
 
@@ -311,6 +312,34 @@ Exports MUST include a manifest identifying the resource categories included, th
 
 ---
 
+## Cross-System Resource Identity and Mapping Rules
+
+**LEBOSS-MAP-1**
+Every governed resource MUST have a stable identity within its environment. An identity that changes over time, or that depends on system-internal state not present in an export, cannot serve as a basis for governance continuity across systems.
+*Source: §17*
+
+**LEBOSS-MAP-2**
+Resource identity MUST persist through export and import without alteration. The identity a resource carries in an export package MUST be the same identity used to reference it in governance objects — Access Grants, Audit Records, and Integration Descriptors — within that environment.
+*Source: §17*
+
+**LEBOSS-MAP-3**
+An export MUST include sufficient identity information for each resource to enable a receiving system to uniquely identify and map that resource independently, without access to the source system or its service providers.
+*Source: §17*
+
+**LEBOSS-MAP-4**
+A receiving system importing a LEBOSS export MUST be able to map each imported resource to an internal equivalent without requiring access to the source system or its service providers.
+*Source: §17*
+
+**LEBOSS-MAP-5**
+Structural relationships between resources MUST remain resolvable in the receiving system after import. An import that renders previously resolvable relationships between resources unresolvable does not satisfy this standard.
+*Source: §17*
+
+**LEBOSS-MAP-6**
+Resource identity and mapping MUST NOT depend on proprietary mechanisms, vendor-controlled systems, or undocumented processes.
+*Source: §17*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -325,7 +354,8 @@ Exports MUST include a manifest identifying the resource categories included, th
 | Enforcement Responsibility (ENF)    | 4  | 2  | 3  | — | — |
 | Audit as System of Record (REC)     | 4  | 2  | 2  | — | — |
 | Data Portability Requirements (PORT) | 6 | 5  | 1  | — | — |
-| **Total**                           | **58** | **41** | **18** | **5** | **—** |
+| Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
+| **Total**                           | **64** | **46** | **19** | **5** | **—** |
 
 ---
 
@@ -350,4 +380,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.16. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.17. The standard governs in all cases of conflict.*

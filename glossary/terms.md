@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.16
+**Updated Through:** proposal/0.0.17
 
 ---
 
@@ -553,6 +553,30 @@ Resource identifiers appear in Access Grant `scope` fields, Audit Record `resour
 See also: *Resource*, *Resource Namespace*
 
 Full model: [`standards/leboss-resource-model.md`](../standards/leboss-resource-model.md)
+
+---
+
+## Cross-System Resource Mapping
+
+The requirement that a receiving system be able to map each resource in a LEBOSS export to an internal equivalent, without access to the source system or its service providers. Cross-system mapping depends on each resource carrying sufficient identity information — including namespace context — within the export package.
+
+A system that imports a LEBOSS export MUST be able to establish the identity and relationships of every resource from the export alone. Mapping that requires querying the source system, accessing proprietary tooling, or relying on undocumented processes does not satisfy this requirement.
+
+Normative rules: LEBOSS-MAP-3, LEBOSS-MAP-4, LEBOSS-MAP-5, LEBOSS-MAP-6.
+
+See also: *Identity Portability*, *Resource Identifier*, *Resource Namespace*, *Reconstructable Export*
+
+---
+
+## Identity Portability
+
+The requirement that a governed resource's identity — the stable label by which it is referenced in governance objects — persists through export and import without alteration. A resource exported from one LEBOSS-compliant system and imported into another carries its original identity, keeping all Access Grants, Audit Records, and Integration Descriptors that reference that resource valid across environments.
+
+Identity portability requires that the export include namespace definitions sufficient for the receiving system to resolve every identifier independently, and that the identity used in the export match the identity used in governance objects within the source environment.
+
+Normative rules: LEBOSS-MAP-1, LEBOSS-MAP-2.
+
+See also: *Cross-System Resource Mapping*, *Resource Identifier*, *Resource Namespace*
 
 ---
 

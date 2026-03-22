@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.16
+**Updated Through:** proposal/0.0.17
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -148,6 +148,17 @@ Documentation of compliance, policy declarations, and stated intent do not const
 
 Operational enforcement is required across all governed action categories: data access, grant validation, grant revocation, audit record creation, and data export.
 
+### 3.8 Cross-System Resource Identity and Mapping
+
+A conformant system **MUST** ensure that governed resources carry stable, portable identity sufficient to support cross-system migration. Specifically:
+
+- Every governed resource **MUST** have a stable identity within its environment that does not depend on system-internal state absent from an export (LEBOSS-MAP-1).
+- Resource identity **MUST** persist through export and import without alteration — the identity used in governance objects **MUST** match the identity carried in the export (LEBOSS-MAP-2).
+- Exports **MUST** include sufficient identity information for each resource to enable a receiving system to uniquely identify and map that resource independently (LEBOSS-MAP-3).
+- A receiving system importing a LEBOSS export **MUST** be able to map each imported resource to an internal equivalent without requiring access to the source system (LEBOSS-MAP-4).
+- Structural relationships between resources **MUST** remain resolvable after import (LEBOSS-MAP-5).
+- Resource identity and mapping **MUST NOT** depend on proprietary mechanisms, vendor-controlled systems, or undocumented processes (LEBOSS-MAP-6).
+
 ---
 
 ## 4. Non-Conformance Conditions
@@ -175,6 +186,10 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 10. **Non-reconstructable export** — the data portability mechanism produces exports that are insufficient to reconstruct the governed environment's operational state in an independent system without reliance on the exporting system or its service providers (LEBOSS-PORT-4).
 
 11. **Proprietary format dependency** — exports require proprietary tools, vendor-controlled systems, or undocumented formats to access, parse, or interpret, making them inaccessible to independent implementation (LEBOSS-PORT-5).
+
+12. **Identity-breaking import** — the system fails to map imported resources to internal equivalents, or the import process alters resource identities such that governance objects referencing those resources become unresolvable (LEBOSS-MAP-4).
+
+13. **Proprietary identity dependency** — resource identity or cross-system mapping depends on proprietary mechanisms, vendor-controlled systems, or undocumented processes, preventing independent migration without source system access (LEBOSS-MAP-6).
 
 ---
 
