@@ -1,7 +1,7 @@
 # LEBOSS Charter and Mission
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.11
+**Updated Through:** proposal/0.0.29
 
 ---
 
@@ -23,12 +23,18 @@ We believe a standard — shared, open, freely adoptable — is the most durable
 
 ## What LEBOSS Is
 
-LEBOSS — the **Local Entrepreneur Business Operating System Standards** — is an open standard that defines:
+LEBOSS — the **Local Entrepreneur Business Operating System Standards** — is an open standard that defines the governance layer for local business data systems:
 
 - How the digital operations of a local business should be organized
 - Who owns the data within that organization
 - What obligations service providers accept when they are granted access to that data
+- How access must be granted, scoped, delegated, and revoked
+- What governed actions must be audited and what detail those records must contain
+- How the complete operational data environment must be exportable on demand
+- How conformance claims must be evaluated and verified
 - How systems must be built to make ownership real rather than nominal
+
+LEBOSS defines the governance layer — the rules for ownership, access control, delegation, enforcement, audit, portability, and verification. These areas are fully specified in the current standard. What LEBOSS does not define is implementation: runtime environments, infrastructure platforms, API designs, or specific software architectures are outside the scope of the standard.
 
 LEBOSS is not a product. It is not a certification body. It is not a trade association. It is a standard — published openly, maintained by a community, and freely available for adoption, implementation, critique, and improvement.
 
@@ -50,7 +56,7 @@ LEBOSS is not a legal framework. It does not create rights or impose obligations
 
 This mission is pursued through:
 
-1. **Publication of the Standard** — An open, versioned specification that defines the LEBOSS architecture, data ownership doctrine, and service provider responsibilities
+1. **Publication of the Standard** — An open, versioned specification that defines the LEBOSS architecture, data ownership doctrine, access control model, delegation requirements, enforcement obligations, audit resolution standards, data portability requirements, and conformance criteria
 2. **Community Governance** — A transparent process by which the standard is proposed, debated, amended, and published by a community of contributors
 3. **Adoption and Implementation** — Encouraging developers, agencies, and service providers to build systems that align with the standard
 

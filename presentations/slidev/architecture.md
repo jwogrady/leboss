@@ -468,7 +468,7 @@ class: text-center
     <li>• Access Grants MUST be issued only by the governing entity</li>
     <li>• Access Grants MUST be revocable at any time</li>
     <li>• No data access is permitted without a valid, active Access Grant</li>
-    <li>• Revocation MUST take effect within a defined maximum latency</li>
+    <li>• Revocation is effective at the moment it occurs — no governed action may proceed under a revoked grant</li>
     <li>• Every grant issuance, suspension, and revocation MUST produce an Audit Record</li>
   </ul>
 </div>
