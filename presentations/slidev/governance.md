@@ -301,7 +301,7 @@ class: text-center
 <div class="bg-blue-900 bg-opacity-40 border border-blue-500 rounded-xl p-5 text-center">
   <div class="text-5xl font-bold text-blue-300 mb-2">Z</div>
   <div class="text-sm font-semibold mb-2">Draft</div>
-  <div class="text-xs text-gray-400">Rightmost digit. Increments with each accepted Proposal. Working drafts open to community feedback.</div>
+  <div class="text-xs text-gray-400">Rightmost digit. Increments with each accepted Proposal. Each Z iteration is open for community review and revision.</div>
   <div class="mt-3 text-xs text-blue-300 font-mono">0.0.1 → 0.0.2 → 0.0.29</div>
 </div>
 
