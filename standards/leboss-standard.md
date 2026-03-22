@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.27
+**Updated Through:** proposal/0.0.28
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.27, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.28, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.27. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.28. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -80,6 +80,7 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 21. [Actor Identity Portability](#21-actor-identity-portability)
 22. [Governing Entity Authenticity](#22-governing-entity-authenticity)
 23. [Audit Resolution Requirements](#23-audit-resolution-requirements)
+24. [Delegation Chain Lifetime Integrity](#24-delegation-chain-lifetime-integrity)
 
 ---
 
@@ -552,7 +553,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.27.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.28.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -902,4 +903,29 @@ The normative rules for audit resolution requirements (LEBOSS-AUD-1 through AUD-
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.27 — Open for community review and pull request contribution.*
+## 24. Delegation Chain Lifetime Integrity
+
+The LEBOSS delegation model requires that every delegation chain be traceable to a valid root governing entity grant (DEL-3). This traceability requirement is structural: it governs the form of the chain at the time it is created and evaluated. It does not govern how long the evidence supporting that evaluation must remain available.
+
+The result is a temporal gap. A delegation chain can be structurally correct at issuance — fully traced, properly scoped, referencing all originating grants — while the audit records that would allow an independent party to verify that structure expire under normal retention policy. When those records are gone, the chain can still be asserted by the system. It cannot be independently confirmed.
+
+**The gap this section addresses:** The DEL rules establish that delegation must be traceable. They do not establish that traceability must be independently demonstrable for as long as the delegation is active. A governing entity who wishes to audit an active delegation chain — or an independent evaluator verifying compliance — may find that the foundational records proving the chain's legitimacy no longer exist, while the delegation itself continues to authorize access on the governing entity's behalf.
+
+This is a meaningful accountability failure. The purpose of DEL-3 is to ensure that authority is always traceable to the governing entity's actual authorization. That purpose is defeated if the evidence supporting that traceability is routinely deleted while the authority it supports remains active.
+
+This section establishes the relationship between delegation authority and its evidentiary basis: a delegation chain may not remain active beyond the point at which it can be independently verified. This section does not define retention durations, storage mechanisms, archival strategies, or implementation approaches for maintaining delegation evidence.
+
+**Key behavioral requirements:**
+
+- A delegation chain **MUST** remain independently verifiable for its entire active lifetime — the chain must be traceable to a valid root governing entity grant through evidence that does not rely on system assertions (LEBOSS-DCL-1).
+- A conformant system **MUST NOT** maintain active delegation grants whose authority chain cannot be independently validated. An unverifiable chain **MUST** be treated as having no valid authority (LEBOSS-DCL-2).
+- The audit evidence supporting each step in a delegation chain **MUST** persist for at least as long as the delegation remains active (LEBOSS-DCL-3).
+- A conformant system **MUST NOT** allow a delegation chain to remain active after the supporting audit records establishing the root governing entity grant have become unavailable or irrecoverable (LEBOSS-DCL-4).
+- Loss of verifiability in any link of a delegation chain **MUST** propagate as a validity failure to all grants in that chain (LEBOSS-DCL-5).
+- A conformant system **MUST NOT** substitute its own assertions, internal state, or configuration as evidence of delegation authority when independent audit evidence is unavailable (LEBOSS-DCL-6).
+
+The normative rules for delegation chain lifetime integrity (LEBOSS-DCL-1 through DCL-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.28 — Open for community review and pull request contribution.*
