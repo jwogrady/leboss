@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.18
+**Updated Through:** proposal/0.0.19
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -751,4 +751,25 @@ The normative rules for delegation and authority chains (LEBOSS-DEL-1 through DE
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.18 — Open for community review and pull request contribution.*
+## 19. Conformance Verification
+
+The LEBOSS standard defines governance rules that must be satisfied in operation. The value of those rules depends on whether conformance can be meaningfully evaluated — whether a system's compliance claim can be independently examined, rather than accepted on assertion alone.
+
+Conformance is not a declaration; it is a demonstrable property of system behavior. A system satisfies LEBOSS conformance requirements when its governed operations can be observed to comply with applicable normative rules. Stating compliance is not the same as demonstrating it.
+
+This section establishes the structural requirements for conformance claims: what must be satisfiable, what constitutes sufficient visibility for independent review, and what conditions prevent a valid compliance claim.
+
+**Key behavioral requirements:**
+
+- A LEBOSS-compliant system **MUST** satisfy all applicable normative rules. Partial satisfaction of normative rules **MUST NOT** be represented as full compliance.
+- Compliance claims **MUST** be supportable through observable system behavior and audit records.
+- A system **MUST NOT** claim LEBOSS compliance if any non-conformance condition defined in §4 of the Conformance document is present.
+- A system **MUST** provide sufficient visibility into its governed operations to allow an independent party to verify conformance without relying solely on system-reported assertions.
+- Where conformance levels are defined, those levels **MUST** be clearly bounded and non-ambiguous. A system **MUST NOT** represent partial satisfaction of a conformance level as meeting that level.
+- Verification **MUST NOT** be satisfied by documentation, policy declaration, or stated intent alone. Conformance requires observable evidence of enforcement in governed operations.
+
+The normative rules for conformance verification (LEBOSS-VER-1 through VER-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.19 — Open for community review and pull request contribution.*

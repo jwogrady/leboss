@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.18
+**Updated Through:** proposal/0.0.19
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -30,6 +30,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `PORT` — Data Portability Requirements Rules
 - `MAP` — Cross-System Resource Identity and Mapping Rules
 - `DEL` — Delegation and Authority Chain Rules
+- `VER` — Conformance Verification Rules
 
 ---
 
@@ -369,6 +370,34 @@ Delegation MUST NOT create implicit or inherited access. Access authorized throu
 
 ---
 
+## Conformance Verification Rules
+
+**LEBOSS-VER-1**
+A LEBOSS-compliant system MUST satisfy all applicable normative rules. Partial satisfaction of normative rules MUST NOT be represented as full compliance.
+*Source: §19*
+
+**LEBOSS-VER-2**
+Compliance claims MUST be supportable through observable system behavior and audit records. Self-declaration without supporting evidence MUST NOT constitute a valid compliance claim.
+*Source: §19*
+
+**LEBOSS-VER-3**
+A system MUST NOT claim LEBOSS compliance if any non-conformance condition defined in conformance.md §4 is present.
+*Source: §19*
+
+**LEBOSS-VER-4**
+A system MUST provide sufficient visibility into its governed operations to allow an independent party to verify conformance without relying solely on system-reported assertions.
+*Source: §19*
+
+**LEBOSS-VER-5**
+Where conformance levels are defined, those levels MUST be clearly bounded and non-ambiguous. A system MUST NOT represent partial satisfaction of a conformance level as meeting that level.
+*Source: §19*
+
+**LEBOSS-VER-6**
+Verification MUST NOT be satisfied by documentation, policy declaration, or stated intent alone. Conformance requires observable evidence of enforcement in governed operations.
+*Source: §19*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -385,7 +414,8 @@ Delegation MUST NOT create implicit or inherited access. Access authorized throu
 | Data Portability Requirements (PORT) | 6 | 5  | 1  | — | — |
 | Cross-System Identity and Mapping (MAP) | 6 | 5  | 1  | — | — |
 | Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
-| **Total**                           | **70** | **49** | **22** | **5** | **—** |
+| Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
+| **Total**                           | **76** | **53** | **26** | **5** | **—** |
 
 ---
 
@@ -410,4 +440,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.18. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.19. The standard governs in all cases of conflict.*

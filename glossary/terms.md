@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.18
+**Updated Through:** proposal/0.0.19
 
 ---
 
@@ -130,6 +130,26 @@ LEBOSS defines two conformance tiers:
 The term "LEBOSS-conformant" is not a defined LEBOSS conformance term.
 
 See also: *Reference Model*
+
+---
+
+## Conformance Claim
+
+A declaration that a system satisfies the requirements of a LEBOSS conformance tier (LEBOSS-aligned or LEBOSS-compliant). A conformance claim is valid only when it is supportable through observable system behavior and audit records. A conformance claim made in the presence of any non-conformance condition defined in [`standards/conformance.md`](../standards/conformance.md) §4 is invalid.
+
+Normative rules: LEBOSS-VER-1, LEBOSS-VER-2, LEBOSS-VER-3.
+
+See also: *Compliance*, *Conformance Evidence*, *Governing Entity*
+
+---
+
+## Conformance Evidence
+
+The observable artifacts — audit records, access grant records, and behavioral demonstrations of enforcement — that support a conformance claim. Conformance evidence must be independently examinable; documentation, policy declarations, and stated intent do not constitute conformance evidence.
+
+Normative rules: LEBOSS-VER-2, LEBOSS-VER-4, LEBOSS-VER-6.
+
+See also: *Conformance Claim*, *Audit Record*, *Compliance*
 
 ---
 
