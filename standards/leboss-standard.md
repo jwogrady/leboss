@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.24
+**Updated Through:** proposal/0.0.25
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -16,13 +16,13 @@ This document represents the integrated working draft of the LEBOSS standard pri
 
 Future revisions of the specification will be introduced through the proposal process defined in [governance/governance.md](../governance/governance.md).
 
-The proposal history for this version spans proposals 0.0.1 through 0.0.24, preserved in [`proposals/`](../proposals/).
+The proposal history for this version spans proposals 0.0.1 through 0.0.25, preserved in [`proposals/`](../proposals/).
 
 Normative language in this specification follows RFC conventions and appears only in documents contained in the `standards/` directory.
 
 ---
 
-> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.24. For change history, see the `proposals/` directory. For version metadata, see git tags.*
+> *This is the living LEBOSS specification. It incorporates all content from proposals 0.0.1 through 0.0.25. For change history, see the `proposals/` directory. For version metadata, see git tags.*
 
 ---
 
@@ -77,6 +77,7 @@ Items deferred beyond v0.1.0 are tracked in [STATUS.md](../STATUS.md).
 18. [Delegation and Authority Chains](#18-delegation-and-authority-chains)
 19. [Conformance Verification](#19-conformance-verification)
 20. [Protocol Normativity Framework](#20-protocol-normativity-framework)
+21. [Actor Identity Portability](#21-actor-identity-portability)
 
 ---
 
@@ -549,7 +550,7 @@ Where conflicts exist between LEBOSS requirements and applicable law, applicable
 
 ## 10. Versioning
 
-This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.23.
+This document is the pre-v0.1.0 working draft of the LEBOSS Standard, updated through proposal/0.0.25.
 
 LEBOSS versions follow the pattern `X.Y.Z`:
 
@@ -824,4 +825,29 @@ The normative rules for protocol normativity (LEBOSS-PROT-1 through PROT-5) are 
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.24 — Open for community review and pull request contribution.*
+## 21. Actor Identity Portability
+
+The LEBOSS governance model requires that every governed action be auditable — that a governing entity can determine what happened, to which resources, and who was accountable. Audit Records name actors. Access Grants name the subject being authorized. This accountability chain is central to data sovereignty.
+
+That accountability becomes meaningless if actor identity cannot be interpreted outside the system that recorded it. A governing entity who exports their audit history and migrates to a new environment must be able to read their governance record — including who was accountable for each action — without requiring access to the originating system's identity infrastructure, directory services, or internal state.
+
+**The gap this section addresses:** Governance objects routinely store actor references using identifiers that are internal to a specific system — database-assigned user IDs, session-scoped tokens, internal role codes, or similar constructs. When exported, these identifiers are structurally present but semantically opaque. An audit record may show that an action occurred and that a specific identifier performed it, while providing no means for an independent party to determine who that identifier represents in accountability terms. The governance record is intact but uninterpretable.
+
+This is not a hypothetical edge case. It is the default behavior of most identity and access management architectures. Without an explicit requirement for portability, every compliant system may — and most will — produce audit histories that become governance dead-ends after migration.
+
+This section does not define identity systems, authentication mechanisms, or identifier formats. It defines what must be true about actor identity in governance objects: that references carry sufficient context to preserve accountability semantics across system boundaries.
+
+**Key behavioral requirements:**
+
+- Actor identity references in governance objects **MUST** be portable — carrying sufficient context to remain interpretable in a receiving system without access to the originating system's internal state or identity infrastructure (LEBOSS-ACTOR-1).
+- A conformant system **MUST NOT** export governance objects in which actor identity references are meaningful only within the originating system's internal state (LEBOSS-ACTOR-2).
+- An export **MUST** include sufficient actor identity context to enable a receiving system to determine the accountable party for each governed action without access to the source system (LEBOSS-ACTOR-3).
+- Governance history **MUST NOT** become opaque as a result of actor identity resolution failure after export or migration (LEBOSS-ACTOR-4).
+- Actor identity portability **MUST** preserve accountability semantics — structural presence of an identifier is not sufficient; the identity information must enable accountability determination in a new environment (LEBOSS-ACTOR-5).
+- Actor identity in governance objects **MUST NOT** depend on external systems or infrastructure unavailable to an independent receiving system (LEBOSS-ACTOR-6).
+
+The normative rules for actor identity portability (LEBOSS-ACTOR-1 through ACTOR-6) are defined in [`standards/leboss-normative-rules.md`](leboss-normative-rules.md).
+
+---
+
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.25 — Open for community review and pull request contribution.*

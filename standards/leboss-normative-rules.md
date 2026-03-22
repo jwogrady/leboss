@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.24
+**Updated Through:** proposal/0.0.25
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -32,6 +32,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `DEL` — Delegation and Authority Chain Rules
 - `VER` — Conformance Verification Rules
 - `PROT` — Protocol Normativity Rules
+- `ACTOR` — Actor Identity Portability Rules
 
 ---
 
@@ -433,7 +434,8 @@ Verification MUST NOT be satisfied by documentation, policy declaration, or stat
 | Delegation and Authority Chains (DEL)   | 6 | 3  | 3  | — | — |
 | Conformance Verification (VER)          | 6 | 4  | 4  | — | — |
 | Protocol Normativity (PROT)             | 5 | 2  | 3  | — | — |
-| **Total**                           | **85** | **57** | **31** | **5** | **—** |
+| Actor Identity Portability (ACTOR)      | 6 | 3  | 3  | — | — |
+| **Total**                           | **91** | **60** | **34** | **5** | **—** |
 
 ---
 
@@ -461,9 +463,37 @@ Where an incorporated LEBOSS protocol defines required behavior through MUST or 
 
 ---
 
+## Actor Identity Portability Rules
+
+**LEBOSS-ACTOR-1**
+Actor identity references in governance objects — including Audit Records, Access Grants, and Integration Descriptors — MUST be portable. An actor reference is portable if it can be interpreted in a receiving system without access to the originating system's internal state or identity infrastructure.
+*Source: §21*
+
+**LEBOSS-ACTOR-2**
+A conformant system MUST NOT export governance objects containing actor identity references that are meaningful only within the originating system's internal state and that are not accompanied by sufficient context for interpretation in a receiving system.
+*Source: §21*
+
+**LEBOSS-ACTOR-3**
+An export MUST include sufficient actor identity context for each actor referenced in governance objects to enable a receiving system to determine the accountable party for each governed action without access to the source system or its service providers.
+*Source: §21*
+
+**LEBOSS-ACTOR-4**
+Governance history MUST NOT become opaque as a result of actor identity resolution failure after export or migration. An export that renders actor references in Audit Records unresolvable or uninterpretable does not satisfy this standard.
+*Source: §21*
+
+**LEBOSS-ACTOR-5**
+Actor identity portability MUST preserve accountability semantics. It is not sufficient that an actor identifier be structurally present in an export — the identity information must be sufficient to determine accountability for each governed action in a new environment.
+*Source: §21*
+
+**LEBOSS-ACTOR-6**
+Actor identity in governance objects MUST NOT depend on systems or infrastructure external to the governed environment that are unavailable to or inaccessible by an independent receiving system.
+*Source: §21*
+
+---
+
 ## Gaps Identified
 
-The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.24.
+The following requirements were identified as implied by the standard but not yet specified with sufficient precision to be enumerable as rules. Status reflects the current state of the specification through proposal 0.0.25.
 
 **GAP-1: Access Grant Format** — *Resolved in 0.0.3 and 0.0.4; normative standing formalized in 0.0.24*
 The standard requires that access grants specify scope, operations, duration, and purpose (LEBOSS-ACC-2). The Access Grant object (`standards/objects/access-grant.md`) defines the required fields. The Access Grant Protocol (`standards/leboss-access-grant-protocol.md`) defines issuance, validation, revocation, and expiration behavioral rules (LEBOSS-AGP-1 through AGP-17). These rules are incorporated as normative requirements under LEBOSS-PROT-1.
@@ -482,4 +512,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.24. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.25. The standard governs in all cases of conflict.*

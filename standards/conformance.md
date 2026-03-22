@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.24
+**Updated Through:** proposal/0.0.25
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -228,6 +228,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 19. **Ungoverned infrastructure access** — any entity with the ability to access or control systems containing primary operational data is not treated as a service provider, is not disclosed to the governing entity, or is not subject to the service provider obligations and access grant requirements of this standard (LEBOSS-SVC-8, LEBOSS-SVC-9).
 
 20. **Protocol-only compliance** — the system satisfies register-level normative rules while failing to satisfy behavioral requirements defined in incorporated LEBOSS protocol documents (LEBOSS-AGP-1 through AGP-17, LEBOSS-IDP-1 through IDP-26, LEBOSS-ACP-1 through ACP-24, LEBOSS-DPP-1 through DPP-28), or treats protocol-level MUST and MUST NOT requirements as non-binding guidance rather than normative obligations (LEBOSS-PROT-1, LEBOSS-PROT-2, LEBOSS-PROT-3).
+
+21. **Opaque actor identity** — the system exports governance objects — including Audit Records, Access Grants, or Integration Descriptors — in which actor identity references are not interpretable in a receiving system, or produces an export in which actor accountability cannot be determined without access to the originating system's identity infrastructure or internal state (LEBOSS-ACTOR-2, LEBOSS-ACTOR-4).
 
 ---
 
