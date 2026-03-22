@@ -453,7 +453,7 @@ layout: two-cols
   <div class="w-2 h-2 bg-blue-400 rounded-full mt-1.5 flex-shrink-0"></div>
   <div>
     <strong class="text-blue-300">Clear governance model</strong>
-    <p class="text-gray-400 text-xs mt-1">A comprehensive set of normative rules across multiple protocol groups — a precise implementation target.</p>
+    <p class="text-gray-400 text-xs mt-1">115 normative rules across 19 rule groups — a precise, version-stable implementation target.</p>
   </div>
 </div>
 
