@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.13
+**Updated Through:** proposal/0.0.14
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -128,6 +128,14 @@ The governing entity **MUST** be able to query the audit history to determine wh
 
 Service providers **MUST NOT** be able to suppress, modify, or selectively withhold audit records from the governing entity.
 
+### 3.7 Operational Enforcement
+
+A conformant system **MUST** enforce normative requirements in operation.
+
+Documentation of compliance, policy declarations, and stated intent do not constitute enforcement. A governed action that proceeds without enforcement of applicable normative requirements is a conformance violation, regardless of whether the failure was intentional.
+
+Operational enforcement is required across all governed action categories: data access, grant validation, grant revocation, audit record creation, and data export.
+
 ---
 
 ## 4. Non-Conformance Conditions
@@ -147,6 +155,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 6. **Secondary use without consent** — primary operational data is used for purposes beyond those covered by active access grants without explicit governing entity consent.
 
 7. **Rule redefinition** — the system redefines, overrides, or selectively applies normative LEBOSS requirements in a manner inconsistent with the published standard while claiming LEBOSS alignment or compliance (LEBOSS-SPEC-3).
+
+8. **Unenforced requirements** — normative requirements governing data access, grant validation, grant revocation, audit record creation, or data export are satisfied by documentation, policy declaration, or stated intent only, without operational enforcement (LEBOSS-ENF-1, LEBOSS-ENF-2).
 
 ---
 

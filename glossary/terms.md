@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.13
+**Updated Through:** proposal/0.0.14
 
 ---
 
@@ -239,6 +239,20 @@ See also: *Access Grant*, *Integration Descriptor*, *Audit Record*
 
 ---
 
+## Governed Action
+
+An operation performed within a LEBOSS-compliant system that is subject to normative
+requirements. Governed action categories include: data access, grant issuance, grant
+validation, grant revocation, audit record creation, and data export.
+
+Governed actions must be subject to rule enforcement at the time they occur. A governed
+action that proceeds without enforcement of applicable normative requirements is a
+conformance violation.
+
+See also: *Audit Event*, *Operational Enforcement*, *Access Grant*
+
+---
+
 ## Governing Committee
 
 See: *Committee* (defined in [governance/committee.md](../governance/committee.md))
@@ -388,6 +402,23 @@ Contrast with: *Satellite (Element 5)*
 ## Natural Satellite
 
 See: *Moon (Element 4)*
+
+---
+
+## Operational Enforcement
+
+The property of a LEBOSS-compliant system by which normative requirements are enforced
+at the time governed actions occur — not documented, stated as intent, or expressed
+as policy alone.
+
+Operational enforcement is a conformance requirement. A system that permits governed
+actions to proceed without enforcement of applicable normative requirements is
+non-conformant, regardless of its documented policies or stated architectural intent.
+
+The LEBOSS standard defines the obligation to enforce. It does not prescribe the
+architecture, mechanism, or technology by which enforcement is achieved.
+
+See also: *Governed Action*, *Conformance*, *LEBOSS-compliant*
 
 ---
 
