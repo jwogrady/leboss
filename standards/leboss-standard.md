@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.14
+**Updated Through:** proposal/0.0.15
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -492,6 +492,16 @@ Formal conformance certification criteria will be defined in a subsequent versio
 16. Governed actions — including data access, grant validation, grant revocation, audit record creation, and data export — are subject to rule enforcement at the time they occur.
 17. A failure to operationally enforce any ownership, access, audit, revocation, or portability requirement constitutes a conformance failure, regardless of whether that failure was intentional.
 
+### 8.7 Audit as System of Record
+
+The set of Audit Records for a governed environment constitutes the authoritative record of all governed actions performed within that environment.
+
+18. The sequence of Audit Records **MUST** be treated as the authoritative representation of what governed actions have occurred within the governed environment.
+19. A system **MUST NOT** represent the state of a governed resource in a manner that is irreconcilable with the Audit Record history for that resource.
+20. Audit Records are not supplementary to system integrity — they are foundational. A system that treats audit records as secondary to its primary state mechanism does not satisfy LEBOSS audit requirements.
+
+The LEBOSS standard does not prescribe how the system of record is stored or processed. It requires only that the Audit Record history and the system's represented state of governed resources remain reconcilable.
+
 ---
 
 ## 9. Relationship to Other Standards
@@ -691,4 +701,4 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.12 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.15 — Open for community review and pull request contribution.*

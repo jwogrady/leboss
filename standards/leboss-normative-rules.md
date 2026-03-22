@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.14
+**Updated Through:** proposal/0.0.15
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -25,7 +25,8 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `CONT` — Continuity Rules
 - `SVC` — Service Provider Rules
 - `SPEC` — Specification Boundary Rules
-- `ENF`  — Enforcement Responsibility Rules
+- `ENF` — Enforcement Responsibility Rules
+- `REC` — Audit as System of Record Rules
 
 ---
 
@@ -261,6 +262,26 @@ means by which enforcement is achieved.
 
 ---
 
+## Audit as System of Record Rules
+
+**LEBOSS-REC-1**
+The set of Audit Records for a governed environment MUST constitute the authoritative record of governed actions within that environment.
+*Source: §8.7*
+
+**LEBOSS-REC-2**
+A LEBOSS-compliant system MUST NOT represent the state of a governed resource in a manner that is irreconcilable with the Audit Record history for that resource.
+*Source: §8.7*
+
+**LEBOSS-REC-3**
+Audit Records MUST be treated as foundational to system integrity. A system that treats audit records as supplementary or secondary to its primary state mechanism does not satisfy LEBOSS audit requirements.
+*Source: §8.7*
+
+**LEBOSS-REC-4**
+The LEBOSS standard MUST NOT prescribe how the system of record is stored or processed. Only the consistency guarantee between Audit Record history and represented resource state is normative.
+*Source: §8.7*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -270,10 +291,11 @@ means by which enforcement is achieved.
 | Architectural (ARCH) | 11 | 9 | 2 | — | — |
 | Security (SEC) | 5 | 4 | 1 | 1 | — |
 | Continuity (CONT) | 4 | 4 | 1 | — | — |
-| Service Provider (SVC)           | 7 | 5 | 2 | — | — |
-| Specification Boundary (SPEC)    | 4 | 2 | 2 | 1 | — |
-| Enforcement Responsibility (ENF) | 4 | 2 | 3 | — | — |
-| **Total**                        | **48** | **34** | **15** | **5** | **—** |
+| Service Provider (SVC)              | 7  | 5  | 2  | — | — |
+| Specification Boundary (SPEC)       | 4  | 2  | 2  | 1 | — |
+| Enforcement Responsibility (ENF)    | 4  | 2  | 3  | — | — |
+| Audit as System of Record (REC)     | 4  | 2  | 2  | — | — |
+| **Total**                           | **52** | **36** | **17** | **5** | **—** |
 
 ---
 

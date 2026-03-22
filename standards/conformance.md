@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.14
+**Updated Through:** proposal/0.0.15
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -101,6 +101,8 @@ Operations that do not correspond to an active access grant **MUST NOT** be perm
 
 A conformant system **MUST** record an audit event for every operation that affects governed resources.
 
+The set of Audit Records for a governed environment constitutes the **authoritative record** of governed actions within that system. Audit Records are not supplementary — they are foundational to system integrity.
+
 Audit records **MUST** include:
 
 - a timestamp
@@ -109,6 +111,8 @@ Audit records **MUST** include:
 - the operation type
 
 Audit records **MUST NOT** be modifiable or deletable by actors other than the governing entity acting under documented retention policy.
+
+A conformant system **MUST NOT** represent the state of a governed resource in a manner that is irreconcilable with the Audit Record history for that resource (LEBOSS-REC-2).
 
 ### 3.5 Data Portability
 
@@ -157,6 +161,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 7. **Rule redefinition** — the system redefines, overrides, or selectively applies normative LEBOSS requirements in a manner inconsistent with the published standard while claiming LEBOSS alignment or compliance (LEBOSS-SPEC-3).
 
 8. **Unenforced requirements** — normative requirements governing data access, grant validation, grant revocation, audit record creation, or data export are satisfied by documentation, policy declaration, or stated intent only, without operational enforcement (LEBOSS-ENF-1, LEBOSS-ENF-2).
+
+9. **Irreconcilable state** — the system represents the state of a governed resource in a manner that cannot be reconciled with the Audit Record history for that resource (LEBOSS-REC-2).
 
 ---
 
