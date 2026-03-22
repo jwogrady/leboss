@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.15
+**Updated Through:** proposal/0.0.16
 **Derived from:** [leboss-standard.md](leboss-standard.md)
 
 ---
@@ -27,6 +27,7 @@ Rules are identified as `LEBOSS-{group}-{number}` where group indicates the cate
 - `SPEC` — Specification Boundary Rules
 - `ENF` — Enforcement Responsibility Rules
 - `REC` — Audit as System of Record Rules
+- `PORT` — Data Portability Requirements Rules
 
 ---
 
@@ -282,6 +283,34 @@ The LEBOSS standard MUST NOT prescribe how the system of record is stored or pro
 
 ---
 
+## Data Portability Requirements Rules
+
+**LEBOSS-PORT-1**
+A complete export MUST include all primary operational data, all governance objects (Access Grants, Integration Descriptors), and all Audit Records within the system's retention window.
+*Source: §6.4*
+
+**LEBOSS-PORT-2**
+A conformant system MUST NOT produce an export that omits any governed resource category without explicit governing entity authorization.
+*Source: §6.4*
+
+**LEBOSS-PORT-3**
+An export MUST preserve the structural relationships between resources, governance objects, and Audit Records such that those relationships are recoverable from the export alone.
+*Source: §6.4*
+
+**LEBOSS-PORT-4**
+An export MUST be sufficient to reconstruct the governed environment's operational state in an independent system without reliance on the exporting system or its service providers.
+*Source: §6.4*
+
+**LEBOSS-PORT-5**
+Exports MUST use documented, non-proprietary formats. The documentation for the export format MUST be sufficient for an independent party to implement a reader without access to proprietary tools or vendor assistance.
+*Source: §6.4*
+
+**LEBOSS-PORT-6**
+Exports MUST include a manifest identifying the resource categories included, the time range covered, and the record counts for each category, sufficient for the governing entity to verify completeness independently.
+*Source: §6.4*
+
+---
+
 ## Summary Counts
 
 | Group | Rules | MUST | MUST NOT | MAY | SHOULD |
@@ -295,7 +324,8 @@ The LEBOSS standard MUST NOT prescribe how the system of record is stored or pro
 | Specification Boundary (SPEC)       | 4  | 2  | 2  | 1 | — |
 | Enforcement Responsibility (ENF)    | 4  | 2  | 3  | — | — |
 | Audit as System of Record (REC)     | 4  | 2  | 2  | — | — |
-| **Total**                           | **52** | **36** | **17** | **5** | **—** |
+| Data Portability Requirements (PORT) | 6 | 5  | 1  | — | — |
+| **Total**                           | **58** | **41** | **18** | **5** | **—** |
 
 ---
 
@@ -309,8 +339,8 @@ The standard requires that access grants specify scope, operations, duration, an
 **GAP-2: Audit Trail Format** — *Resolved in 0.0.3 and 0.0.6*
 The standard requires auditable records (LEBOSS-SEC-3, LEBOSS-SVC-3). The Audit Record object (`standards/objects/audit-record.md`) defines the required fields. The Audit Record Collection Protocol (`standards/leboss-audit-protocol.md`) defines capture, correlation, retention, and integrity behavioral rules (LEBOSS-ACP-1 through ACP-24).
 
-**GAP-3: Portability Format** — *Partially resolved in 0.0.7*
-The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1). The Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) defines export authority, scope, completeness, and neutrality behavioral rules (LEBOSS-DPP-1 through DPP-28). A specific LEBOSS Portability Format (canonical encoding) is deferred to a future proposal.
+**GAP-3: Portability Format** — *Partially resolved — export requirements defined; canonical encoding remains deferred*
+The standard requires machine-readable export (LEBOSS-OWN-3, LEBOSS-SVC-1). The Data Portability Protocol (`standards/leboss-data-portability-protocol.md`) defines export authority, scope, completeness, and neutrality behavioral rules (LEBOSS-DPP-1 through DPP-28). Proposal 0.0.16 added standard-level requirements for export completeness, relationship preservation, reconstructability, format independence, and manifests (LEBOSS-PORT-1 through PORT-6). A specific canonical encoding format remains deferred to a future proposal.
 
 **GAP-4: External Integration Authorization Protocol** — *Resolved in 0.0.3 and 0.0.5*
 LEBOSS-ACC-5 requires explicit authorization for external integrations. The Integration Descriptor object (`standards/objects/integration-descriptor.md`) defines what must be recorded. The Integration Descriptor Protocol (`standards/leboss-integration-protocol.md`) defines the full integration lifecycle and behavioral rules (LEBOSS-IDP-1 through IDP-26).
@@ -320,4 +350,4 @@ LEBOSS-CONT-1 through CONT-3 require succession support but no protocol exists f
 
 ---
 
-*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.12. The standard governs in all cases of conflict.*
+*LEBOSS Normative Rule Register — pre-v0.1.0 draft, updated through proposal/0.0.16. The standard governs in all cases of conflict.*

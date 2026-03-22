@@ -3,7 +3,7 @@
 
 **Status:** Draft
 **Target Release:** v0.1.0
-**Updated Through:** proposal/0.0.15
+**Updated Through:** proposal/0.0.16
 **Supersedes:** [leboss-standard-0.0.1.md](leboss-standard-0.0.1.md)
 
 ---
@@ -405,6 +405,18 @@ A LEBOSS-compliant system **MUST** provide the governing entity with the ability
 
 Data portability is a requirement of ownership. A system that cannot return data to the owner is a system that has appropriated it.
 
+A valid export under this standard **MUST** satisfy the following requirements:
+
+1. **Completeness** — An export **MUST** include all primary operational data, all governance objects (including Access Grants and Integration Descriptors), and all Audit Records within the system's retention window. A conformant system **MUST NOT** produce an export that omits any governed resource category without explicit governing entity authorization.
+
+2. **Relationship preservation** — An export **MUST** preserve the structural relationships between resources, governance objects, and Audit Records such that those relationships are recoverable from the export alone.
+
+3. **Reconstructability** — An export **MUST** be sufficient to reconstruct the governed environment's operational state in an independent system without reliance on the exporting system, its service providers, or proprietary infrastructure.
+
+4. **Format independence** — Exports **MUST** use documented, non-proprietary formats. The documentation for the export format **MUST** be sufficient for an independent party to implement a reader without access to proprietary tools or vendor assistance.
+
+5. **Manifest** — Exports **MUST** include a manifest identifying the resource categories included, the time range covered, and the record counts for each category, sufficient for the governing entity to verify completeness independently.
+
 ### 6.5 Data Residency
 
 The governing entity **MUST** be informed of where primary operational data is stored and processed, including the jurisdiction of that infrastructure.
@@ -701,4 +713,4 @@ The full model, including 23 normative rules (LEBOSS-RM-1 through RM-23) and def
 
 ---
 
-*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.15 — Open for community review and pull request contribution.*
+*LEBOSS Standard — pre-v0.1.0 draft, updated through proposal/0.0.16 — Open for community review and pull request contribution.*

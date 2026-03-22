@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.15
+**Updated Through:** proposal/0.0.16
 
 ---
 
@@ -455,6 +455,40 @@ An Operational Data Export is initiated exclusively by the governing entity or a
 See also: *Data Portability*, *Environment Migration*, *Audit Record*, *Access Grant*
 
 Full protocol: [`standards/leboss-data-portability-protocol.md`](../standards/leboss-data-portability-protocol.md)
+
+---
+
+## Complete Export
+
+A data export that satisfies the LEBOSS completeness requirement: it includes all primary operational data, all governance objects (Access Grants and Integration Descriptors), and all Audit Records within the system's retention window, with no governed resource category omitted without explicit governing entity authorization.
+
+Completeness is a normative requirement, not a best-effort goal. An export that omits any governed resource category without authorization is a non-conformance condition regardless of the reason for the omission.
+
+Normative rules: LEBOSS-PORT-1, LEBOSS-PORT-2.
+
+See also: *Operational Data Export*, *Export Manifest*, *Reconstructable Export*
+
+---
+
+## Export Manifest
+
+A structured artifact included with every data export in a LEBOSS-compliant system that identifies the scope of the export: the resource categories included, the time range covered, and the record counts for each category. The manifest enables the governing entity to verify export completeness independently, without requiring access to the source system or cooperation from the service provider.
+
+Normative rule: LEBOSS-PORT-6.
+
+See also: *Complete Export*, *Operational Data Export*, *Data Portability*
+
+---
+
+## Reconstructable Export
+
+A data export that is sufficient to rebuild the governed environment's operational state in an independent system without reliance on the exporting system, its service providers, or proprietary infrastructure. Reconstructability requires that the export include all resources, their relationships, and all governance and audit history needed to establish the state of the environment at the time of export.
+
+An export that requires vendor assistance, proprietary tools, or access to the source system in order to be used is not reconstructable and does not satisfy LEBOSS portability requirements.
+
+Normative rules: LEBOSS-PORT-3, LEBOSS-PORT-4, LEBOSS-PORT-5.
+
+See also: *Complete Export*, *Export Manifest*, *Data Portability*, *Environment Migration*
 
 ---
 
