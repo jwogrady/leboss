@@ -96,7 +96,7 @@ Implementations MAY define additional operation types but MUST NOT grant access 
 
 A governing entity MAY designate a delegate to issue Access Grants on their behalf. Delegated grants MUST reference the `delegated_from` field to establish the chain of authority. A delegate MUST NOT issue grants with broader scope or permissions than their own delegated authority.
 
-The delegation model itself is not fully specified in this version and will be addressed in a future proposal.
+The standard-level constraints governing delegation — scope bounding, traceability, revocation cascade, and prohibition of implicit access — are defined in [`standards/leboss-normative-rules.md`](../leboss-normative-rules.md) (LEBOSS-DEL-1 through DEL-6), added in proposal 0.0.18.
 
 ---
 

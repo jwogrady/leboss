@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.17
+**Updated Through:** proposal/0.0.18
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -159,6 +159,17 @@ A conformant system **MUST** ensure that governed resources carry stable, portab
 - Structural relationships between resources **MUST** remain resolvable after import (LEBOSS-MAP-5).
 - Resource identity and mapping **MUST NOT** depend on proprietary mechanisms, vendor-controlled systems, or undocumented processes (LEBOSS-MAP-6).
 
+### 3.9 Delegation and Authority Chains
+
+A conformant system **MUST** enforce structural constraints on delegated access authority. Specifically:
+
+- Delegated authority **MUST NOT** exceed the scope, operations, or duration of the grant from which it was delegated (LEBOSS-DEL-1).
+- Every delegated grant **MUST** reference the originating grant that authorized the delegation (LEBOSS-DEL-2).
+- Delegation chains **MUST** be fully traceable from any point to the root governing entity grant (LEBOSS-DEL-3).
+- Revocation of a grant **MUST** propagate to all dependent delegated grants (LEBOSS-DEL-4).
+- A conformant system **MUST NOT** permit delegation chains that introduce ambiguity in access authority or that cannot be fully audited (LEBOSS-DEL-5).
+- Delegation **MUST NOT** create implicit or inherited access outside explicit grant scope (LEBOSS-DEL-6).
+
 ---
 
 ## 4. Non-Conformance Conditions
@@ -190,6 +201,10 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 12. **Identity-breaking import** — the system fails to map imported resources to internal equivalents, or the import process alters resource identities such that governance objects referencing those resources become unresolvable (LEBOSS-MAP-4).
 
 13. **Proprietary identity dependency** — resource identity or cross-system mapping depends on proprietary mechanisms, vendor-controlled systems, or undocumented processes, preventing independent migration without source system access (LEBOSS-MAP-6).
+
+14. **Unbounded delegation** — the system permits a delegated grant to be issued with scope, operations, or duration exceeding those of the delegating grant, or permits delegation chains to extend beyond the bounds of the root governing entity grant (LEBOSS-DEL-1).
+
+15. **Untraceable authority chain** — the system permits delegation chains that cannot be traced to a valid root governing entity grant, or that introduce ambiguity in access authority, or that do not propagate revocation to all dependent grants (LEBOSS-DEL-3, LEBOSS-DEL-4, LEBOSS-DEL-5).
 
 ---
 

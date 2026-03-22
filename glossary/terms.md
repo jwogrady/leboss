@@ -1,7 +1,7 @@
 # LEBOSS Glossary of Terms
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.17
+**Updated Through:** proposal/0.0.18
 
 ---
 
@@ -160,6 +160,28 @@ Contributors do not hold voting authority on the committee but their participati
 ## LEBOSS Elements
 
 The six hierarchical architectural elements defined by the LEBOSS standard: Universe (0), Galaxy (1), Star (2), Planet (3), Moon (4), and Satellite (5). Together, the LEBOSS Elements form a complete vocabulary for describing the structure of a local business's digital ecosystem.
+
+---
+
+## Authority Chain
+
+The traceable sequence of grants from a delegated action back to the root governing entity grant. Every access action authorized through a delegated grant must be resolvable to an authority chain that terminates at a valid grant issued by the governing entity. An authority chain that cannot be fully traced, that contains a revoked link, or that terminates at an unknown or invalid authority does not satisfy LEBOSS delegation requirements.
+
+Normative rules: LEBOSS-DEL-2, LEBOSS-DEL-3, LEBOSS-DEL-4.
+
+See also: *Delegated Grant*, *Access Grant*, *Governing Entity*
+
+---
+
+## Delegated Grant
+
+An Access Grant issued by a delegate acting on behalf of the governing entity, rather than directly by the governing entity. A delegated grant must reference the originating grant that authorized the delegation, must not exceed the scope, operations, or duration of the delegating grant, and must be invalidated when the originating grant is revoked.
+
+Delegation authority must be explicitly included in the delegate's own Access Grant. Delegation does not create implicit or inherited access — every step in a delegation chain is bounded by explicit grant scope.
+
+Normative rules: LEBOSS-DEL-1, LEBOSS-DEL-2, LEBOSS-DEL-5, LEBOSS-DEL-6.
+
+See also: *Authority Chain*, *Access Grant*, *Governing Entity*
 
 ---
 
