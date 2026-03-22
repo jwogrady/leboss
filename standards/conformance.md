@@ -1,7 +1,7 @@
 # LEBOSS Conformance
 
 **Status:** Draft
-**Updated Through:** proposal/0.0.26
+**Updated Through:** proposal/0.0.27
 **Applies to:** LEBOSS Standard pre-v0.1.0 draft and later
 
 ---
@@ -232,6 +232,8 @@ A system **MUST NOT** be described as LEBOSS-compliant if any of the following c
 21. **Opaque actor identity** — the system exports governance objects — including Audit Records, Access Grants, or Integration Descriptors — in which actor identity references are not interpretable in a receiving system, or produces an export in which actor accountability cannot be determined without access to the originating system's identity infrastructure or internal state (LEBOSS-ACTOR-2, LEBOSS-ACTOR-4).
 
 22. **Platform-dependent ownership** — the system defines or controls governing entity authority in a manner that makes it dependent on service provider accounts, platform-controlled identifiers, or system-generated constructs that do not represent the real-world entity they purport to govern; or permits a service provider to unilaterally modify, reassign, or revoke governing entity status without the authorization of the party the governing entity represents (LEBOSS-GEA-2, LEBOSS-GEA-3, LEBOSS-GEA-5).
+
+23. **Insufficient audit resolution** — the system produces audit records that satisfy recording requirements but omit the resource-level or operation-level detail required to verify whether governed actions were within authorized scope, or produces an audit corpus that an independent party cannot use to evaluate governed action legality without access to system state, internal nomenclature, or service provider cooperation (LEBOSS-AUD-3, LEBOSS-AUD-5, LEBOSS-AUD-6).
 
 ---
 
