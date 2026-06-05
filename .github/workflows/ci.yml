@@ -1,0 +1,45 @@
+name: CI
+
+# Build verification + spec content-integrity checks on every pull request
+# and on pushes to master. See scripts/check-spec-integrity.sh for the
+# invariants this guards (115 rules / 19 groups / resolvable conformance refs).
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+# Least privilege: this workflow only needs to read the repository.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  spec-integrity:
+    name: Spec integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check spec integrity
+        run: bash scripts/check-spec-integrity.sh
+
+  build-decks:
+    name: Build presentation decks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: presentations/slidev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: presentations/slidev/package-lock.json
+      - name: Install dependencies
+        run: npm ci
+      - name: Build all decks
+        run: npm run build:all
