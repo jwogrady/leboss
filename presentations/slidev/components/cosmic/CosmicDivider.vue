@@ -6,8 +6,8 @@
 -->
 <template>
   <div class="cosmic-divider relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
-    <!-- Background orbital rings -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="xMidYMid meet">
+    <!-- Background orbital rings (decorative) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
       <circle cx="50%" cy="50%" :r="r1" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
       <circle cx="50%" cy="50%" :r="r2" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
       <circle cx="50%" cy="50%" :r="r3" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />

@@ -38,13 +38,16 @@
   <div
     class="cosmic-system relative flex items-center justify-center"
     :style="{ width: `${width}px`, height: `${height}px` }"
+    role="img"
+    :aria-label="ariaLabel"
   >
-    <!-- Starfield -->
+    <!-- Starfield (decorative) -->
     <svg
       v-if="starfield"
       class="absolute inset-0 pointer-events-none"
       :width="width"
       :height="height"
+      aria-hidden="true"
     >
       <circle
         v-for="star in stars"
@@ -57,11 +60,12 @@
       />
     </svg>
 
-    <!-- Orbit rings -->
+    <!-- Orbit rings (decorative) -->
     <svg
       class="absolute inset-0 pointer-events-none"
       :width="width"
       :height="height"
+      aria-hidden="true"
     >
       <circle
         v-for="orbit in orbits"
@@ -76,12 +80,13 @@
       />
     </svg>
 
-    <!-- Connector lines from center to each node -->
+    <!-- Connector lines from center to each node (decorative) -->
     <svg
       v-if="showConnectors"
       class="absolute inset-0 pointer-events-none"
       :width="width"
       :height="height"
+      aria-hidden="true"
     >
       <line
         v-for="conn in connectorLines"
@@ -176,6 +181,20 @@ const props = withDefaults(defineProps<{
 
 const cx = computed(() => props.width / 2)
 const cy = computed(() => props.height / 2)
+
+// Text alternative describing the orbital diagram for assistive technology.
+const ariaLabel = computed(() => {
+  const center = `${props.centerLabel}${props.centerSub ? ` (${props.centerSub})` : ''} at the center`
+  const layers = props.orbits
+    .map((orbit, oi) => {
+      const nodes = orbit.nodes
+        .map((n) => `${n.label}${n.sub ? ` (${n.sub})` : ''}`)
+        .join(', ')
+      return nodes ? `orbit ${oi + 1}: ${nodes}` : ''
+    })
+    .filter(Boolean)
+  return `LEBOSS orbital diagram. ${[center, ...layers].join('; ')}.`
+})
 
 // Deterministic starfield
 const stars = computed(() => {
