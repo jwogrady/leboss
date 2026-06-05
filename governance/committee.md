@@ -98,13 +98,51 @@ The committee will hold public discussion periods for all Drafts and will seek t
 
 ## Current Committee
 
+The initial committee is constituted by the founding Maintainer (the bootstrap
+permitted under *How Maintainers Are Appointed*). Until human Committee Members are
+nominated, the review seats are filled by **designated AI reviewer personas** —
+structured review lenses, each accountable to the Maintainer, that examine every
+Proposal and Draft from a distinct perspective and record their assessment in the
+pull request.
+
 | Role | Name | Affiliation |
 |------|------|-------------|
-| Maintainer | *To be appointed* | — |
-| Committee Member | *Open for nomination* | — |
-| Committee Member | *Open for nomination* | — |
+| Maintainer (Chair) | jwogrady | Status26 |
 
-*Nominations are open. See [CONTRIBUTING.md](../CONTRIBUTING.md) for how to participate.*
+**Maintainer conflict-of-interest disclosure:** the Maintainer is affiliated with
+Status26, which provides software and services to local businesses — a relationship
+directly addressed by this standard (see *Conflict of Interest Policy* above).
+Disclosure does not disqualify; it is recorded here so committee decisions can be
+read with it in view.
+
+### Review seats (AI reviewer personas)
+
+| Seat | Review lens | Primary rule groups |
+|------|-------------|---------------------|
+| Owner Advocate | Protects the business owner's (Universe's) sovereignty and the right to leave | OWN, PORT |
+| Implementer Advocate | Tests whether requirements are buildable and verifiable in real systems | SVC, VER, ARCH |
+| Security & Audit Reviewer | Examines authorization, enforcement, and the audit system of record | SEC, ENF, REC, AUD |
+| Continuity & Portability Reviewer | Examines export completeness, identity portability, and revocation timing | CONT, ACTOR, REV, DCL |
+| Conformance Editor | Guards register/standard coherence, rule numbering, and conformance traceability | SPEC, MAP, PROT, DEL, GEA |
+| Adversarial Reviewer | Stress-tests for gaps and contradictions (continuing the 0.0.21 stress-test practice) | all |
+
+### How the persona committee works
+
+- For each Proposal or Draft, each review seat produces a written assessment in the
+  pull request: **approve**, **request changes**, or **reject**, with rationale tied
+  to its lens and the affected rule groups.
+- These assessments are advisory but part of the public record (see *Transparency*).
+  The human Maintainer is accountable for every decision and holds final merge and
+  tie-breaking authority, exactly as defined in *Roles → Maintainers*.
+- The voting thresholds and minimum periods in
+  [governance/governance.md](governance.md) continue to apply. Persona review
+  operationalizes committee review; it does not replace the member-ratification step,
+  which remains a human process as members are seated.
+- This persona arrangement is an **interim bootstrap**. Human Committee Members are
+  actively sought (see *Community Participation* and [CONTRIBUTING.md](../CONTRIBUTING.md));
+  as they are seated, they take up the review seats above. Any change to this
+  arrangement follows the amendment process in
+  [governance/governance.md](governance.md).
 
 ---
 

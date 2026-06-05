@@ -48,8 +48,8 @@ A `1.0.0` or higher version marks a Published standard:
 
 Specification versions are tracked through:
 
-1. **Git tags** — each release is tagged `vX.Y.Z` on the `master` branch
-2. **Proposal directories** — each draft increment has a corresponding `proposals/X.Y.Z/proposal.md` documenting what changed and why
+1. **Git tags** — releases through `v0.0.11` are tagged `vX.Y.Z` on the `master` branch. Tagging lapsed after `v0.0.11`; versions `0.0.12`–`0.0.29` are not yet tagged (backfill is tracked in the issue tracker).
+2. **Proposal directories** — each draft increment has a corresponding `proposals/X.Y.Z/proposal.md` documenting what changed and why. This is the authoritative per-version record for every draft, tagged or not.
 
 ### Draft Releases
 
@@ -68,7 +68,7 @@ Specification versions are tracked through:
 | 0.0.9 | [`v0.0.9`](https://github.com/jwogrady/leboss/releases/tag/v0.0.9) | [proposals/0.0.9](proposals/0.0.9/proposal.md) | Specification Stabilization |
 | 0.0.10 | [`v0.0.10`](https://github.com/jwogrady/leboss/releases/tag/v0.0.10) | [proposals/0.0.10](proposals/0.0.10/proposal.md) | Repository Normalization |
 | 0.0.11 | [`v0.0.11`](https://github.com/jwogrady/leboss/releases/tag/v0.0.11) | [proposals/0.0.11](proposals/0.0.11/proposal.md) | Canonical multi-deck presentation system |
-| 0.0.12 | [`v0.0.12`](https://github.com/jwogrady/leboss/releases/tag/v0.0.12) | [proposals/0.0.12](proposals/0.0.12/proposal.md) | Terminology stabilization — conformance tiers, missing glossary entries, element name alignment |
+| 0.0.12 | *(untagged)* | [proposals/0.0.12](proposals/0.0.12/proposal.md) | Terminology stabilization — conformance tiers, missing glossary entries, element name alignment |
 
 #### Governance Boundary and Enforcement Series (0.0.13–0.0.20)
 
@@ -114,7 +114,9 @@ git tag -a v0.1.0 -m "LEBOSS 0.1.0 — first Committee Vote candidate"
 git push origin v0.1.0
 ```
 
-Each tag marks the state of the specification at that version. The full specification at any past version is recoverable by checking out the corresponding tag.
+Each tag marks the state of the specification at that version. The full specification at any tagged version is recoverable by checking out the corresponding tag.
+
+> **Current tag state:** tags exist for `v0.0.1`–`v0.0.11`. Tagging lapsed for `0.0.12`–`0.0.29`; those versions are recoverable through their merge commits and `proposals/` directories. Backfilling the missing tags is planned so the convention above holds for every version going forward.
 
 ---
 

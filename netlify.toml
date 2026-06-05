@@ -8,3 +8,20 @@
 
 [context.deploy-preview]
   command = "npm run build:all"
+
+# Defense-in-depth security headers for the public static site.
+# The CSP is a conservative baseline that keeps the Slidev-built decks rendering.
+# Notes:
+#   - 'unsafe-inline' is retained because Vite/Slidev production output includes
+#     inline styles and scripts.
+#   - fonts.googleapis.com / fonts.gstatic.com are allowed because the seriph
+#     theme loads its web fonts from Google Fonts at runtime.
+# Tighten toward nonces/hashes once verified on a deploy preview.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'"

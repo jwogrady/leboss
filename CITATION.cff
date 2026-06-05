@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "LEBOSS — Local Entrepreneur Business Operating System Standards"
+message: "If you reference or build against this standard, please cite it using these metadata."
+type: dataset
+authors:
+  - name: "LEBOSS Contributors"
+repository-code: "https://github.com/jwogrady/leboss"
+url: "https://leboss.status26.com/"
+abstract: >-
+  LEBOSS is an open governance standard defining data ownership, access control,
+  delegation, enforcement, audit, portability, identity, and revocation for local
+  business data systems. It is a release candidate (v0.1.0-rc) ahead of the first
+  Committee Vote.
+keywords:
+  - data-ownership
+  - data-sovereignty
+  - open-standard
+  - governance
+  - data-portability
+  - conformance
+license: CC-BY-4.0
+version: v0.1.0-rc
