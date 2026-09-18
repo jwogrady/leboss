@@ -14,7 +14,7 @@
     "node": ">=22 <23"
   },
   "dependencies": {
-    "@slidev/cli": "52.16.0",
+    "@slidev/cli": "52.19.2",
     "@slidev/theme-seriph": "0.25.0"
   }
 }
