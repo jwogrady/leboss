@@ -53,6 +53,9 @@ step.
 
 ## Branch and PR Discipline
 
+- **The 0.1.0 refactor lives on `refactor`.** Until 0.1.0 is ready, commit all
+  refactor work to the `refactor` branch, not to separate feature branches. Do not
+  merge `refactor` into `master` or open a PR for it unless a human explicitly asks.
 - Never commit directly to `master`. Work on a feature branch.
 - One concern per PR. All standards changes go through the governance PR workflow:
   `Proposal` (PR) → `Draft` → `Committee Vote` → `Published`.
@@ -87,8 +90,32 @@ removing dependencies, or editing `netlify.toml` / build config. Treat
 - [Conventional Commits](https://www.conventionalcommits.org/): `<type>(<scope>): <subject>`.
 - Types: `feat` (new content/docs), `docs` (edits to existing docs), `fix`
   (corrections), `chore` (tooling/config). Scopes: `standards`, `governance`,
-  `glossary`, `charter`, `proposals`, `presentation`, `claude`.
+  `glossary`, `charter`, `proposals`, `presentation`, `readme`, `ci`, `claude`.
+- Pick the type for its release impact: it drives the version bump and the
+  changelog section (`feat` → Added, `docs` → Changed, `fix` → Fixed, `chore` →
+  hidden).
 - Imperative subject, under 72 characters, no trailing period. Body explains *why*.
+
+## Releases
+
+Releases are cut by [release-please](https://github.com/googleapis/release-please)
+from Conventional Commits. Never tag, bump versions, or write release entries in
+`CHANGELOG.md` by hand.
+
+- **Files:** `release-please-config.json`, `.release-please-manifest.json`,
+  `.github/workflows/release-please.yml`.
+- **How it runs:** on every push to `master`, release-please opens or updates one
+  release PR. Merging that PR tags `vX.Y.Z`, updates `CHANGELOG.md`, and bumps
+  `version` in `CITATION.cff`.
+- **The first release is 0.1.0**, pinned with `release-as` in the config. Until
+  then the refactor stays on the `refactor` branch, and commits stack until the
+  maintainers decide to release. **Never merge the release PR** unless a human
+  explicitly asks. Remove `release-as` after 0.1.0 ships.
+- **Pre-1.0 bumps:** `feat` bumps Z (patch); a breaking change (`!` or
+  `BREAKING CHANGE:`) bumps Y (minor). `docs` commits are releasable because
+  standards edits use the `docs` type.
+- **Squash merges** collapse a branch into one commit, so the PR title must itself
+  be a valid Conventional Commit.
 
 ## GitHub API and Automation
 
