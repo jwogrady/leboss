@@ -2,129 +2,63 @@
 
 **Local Entrepreneur Business Operating System Standards**
 
-[![Version](https://img.shields.io/badge/version-v0.1.0--rc-blue)](STATUS.md)
-[![Status](https://img.shields.io/badge/status-release%20candidate-yellow)](STATUS.md)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey)](LICENSE)
-[![Type](https://img.shields.io/badge/type-open%20standard-purple)](standards/leboss-standard.md)
-[![Spec](https://img.shields.io/badge/spec-115%20rules%20%2F%2019%20groups-informational)](standards/leboss-normative-rules.md)
-[![Portal](https://img.shields.io/badge/portal-live-brightgreen)](https://leboss.status26.com/)
+> **An open governance standard that puts local business data ownership back in the hands of owners.**
 
-> **An open governance standard that puts local business data ownership back in the hands of the business.**
-
-**LEBOSS is an open governance standard and a published presentation portal — not an app, SDK, or package you install.** It defines ownership, access control, delegation, enforcement, audit, portability, identity, and revocation for local business data systems. You read the spec, run the decks, or implement against it.
+**LEBOSS is the framework Status26 Inc. used to build Cosmos.** We use it to make sure the tools we ship conform to, and reinforce, our core philosophy.
 
 ---
 
 ## The Problem
 
-Local businesses run on software — CRM, scheduling, billing, marketing, point-of-sale. Each system holds a piece of the business's operational data. In most cases, the **platform controls the data, not the business**.
+Local business owners depend on software: CRM, scheduling, billing, marketing, point-of-sale. Each system holds not just the business's operational data, but the owners' very identities.
+
+In most cases, the **platform controls the data, not the business**. Owners who don't control their data give up their freedom.
 
 - Switching vendors means losing history.
 - Integrations acquire access without declared scope.
 - There is no audit trail the business can inspect.
 - Portability is a feature the vendor offers, not a right the owner holds.
 
-LEBOSS treats this as a **structural problem with a structural solution**: define ownership **architecturally, not contractually**. The owner of a business owns its data — and that ownership should be a property of the system's design, not a clause to be read in a contract after something has already gone wrong.
+If your company has these issues, you have a data sovereignty problem, and LEBOSS can fix it.
 
----
+LEBOSS treats data sovereignty as a **structural problem with a structural solution**: define ownership **architecturally**, not in a vendor's terms of service. The owner of a business owns its data, and that ownership should be a property of the system's design, not a clause discovered after something has already gone wrong.
+
+## Identity Comes First
+
+All of that is still true, and it is useful for thinking about systems. But it leaves one big hole: **who owns the identity?** The company? The vendor? The downstream service provider that generates and delegates a key?
+
+That question is what LEBOSS 0.1.0 answers. While building Cosmos, we found that once you solve identity, the sovereignty problems melt away quickly.
+
+Identity comes down to a philosophy of ownership. After reading the W3C's [identity and the web](https://w3c.github.io/identity-web-impact/) work, we believe identity supersedes ownership. We are all born with an identity. You control it; you manage it. True ownership and freedom require the consent of the governed.
+
+So identity belongs at the top of the hierarchy, above the Governing Entity. Leaving it anywhere else undercuts the core philosophy of LEBOSS. Drawing the ownership boundary around identity is what makes LEBOSS a transformative doctrine for Cosmos, and it is why we are refactoring the standard.
+
+## What's Changing
+
+The old standard was never released; it stopped at a release candidate. Now that we have real-world experience building Cosmos on LEBOSS, we will refactor that release candidate into the **0.1.0** release.
+
+Until 0.1.0 is ready to ship, we are moving the governance and marketing material out of this repository. **The only thing left here will be the LEBOSS standard.**
+
+We are also adjusting the solar-system ontology. It is a useful picture to think of the customer as the star, with services orbiting it like planets. But system topology is not something the standard should dictate: once an app starts to scale, its pieces live all over the place.
 
 ## The Reference Model
 
-LEBOSS describes any local-business data system as six hierarchical elements. The **Universe** (Governing Entity) is the root owner of all data; every other element operates under explicit, scoped, revocable authorization, and every governed operation produces an Audit Record.
+**Identity sits above the Governing Entity.**
 
-```mermaid
-flowchart LR
-    U(("0 · Universe\nGoverning Entity"))
-    G(("1 · Galaxy\nBrand / Business Line"))
-    S(("2 · Star\nCustomer Interface"))
-    P(("3 · Planet\nBackend Service"))
-    M(("4 · Moon\nInternal Capability\ncompany-owned"))
-    T(("5 · Satellite\nExternal Integration\nthird-party"))
+Early LEBOSS put a lot of emphasis on system topology, enforcing governance by position. The new model starts from identity: an identity's owner consents to be governed by the rules in exchange for access to the system. That consent is the contract.
 
-    U --> G
-    G --> S
-    S <--> P
-    P --- M
-    P --- T
-
-    style U fill:#3b4fc8,color:#fff,stroke:none
-    style G fill:#7c3aed,color:#fff,stroke:none
-    style S fill:#d97706,color:#fff,stroke:none
-    style P fill:#059669,color:#fff,stroke:none
-    style M fill:#4f46e5,color:#fff,stroke:none
-    style T fill:#dc2626,color:#fff,stroke:none
-```
-
-| Element | Role |
-|---------|------|
-| **0 · Universe** | Governing Entity — the person, family, or legal entity that owns all data |
-| **1 · Galaxy** | A brand or business line owned by the Universe |
-| **2 · Star** | Customer-facing interface (website, app, booking portal); cannot function without a Planet |
-| **3 · Planet** | Backend service that powers a Star; holds primary operational data |
-| **4 · Moon** | A *natural* satellite — a company-owned, company-operated internal capability |
-| **5 · Satellite** | An *artificial* satellite — a third-party integration; the greatest sovereignty risk, so it must be explicitly authorized and audited |
-
-Star and Planet depend on each other bidirectionally: without a Planet to support it a Star cannot function, and without a Star a Planet serves no one. Moons and Satellites are *associated with* the Planet layer — they are capabilities and connections, not children in the ownership tree.
-
-<details>
-<summary>Plain-text version of the reference model</summary>
-
-```
-LEBOSS Reference Model
-───────────────────────────────────────────────────────
-
-  ┌─────────────────┐
-  │   0 · Universe  │   Root owner (person / family / legal entity)
-  │ Governing Entity│
-  └────────┬────────┘
-           │ owns
-  ┌────────▼────────┐
-  │   1 · Galaxy    │   Brand or business line
-  └────────┬────────┘
-           │ contains
-  ┌────────▼────────┐       ┌─────────────────────┐
-  │   2 · Star      │◄─────►│   3 · Planet         │
-  │ Customer        │       │ Backend Service      │
-  │ Interface       │       │ (holds primary data) │
-  └─────────────────┘       └──────────┬───────────┘
-                                       │
-                          ┌────────────┴────────────┐
-                          │                         │
-                 ┌────────▼────────┐       ┌────────▼────────┐
-                 │   4 · Moon      │       │  5 · Satellite  │
-                 │ Internal        │       │ External        │
-                 │ Capability      │       │ Integration     │
-                 │ [company-owned] │       │ [third-party]   │
-                 └─────────────────┘       └─────────────────┘
-
-  Moon:      natural satellite — company owned, company operated
-  Satellite: artificial satellite — third-party, outside direct control
-```
-
-</details>
-
-> See the interactive version in the Architecture deck at **[leboss.status26.com/architecture/](https://leboss.status26.com/architecture/)**.
+Topology is no longer the starting point. Access is determined by the rights the contract grants. Topology is inferred from those rights, enforced by identity, and verified against the contract.
 
 ---
 
-## What You Get
-
-- **115 normative rules across 19 rule groups** — each coded `LEBOSS-{GROUP}-{n}` and traceable to its source section in the standard.
-- **A single ownership vocabulary** — the six-element reference model, defined once and referenced everywhere without drift.
-- **Owner-first data sovereignty** made architecturally enforceable, not contractual: the Governing Entity owns all data; everything else operates under scoped, revocable authorization.
-- **Audit as the system of record** — the audit corpus, not internal state, is the canonical truth.
-- **Checkable conformance** — 25 named non-conformance conditions, each mapped to specific rule IDs, plus two clear tiers.
-- **Open governance machinery** — proposal lifecycle, committee roles, conflict-of-interest policy, and PR template, all written.
-
----
+> [!NOTE]
+> **Editor's note:** Everything below describes the v0.1.0-rc release candidate and has not yet been revised for the identity-first model. We have kept it, links included, to preserve the original context of these documents. Some of it, such as the orbital model, the presentation decks and the committee process, will change or move out of this repository before 0.1.0.
 
 ## Getting Started
 
-There is no package to install. Pick the path that fits your role.
-
 ### 1 · Read the standard
 
-The authoritative artifact is Markdown. A good order:
+These are the standard documents. They will be released as 0.1.0 when ready.
 
 1. **[charter/mission.md](charter/mission.md)** — why LEBOSS exists.
 2. **[standards/leboss-standard.md](standards/leboss-standard.md)** — the base standard: scope, core concepts, the §5 reference model, ownership doctrine, service-provider obligations, conformance.
