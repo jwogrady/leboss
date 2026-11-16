@@ -81,6 +81,16 @@ LEBOSS uses semantic versioning `X.Y.Z` with LEBOSS-specific meaning:
 
 The current version is v0.1.0-rc (0.0.29) — a structurally complete governance standard and release candidate for the first Committee Vote. See `STATUS.md`.
 
+## Releases (release-please)
+
+Releases are cut by [release-please](https://github.com/googleapis/release-please) from Conventional Commits. Never tag, bump versions, or write release entries in `CHANGELOG.md` by hand.
+
+- **Files:** `release-please-config.json`, `.release-please-manifest.json`, `.github/workflows/release-please.yml`.
+- **How it runs:** on every push to `master`, release-please opens or updates one release PR. Merging that PR tags `vX.Y.Z`, updates `CHANGELOG.md`, and bumps `version` in `CITATION.cff`.
+- **The first release is 0.1.0**, pinned with `release-as` in the config. Until then, the refactor stays on the `refactor` branch (see Agent Working Rules), and commits stack until the maintainers decide to release. **Never merge the release PR** unless a human explicitly asks. Remove `release-as` after 0.1.0 ships.
+- **Pre-1.0 bumps:** `feat` bumps Z (patch), a breaking change (`!` or `BREAKING CHANGE:`) bumps Y (minor). `docs` commits are releasable because standards edits use the `docs` type. `chore` is hidden from the changelog.
+- **Squash merges** collapse a branch into one commit, so the PR title must itself be a valid Conventional Commit.
+
 ## Key Terminology
 
 - **LEBOSS Elements** — the six hierarchical architectural elements (Universe, Galaxy, Star, Planet, Moon, Satellite). Do not use "Cosmic Elements" — this was a prior branded term, removed from all documents.
@@ -99,14 +109,16 @@ This repository uses [Conventional Commits](https://www.conventionalcommits.org/
 <type>(<scope>): <short description>
 ```
 
-| Type | Use for |
-|------|---------|
-| `feat` | New standards content, new documents |
-| `docs` | Edits to existing standards, governance, or glossary |
-| `fix` | Corrections to errors or contradictions in the standard |
-| `chore` | Repository maintenance (tooling, config, gitignore) |
+| Type | Use for | Changelog section |
+|------|---------|-------------------|
+| `feat` | New standards content, new documents | Added |
+| `docs` | Edits to existing standards, governance, or glossary | Changed |
+| `fix` | Corrections to errors or contradictions in the standard | Fixed |
+| `chore` | Repository maintenance (tooling, config, gitignore) | hidden |
 
-Common scopes: `standards`, `governance`, `glossary`, `charter`, `proposals`, `presentation`, `claude`
+Pick the type for its release impact: it drives the version bump and changelog (see [Releases](#releases-release-please)).
+
+Common scopes: `standards`, `governance`, `glossary`, `charter`, `proposals`, `presentation`, `readme`, `ci`, `claude`
 
 - Subject in the imperative mood, under 72 characters, no trailing period.
 - Body (when needed) explains *why*, not what. Wrap at ~72 columns.
@@ -128,6 +140,7 @@ All changes to standards documents go through pull requests. See `governance/gov
 
 ## Agent Working Rules
 
+- **The 0.1.0 refactor lives on `refactor`.** Until 0.1.0 is ready, all refactor work is committed to the `refactor` branch, not to separate feature branches. Do not merge `refactor` into `master` or open a PR for it unless a human explicitly asks.
 - **Branches & PRs.** Never commit directly to `master`. Cut a feature branch and open one focused PR per concern. All standards changes go through the governance PR workflow above; `CONTRIBUTING.md` defines the required PR shape (Summary, Motivation, Specification Changes, Impact Assessment, Backward Compatibility).
 - **Destructive actions need confirmation.** Deleting files, force-pushing or resetting history, removing dependencies, or editing `netlify.toml` / build config — confirm with a human first. Treat `proposals/` and `presentations/archive/` as append-only history.
 - **GitHub boundary.** Read GitHub state (issues, PRs, CI) freely. Do not open, close, or comment on issues/PRs, create tags or releases, or edit workflows unless explicitly instructed.
