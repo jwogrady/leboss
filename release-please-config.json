@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "23d8444",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "leboss",
+      "release-as": "0.1.0",
+      "include-v-in-tag": true,
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "changelog-path": "CHANGELOG.md",
+      "changelog-sections": [
+        { "type": "feat", "section": "Added" },
+        { "type": "fix", "section": "Fixed" },
+        { "type": "docs", "section": "Changed" },
+        { "type": "chore", "section": "Maintenance", "hidden": true }
+      ],
+      "extra-files": [
+        { "type": "yaml", "path": "CITATION.cff", "jsonpath": "$.version" }
+      ]
+    }
+  }
+}
